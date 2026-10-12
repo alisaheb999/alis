@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Page</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Page</h1>
+  <p>This is a simple test HTML page.</p>
+  <button id="btn">Click me</button>
+  <p id="output"></p>
+
+  <script>
+    let count = 0;
+    document.getElementById('btn').addEventListener('click', () => {
+      count++;
+      document.getElementById('output').textContent = `Clicked ${count} time${count === 1 ? '' : 's'}.`;
+    });
+  </script>
+</body>
+</html>
