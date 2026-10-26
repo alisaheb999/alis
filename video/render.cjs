@@ -25,7 +25,7 @@ fs.mkdirSync(framesDir);
   const out = path.join(__dirname, 'demo.mp4');
   execFileSync('ffmpeg', ['-y', '-v', 'error', '-framerate', String(fps), '-i', path.join(framesDir, 'f%04d.png'),
     '-i', audio, '-t', secs, '-af', `afade=t=out:st=${Number(secs) - 0.35}:d=0.35`,
-    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '17', '-preset', 'slow', '-c:a', 'aac', '-b:a', '192k',
+    '-c:v', 'libx264', '-profile:v', 'main', '-level', '4.0', '-pix_fmt', 'yuv420p', '-crf', '20', '-preset', 'slow', '-movflags', '+faststart', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100',
     '-shortest', out], { stdio: 'inherit' });
   console.log('wrote', out);
 })();

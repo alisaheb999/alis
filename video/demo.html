@@ -2,66 +2,34 @@
 <html lang="bn">
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0b1030;
-    --yellow: #ffc72c;
-    --red: #ff4d5e;
-    --mint: #2ee59d;
-    --ink: #eef1ff;
+    --navy: #f7f9ff;
+    --yellow: #2563ff;
+    --ink: #0b1a4a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { width: 1080px; height: 1350px; overflow: hidden; background: #05071a; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: #f7f9ff; }
   #stage { position: absolute; inset: 0; overflow: hidden; background: var(--navy); }
-  .glow { position: absolute; border-radius: 50%; filter: blur(120px); }
-  #g1 { width: 900px; height: 900px; background: #3b2bbf; }
-  #g2 { width: 800px; height: 800px; background: #1645c9; }
-  #g3 { width: 700px; height: 700px; background: #ff2d55; opacity: 0; }
-  #dust { position: absolute; inset: 0; }
-  .mote { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #c9d3ff; }
-  #cam { position: absolute; inset: 0; transform-origin: 50% 47%; }
+  .glow { position: absolute; border-radius: 50%; filter: blur(140px); }
+  #g1 { width: 900px; height: 900px; background: #bcd3ff; }
+  #g2 { width: 800px; height: 800px; background: #cfe4ff; }
+  #g3 { width: 760px; height: 760px; background: radial-gradient(circle, #8fb4ff, #b9d2ff 60%, transparent 70%); opacity: 0; }
+  .mote { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #5b8cff; }
+  #cam { position: absolute; inset: 0; transform-origin: 50% 45%; }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
 
-  #dot { position: absolute; left: 540px; top: 230px; width: 28px; height: 28px; margin: -14px 0 0 -14px;
-         border-radius: 50%; background: var(--yellow); box-shadow: 0 0 40px 10px rgba(255,199,44,.6); }
-  #ring { position: absolute; left: 540px; top: 230px; border-radius: 50%; border: 3px solid var(--yellow); }
+  #title { position: absolute; top: 930px; width: 100%; text-align: center; white-space: nowrap;
+           font: 700 92px 'Space Grotesk', sans-serif; color: var(--ink); }
+  #title b { background: linear-gradient(90deg, #1d4ed8, #2563ff 50%, #4fa3ff);
+             -webkit-background-clip: text; background-clip: text; color: transparent; }
+  #tag { position: absolute; top: 1060px; width: 100%; text-align: center;
+         font: 500 24px 'JetBrains Mono', monospace; letter-spacing: 10px; color: #6b7cb3; }
 
-  #phoneWrap { position: absolute; left: 330px; top: 230px; width: 420px; height: 840px; perspective: 1600px; }
-  #phone { position: absolute; inset: 0; transform-style: preserve-3d; }
-  #outline { position: absolute; inset: -6px; width: 432px; height: 852px; overflow: visible; }
-  #screen { position: absolute; inset: 0; border-radius: 58px; overflow: hidden;
-            background: linear-gradient(160deg, #1a2160 0%, #0e1340 55%, #0a0d2c 100%); }
-  #redTint { position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(255,77,94,.55), rgba(120,0,30,.35) 70%); opacity: 0; }
-  #sweep { position: absolute; top: -200px; width: 220px; height: 1300px; transform: rotate(18deg);
-           background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent); }
-  #notch { position: absolute; top: 22px; left: 50%; width: 110px; height: 30px; margin-left: -55px; border-radius: 20px; background: #05071a; }
-
-  #label { position: absolute; top: 250px; width: 100%; text-align: center; font: 500 22px 'JetBrains Mono', monospace;
-           letter-spacing: 6px; color: #8f9bd6; }
-  #balance { position: absolute; top: 290px; width: 100%; text-align: center; font: 700 86px 'Hind Siliguri', sans-serif;
-             color: var(--ink); white-space: nowrap; }
-  #balance span { display: inline-block; }
-  #bar { position: absolute; top: 410px; left: 90px; height: 6px; border-radius: 6px; background: var(--mint);
-         box-shadow: 0 0 18px rgba(46,229,157,.7); }
-  #zero { position: absolute; top: 290px; width: 100%; text-align: center; font: 700 120px 'Hind Siliguri', sans-serif;
-          color: var(--red); text-shadow: 0 0 50px rgba(255,77,94,.8); opacity: 0; }
-
-  #notif { position: absolute; top: 80px; left: 26px; right: 26px; height: 112px; border-radius: 28px; padding: 22px;
-           display: flex; gap: 18px; align-items: center; background: rgba(255,255,255,.1);
-           border: 1.5px solid rgba(255,255,255,.18); backdrop-filter: blur(10px); }
-  #notif .ic { width: 66px; height: 66px; border-radius: 18px; background: var(--yellow); flex: none;
-               display: grid; place-items: center; }
-  #notif .t1 { font: 700 26px 'Hind Siliguri', sans-serif; color: var(--ink); }
-  #notif .t2 { font: 500 21px 'JetBrains Mono', monospace; color: #7fb4ff; text-decoration: underline; }
-
-  #finger { position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
-            background: rgba(255,255,255,.9); box-shadow: 0 0 30px rgba(255,255,255,.7); }
-  #ripple { position: absolute; border-radius: 50%; border: 4px solid #fff; }
-
-  #vignette { position: absolute; inset: 0; pointer-events: none;
-              background: radial-gradient(ellipse at 50% 48%, transparent 45%, rgba(0,0,0,.65) 100%); }
-  #grain { position: absolute; inset: -50px; opacity: .07; pointer-events: none; }
-  #fade { position: absolute; inset: 0; background: #000; pointer-events: none; }
+  #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(37,99,255,.10) 100%); }
+  #grain { position: absolute; inset: -50px; width: 1180px; height: 1450px; opacity: .025; }
+  #fade { position: absolute; inset: 0; background: #fff; }
 </style>
 </head>
 <body>
@@ -69,29 +37,36 @@
   <div id="g1" class="glow"></div><div id="g2" class="glow"></div><div id="g3" class="glow"></div>
   <div id="dust"></div>
   <div id="cam">
-    <div id="ring"></div>
-    <div id="phoneWrap"><div id="phone">
-      <div id="screen">
-        <div id="redTint"></div>
-        <div id="notch"></div>
-        <div id="label">BALANCE</div>
-        <div id="balance"></div>
-        <div id="bar"></div>
-        <div id="zero">৳০</div>
-        <div id="notif">
-          <div class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0b1030" stroke-width="2.6" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg></div>
-          <div><div class="t1">অফার! 🎁</div><div class="t2">bkash-verify.xyz</div></div>
-        </div>
-        <div id="sweep"></div>
-        <div id="ripple"></div>
-        <div id="finger"></div>
-      </div>
-      <svg id="outline" viewBox="-6 -6 432 852">
-        <path id="edge" pathLength="1" fill="none" stroke-width="5" stroke-linecap="round"
-          d="M210 0 H362 A58 58 0 0 1 420 58 V782 A58 58 0 0 1 362 840 H58 A58 58 0 0 1 0 782 V58 A58 58 0 0 1 58 0 Z"/>
-      </svg>
-    </div></div>
-    <div id="dot"></div>
+    <svg width="1080" height="1350">
+      <defs>
+        <linearGradient id="gem" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#2563ff"/><stop offset="1" stop-color="#4fa3ff"/>
+        </linearGradient>
+        <radialGradient id="rayFade"><stop offset="0" stop-color="#2563ff" stop-opacity=".16"/><stop offset="1" stop-color="#2563ff" stop-opacity="0"/></radialGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+      <!-- light rays behind the star -->
+      <g id="rays" transform="translate(540 600)"></g>
+      <!-- burst rings -->
+      <circle id="ring1" cx="540" cy="600" fill="none" stroke="#2563ff" stroke-width="3"/>
+      <circle id="ring2" cx="540" cy="600" fill="none" stroke="#4fa3ff" stroke-width="3"/>
+      <!-- tilted badge frame around the "!" -->
+      <g id="badge" transform="translate(540 600)">
+        <rect id="badgeRect" x="-130" y="-130" width="260" height="260" rx="56" fill="none" stroke="#2563ff" stroke-width="6" pathLength="1"/>
+      </g>
+      <!-- "!" : stem + dot -->
+      <rect id="stem" x="-17" width="34" rx="17" fill="#2563ff"/>
+      <circle id="dot" r="20" fill="#2563ff"/>
+      <!-- the sparkle -->
+      <g id="star" transform="translate(540 600)">
+        <path d="M0,-1 Q0,0 1,0 Q0,0 0,1 Q0,0 -1,0 Q0,0 0,-1 Z" transform="scale(190)" fill="url(#gem)" filter="url(#soft)" opacity=".8"/>
+        <path d="M0,-1 Q0,0 1,0 Q0,0 0,1 Q0,0 -1,0 Q0,0 0,-1 Z" transform="scale(170)" fill="url(#gem)"/>
+      </g>
+      <!-- orbiting "thinking" particles -->
+      <g id="orbit" transform="translate(540 600)"></g>
+    </svg>
+    <div id="title">Gemini <b>AI Pro</b></div>
+    <div id="tag">GOOGLE</div>
   </div>
   <canvas id="grain" width="590" height="725"></canvas>
   <div id="vignette"></div>
@@ -102,138 +77,111 @@ const $ = id => document.getElementById(id);
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const prog = (t, a, b) => clamp((t - a) / (b - a));
 const outCubic = x => 1 - Math.pow(1 - x, 3);
+const inCubic = x => x * x * x;
 const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 const outBack = x => 1 + 2.4 * Math.pow(x - 1, 3) + 1.4 * Math.pow(x - 1, 2);
 const lerp = (a, b, x) => a + (b - a) * x;
-const BN = '০১২৩৪৫৬৭৮৯';
-const bn = n => String(n).replace(/\d/g, d => BN[d]);
-const fmt = n => '৳' + bn(Math.round(n).toLocaleString('en-US'));
 function rng(seed) { return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
 
-// dust motes
 const r = rng(7), motes = [];
 for (let i = 0; i < 46; i++) {
   const m = document.createElement('div'); m.className = 'mote'; $('dust').appendChild(m);
   motes.push({ el: m, x: r() * 1080, y: r() * 1350, s: .5 + r() * 1.6, v: 10 + r() * 30, o: .15 + r() * .45, p: r() * 6 });
 }
-
-// falling digits for the balance
-const FULL = fmt(25480);
-$('balance').innerHTML = [...FULL].map(c => `<span>${c}</span>`).join('');
-const spans = [...$('balance').children];
-const fall = spans.map(() => ({ vx: (r() - .5) * 260, rot: (r() - .5) * 140, d: r() * .25 }));
+for (let i = 0; i < 12; i++) mk('rect', { x: -6, y: -620, width: 12, height: 620, fill: 'url(#rayFade)', transform: `rotate(${i * 30})` }, $('rays'));
+const orbs = [0, 1, 2].map(i => mk('circle', { r: 11, fill: ['#1d4ed8', '#4fa3ff', '#93c5fd'][i] }, $('orbit')));
 
 const grain = $('grain').getContext('2d');
 const gimg = grain.createImageData(590, 725);
 
+// Voice timing (from the audio's pauses):
+// 0.00–0.42 "ভাই,"  0.75–2.17 "একটা গুরুত্বপূর্ণ কথা বলি।"
+// 2.62–4.17 "যারা Google Gemini AI Pro"  4.27–5.60 "নেওয়ার কথা ভাবছেন,"
 window.render = function (t) {
-  // background breathing
+  const gem = prog(t, 2.62, 3.1);
   $('g1').style.transform = `translate(${-200 + Math.sin(t * .7) * 60}px, ${-150 + Math.cos(t * .5) * 50}px)`;
   $('g2').style.transform = `translate(${480 + Math.cos(t * .6) * 70}px, ${700 + Math.sin(t * .8) * 60}px)`;
-  const danger = prog(t, 2.9, 3.5);
-  $('g3').style.transform = 'translate(190px, 330px)';
-  $('g3').style.opacity = danger * .55 * (1 - prog(t, 4.6, 5) * .4);
-  $('g1').style.opacity = .55 - danger * .25;
-  $('g2').style.opacity = .45;
+  $('g1').style.opacity = .9; $('g2').style.opacity = .8;
+  $('g3').style.transform = `translate(160px, 220px) scale(${.8 + gem * .3 + Math.sin(t * 2) * .03})`;
+  $('g3').style.opacity = gem * .55;
   motes.forEach(m => {
     const y = ((m.y - t * m.v) % 1350 + 1350) % 1350;
     m.el.style.transform = `translate(${m.x + Math.sin(t + m.p) * 14}px, ${y}px) scale(${m.s})`;
     m.el.style.opacity = m.o * prog(t, 0, .8);
   });
 
-  // camera: slow push-in, impact shake on the tap
-  const shake = t > 2.9 && t < 3.4 ? Math.sin(t * 90) * 10 * (1 - prog(t, 2.9, 3.4)) : 0;
-  $('cam').style.transform = `translate(${shake}px, ${shake * .4}px) scale(${1.12 + t * .014})`;
+  // camera: slow push-in with a soft punch on the star reveal
+  const punch = Math.sin(prog(t, 2.62, 3.0) * Math.PI) * .035;
+  $('cam').style.transform = `scale(${1 + t * .012 + punch})`;
 
-  // 0.0 – 0.75: the yellow dot is born
-  const born = outBack(prog(t, .05, .45));
-  const toEdge = prog(t, .75, 1.1);
-  $('dot').style.transform = `scale(${born * (1 - toEdge)})`;
-  const rg = outCubic(prog(t, .1, .9));
-  $('ring').style.width = $('ring').style.height = rg * 360 + 'px';
-  $('ring').style.margin = `${-rg * 180}px 0 0 ${-rg * 180}px`;
-  $('ring').style.opacity = (1 - rg) * (t > .1 ? 1 : 0);
+  // "ভাই," — yellow dot pops in with a ring
+  const born = outBack(prog(t, .02, .4));
+  const r1 = outCubic(prog(t, .05, .9));
+  $('ring1').setAttribute('r', r1 * 240);
+  $('ring1').setAttribute('opacity', t > .05 ? (1 - r1) : 0);
 
-  // 0.75 – 1.7: phone outline draws itself from the dot
-  const draw = inOutCubic(prog(t, .75, 1.7));
-  const edge = $('edge');
-  edge.setAttribute('stroke-dasharray', `${draw} 1`);
-  const edgeCol = danger > 0 ? `rgb(255,${Math.round(lerp(199, 77, danger))},${Math.round(lerp(44, 94, danger))})` : '#ffc72c';
-  edge.setAttribute('stroke', edgeCol);
-  $('outline').style.filter = `drop-shadow(0 0 ${12 + danger * 18}px ${edgeCol})`;
-  $('outline').style.opacity = 1 - prog(t, 1.7, 2.2) * .55 + danger * .55;
+  // "একটা গুরুত্বপূর্ণ কথা বলি" — dot drops, "!" stem rises, tilted badge draws around it
+  const rise = outBack(prog(t, .75, 1.15));
+  const retract = inCubic(prog(t, 2.17, 2.55));
+  const stemH = 130 * rise * (1 - retract);
+  const dotY = 600 + lerp(0, 75, outCubic(prog(t, .7, 1.0))) * (1 - retract) - retract * 0;
+  const floatY = Math.sin(t * 3) * 5 * prog(t, 1.1, 1.4) * (1 - retract);
+  $('dot').setAttribute('cx', 540);
+  $('dot').setAttribute('cy', dotY + floatY);
+  $('dot').setAttribute('r', 20 * born * (1 - prog(t, 2.62, 2.75)));
+  $('stem').setAttribute('y', dotY + floatY - 45 - stemH);
+  $('stem').setAttribute('height', Math.max(0, stemH));
+  $('stem').setAttribute('transform', '');
+  $('stem').style.transform = 'translateX(540px)';
+  const dot = $('dot');
+  dot.style.filter = $('stem').style.filter = `drop-shadow(0 0 22px rgba(37,99,255,.45))`;
 
-  // 3D tilt of the phone
-  const tilt = lerp(-16, 0, outCubic(prog(t, .8, 2.2))) + Math.sin(t * 1.3) * 2.5;
-  $('phone').style.transform = `rotateY(${tilt}deg) rotateX(${lerp(8, 2, prog(t, .8, 2.2))}deg)`;
+  const draw = inOutCubic(prog(t, .85, 1.6));
+  const bOut = inOutCubic(prog(t, 2.1, 2.6));
+  $('badgeRect').setAttribute('stroke-dasharray', `${draw} 1`);
+  $('badge').setAttribute('transform', `translate(540 600) rotate(${lerp(-30, -8, outCubic(prog(t, .85, 1.8))) + bOut * 140}) scale(${1 - bOut})`);
+  $('badge').setAttribute('opacity', 1 - bOut);
+  $('badge').style.filter = 'drop-shadow(0 0 16px rgba(37,99,255,.35))';
 
-  // 1.4 – 2.2: screen comes alive, balance counts up
-  const live = prog(t, 1.35, 1.9);
-  $('screen').style.opacity = live;
-  const count = outCubic(prog(t, 1.45, 2.15));
-  $('label').style.opacity = live;
-  $('bar').style.width = count * 240 + 'px';
-  $('bar').style.opacity = 1 - danger;
-  const cur = fmt(25480 * count);
-  if (t < 2.95) {
-    // during the count-up use the live number; keep spans for the fall later
-    $('balance').textContent = cur;
-  } else if (!$('balance').firstElementChild) {
-    $('balance').innerHTML = ''; spans.forEach(s => $('balance').appendChild(s));
-  }
-  if (t >= 2.95) {
-    spans.forEach((s, i) => {
-      const f = fall[i], k = Math.max(0, t - 2.95 - f.d);
-      s.style.transform = `translate(${f.vx * k}px, ${900 * k * k}px) rotate(${f.rot * k}deg)`;
-      s.style.opacity = 1 - clamp(k / .7);
-      s.style.color = `rgb(255,${Math.round(lerp(241, 120, clamp(k * 4)))},${Math.round(lerp(255, 130, clamp(k * 4)))})`;
-    });
-  }
-  // light sweep across the glass
-  $('sweep').style.left = lerp(-300, 560, inOutCubic(prog(t, 1.6, 2.4))) + 'px';
+  // "যারা Google Gemini AI Pro" — the dot blooms into a sparkle
+  const s = outBack(prog(t, 2.62, 3.15));
+  const breathe = 1 + Math.sin((t - 3.1) * 3.2) * .025 * prog(t, 3.1, 3.4);
+  $('star').setAttribute('transform', `translate(540 600) rotate(${lerp(-135, 0, outCubic(prog(t, 2.62, 3.3)))}) scale(${s * breathe})`);
+  const r2 = outCubic(prog(t, 2.62, 3.5));
+  $('ring2').setAttribute('r', r2 * 420);
+  $('ring2').setAttribute('opacity', t > 2.62 ? (1 - r2) * .9 : 0);
+  $('rays').setAttribute('transform', `translate(540 600) rotate(${t * 12}) scale(${outCubic(gem)})`);
+  $('rays').setAttribute('opacity', gem * .9);
 
-  // 2.2 – 2.6: notification drops in
-  const nIn = outBack(prog(t, 2.15, 2.55));
-  const nOut = prog(t, 3.0, 3.35);
-  $('notif').style.transform = `translateY(${lerp(-170, 0, nIn) - nOut * 30}px) scale(${1 - (t > 2.62 && t < 2.8 ? .04 : 0)})`;
-  $('notif').style.opacity = clamp(nIn * 1.5) * (1 - nOut);
-  $('notif').style.filter = `blur(${(1 - clamp(nIn)) * 8}px)`;
+  // title wipes in on "Gemini AI Pro"
+  const ti = outCubic(prog(t, 3.05, 3.7));
+  $('title').style.clipPath = `inset(0 ${(1 - ti) * 50}% 0 ${(1 - ti) * 50}%)`;
+  $('title').style.letterSpacing = lerp(18, -1, ti) + 'px';
+  $('title').style.opacity = ti;
+  $('title').style.filter = `blur(${(1 - ti) * 10}px)`;
+  const tg = prog(t, 3.5, 3.9);
+  $('tag').style.opacity = tg;
+  $('tag').style.transform = `translateY(${(1 - outCubic(tg)) * 20}px)`;
 
-  // 2.35 – 2.65: finger arrives and taps
-  const fIn = inOutCubic(prog(t, 2.3, 2.62));
-  $('finger').style.left = lerp(420, 230, fIn) + 'px';
-  $('finger').style.top = lerp(760, 140, fIn) + 'px';
-  const press = t > 2.62 && t < 2.78 ? .8 : 1;
-  $('finger').style.transform = `scale(${press})`;
-  $('finger').style.opacity = prog(t, 2.3, 2.4) * (1 - prog(t, 2.8, 3.0));
-  const rp = outCubic(prog(t, 2.64, 3.1));
-  $('ripple').style.left = 230 - rp * 200 + 'px'; $('ripple').style.top = 140 - rp * 200 + 'px';
-  $('ripple').style.width = $('ripple').style.height = rp * 400 + 'px';
-  $('ripple').style.opacity = t > 2.64 ? (1 - rp) * .9 : 0;
+  // "নেওয়ার কথা ভাবছেন" — three orbs orbit the star, like a thought forming
+  const ob = outCubic(prog(t, 4.2, 4.7));
+  orbs.forEach((o, i) => {
+    const a = t * 2.6 + i * 2.094;
+    const x = Math.cos(a) * 250 * ob, y = Math.sin(a) * 70 * ob;
+    o.setAttribute('cx', x); o.setAttribute('cy', y - 10);
+    o.setAttribute('opacity', ob * (Math.sin(a) > 0 ? 1 : .45));
+    o.style.filter = `drop-shadow(0 0 12px ${o.getAttribute('fill')})`;
+  });
+  $('orbit').setAttribute('transform', `translate(540 600) rotate(-14)`);
 
-  // 2.9 – 3.5: glitch + red
-  $('redTint').style.opacity = danger * .9;
-  const glitchOn = t > 2.85 && t < 3.45 && Math.floor(t * 30) % 3 !== 0;
-  const gx = glitchOn ? 7 + (Math.floor(t * 30) % 4) * 3 : 0;
-  $('phoneWrap').style.filter = gx ? `drop-shadow(${gx}px 0 0 rgba(255,0,80,.75)) drop-shadow(${-gx}px 0 0 rgba(0,220,255,.75))` : 'none';
-  $('phoneWrap').style.transform = gx ? `translateX(${(Math.floor(t * 30) % 2 ? 1 : -1) * gx}px)` : 'none';
-
-  // 3.6 – 5: the empty balance
-  const z = outBack(prog(t, 3.6, 4.0));
-  const pulse = t > 4.0 ? 1 + Math.sin((t - 4.0) * 8) * .03 : 1;
-  $('zero').style.opacity = prog(t, 3.6, 3.8);
-  $('zero').style.transform = `scale(${lerp(1.6, 1, z) * pulse})`;
-  $('label').style.color = danger ? `rgb(255,${Math.round(lerp(155, 140, danger))},${Math.round(lerp(214, 150, danger))})` : '#8f9bd6';
-
-  // film grain
   const gr = rng(1 + Math.floor(t * 30));
   for (let i = 0; i < gimg.data.length; i += 4) {
     const v = gr() * 255; gimg.data[i] = gimg.data[i + 1] = gimg.data[i + 2] = v; gimg.data[i + 3] = 255;
   }
   grain.putImageData(gimg, 0, 0);
-  $('grain').style.width = '1180px'; $('grain').style.height = '1450px';
-
-  $('fade').style.opacity = 1 - prog(t, 0, .25) + prog(t, 4.75, 5) * .85;
+  $('fade').style.opacity = 1 - prog(t, 0, .2);
 };
 render(0);
 </script>
