@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&family=Hind+Siliguri:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f9ff;
+    --blue: #2563ff;
+    --deep: #1d4ed8;
+    --sky: #4fa3ff;
+    --ink: #0b1a4a;
+    --muted: #6b7cb3;
+    --warn: #f43f5e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--bg); }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: var(--bg); }
+  .glow { position: absolute; border-radius: 50%; filter: blur(140px); }
+  #g1 { width: 900px; height: 900px; background: #bcd3ff; }
+  #g2 { width: 800px; height: 800px; background: #cfe4ff; }
+  #g3 { width: 760px; height: 760px; background: radial-gradient(circle, #8fb4ff, #b9d2ff 60%, transparent 70%); opacity: 0; }
+  .mote { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #5b8cff; }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
+
+  .scene { position: absolute; inset: 0; display: none; transform-origin: 50% 45%; }
+  .bn { font-family: 'Hind Siliguri', sans-serif; font-weight: 700; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: 8px; color: var(--muted); }
+  .center { position: absolute; width: 100%; text-align: center; white-space: nowrap; }
+  .glass { position: absolute; border-radius: 40px; background: rgba(255,255,255,.78);
+           border: 1.5px solid rgba(37,99,255,.14);
+           box-shadow: 0 40px 80px -30px rgba(37,99,255,.35), inset 0 1px 0 #fff; }
+  .grad { background: linear-gradient(90deg, #1d4ed8, #2563ff 50%, #4fa3ff);
+          -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* intro */
+  #title { top: 930px; font: 700 92px 'Space Grotesk', sans-serif; color: var(--ink); }
+  #tag { top: 1060px; font-size: 24px; letter-spacing: 10px; }
+
+  /* progress */
+  #prog { position: absolute; top: 48px; left: 90px; width: 900px; height: 6px; border-radius: 6px; background: rgba(37,99,255,.12); overflow: hidden; }
+  #progFill { height: 100%; background: linear-gradient(90deg, var(--deep), var(--sky)); border-radius: 6px; }
+
+  /* s3 */
+  #s3num { top: 470px; font-size: 230px; line-height: 1; color: var(--ink); }
+  #s3unit { top: 720px; font-size: 64px; color: var(--blue); }
+  #s3tag { top: 215px; font-size: 26px; }
+
+  /* s4 */
+  #flow { left: 50%; top: 300px; height: 96px; padding: 0 40px 0 24px; border-radius: 60px; display: flex; align-items: center; gap: 18px;
+          transform: translateX(-50%); font: 700 40px 'Space Grotesk', sans-serif; color: var(--ink); }
+  #credits { top: 520px; font: 700 230px 'Space Grotesk', sans-serif; line-height: 1; color: var(--ink); }
+  #creditsLbl { top: 800px; font-size: 28px; }
+
+  /* s4b */
+  .card { width: 420px; height: 540px; left: 330px; top: 360px; transform-origin: 50% 110%; }
+  #s4bLbl { top: 1010px; font-size: 26px; }
+
+  /* s5 */
+  .tile { width: 390px; height: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+  .tile .name { font: 700 40px 'Space Grotesk', sans-serif; color: var(--ink); }
+  .tile .ico { width: 120px; height: 120px; border-radius: 34px; display: grid; place-items: center;
+               background: linear-gradient(145deg, #e8f0ff, #d6e4ff); }
+
+  /* s6 */
+  #cal { width: 460px; height: 540px; left: 310px; top: 330px; overflow: hidden; perspective: 900px; }
+  #calHead { height: 120px; background: linear-gradient(90deg, var(--deep), var(--sky)); color: #fff;
+             font-size: 52px; display: grid; place-items: center; }
+  .day { position: absolute; top: 150px; left: 0; width: 100%; text-align: center; font: 700 270px 'Space Grotesk', sans-serif;
+         color: var(--ink); line-height: 1.2; height: 390px; background: #fff; backface-visibility: hidden; transform-origin: 50% 0; }
+  #s6tag { top: 930px; font-size: 26px; }
+
+  /* s7 */
+  #toggle { left: 340px; top: 360px; width: 400px; height: 190px; border-radius: 100px; }
+  #knob { position: absolute; top: 20px; width: 150px; height: 150px; border-radius: 50%; background: #fff;
+          box-shadow: 0 10px 30px rgba(11,26,74,.25); }
+  #offLbl { top: 300px; font-size: 26px; }
+  #price { left: 250px; top: 650px; width: 580px; height: 230px; display: flex; align-items: center; justify-content: center; gap: 30px; }
+  #price .amt { font: 700 96px 'Space Grotesk', sans-serif; color: var(--ink); }
+  #price .per { font-size: 44px; color: var(--muted); }
+
+  /* s8 */
+  #missBtn { position: absolute; left: 50%; top: 930px; height: 130px; padding: 0 70px; border-radius: 80px; transform: translateX(-50%);
+             background: linear-gradient(90deg, var(--deep), var(--sky)); color: #fff; font-size: 56px;
+             display: flex; align-items: center; white-space: nowrap; box-shadow: 0 30px 60px -20px rgba(37,99,255,.7); }
+  #s8title { top: 900px; font: 700 80px 'Space Grotesk', sans-serif; color: var(--ink); }
+
+  /* s9 */
+  .opt { width: 400px; height: 440px; top: 560px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+  .opt .t { font-size: 46px; color: var(--ink); }
+
+  /* s10 */
+  #check { left: 200px; top: 760px; width: 680px; height: 300px; padding: 40px 54px; display: flex; flex-direction: column; justify-content: space-around; }
+  .row { display: flex; align-items: center; gap: 30px; font-size: 48px; color: var(--ink); }
+  .box { width: 70px; height: 70px; border-radius: 22px; border: 4px solid rgba(37,99,255,.3); position: relative; flex: none; }
+  .box .fill { position: absolute; inset: -4px; border-radius: 22px; background: var(--blue); display: grid; place-items: center; }
+
+  /* s11 */
+  #endTitle { top: 860px; font: 700 96px 'Space Grotesk', sans-serif; color: var(--ink); }
+  #endTag { top: 990px; font-size: 26px; }
+
+  #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(37,99,255,.10) 100%); }
+  #grain { position: absolute; inset: -50px; width: 1180px; height: 1450px; opacity: .025; }
+  #fade { position: absolute; inset: 0; background: #fff; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="g1" class="glow"></div><div id="g2" class="glow"></div><div id="g3" class="glow"></div>
+  <div id="dust"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="gem" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#2563ff"/><stop offset="1" stop-color="#4fa3ff"/>
+      </linearGradient>
+      <radialGradient id="rayFade"><stop offset="0" stop-color="#2563ff" stop-opacity=".16"/><stop offset="1" stop-color="#2563ff" stop-opacity="0"/></radialGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+      <symbol id="spark" viewBox="-1 -1 2 2"><path d="M0,-1 Q0,0 1,0 Q0,0 0,1 Q0,0 -1,0 Q0,0 0,-1 Z" fill="url(#gem)"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- 1–2: intro (0 – 6.6) -->
+  <div id="s12" class="scene">
+    <svg width="1080" height="1350">
+      <g id="rays" transform="translate(540 600)"></g>
+      <circle id="ring1" cx="540" cy="600" fill="none" stroke="#2563ff" stroke-width="3"/>
+      <circle id="ring2" cx="540" cy="600" fill="none" stroke="#4fa3ff" stroke-width="3"/>
+      <g id="badge" transform="translate(540 600)">
+        <rect id="badgeRect" x="-130" y="-130" width="260" height="260" rx="56" fill="none" stroke="#2563ff" stroke-width="6" pathLength="1"/>
+      </g>
+      <rect id="stem" x="-17" width="34" rx="17" fill="#2563ff"/>
+      <circle id="dot" r="20" fill="#2563ff"/>
+      <g id="star" transform="translate(540 600)">
+        <path d="M0,-1 Q0,0 1,0 Q0,0 0,1 Q0,0 -1,0 Q0,0 0,-1 Z" transform="scale(190)" fill="url(#gem)" filter="url(#soft)" opacity=".8"/>
+        <path d="M0,-1 Q0,0 1,0 Q0,0 0,1 Q0,0 -1,0 Q0,0 0,-1 Z" transform="scale(170)" fill="url(#gem)"/>
+      </g>
+      <g id="orbit" transform="translate(540 600)"></g>
+    </svg>
+    <div id="title" class="center">Gemini <b class="grad">AI Pro</b></div>
+    <div id="tag" class="center mono">GOOGLE</div>
+  </div>
+
+  <!-- 3: 18-month offer running out (6.64 – 10.3) -->
+  <div id="s3" class="scene">
+    <svg width="1080" height="1350">
+      <circle cx="540" cy="600" r="300" fill="none" stroke="rgba(37,99,255,.12)" stroke-width="22"/>
+      <circle id="arc" cx="540" cy="600" r="300" fill="none" stroke="#2563ff" stroke-width="22" stroke-linecap="round"
+              pathLength="1" transform="rotate(-90 540 600)"/>
+      <circle id="arcHead" r="20" fill="#fff" stroke="#2563ff" stroke-width="8"/>
+    </svg>
+    <div id="s3tag" class="center mono">JIO OFFER</div>
+    <div id="s3num" class="center bn">১৮</div>
+    <div id="s3unit" class="center bn">মাস</div>
+  </div>
+
+  <!-- 4a: Google Flow, 1000 credits (10.47 – 14.8) -->
+  <div id="s4" class="scene">
+    <div id="flow" class="glass">
+      <svg width="56" height="56" viewBox="0 0 24 24" style="position:static"><path d="M3 15c3-6 6 2 9-3s6-3 9-8" fill="none" stroke="#2563ff" stroke-width="2.6" stroke-linecap="round"/><path d="M3 20c3-6 6 2 9-3s6-3 9-8" fill="none" stroke="#4fa3ff" stroke-width="2.6" stroke-linecap="round" opacity=".6"/></svg>
+      Google Flow
+    </div>
+    <svg width="1080" height="1350"><g id="tokens"></g></svg>
+    <div id="credits" class="center bn"></div>
+    <div id="creditsLbl" class="center mono">AI CREDITS / MONTH</div>
+  </div>
+
+  <!-- 4b: premium models (14.91 – 16.95) -->
+  <div id="s4b" class="scene">
+    <div class="glass card" id="c1"></div>
+    <div class="glass card" id="c2"></div>
+    <div class="glass card" id="c3">
+      <svg width="420" height="540"><use href="#spark" x="130" y="190" width="160" height="160"/></svg>
+    </div>
+    <div id="s4bLbl" class="center mono">PREMIUM AI MODELS</div>
+  </div>
+
+  <!-- 5: feature tiles (17.11 – 23.6) -->
+  <div id="s5" class="scene">
+    <div class="glass tile" id="t1" style="left:135px;top:300px">
+      <div class="ico"><svg width="64" height="64" viewBox="0 0 24 24" style="position:static"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="#2563ff" stroke-width="2"/><path d="M10 9.2v5.6l4.6-2.8z" fill="#2563ff"/></svg></div>
+      <div class="name">Veo</div>
+    </div>
+    <div class="glass tile" id="t2" style="left:555px;top:300px">
+      <div class="ico"><svg width="64" height="64" viewBox="0 0 24 24" style="position:static"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="#2563ff" stroke-width="2"/><path d="M5 17l4.5-5 3.5 3.5 2.5-2.5L19 17" fill="none" stroke="#2563ff" stroke-width="2" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.8" fill="#4fa3ff"/></svg></div>
+      <div class="name">Nano Banana</div>
+    </div>
+    <div class="glass tile" id="t3" style="left:135px;top:680px">
+      <div class="ico"><svg width="64" height="64" viewBox="0 0 24 24" style="position:static"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#2563ff" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="#2563ff" stroke-width="2.4" stroke-linecap="round"/><path d="M7.5 9h6M7.5 12h4" stroke="#4fa3ff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <div class="name">Deep Research</div>
+    </div>
+    <div class="glass tile" id="t4" style="left:555px;top:680px">
+      <div class="ico"><svg width="64" height="64" viewBox="0 0 24 24" style="position:static"><path d="M7 18.5h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.5 10a4.25 4.25 0 0 0 .5 8.5z" fill="none" stroke="#2563ff" stroke-width="2" stroke-linejoin="round"/></svg></div>
+      <div class="name">5 TB</div>
+    </div>
+  </div>
+
+  <!-- 6: calendar, 29 October (23.89 – 28.2) -->
+  <div id="s6" class="scene">
+    <div id="cal" class="glass">
+      <div id="calHead" class="bn">অক্টোবর</div>
+      <div id="days"></div>
+    </div>
+    <svg width="1080" height="1350">
+      <rect id="calRing" x="290" y="310" width="500" height="580" rx="56" fill="none" stroke="#f43f5e" stroke-width="6" pathLength="1"/>
+    </svg>
+    <div id="s6tag" class="center mono">LAST DAY</div>
+  </div>
+
+  <!-- 7: offer off, regular price (28.39 – 32.8) -->
+  <div id="s7" class="scene">
+    <div id="offLbl" class="center mono">OFFER</div>
+    <div id="toggle" class="glass"><div id="knob"></div></div>
+    <div id="price" class="glass">
+      <svg id="cycle" width="96" height="96" viewBox="0 0 24 24" style="position:static"><path d="M20 12a8 8 0 1 1-2.34-5.66" fill="none" stroke="#2563ff" stroke-width="2.2" stroke-linecap="round"/><path d="M20 4v4.5h-4.5" fill="none" stroke="#2563ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="amt">৳ ••••</span><span class="per bn">/মাস</span>
+    </div>
+  </div>
+
+  <!-- 8: don't miss it (32.96 – 38.6) -->
+  <div id="s8" class="scene">
+    <svg width="1080" height="1350">
+      <g id="rays8" transform="translate(540 560)"></g>
+      <circle id="iris" cx="540" cy="560" fill="none" stroke="#2563ff" stroke-width="5"/>
+      <circle id="iris2" cx="540" cy="560" fill="none" stroke="#4fa3ff" stroke-width="2" stroke-dasharray="6 14"/>
+      <g id="star8"><use href="#spark" x="-1" y="-1" width="2" height="2"/></g>
+    </svg>
+    <div id="s8title" class="center">Gemini <b class="grad">AI Pro</b></div>
+    <div id="missBtn" class="bn">মিস করবেন না</div>
+  </div>
+
+  <!-- 9: from us or a trusted seller (38.81 – 44.2) -->
+  <div id="s9" class="scene">
+    <svg width="1080" height="1350">
+      <path id="l1" d="M540 330 C540 450 340 430 340 560" fill="none" stroke="#2563ff" stroke-width="4" stroke-dasharray="1" pathLength="1"/>
+      <path id="l2" d="M540 330 C540 450 740 430 740 560" fill="none" stroke="#4fa3ff" stroke-width="4" pathLength="1"/>
+      <g transform="translate(540 270)"><use href="#spark" x="-70" y="-70" width="140" height="140"/></g>
+    </svg>
+    <div class="glass opt" id="o1" style="left:130px">
+      <div class="ico"><svg width="110" height="110" viewBox="0 0 24 24" style="position:static"><path d="M4 9.5L5.5 4h13L20 9.5" fill="none" stroke="#2563ff" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0" fill="none" stroke="#2563ff" stroke-width="1.8"/><path d="M5.5 12.5V20h13v-7.5M10 20v-4.5h4V20" fill="none" stroke="#2563ff" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div class="t bn">আমাদের থেকে</div>
+    </div>
+    <div class="glass opt" id="o2" style="left:550px">
+      <div class="ico"><svg width="110" height="110" viewBox="0 0 24 24" style="position:static"><circle cx="10" cy="8" r="3.6" fill="none" stroke="#4fa3ff" stroke-width="1.8"/><path d="M3.5 20a6.5 6.5 0 0 1 11.2-4.5" fill="none" stroke="#4fa3ff" stroke-width="1.8" stroke-linecap="round"/><path d="M15 18.2l2 2 4-4.2" fill="none" stroke="#2563ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="t bn">বিশ্বস্ত সেলার</div>
+    </div>
+  </div>
+
+  <!-- 10: verify first (44.35 – 49.3) -->
+  <div id="s10" class="scene">
+    <svg width="1080" height="1350">
+      <g transform="translate(540 470)">
+        <path id="shieldFill" d="M0 -230 L190 -160 V10 C190 140 90 220 0 260 C-90 220 -190 140 -190 10 V-160 Z" fill="url(#gem)"/>
+        <path id="shield" d="M0 -230 L190 -160 V10 C190 140 90 220 0 260 C-90 220 -190 140 -190 10 V-160 Z" fill="none" stroke="#2563ff" stroke-width="10" stroke-linejoin="round" pathLength="1"/>
+        <path id="shieldTick" d="M-75 10 L-20 65 L85 -50" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+      </g>
+    </svg>
+    <div id="check" class="glass">
+      <div class="row bn"><div class="box"><div class="fill" id="b1"><svg width="40" height="40" viewBox="0 0 24 24" style="position:static"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>অ্যাক্টিভেশন</div>
+      <div class="row bn"><div class="box"><div class="fill" id="b2"><svg width="40" height="40" viewBox="0 0 24 24" style="position:static"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>শর্তাবলি</div>
+    </div>
+  </div>
+
+  <!-- 11: money in the right place, end card (49.36 – 55) -->
+  <div id="s11" class="scene">
+    <svg width="1080" height="1350">
+      <g id="target" transform="translate(540 760)">
+        <circle r="250" fill="none" stroke="rgba(37,99,255,.18)" stroke-width="4"/>
+        <circle r="170" fill="none" stroke="rgba(37,99,255,.3)" stroke-width="4"/>
+        <circle r="90" fill="rgba(37,99,255,.1)" stroke="#2563ff" stroke-width="5"/>
+      </g>
+      <circle id="hit" cx="540" cy="760" fill="none" stroke="#2563ff" stroke-width="4"/>
+      <g id="coin">
+        <circle r="78" fill="url(#gem)"/>
+        <circle r="62" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+        <text y="30" text-anchor="middle" font-family="Hind Siliguri" font-weight="700" font-size="88" fill="#fff">৳</text>
+      </g>
+      <g id="endStar"><use href="#spark" x="-1" y="-1" width="2" height="2"/></g>
+    </svg>
+    <div id="endTitle" class="center">Gemini <b class="grad">AI Pro</b></div>
+    <div id="endTag" class="center mono">ACTIVATE · VERIFY · ENJOY</div>
+  </div>
+
+  <div id="prog"><div id="progFill"></div></div>
+  <canvas id="grain" width="590" height="725"></canvas>
+  <div id="vignette"></div>
+  <div id="fade"></div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const inCubic = x => x * x * x;
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => 1 + 2.4 * Math.pow(x - 1, 3) + 1.4 * Math.pow(x - 1, 2);
+const lerp = (a, b, x) => a + (b - a) * x;
+const BN = '০১২৩৪৫৬৭৮৯';
+const bn = n => String(n).replace(/\d/g, d => BN[d]);
+function rng(seed) { return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const DUR = 55;
+
+const r = rng(7), motes = [];
+for (let i = 0; i < 46; i++) {
+  const m = document.createElement('div'); m.className = 'mote'; $('dust').appendChild(m);
+  motes.push({ el: m, x: r() * 1080, y: r() * 1350, s: .5 + r() * 1.6, v: 10 + r() * 30, o: .15 + r() * .45, p: r() * 6 });
+}
+for (const g of ['rays', 'rays8'])
+  for (let i = 0; i < 12; i++) mk('rect', { x: -6, y: -620, width: 12, height: 620, fill: 'url(#rayFade)', transform: `rotate(${i * 30})` }, $(g));
+const orbs = [0, 1, 2].map(i => mk('circle', { r: 11, fill: ['#1d4ed8', '#4fa3ff', '#93c5fd'][i] }, $('orbit')));
+const tokens = [];
+for (let i = 0; i < 18; i++) {
+  const a = r() * Math.PI * 2, d = 380 + r() * 220;
+  tokens.push({ el: mk('circle', { r: 8 + r() * 8, fill: i % 2 ? '#2563ff' : '#4fa3ff' }, $('tokens')), x: 540 + Math.cos(a) * d, y: 620 + Math.sin(a) * d, d: r() * .5 });
+}
+const DAYS = [24, 25, 26, 27, 28, 29];
+DAYS.forEach(d => { const e = document.createElement('div'); e.className = 'day'; e.textContent = bn(d); $('days').appendChild(e); });
+const dayEls = [...$('days').children];
+
+const grain = $('grain').getContext('2d');
+const gimg = grain.createImageData(590, 725);
+
+// Shows a scene between a and b with a soft rise-in and blur-out. Returns visibility 0–1.
+function scene(id, t, a, b, inDur = .45, outDur = .4) {
+  const el = $(id);
+  const i = outCubic(prog(t, a, a + inDur)), o = inCubic(prog(t, b, b + outDur));
+  const v = i * (1 - o);
+  if (v <= .001) { el.style.display = 'none'; return 0; }
+  el.style.display = 'block';
+  el.style.opacity = v;
+  el.style.transform = `translateY(${(1 - i) * 50}px) scale(${(1 + (t - a) * .006) * (1 - o * .06)})`;
+  el.style.filter = v < .99 ? `blur(${(1 - v) * 14}px)` : 'none';
+  return v;
+}
+const pop = (t, a, d = .45) => outBack(prog(t, a, a + d));
+
+// Voice timing measured from the audio's pauses (seconds):
+//  0.00 ভাই · 0.75 একটা গুরুত্বপূর্ণ কথা বলি · 2.62 যারা Google Gemini AI Pro · 4.27 নেওয়ার কথা ভাবছেন
+//  6.64 জিও-এর ১৮ মাসের অফার শেষ হওয়ার পথে · 10.47 এই অফারে পাচ্ছেন · 12.42 Google Flow · 13.2 ১০০০ AI Credits
+// 14.91 Gemini-র প্রিমিয়াম AI Models · 17.11 Veo · 19.25 Nano Banana · 20.35 Deep Research · 21.64 ৫ টেরাবাইট
+// 23.89 শর্ত অনুযায়ী · 25.73 ২৯ অক্টোবর · 26.92 শেষ হওয়ার কথা · 28.39 এরপর একই সুবিধা · 30.4 নিয়মিত প্রাইস
+// 32.96 তাই আমার পরামর্শ · 34.41 Gemini AI Pro · 36.81 সুযোগটা · 37.49 মিস করবেন না
+// 38.81 আমাদের কাছ থেকে · 40.64 বিশ্বস্ত সেলার · 44.35 যেখান থেকেই নেন · 45.51 অ্যাক্টিভেশন · 47.0 শর্তগুলো · 48.0 যাচাই
+// 49.36 কারণ দিনশেষে · 50.53 টাকাটা যেন সঠিক জায়গায় · 53.14 সেটাই সবচেয়ে গুরুত্বপূর্ণ
+window.render = function (t) {
+  // backdrop
+  $('g1').style.transform = `translate(${-200 + Math.sin(t * .7) * 60}px, ${-150 + Math.cos(t * .5) * 50}px)`;
+  $('g2').style.transform = `translate(${480 + Math.cos(t * .6) * 70}px, ${700 + Math.sin(t * .8) * 60}px)`;
+  $('g1').style.opacity = .9; $('g2').style.opacity = .8;
+  const halo = Math.max(prog(t, 2.62, 3.1) * (1 - prog(t, 6.3, 6.8)), prog(t, 33, 33.6) * (1 - prog(t, 38.4, 38.9)), prog(t, 53.1, 53.7));
+  $('g3').style.transform = `translate(160px, 200px) scale(${.9 + Math.sin(t * 2) * .03})`;
+  $('g3').style.opacity = halo * .55;
+  motes.forEach(m => {
+    const y = ((m.y - t * m.v) % 1350 + 1350) % 1350;
+    m.el.style.transform = `translate(${m.x + Math.sin(t + m.p) * 14}px, ${y}px) scale(${m.s})`;
+    m.el.style.opacity = m.o * prog(t, 0, .8);
+  });
+  $('progFill').style.width = (t / DUR * 100) + '%';
+  $('prog').style.opacity = prog(t, 6.6, 7.2) * (1 - prog(t, 53, 53.5));
+
+  // ---- 1–2 intro
+  if (scene('s12', t, -1, 6.3, .01, .4)) {
+    const punch = Math.sin(prog(t, 2.62, 3.0) * Math.PI) * .035;
+    $('s12').style.transform += ` scale(${1 + t * .012 + punch})`;
+    const born = outBack(prog(t, .02, .4));
+    const r1 = outCubic(prog(t, .05, .9));
+    $('ring1').setAttribute('r', r1 * 240);
+    $('ring1').setAttribute('opacity', t > .05 ? (1 - r1) : 0);
+    const rise = outBack(prog(t, .75, 1.15));
+    const retract = inCubic(prog(t, 2.17, 2.55));
+    const stemH = 130 * rise * (1 - retract);
+    const dotY = 600 + lerp(0, 75, outCubic(prog(t, .7, 1.0))) * (1 - retract);
+    const floatY = Math.sin(t * 3) * 5 * prog(t, 1.1, 1.4) * (1 - retract);
+    $('dot').setAttribute('cx', 540);
+    $('dot').setAttribute('cy', dotY + floatY);
+    $('dot').setAttribute('r', 20 * born * (1 - prog(t, 2.62, 2.75)));
+    $('stem').setAttribute('y', dotY + floatY - 45 - stemH);
+    $('stem').setAttribute('height', Math.max(0, stemH));
+    $('stem').style.transform = 'translateX(540px)';
+    $('dot').style.filter = $('stem').style.filter = 'drop-shadow(0 0 22px rgba(37,99,255,.45))';
+    const draw = inOutCubic(prog(t, .85, 1.6));
+    const bOut = inOutCubic(prog(t, 2.1, 2.6));
+    $('badgeRect').setAttribute('stroke-dasharray', `${draw} 1`);
+    $('badge').setAttribute('transform', `translate(540 600) rotate(${lerp(-30, -8, outCubic(prog(t, .85, 1.8))) + bOut * 140}) scale(${1 - bOut})`);
+    $('badge').setAttribute('opacity', 1 - bOut);
+    $('badge').style.filter = 'drop-shadow(0 0 16px rgba(37,99,255,.35))';
+    const s = outBack(prog(t, 2.62, 3.15));
+    const breathe = 1 + Math.sin((t - 3.1) * 3.2) * .025 * prog(t, 3.1, 3.4);
+    $('star').setAttribute('transform', `translate(540 600) rotate(${lerp(-135, 0, outCubic(prog(t, 2.62, 3.3)))}) scale(${s * breathe})`);
+    const r2 = outCubic(prog(t, 2.62, 3.5));
+    $('ring2').setAttribute('r', r2 * 420);
+    $('ring2').setAttribute('opacity', t > 2.62 ? (1 - r2) * .9 : 0);
+    const gem = prog(t, 2.62, 3.1);
+    $('rays').setAttribute('transform', `translate(540 600) rotate(${t * 12}) scale(${outCubic(gem)})`);
+    $('rays').setAttribute('opacity', gem * .9);
+    const ti = outCubic(prog(t, 3.05, 3.7));
+    $('title').style.clipPath = `inset(0 ${(1 - ti) * 50}% 0 ${(1 - ti) * 50}%)`;
+    $('title').style.letterSpacing = lerp(18, -1, ti) + 'px';
+    $('title').style.opacity = ti;
+    $('title').style.filter = `blur(${(1 - ti) * 10}px)`;
+    const tg = prog(t, 3.5, 3.9);
+    $('tag').style.opacity = tg;
+    $('tag').style.transform = `translateY(${(1 - outCubic(tg)) * 20}px)`;
+    const ob = outCubic(prog(t, 4.2, 4.7));
+    orbs.forEach((o, i) => {
+      const a = t * 2.6 + i * 2.094;
+      o.setAttribute('cx', Math.cos(a) * 250 * ob); o.setAttribute('cy', Math.sin(a) * 70 * ob - 10);
+      o.setAttribute('opacity', ob * (Math.sin(a) > 0 ? 1 : .45));
+      o.style.filter = `drop-shadow(0 0 12px ${o.getAttribute('fill')})`;
+    });
+    $('orbit').setAttribute('transform', 'translate(540 600) rotate(-14)');
+  }
+
+  // ---- 3: the 18-month offer is running out
+  if (scene('s3', t, 6.6, 10.05)) {
+    const fill = outCubic(prog(t, 6.7, 7.6));
+    const drain = inOutCubic(prog(t, 8.2, 9.9));
+    const p = Math.max(.001, fill * (1 - drain * .88));
+    const col = drain > 0 ? `rgb(${Math.round(lerp(37, 244, drain))},${Math.round(lerp(99, 63, drain))},${Math.round(lerp(255, 94, drain))})` : '#2563ff';
+    $('arc').setAttribute('stroke-dasharray', `${p} 1`);
+    $('arc').setAttribute('stroke', col);
+    $('arc').style.filter = `drop-shadow(0 0 14px ${col})`;
+    const a = -Math.PI / 2 + p * Math.PI * 2;
+    $('arcHead').setAttribute('cx', 540 + Math.cos(a) * 300);
+    $('arcHead').setAttribute('cy', 600 + Math.sin(a) * 300);
+    $('arcHead').setAttribute('stroke', col);
+    $('s3num').style.transform = `scale(${pop(t, 6.75, .5)})`;
+    $('s3unit').style.opacity = prog(t, 7.1, 7.4);
+    $('s3tag').style.opacity = prog(t, 7.0, 7.4);
+    // urgency: the number ticks on each beat while draining
+    const tick = drain > 0 && drain < 1 ? 1 + Math.max(0, Math.sin(t * Math.PI * 4)) * .03 : 1;
+    $('s3num').style.transform += ` scale(${tick})`;
+  }
+
+  // ---- 4a: Google Flow, 1000 credits a month
+  if (scene('s4', t, 10.47, 14.62)) {
+    const f = pop(t, 12.3, .5);
+    $('flow').style.transform = `translateX(-50%) scale(${lerp(.6, 1, f)})`;
+    $('flow').style.opacity = clamp(f);
+    const c = outCubic(prog(t, 13.15, 14.3));
+    $('credits').textContent = bn(Math.round(1000 * c));
+    $('credits').style.opacity = prog(t, 13.1, 13.3);
+    $('credits').style.transform = `scale(${1 + (c > .99 ? Math.sin(prog(t, 14.3, 14.55) * Math.PI) * .06 : 0)})`;
+    $('creditsLbl').style.opacity = prog(t, 13.6, 14.0);
+    tokens.forEach(k => {
+      const q = inOutCubic(prog(t, 10.6 + k.d, 13.3 + k.d * .6));
+      k.el.setAttribute('cx', lerp(k.x, 540, q)); k.el.setAttribute('cy', lerp(k.y, 620, q));
+      k.el.setAttribute('opacity', prog(t, 10.6 + k.d, 11 + k.d) * (1 - prog(t, 13.1 + k.d * .6, 13.4 + k.d * .6)));
+    });
+  }
+
+  // ---- 4b: premium AI models
+  if (scene('s4b', t, 14.85, 16.85, .35)) {
+    const fan = outBack(prog(t, 15.05, 15.7));
+    $('c1').style.transform = `rotate(${-16 * fan}deg) translateX(${-60 * fan}px)`;
+    $('c2').style.transform = `rotate(${16 * fan}deg) translateX(${60 * fan}px)`;
+    $('c1').style.opacity = $('c2').style.opacity = .55 + fan * .2;
+    $('c3').style.transform = `translateY(${-20 * fan + Math.sin(t * 3) * 6}px)`;
+    $('s4bLbl').style.opacity = prog(t, 15.5, 15.9);
+  }
+
+  // ---- 5: Veo, Nano Banana, Deep Research, 5 TB
+  if (scene('s5', t, 17.0, 23.42, .3)) {
+    const at = [17.11, 19.25, 20.35, 21.64], ends = [19.25, 20.35, 21.64, 23.4];
+    at.forEach((a, i) => {
+      const el = $('t' + (i + 1)), p = pop(t, a, .5);
+      const active = prog(t, a, a + .2) * (1 - prog(t, ends[i], ends[i] + .25));
+      el.style.opacity = t < a ? 0 : clamp(p * 1.4) * lerp(.55, 1, Math.max(active, prog(t, 22.9, 23.2)));
+      el.style.transform = `translateY(${(1 - p) * 60}px) scale(${lerp(.85, 1, p) * (1 + active * .04)})`;
+      el.style.borderColor = `rgba(37,99,255,${.14 + active * .5})`;
+      el.style.boxShadow = `0 40px 80px -30px rgba(37,99,255,${.35 + active * .35}), inset 0 1px 0 #fff`;
+    });
+  }
+
+  // ---- 6: calendar flips to the 29th
+  if (scene('s6', t, 23.89, 27.95)) {
+    // 24 → 29, flipping between 25.0 and 25.75
+    const flips = [25.0, 25.15, 25.3, 25.45, 25.6];
+    dayEls.forEach((d, i) => {
+      const leave = i < 5 ? inOutCubic(prog(t, flips[i], flips[i] + .16)) : 0;
+      const arrived = i === 0 || t >= flips[i - 1];
+      d.style.display = arrived && leave < 1 ? 'block' : 'none';
+      d.style.zIndex = 10 - i;
+      d.style.transform = `rotateX(${leave * -95}deg)`;
+      d.style.color = i === 5 ? '#f43f5e' : '';
+    });
+    const ring = inOutCubic(prog(t, 25.9, 26.7));
+    $('calRing').setAttribute('stroke-dasharray', `${ring} 1`);
+    $('calRing').style.filter = 'drop-shadow(0 0 14px rgba(244,63,94,.45))';
+    $('cal').style.transform = `scale(${1 + Math.sin(prog(t, 25.75, 26.1) * Math.PI) * .04})`;
+    $('s6tag').style.opacity = prog(t, 26.9, 27.3);
+    $('s6tag').style.color = '#f43f5e';
+  }
+
+  // ---- 7: offer switches off, regular price appears
+  if (scene('s7', t, 28.39, 32.6)) {
+    const off = inOutCubic(prog(t, 29.5, 29.9));
+    $('knob').style.left = lerp(230, 20, off) + 'px';
+    $('toggle').style.background = `rgba(${Math.round(lerp(37, 226, off))},${Math.round(lerp(99, 232, off))},${Math.round(lerp(255, 245, off))},${lerp(1, .9, off)})`;
+    $('offLbl').textContent = off > .5 ? 'OFFER · OFF' : 'OFFER · ON';
+    const pr = pop(t, 30.4, .55);
+    $('price').style.opacity = clamp(pr);
+    $('price').style.transform = `translateY(${(1 - pr) * 80}px)`;
+    $('cycle').style.transform = `rotate(${(t - 30.4) * 140}deg)`;
+  }
+
+  // ---- 8: my advice — don't miss it
+  if (scene('s8', t, 32.96, 38.45)) {
+    const s = outBack(prog(t, 33.0, 33.6));
+    $('star8').setAttribute('transform', `translate(540 560) rotate(${lerp(-90, 0, outCubic(prog(t, 33, 33.8)))}) scale(${170 * s * (1 + Math.sin(t * 3) * .02)})`);
+    $('rays8').setAttribute('transform', `translate(540 560) rotate(${t * 12}) scale(${outCubic(prog(t, 33, 33.7))})`);
+    const ti = outCubic(prog(t, 34.4, 35.0)), tout = prog(t, 36.6, 36.9);
+    $('s8title').style.opacity = ti * (1 - tout);
+    $('s8title').style.clipPath = `inset(0 ${(1 - ti) * 50}% 0 ${(1 - ti) * 50}%)`;
+    // the window closes in around the star
+    const iris = inOutCubic(prog(t, 36.8, 37.5));
+    $('iris').setAttribute('r', lerp(780, 270, iris));
+    $('iris').setAttribute('opacity', prog(t, 36.8, 36.95));
+    $('iris').style.filter = 'drop-shadow(0 0 16px rgba(37,99,255,.5))';
+    $('iris2').setAttribute('r', lerp(860, 310, iris));
+    $('iris2').setAttribute('opacity', prog(t, 36.8, 36.95) * .7);
+    $('iris2').setAttribute('transform', `rotate(${t * 20} 540 560)`);
+    const b = pop(t, 37.45, .5);
+    $('missBtn').style.opacity = clamp(b);
+    $('missBtn').style.transform = `translateX(-50%) scale(${lerp(.6, 1, b) * (1 + Math.max(0, Math.sin((t - 37.9) * 7)) * .025 * prog(t, 37.9, 38))})`;
+  }
+
+  // ---- 9: from us, or a trusted seller
+  if (scene('s9', t, 38.81, 43.95)) {
+    const a = pop(t, 38.9, .55), b = pop(t, 40.64, .55);
+    $('o1').style.opacity = clamp(a); $('o1').style.transform = `translateY(${(1 - a) * 70}px)`;
+    $('o2').style.opacity = clamp(b); $('o2').style.transform = `translateY(${(1 - b) * 70}px)`;
+    $('l1').setAttribute('stroke-dasharray', `${inOutCubic(prog(t, 39.0, 39.6))} 1`);
+    $('l2').setAttribute('stroke-dasharray', `${inOutCubic(prog(t, 40.7, 41.3))} 1`);
+    const both = prog(t, 42.0, 42.4);
+    $('o1').style.borderColor = $('o2').style.borderColor = `rgba(37,99,255,${.14 + both * .4})`;
+  }
+
+  // ---- 10: verify activation and terms first
+  if (scene('s10', t, 44.35, 49.0)) {
+    $('shield').setAttribute('stroke-dasharray', `${inOutCubic(prog(t, 44.4, 45.4))} 1`);
+    const sf = prog(t, 48.0, 48.35);
+    $('shieldFill').setAttribute('opacity', sf);
+    $('shieldTick').setAttribute('stroke-dasharray', `${inOutCubic(prog(t, 48.15, 48.6))} 1`);
+    $('shieldTick').setAttribute('opacity', t > 48.15 ? 1 : 0);
+    const c = pop(t, 45.0, .5);
+    $('check').style.opacity = clamp(c); $('check').style.transform = `translateY(${(1 - c) * 60}px)`;
+    [['b1', 45.55], ['b2', 47.0]].forEach(([id, at]) => {
+      const p = pop(t, at, .35);
+      $(id).style.transform = `scale(${p})`; $(id).style.opacity = clamp(p * 3);
+    });
+  }
+
+  // ---- 11: money in the right place → end card
+  if (scene('s11', t, 49.36, 60)) {
+    const tgt = pop(t, 49.45, .6), tOut = inCubic(prog(t, 53.0, 53.4));
+    $('target').setAttribute('transform', `translate(540 760) scale(${tgt * (1 - tOut)})`);
+    // coin arcs in and lands on "সঠিক জায়গায়"
+    const q = prog(t, 50.6, 51.9);
+    const cx = lerp(880, 540, outCubic(q)), cy = lerp(160, 760, q * q);
+    const land = t > 51.9 ? Math.sin(prog(t, 51.9, 52.2) * Math.PI) * 18 : 0;
+    $('coin').setAttribute('transform', `translate(${cx} ${cy - land}) rotate(${(1 - q) * -260}) scale(${(t < 50.6 ? 0 : 1) * (1 - tOut)})`);
+    $('coin').style.filter = 'drop-shadow(0 20px 30px rgba(37,99,255,.4))';
+    const h = outCubic(prog(t, 51.9, 52.7));
+    $('hit').setAttribute('r', 90 + h * 300);
+    $('hit').setAttribute('opacity', t > 51.9 ? (1 - h) : 0);
+    // end card
+    const e = outBack(prog(t, 53.15, 53.75));
+    $('endStar').setAttribute('transform', `translate(540 600) rotate(${lerp(-120, 0, outCubic(prog(t, 53.15, 53.9)))}) scale(${150 * e * (1 + Math.sin(t * 3) * .02)})`);
+    const et = outCubic(prog(t, 53.5, 54.1));
+    $('endTitle').style.opacity = et;
+    $('endTitle').style.clipPath = `inset(0 ${(1 - et) * 50}% 0 ${(1 - et) * 50}%)`;
+    $('endTitle').style.letterSpacing = lerp(18, -1, et) + 'px';
+    $('endTag').style.opacity = prog(t, 53.9, 54.3);
+  }
+
+  const gr = rng(1 + Math.floor(t * 30));
+  for (let i = 0; i < gimg.data.length; i += 4) {
+    const v = gr() * 255; gimg.data[i] = gimg.data[i + 1] = gimg.data[i + 2] = v; gimg.data[i + 3] = 255;
+  }
+  grain.putImageData(gimg, 0, 0);
+  $('fade').style.opacity = 1 - prog(t, 0, .2) + prog(t, 54.7, 55);
+};
+render(0);
+</script>
+</body>
+</html>
