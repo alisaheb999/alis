@@ -1,0 +1,294 @@
+/* ==========================================================================
+   GHOST — Design System Extension
+   Carries the GHOST CACHE look (design-tokens.css + ghost-design-system.css)
+   over to GHOST COMMAND, Ghostae Text (toolkit) and GHOST TOOLS.
+   Presentation only. Loaded last, never changes markup or logic.
+   ========================================================================== */
+
+/* ── Shared shell ───────────────────────────────────────────────────────── */
+body,
+.ghost-body,
+.panel,
+.tools-shell,
+.toolkit-shell,
+.command-shell {
+  font-family: var(--font-base);
+  font-size: var(--size-label);
+  color: var(--c-text-primary);
+  background: var(--c-bg);
+}
+
+/* Scrollbars match CACHE */
+.tools-shell *::-webkit-scrollbar,
+.toolkit-shell *::-webkit-scrollbar,
+.command-shell *::-webkit-scrollbar,
+.tk-body::-webkit-scrollbar,
+.tool-body::-webkit-scrollbar,
+.chat-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.tools-shell *::-webkit-scrollbar-thumb,
+.toolkit-shell *::-webkit-scrollbar-thumb,
+.command-shell *::-webkit-scrollbar-thumb,
+.tk-body::-webkit-scrollbar-thumb,
+.tool-body::-webkit-scrollbar-thumb,
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+.tools-shell *::-webkit-scrollbar-track,
+.toolkit-shell *::-webkit-scrollbar-track,
+.command-shell *::-webkit-scrollbar-track,
+.chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── Headers / toolbars ─────────────────────────────────────────────────── */
+.toolkit-header,
+.command-header,
+.tk-header,
+.panel-header {
+  background: var(--c-panel);
+  border-bottom: 1px solid var(--c-border);
+  padding: var(--sp) calc(var(--sp) * 1.5);
+  gap: var(--sp);
+}
+.tools-header h1,
+.toolkit-header h1,
+.command-header h1,
+.panel-header h1,
+.panel-title {
+  font-size: var(--size-title);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.panel-subtitle,
+.tools-header p,
+.command-header p {
+  font-size: var(--size-meta);
+  color: var(--c-text-secondary);
+  margin: 2px 0 0;
+}
+
+/* ── Tabs ───────────────────────────────────────────────────────────────── */
+.tab-bar,
+.tk-tabs,
+.tools-tabs,
+.mode-tabs {
+  gap: 2px;
+  background: var(--c-panel);
+  border-bottom: 1px solid var(--c-border);
+  padding: 0 calc(var(--sp) * 0.75);
+}
+.tab-bar .tab,
+.tk-tabs .tk-tab,
+.tools-tabs .tab,
+.mode-tabs button {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--c-text-secondary);
+  font-size: var(--size-label);
+  font-weight: var(--font-weight-medium);
+  min-height: 32px;
+  padding: 0 calc(var(--sp) * 1.25);
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.tab-bar .tab:hover,
+.tk-tabs .tk-tab:hover,
+.tools-tabs .tab:hover,
+.mode-tabs button:hover {
+  color: var(--c-text-primary);
+  background: rgba(255, 255, 255, 0.03);
+}
+.tab-bar .tab.active,
+.tk-tabs .tk-tab.active,
+.tools-tabs .tab.active,
+.mode-tabs button.active {
+  color: var(--c-text-primary);
+  background: transparent;
+  border-bottom-color: var(--c-accent);
+}
+
+/* ── Cards / sections ───────────────────────────────────────────────────── */
+.tool-card,
+.tk-section,
+.tools-section,
+.pm-card,
+.card,
+.section-box {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: calc(var(--sp) * 1.5);
+}
+.tool-card:hover,
+.pm-card:hover {
+  background: var(--c-card-hover);
+}
+.section-label,
+.tk-section-title,
+.tool-card h2,
+.tool-card h3 {
+  font-size: var(--size-meta);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-secondary);
+  margin: 0 0 var(--sp);
+}
+
+/* ── Controls ───────────────────────────────────────────────────────────── */
+.tools-shell button,
+.toolkit-shell button,
+.command-shell button,
+.tk-btn,
+.tool-btn {
+  font-family: var(--font-base);
+  font-size: var(--size-label);
+  font-weight: var(--font-weight-medium);
+  min-height: 30px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border);
+  background: #333338;
+  color: var(--c-text-primary);
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+.tools-shell button:hover,
+.toolkit-shell button:hover,
+.command-shell button:hover,
+.tk-btn:hover,
+.tool-btn:hover {
+  background: #3C3C43;
+}
+.tools-shell button:active,
+.toolkit-shell button:active,
+.command-shell button:active {
+  transform: translateY(1px);
+}
+.btn-primary,
+.tk-btn.primary,
+.tool-btn.primary,
+button.accent {
+  background: var(--c-accent);
+  border-color: transparent;
+  color: #fff;
+}
+.btn-primary:hover,
+.tk-btn.primary:hover,
+.tool-btn.primary:hover,
+button.accent:hover {
+  background: #1f6fd0;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="number"],
+select,
+textarea {
+  font-family: var(--font-base);
+  font-size: var(--size-label);
+  color: var(--c-text-primary);
+  background: #202024;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  min-height: 30px;
+  padding: 0 calc(var(--sp) * 0.75);
+}
+textarea {
+  padding: calc(var(--sp) * 0.75);
+  line-height: 1.5;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 2px rgba(38, 128, 235, 0.22);
+}
+
+input[type="range"] {
+  accent-color: var(--c-accent);
+}
+
+/* ── GHOST COMMAND chat ─────────────────────────────────────────────────── */
+.chat-msg,
+.msg-bubble {
+  border-radius: var(--radius-lg);
+  font-size: var(--size-label);
+  line-height: 1.55;
+  box-shadow: var(--shadow-sm);
+}
+.chat-msg.user .msg-bubble,
+.msg-bubble.user {
+  background: var(--c-accent);
+  color: #fff;
+}
+.chat-msg.assistant .msg-bubble,
+.msg-bubble.assistant {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+}
+.msg-bubble pre,
+.msg-bubble code {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: var(--size-meta);
+  background: #191A1D;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+}
+.composer,
+.chat-composer {
+  background: var(--c-panel);
+  border-top: 1px solid var(--c-border);
+  padding: var(--sp);
+  gap: var(--sp);
+}
+
+/* ── Ghostae Text preset cards ────────────────────────────────────────────── */
+.tk-card,
+.preset-card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: background 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.tk-card:hover,
+.preset-card:hover {
+  background: var(--c-card-hover);
+  box-shadow: var(--shadow-md);
+}
+.tk-card .tk-card-title,
+.preset-card .title {
+  font-size: var(--size-meta);
+  font-weight: var(--font-weight-medium);
+  color: var(--c-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Status dot (CACHE parity) ──────────────────────────────────────────── */
+.ghost-conn-status,
+.connection-pill {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--c-text-secondary);
+  font-size: var(--size-meta);
+  padding: 0;
+  gap: 6px;
+}
+
+/* ── Motion / accessibility ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

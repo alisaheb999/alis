@@ -1,0 +1,293 @@
+/* ==========================================================================
+   GHOST — Expression Library (2026)
+   Same-to-same port of the user's `enhanced_expression_library_2.html` mockup:
+   icon-only 70×70 cards, hover popover with title / description / Apply / Copy.
+   Loaded after every other stylesheet so it always wins.
+   ========================================================================== */
+
+#exprGrid.tk-expr-grid,
+.tk-expr-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 8px;
+    overflow: visible !important;
+}
+
+/* Compact panel header above the icon grid. */
+.tk-expr-toolbar {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    margin: 0 0 14px;
+    padding: 7px 10px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+}
+.tk-expr-toolbar > label { display: none; }
+.tk-expr-toolbar .tk-select {
+    min-width: 170px;
+    max-width: min(320px, 100%);
+    height: 26px;
+    padding: 0 26px 0 8px;
+    color: #fff;
+    background: #27272a;
+    border: 1px solid #52525b;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.tk-expr-toolbar .tk-expr-hint {
+    margin-left: auto;
+    color: #a1a1aa;
+    font-size: 10px;
+    line-height: 1.3;
+}
+@media (max-width: 440px) {
+    .tk-expr-toolbar { align-items: flex-start; flex-direction: column; }
+    .tk-expr-toolbar .tk-select { width: 100%; max-width: none; }
+    .tk-expr-toolbar .tk-expr-hint { margin-left: 0; }
+}
+
+.tk-expr-card {
+    position: relative;
+    width: 70px !important;
+    height: 70px !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #18181b !important;
+    border: 1px solid #27272a !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    overflow: visible !important;
+    box-shadow: none !important;
+}
+
+.tk-expr-card:hover,
+.tk-expr-card:focus-within {
+    background: #202023 !important;
+    border-color: #3b82f6 !important;
+    z-index: 50;
+}
+
+/* ── icon ─────────────────────────────────────────────────────────────── */
+.tk-expr-icon {
+    width: 26px;
+    height: 26px;
+    color: #f4f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.tk-expr-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.tk-expr-card:hover .tk-expr-icon,
+.tk-expr-card:focus-within .tk-expr-icon { color: #ffffff; }
+
+/* Previews play automatically; the toolbar pause button can stop them. */
+body:not(.expr-motion-paused) .tk-expr-card.expr-preview-active .tk-expr-icon.fx-wiggle { animation: ghExprWiggle 1s ease-in-out infinite !important; }
+body:not(.expr-motion-paused) .tk-expr-card.expr-preview-active .tk-expr-icon.fx-spin   { animation: ghExprSpin 1.6s linear infinite !important; }
+body:not(.expr-motion-paused) .tk-expr-card.expr-preview-active .tk-expr-icon.fx-bounce { animation: ghExprBounce 1s ease-in-out infinite !important; }
+body:not(.expr-motion-paused) .tk-expr-card.expr-preview-active .tk-expr-icon.fx-pulse  { animation: ghExprPulse 1.1s ease-in-out infinite !important; }
+body:not(.expr-motion-paused) .tk-expr-card.expr-preview-active .tk-expr-icon.fx-slide  { animation: ghExprSlide 1.1s ease-in-out infinite !important; }
+
+@keyframes ghExprWiggle { 0%,100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
+@keyframes ghExprSpin   { to { transform: rotate(360deg); } }
+@keyframes ghExprBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes ghExprPulse  { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18); opacity: .75; } }
+@keyframes ghExprSlide  { 0%,100% { transform: translateX(-4px); } 50% { transform: translateX(4px); } }
+
+/* ── hover popover ────────────────────────────────────────────────────── */
+.tk-expr-pop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    width: 234px;
+    padding: 14px;
+    background: #18181b;
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .55);
+    z-index: 120;
+    text-align: left;
+    cursor: default;
+}
+.tk-expr-card:hover .tk-expr-pop,
+.tk-expr-card:focus-within .tk-expr-pop { display: block; }
+
+/* flip toward the panel when the card sits near the right / bottom edge */
+.tk-expr-card.pop-left .tk-expr-pop { left: auto; right: 100%; margin-left: 0; margin-right: 10px; }
+.tk-expr-card.pop-up   .tk-expr-pop { top: auto; bottom: 0; }
+
+.tk-expr-pop h3 {
+    display: block !important;
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.tk-expr-pop .tk-expr-desc {
+    margin: 0 0 6px;
+    font-size: 10px;
+    line-height: 1.45;
+    color: #a1a1aa;
+}
+.tk-expr-pop .tk-expr-code {
+    display: block;
+    margin: 0 0 10px;
+    padding: 6px 7px;
+    max-height: 54px;
+    overflow: hidden;
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 9.5px;
+    line-height: 1.4;
+    color: #60a5fa;
+    background: #0c0c0c;
+    border: 1px solid #27272a;
+    border-radius: 7px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.tk-expr-pop .tk-expr-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin: 0 0 8px;
+}
+.tk-expr-pop .tk-expr-target {
+    opacity: 1 !important;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #71717a;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+.tk-expr-pop .tk-vote-float,
+.tk-expr-pop .tk-vote {
+    opacity: 1 !important;
+    position: static !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.tk-expr-pop .tk-vote button,
+.tk-expr-pop .tk-vote-float button {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 3px !important;
+    color: #71717a;
+}
+.tk-expr-pop .tk-vote button:hover,
+.tk-expr-pop .tk-vote-float button:hover { color: #fff; }
+
+.tk-expr-pop .tk-expr-actions {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+    gap: 6px;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+.tk-expr-pop .tk-expr-actions button {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: 24px;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1;
+    font-size: 10px;
+    font-weight: 600;
+    border: 0 !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+}
+.tk-expr-pop .tk-expr-actions button.primary-button { background: #2563eb !important; color: #fff !important; }
+.tk-expr-pop .tk-expr-actions button.primary-button:hover { background: #3b82f6 !important; }
+.tk-expr-pop .tk-expr-actions button.ghost-button { background: #333 !important; color: #f4f4f5 !important; }
+.tk-expr-pop .tk-expr-actions button.ghost-button:hover { background: #3f3f46 !important; }
+
+/* compact mode keeps the same card, just tighter */
+body.ghost-compact .tk-expr-card { width: 56px !important; height: 56px !important; }
+body.ghost-compact .tk-expr-icon svg { width: 20px; height: 20px; }
+/* The global compact rule hides card headings.  The expression title lives
+   inside the popover, so restore it here or compact mode appears blank. */
+body.ghost-compact .tk-expr-pop h3 { display: block !important; }
+
+/* Exact reference-page header and surface treatment. */
+#tab-expression.tools-tab-panel { padding: 16px; background: #0c0c0c; }
+.tk-expr-toolbar {
+    justify-content: space-between;
+    min-height: 42px;
+    margin: 0 0 24px;
+    padding: 8px 16px;
+}
+.tk-expr-toolbar > label,
+.tk-expr-toolbar .tk-expr-hint { display: none; }
+.tk-expr-reference-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.tk-expr-reference-search {
+    width: 0; min-width: 0; height: 26px; padding: 0; opacity: 0;
+    color: #fff; background: #27272a; border: 1px solid transparent;
+    border-radius: 5px; font-size: 11px;
+    transition: width .18s ease, padding .18s ease, opacity .18s ease;
+}
+.tk-expr-reference-search:focus { width: 150px; padding: 0 8px; opacity: 1; border-color: #52525b; outline: none; }
+.tk-expr-reference-icon {
+    width: 24px; height: 24px; padding: 0; color: #a1a1aa;
+    background: transparent; border: 0; border-radius: 4px;
+    font-size: 19px; line-height: 1; cursor: pointer;
+}
+.tk-expr-reference-icon:hover { color: #fff; background: #27272a; }
+.tk-expr-reference-pro {
+    height: 24px; padding: 0 10px; color: #fff; background: #2563eb;
+    border: 0; border-radius: 4px; font-size: 10px; font-weight: 700; cursor: pointer;
+}
+.tk-expr-reference-pro:hover { background: #3b82f6; }
+.tk-expr-pop { width: 250px; padding: 16px; }
+body.expr-motion-paused .tk-expr-icon { animation-play-state: paused !important; }
+/* A hovered card is always allowed to preview, even if it was just outside
+   the observer root when the pointer entered it. */
+body:not(.expr-motion-paused) .tk-expr-card:hover .tk-expr-icon { animation-play-state: running; }
+@media (max-width: 440px) {
+    .tk-expr-reference-actions { width: 100%; justify-content: flex-end; }
+    .tk-expr-reference-search:focus { width: 120px; }
+}
+
+/* CEP docks can be much narrower than a browser window.  Keep the toolbar
+   and detail popover within that small surface instead of clipping them. */
+@media (max-width: 360px) {
+    #tab-expression.tools-tab-panel { padding: 8px; }
+    .tk-expr-toolbar { margin-bottom: 12px; padding: 7px 8px; }
+    .tk-expr-toolbar .tk-select { min-width: 0; width: 100%; }
+    .tk-expr-grid { gap: 6px !important; }
+    .tk-expr-pop {
+        width: calc(100vw - 28px);
+        max-width: 250px;
+        max-height: calc(100vh - 24px);
+        overflow: auto;
+    }
+}

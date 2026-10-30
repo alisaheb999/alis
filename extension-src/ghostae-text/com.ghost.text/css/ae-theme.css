@@ -1,0 +1,289 @@
+/* ============================================================
+   GHOST — After Effects native theme (v3.5.3)
+   Loaded LAST so it aligns every panel 1:1 with the web preview
+   palette shown on the landing page (AE default dark UI).
+   ============================================================ */
+:root,
+html body {
+    --bg: #1d1d1d;
+    --panel: #232323;
+    --panel-2: #2b2b2b;
+    --panel-3: #333333;
+    --border: #3a3a3a;
+    --border-soft: #2f2f2f;
+    --text: #d6d6d6;
+    --muted: #8c8c8c;
+    --text-dim: #a0a0a0;
+    --accent: #2680eb;
+    --accent-2: #2680eb;
+    --accent-soft: rgba(38, 128, 235, .15);
+    --accent-grad: linear-gradient(135deg, #378ef0 0%, #2680eb 60%, #1a5fbf 100%);
+    --ok: #34d399;
+    --warn: #f59e0b;
+    --danger: #e34850;
+}
+
+html, body {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---- shells / surfaces ---- */
+.command-shell,
+.tools-shell,
+.app-shell,
+main {
+    background: var(--bg) !important;
+}
+
+.command-header,
+.tools-header,
+.app-header,
+header {
+    background: var(--panel) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.provider-bar,
+.context-chip,
+.command-footer,
+.tools-footer,
+.app-footer,
+footer {
+    background: var(--panel) !important;
+    border-color: var(--border) !important;
+    color: var(--text-dim) !important;
+}
+
+.sessions-panel,
+.plan-preview,
+.result-panel,
+.expression-card,
+.card,
+.tool-card,
+.panel,
+.modal-card {
+    background: var(--panel) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+}
+
+/* ---- typography ---- */
+h1, h2, h3, strong, b { color: var(--text) !important; }
+p, span, label, li, small { color: inherit; }
+.muted, .provider-label, .plan-head span { color: var(--muted) !important; }
+
+/* ---- controls ---- */
+button,
+select,
+input[type="text"],
+input[type="number"],
+input[type="search"],
+textarea {
+    background: var(--panel-2) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+}
+
+button:hover,
+select:hover {
+    background: var(--panel-3) !important;
+    border-color: #4a4a4a !important;
+    color: #fff !important;
+}
+
+button:focus-visible,
+select:focus,
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 1px var(--accent) !important;
+}
+
+button.primary,
+button[type="submit"],
+.composer-actions #runCommandButton,
+.plan-actions button.primary,
+.expression-actions button.primary {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+button.primary:hover,
+button[type="submit"]:hover,
+.composer-actions #runCommandButton:hover {
+    background: #378ef0 !important;
+    border-color: #378ef0 !important;
+}
+
+button:disabled { opacity: .5 !important; }
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] { accent-color: var(--accent) !important; }
+
+/* ---- chips, badges, states ---- */
+.connection-badge {
+    background: var(--panel-2) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-dim) !important;
+    border-radius: 999px !important;
+}
+.connection-badge.ready span,
+.context-dot { background: var(--ok) !important; box-shadow: none !important; }
+.connection-badge.pending span { background: var(--warn) !important; }
+.connection-badge.error span { background: var(--danger) !important; }
+
+.provider-key-badge {
+    background: rgba(227, 72, 80, .14) !important;
+    color: #f08c92 !important;
+    border-radius: 3px !important;
+}
+.provider-key-badge.ready {
+    background: rgba(52, 211, 153, .14) !important;
+    color: #6ee7b7 !important;
+}
+
+/* ---- lists / rows ---- */
+.sessions-list li:hover,
+.result-list > *:hover { background: var(--panel-3) !important; }
+.sessions-list li.active,
+.selected,
+.is-active { background: var(--accent-soft) !important; color: #fff !important; }
+
+/* ---- conversation ---- */
+.conversation { background: var(--bg) !important; }
+.message {
+    background: var(--panel) !important;
+    border: 1px solid var(--border-soft) !important;
+    border-radius: 4px !important;
+    color: var(--text) !important;
+}
+.message.user { background: var(--accent-soft) !important; border-color: rgba(38, 128, 235, .35) !important; }
+.message-label { color: var(--accent) !important; letter-spacing: .08em; }
+.message.streaming p::after { color: var(--accent) !important; }
+
+/* ---- quick actions ---- */
+.quick-actions { background: var(--panel) !important; border-color: var(--border) !important; }
+.quick-actions button {
+    background: var(--panel-2) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-dim) !important;
+}
+.quick-actions button:hover {
+    background: var(--accent-soft) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
+}
+
+/* ---- composer ---- */
+.composer { background: var(--panel) !important; border-top: 1px solid var(--border) !important; }
+.composer textarea { background: var(--bg) !important; }
+
+/* ---- code ---- */
+code, pre, .plan-list code {
+    background: #161616 !important;
+    color: #8ab4f8 !important;
+    border-radius: 3px !important;
+}
+
+/* ---- scrollbars (AE style) ---- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #4a4a4a; border: 2px solid var(--bg); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #5a5a5a; }
+
+/* ── Remove BG controls (shared across CACHE / COMMAND / TOOLS) ───────── */
+.removebg-button,
+.removebg-chip,
+.removebg-icon,
+.removebg-fab {
+    font: inherit;
+    color: #fff;
+    background: linear-gradient(180deg, #2f8ff0, #2680eb);
+    border: 1px solid #1b6fd0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: filter 120ms ease, transform 120ms ease;
+}
+.removebg-button,
+.removebg-chip,
+.removebg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 1;
+}
+.removebg-glyph {
+    width: 18px;
+    height: 18px;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+.removebg-fab .removebg-glyph { width: 22px; height: 22px; }
+.removebg-icon.alt { background: linear-gradient(180deg, #3d3d3d, #333); border-color: #4a4a4a; }
+
+.removebg-button:hover,
+.removebg-chip:hover,
+.removebg-icon:hover,
+.removebg-fab:hover { filter: brightness(1.12); }
+.removebg-button:disabled,
+.removebg-chip:disabled,
+.removebg-icon:disabled,
+.removebg-fab:disabled { opacity: 0.55; cursor: progress; }
+
+.removebg-fab {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.removebg-fab span { letter-spacing: 0.02em; }
+
+.ghost-removebg-toast {
+    position: fixed;
+    right: 14px;
+    bottom: 62px;
+    z-index: 80;
+    max-width: 320px;
+    padding: 9px 13px;
+    font-size: 12px;
+    color: #e8e8e8;
+    background: #232323;
+    border: 1px solid #3a3a3a;
+    border-left: 3px solid #2680eb;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+.ghost-removebg-toast.error { border-left-color: #e34850; }
+#removeBgStatus.error { color: #f2777a; }
+.tool-input {
+    width: 100%;
+    padding: 7px 9px;
+    color: #e8e8e8;
+    background: #1d1d1d;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    font: inherit;
+}
+.tool-input:focus { outline: none; border-color: #2680eb; }
+.tool-field { display: block; margin-bottom: 5px; font-size: 11px; color: #9a9a9a; }

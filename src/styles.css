@@ -1,0 +1,1096 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: "Ghostae Payment Bangla";
+  src: url("/fonts/payment-bengali-light.woff2") format("woff2"), url("/fonts/payment-bengali-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ghostae Payment Bangla";
+  src: url("/fonts/payment-bengali-regular.woff2") format("woff2"), url("/fonts/payment-bengali-regular.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base layout - Light mode default */
+:root {
+  --background: #F5F6F8;
+  --foreground: #1D1D1F;
+  --surface: #FFFFFF;
+  --primary: #007AFF;
+  --primary-hover: #0062CC;
+  --border: rgba(60, 60, 67, 0.12);
+  --text-heading: #1D1D1F;
+  --text-body: #1D1D1F;
+  --text-muted: rgba(60, 60, 67, 0.60);
+  --media-surface: #05070D;
+  --media-foreground: #F7FAFF;
+  --text-purchase-gradient: linear-gradient(115deg, var(--media-surface) 0%, oklch(0.28 0.075 258) 48%, var(--primary-hover) 100%);
+  --text-ae-surface: oklch(0.18 0.08 285);
+  --text-ae-ink: oklch(0.8 0.13 285);
+  --text-pr-surface: oklch(0.2 0.085 295);
+  --text-pr-ink: oklch(0.83 0.13 295);
+  --text-offer-surface: color-mix(in oklab, var(--primary) 10%, var(--surface));
+  --text-purchase-shadow: 0 8px 22px color-mix(in oklab, var(--primary) 12%, transparent);
+  --radius-premium: 24px;
+  --shadow-premium: 0 12px 40px -10px rgba(0, 0, 0, 0.08);
+  --surface-2: #F1F3F7;
+  --line: rgba(60, 60, 67, 0.12);
+  --muted-fg: rgba(60, 60, 67, 0.72);
+  --faint: rgba(60, 60, 67, 0.45);
+  --success: #1F9D55;
+  --warning: #D97706;
+  --danger: #E34850;
+  --payment-backdrop: rgba(5, 7, 13, 0.65);
+  --payment-instruction-surface: #142B45;
+  --payment-logo-surface: #FFFFFF;
+  --payment-logo-text: #1D1D1F;
+  --payment-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.payment-overlay { background: var(--payment-backdrop); }
+@media (max-width: 639px) {
+  .payment-overlay { background: var(--background); }
+}
+.media-state-host { position: relative; }
+img[data-gif-slot]:not([src]), img[data-media-state="idle"], img[data-media-state="loading"], img[data-media-state="error"] { opacity: 0; }
+.media-state-overlay { min-height: 24px; }
+.payment-dialog, .payment-tooltip {
+  font-family: "Ghostae Payment Bangla", -apple-system, system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+.payment-dialog { box-shadow: var(--payment-shadow); }
+.account-typography { font-family: "Ghostae Payment Bangla", -apple-system, system-ui, sans-serif; font-weight: 300; letter-spacing: 0; }
+.account-typography :is(button, input, a, h1, h2, h3) { letter-spacing: 0; }
+.payment-dialog :is(button, input, a) { letter-spacing: 0; }
+.payment-dialog .payment-input { color: var(--foreground); }
+.payment-dialog .payment-input::placeholder { color: var(--muted-fg); }
+.payment-dialog .payment-logo, .payment-dialog .payment-method {
+  background: var(--payment-logo-surface);
+}
+.payment-dialog .payment-method:hover { background: var(--payment-logo-surface); }
+.payment-dialog .payment-method-label { color: var(--payment-logo-text); }
+.payment-dialog .payment-method-check { color: var(--primary); }
+.payment-dialog .payment-instructions {
+  background: var(--payment-instruction-surface);
+  color: var(--media-foreground);
+}
+.payment-dialog .payment-instructions :is(h3, li, span) { color: var(--media-foreground); }
+
+html.dark {
+  --background: #080D1C;
+  --foreground: #F5F5F7;
+  --surface: #101728;
+  --primary: #0A84FF;
+  --primary-hover: #409CFF;
+  --border: rgba(84, 84, 88, 0.36);
+  --text-heading: #FFFFFF;
+  --text-body: #F5F5F7;
+  --text-muted: rgba(235, 235, 245, 0.60);
+  --media-surface: #05070D;
+  --media-foreground: #F7FAFF;
+  --shadow-premium: 0 24px 80px rgba(0, 0, 0, 0.4);
+  --surface-2: #162036;
+  --line: rgba(148, 163, 184, 0.14);
+  --muted-fg: rgba(235, 235, 245, 0.62);
+  --faint: rgba(235, 235, 245, 0.38);
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+}
+
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-media-surface: var(--media-surface);
+  --color-media-foreground: var(--media-foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-border: var(--border);
+  --color-muted-fg: var(--muted-fg);
+  --color-faint: var(--faint);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+}
+
+:root {
+  --radius: 0.625rem;
+}
+
+/* Moved logic to top of file for safety */
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+}
+
+/* Bengali typography — light weight Hind Siliguri per user preference */
+html.lang-bn body {
+  font-family: "Hind Siliguri", system-ui, sans-serif;
+  font-weight: 300;
+}
+html.lang-bn h1,
+html.lang-bn h2,
+html.lang-bn h3,
+html.lang-bn h4,
+html.lang-bn strong,
+html.lang-bn .font-semibold,
+html.lang-bn .font-bold {
+  font-weight: 600;
+}
+
+/* Custom scrollbar — Blue and Black */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(30, 58, 138, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+
+/* Absolute background lock for main surfaces — deep navy, never pure black.
+   Intentionally dark/inverted blocks (.ghost-dark-panel) and elements that
+   carry their own surface opt out so no colour leaks at section boundaries. */
+html.dark body:not(.tx-raw *),
+html.dark .ghost-shell-root:not(.tx-raw *),
+html.dark section:not(.ghost-dark-panel):not([data-surface]):not(.tx-raw *) {
+  background-color: #080D1C !important;
+  background-image: none !important;
+}
+
+html:not(.dark) body:not(.tx-raw *),
+html:not(.dark) .ghost-shell-root:not(.tx-raw *),
+html:not(.dark) .ghost-shell-container:not(.tx-raw *),
+html:not(.dark) section:not(.ghost-dark-panel):not([data-surface]):not(.tx-raw *) {
+  background-color: #F5F6F8 !important;
+}
+
+/* Light mode specific visibility fixes */
+html.light .ghost-shell-root:not(.tx-raw *),
+html.light main:not(.tx-raw *),
+html.light .ghost-shell-container:not(.tx-raw *),
+html.light section:not(.ghost-dark-panel):not([data-surface]):not(.tx-raw *),
+html.light .snap-start:not(.ghost-dark-panel):not([data-surface]):not(.tx-raw *) {
+  background-color: #F5F6F8 !important;
+}
+
+/* Section boundaries: no sub-pixel gap or colour bleed between stacked
+   full-width blocks during light/dark transition. */
+section,
+.ghost-shell-container {
+  transition: background-color 300ms ease;
+}
+
+
+html.light h1:not([class*="text-"]):not(.tx-raw *),
+html.light h2:not([class*="text-"]):not(.tx-raw *),
+html.light h3:not([class*="text-"]):not(.tx-raw *),
+html.light h4:not([class*="text-"]):not(.tx-raw *),
+html.light p:not([class*="text-"]):not(.tx-raw *),
+html.light li:not([class*="text-"]):not(.tx-raw *),
+html.light td:not([class*="text-"]):not(.tx-raw *),
+html.light th:not([class*="text-"]):not(.tx-raw *),
+html.light dt:not([class*="text-"]):not(.tx-raw *),
+html.light dd:not([class*="text-"]):not(.tx-raw *),
+html.light label:not([class*="text-"]):not(.tx-raw *),
+html.light input:not(.tx-raw *),
+html.light textarea:not(.tx-raw *),
+html.light select:not(.tx-raw *) {
+  color: #000000;
+}
+
+/* Base Light Mode Text Color - General */
+html.light body,
+html.light main {
+  color: #1D1D1F;
+}
+
+
+/* Light mode: only unstyled text containers get forced black. Elements that
+   carry an explicit Tailwind colour utility keep their own colour so hover
+   states, gradients and on-blue text all work. */
+html.light .glass-chrome > *:not([class*="text-"]) {
+  color: #000000;
+}
+
+
+/* 2 · Material & Depth — Liquid Glass, Applied Correctly */
+.glass-chrome {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px) saturate(150%);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+html.dark .glass-chrome {
+  background: rgba(8, 13, 28, 0.94);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Scrolled header: opaque, blurred and lifted so page text never bleeds through */
+#main-header.nav-scrolled {
+  background: rgba(246, 248, 252, 0.86);
+  backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: 0 8px 30px -18px rgba(11, 16, 32, 0.35) !important;
+}
+
+html.dark #main-header.nav-scrolled {
+  background: rgba(8, 13, 28, 0.88);
+  box-shadow: 0 8px 30px -18px rgba(0, 0, 0, 0.7) !important;
+}
+
+
+/* Content layer — cards, product tiles, list rows: solid, never glass */
+.content-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 16px 32px -16px rgba(0, 0, 0, 0.10);
+}
+
+html.dark .content-card {
+  background: rgba(10, 15, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Typography Scale — Apple Standard */
+.text-large-title { font-size: 2.125rem; line-height: 2.5625rem; font-weight: 700; letter-spacing: -0.02em; }
+.text-title-1 { font-size: 1.75rem; line-height: 2.125rem; font-weight: 700; letter-spacing: -0.02em; }
+.text-title-2 { font-size: 1.375rem; line-height: 1.75rem; font-weight: 700; letter-spacing: -0.01em; }
+.text-title-3 { font-size: 1.25rem; line-height: 1.5625rem; font-weight: 600; }
+.text-headline { font-size: 1.0625rem; line-height: 1.375rem; font-weight: 600; }
+.text-body-apple { font-size: 1.0625rem; line-height: 1.5rem; font-weight: 400; }
+.text-callout { font-size: 1rem; line-height: 1.3125rem; font-weight: 400; }
+.text-subhead { font-size: 0.9375rem; line-height: 1.25rem; font-weight: 400; }
+.text-footnote { font-size: 0.8125rem; line-height: 1.125rem; font-weight: 400; }
+.text-caption-1 { font-size: 0.75rem; line-height: 1rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; }
+.text-caption-2 { font-size: 0.6875rem; line-height: 0.8125rem; font-weight: 400; }
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Interactive Physics */
+.interactive {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.interactive:hover { transform: scale(1.02); }
+.interactive:active { transform: scale(0.98); }
+
+/* Concentric Radius Logic */
+.concentric-p4 { border-radius: calc(var(--radius-outer, 24px) - 4px); }
+.concentric-p8 { border-radius: calc(var(--radius-outer, 24px) - 8px); }
+
+
+/* Icons stay white as requested */
+section .inline-grid.place-items-center svg:not(.tx-raw *),
+section .rounded-full.bg-blue-900\/20 svg:not(.tx-raw *),
+section .rounded-full[style*="background-color: rgb(37, 99, 235)"] svg:not(.tx-raw *),
+section .rounded-full[style*="background-color:#2563eb"] svg:not(.tx-raw *) {
+  color: #ffffff !important;
+}
+
+/* Ensure social icons in light mode cards are pure white */
+html.light .bg-\[\#1877F2\] svg:not(.tx-raw *),
+html.light .bg-\[\#0088cc\] svg:not(.tx-raw *),
+html.light .bg-\[\#25D366\] svg:not(.tx-raw *),
+html.light .bg-slate-800 svg:not(.tx-raw *) {
+  color: #ffffff !important;
+}
+
+/* Icons stay white as requested */
+section .inline-grid.place-items-center svg:not(.tx-raw *),
+section .rounded-full.bg-blue-900\/20 svg:not(.tx-raw *) {
+  color: #ffffff !important;
+}
+
+/* Force pure white for section icons in all modes when inside specific containers */
+section .inline-grid.place-items-center svg:not(.tx-raw *),
+section .rounded-full.bg-blue-900\/20 svg:not(.tx-raw *) {
+  color: #ffffff !important;
+}
+
+
+/* Fix Cards and UI elements in Light Mode */
+html:not(.dark) .rounded-2xl:not(.tx-raw *),
+html:not(.dark) .rounded-3xl:not(.tx-raw *),
+html:not(.dark) .bg-blue-950\/20:not(.tx-raw *),
+html:not(.dark) .bg-blue-950\/25:not(.tx-raw *),
+html:not(.dark) .bg-blue-950\/10:not(.tx-raw *),
+html:not(.dark) .bg-blue-950\/5:not(.tx-raw *),
+html:not(.dark) .bg-\[\#0b1224\]:not(.tx-raw *),
+html:not(.dark) .bg-blue-900\/10:not(.tx-raw *),
+html:not(.dark) .bg-blue-900\/20:not(.tx-raw *),
+html:not(.dark) .bg-blue-900\/5:not(.tx-raw *),
+html:not(.dark) [class*="bg-blue-950"]:not(.tx-raw *),
+html:not(.dark) [class*="bg-blue-900"]:not(.tx-raw *) {
+  background-color: #ffffff !important; 
+  border-color: rgba(60, 60, 67, 0.12) !important;
+  color: #1D1D1F !important;
+}
+
+/* Intentionally dark panels (CTA blocks) opt out of every light-mode
+   whitening rule so their white text stays readable. */
+html:not(.dark) .ghost-dark-panel,
+html.light .ghost-dark-panel {
+  background-color: #0B1020 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+html:not(.dark) .ghost-dark-panel [class*="rounded-"],
+html.light .ghost-dark-panel [class*="rounded-"] {
+  background-color: transparent;
+}
+html:not(.dark) .ghost-dark-panel h1,
+html:not(.dark) .ghost-dark-panel h2,
+html:not(.dark) .ghost-dark-panel h3,
+html:not(.dark) .ghost-dark-panel h4,
+html:not(.dark) .ghost-dark-panel p,
+html:not(.dark) .ghost-dark-panel li,
+html:not(.dark) .ghost-dark-panel span,
+html:not(.dark) .ghost-dark-panel a,
+html.light .ghost-dark-panel h1,
+html.light .ghost-dark-panel h2,
+html.light .ghost-dark-panel h3,
+html.light .ghost-dark-panel h4,
+html.light .ghost-dark-panel p,
+html.light .ghost-dark-panel li,
+html.light .ghost-dark-panel span,
+html.light .ghost-dark-panel a {
+  color: #ffffff;
+}
+html:not(.dark) .ghost-dark-panel .bg-white,
+html.light .ghost-dark-panel .bg-white {
+  background-color: #ffffff !important;
+  color: #0B1020 !important;
+}
+html:not(.dark) .ghost-dark-panel .bg-white *,
+html.light .ghost-dark-panel .bg-white * {
+  color: #0B1020 !important;
+}
+
+/* Specific background lock for Community card in Light Mode */
+html.light section .bg-\[\#0b1224\]:not(.tx-raw *) {
+  background-color: #ffffff !important;
+}
+
+/* Ensure selected items in Light Mode have black text */
+html.light .bg-blue-600:not(.tx-raw *),
+html.light .bg-blue-600 *:not(.tx-raw *),
+html.light a.bg-blue-600:not(.tx-raw *),
+html.light a.bg-blue-600 *:not(.tx-raw *),
+html.light button.bg-blue-600:not(.tx-raw *),
+html.light nav a.bg-blue-600:not(.tx-raw *),
+html.light nav a.bg-blue-600 span:not(.tx-raw *) {
+  color: #ffffff !important;
+}
+
+/* Active router links must never turn white on light surfaces */
+html.light footer a[data-status="active"],
+html.light footer a[data-status="active"] span {
+  color: #1d4ed8 !important;
+}
+html.light header nav a[data-status="active"],
+html.light header nav a[data-status="active"] span {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+
+
+html:not(.dark) .border-blue-900\/30:not(.tx-raw *),
+html:not(.dark) .border-blue-900\/20:not(.tx-raw *),
+html:not(.dark) .border-blue-900\/40:not(.tx-raw *),
+html:not(.dark) .border-blue-500\/20:not(.tx-raw *),
+html:not(.dark) .border-blue-900\/30:not(.tx-raw *) {
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) .text-blue-200\/60:not(.tx-raw *),
+html:not(.dark) .text-blue-200\/40:not(.tx-raw *),
+html:not(.dark) .text-blue-200\/80:not(.tx-raw *),
+html:not(.dark) .text-blue-100:not(.tx-raw *),
+html:not(.dark) .text-blue-100\/70:not(.tx-raw *),
+html:not(.dark) .text-slate-400:not(.tx-raw *),
+html:not(.dark) .text-slate-500:not(.tx-raw *),
+html:not(.dark) .text-gray-400:not(.tx-raw *),
+html:not(.dark) .text-gray-500:not(.tx-raw *),
+html:not(.dark) .text-blue-900\/60:not(.tx-raw *) {
+  color: #64748B !important; 
+}
+
+/* Fix Header in Light Mode — single flat surface, no extra white band */
+html:not(.dark) header,
+html:not(.dark) header nav {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+
+html:not(.dark) header > div,
+html:not(.dark) header .dark\:bg-\[\#0b1020\]\/80,
+html:not(.dark) header .bg-blue-950\/20,
+html:not(.dark) header .bg-blue-950\/50,
+html:not(.dark) header [class*="bg-blue-950"] {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html:not(.dark) header .text-white,
+html:not(.dark) header .text-blue-200\/60,
+html:not(.dark) header .text-sm.font-bold,
+html:not(.dark) header a {
+  color: #0f172a !important;
+}
+
+
+html:not(.dark) header button:not(.bg-blue-600),
+html:not(.dark) header .bg-\[\#0b1020\],
+html:not(.dark) header .dark\:bg-\[\#0b1020\],
+html:not(.dark) header .bg-slate-100 {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #0f172a !important;
+}
+
+
+html:not(.dark) header button svg {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .bg-blue-600 svg,
+html:not(.dark) .bg-blue-500 svg,
+html:not(.dark) section .text-white:not(.tx-raw *),
+html:not(.dark) .ecosystem-flip {
+   color: inherit;
+}
+
+html:not(.dark) section .inline-grid.place-items-center svg {
+  color: #ffffff !important;
+}
+
+
+/* Footer in Light Mode — let the component's own Tailwind colours win so
+   hover states and social icons work; only guarantee the base surface. */
+html:not(.dark) footer {
+  background-color: #F8FAFC;
+  border-top: 1px solid #e2e8f0;
+}
+
+
+/* Specific button text color overrides for Light Mode */
+html:not(.dark) .bg-\[\#1877F2\] svg,
+html:not(.dark) .bg-\[\#0088cc\] svg,
+html:not(.dark) .bg-\[\#25D366\] svg,
+html:not(.dark) .bg-blue-600 svg,
+html:not(.dark) a.bg-\[\#1877F2\],
+html:not(.dark) a.bg-\[\#0088cc\],
+html:not(.dark) a.bg-\[\#25D366\],
+html:not(.dark) a.bg-blue-600,
+html:not(.dark) button.bg-blue-600 {
+  color: #ffffff !important;
+}
+
+
+
+/* Pricing specific issues */
+html:not(.dark) .bg-blue-600,
+html:not(.dark) .bg-\[\#1877F2\],
+html:not(.dark) .bg-\[\#0088cc\],
+html:not(.dark) .bg-\[\#25D366\] {
+  background-color: #2563eb !important;
+}
+
+html:not(.dark) .bg-\[\#1877F2\] { background-color: #1877F2 !important; }
+html:not(.dark) .bg-\[\#0088cc\] { background-color: #0088cc !important; }
+html:not(.dark) .bg-\[\#25D366\] { background-color: #25D366 !important; }
+
+html.light .bg-blue-600 .text-white,
+html.light .bg-blue-600 span,
+html.light .bg-blue-600 div,
+html.light .bg-\[\#1877F2\],
+html.light .bg-\[\#1877F2\] *,
+html.light .bg-\[\#0088cc\],
+html.light .bg-\[\#0088cc\] *,
+html.light .bg-\[\#25D366\],
+html.light .bg-\[\#25D366\] *,
+html.light .bg-slate-800,
+html.light .bg-slate-800 * {
+  color: #ffffff !important;
+}
+
+
+
+html.light .text-blue-500,
+html.light .text-blue-400 {
+  color: #2563eb !important;
+}
+
+/* Download Page Specifics */
+html.light .text-4xl.font-black.text-white,
+html.light .text-2xl.font-bold.text-white,
+/* Headings written as white in dark-first markup need a dark colour on light
+   surfaces — but never buttons/links, which sit on coloured backgrounds. */
+html.light .text-lg.font-bold.text-white:not(button):not(a):not([class*="bg-"]),
+html.light .text-sm.font-bold.text-white:not(button):not(a):not([class*="bg-"]),
+html.light h1.text-white,
+html.light h2.text-white,
+html.light h3.text-white,
+html.light h4.text-white {
+  color: #0F172A !important;
+}
+html.light button.text-white,
+html.light a.text-white,
+html.light .custom-blue-btn,
+html.light .custom-blue-btn * {
+  color: #ffffff !important;
+}
+
+/* Pricing Section Slider Text Fix */
+html.light .pricing-toggle-active {
+  color: #ffffff !important;
+}
+
+
+
+/* Detailed Comparison table fixes */
+html:not(.dark) table tr:hover {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) table td,
+html:not(.dark) table th {
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-blue-100 {
+  color: #1e293b !important;
+}
+
+
+/* Ensure content is always visible and has layout */
+main {
+  position: relative;
+  z-index: 10;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  min-height: 100vh;
+  color: var(--foreground);
+}
+
+/* The homepage hero centres its own content vertically. */
+#heroMain {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+html:not(.dark) section h1:not([class*="text-"]),
+html:not(.dark) section h2:not([class*="text-"]),
+html:not(.dark) section h3:not([class*="text-"]),
+html:not(.dark) section h4:not([class*="text-"]),
+html:not(.dark) section p:not([class*="text-"]),
+html:not(.dark) section li:not([class*="text-"]),
+html:not(.dark) section td:not([class*="text-"]),
+html:not(.dark) section th:not([class*="text-"]) {
+  color: #000000;
+}
+
+/* Anything explicitly marked as sitting on a dark/blue surface stays white,
+   in every theme. Repeated class raises specificity above the light-mode
+   text resets above. */
+html.light .\!text-white.\!text-white,
+html:not(.dark) .\!text-white.\!text-white,
+html.light .on-dark,
+html.light .on-dark h1,
+html.light .on-dark h2,
+html.light .on-dark h3,
+html.light .on-dark p,
+html.light .on-dark span,
+html.light .on-dark a {
+  color: #ffffff !important;
+}
+
+
+
+
+/* Premium Effects */
+.premium-glow {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  letter-spacing: -0.05em;
+}
+
+html.dark .premium-glow {
+  text-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+/* Micro Interactions & Animations */
+@layer utilities {
+  .animate-reveal {
+    animation: reveal 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  
+  .animate-reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: reveal 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  
+  .animate-reveal-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+  .animate-reveal-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+  .animate-reveal-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+  .animate-reveal-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+  .animate-reveal-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Premium Hover & Transitions */
+.hover-premium {
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hover-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.3);
+}
+
+/* Floating Glow Effect */
+.floating-glow {
+  position: relative;
+}
+
+.floating-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floating-glow:hover::before {
+  opacity: 1;
+}
+
+/* Ripple Button Effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-out, height 0.4s ease-out;
+  pointer-events: none;
+}
+
+.btn-ripple:active::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* Hide platform artifacts */
+#lovable-badge,
+[class*="lovable-badge"],
+[id*="lovable-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@keyframes text-shimmer {
+  0% { background-position: 100% center; }
+  100% { background-position: -100% center; }
+}
+
+.animate-text-shimmer {
+  background-size: 200% auto;
+}
+
+@keyframes ghost-float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-120vh) translateX(50px); opacity: 0; }
+}
+
+@keyframes layer-slide {
+  0% { transform: translateX(-100%) scaleX(0.5); opacity: 0; }
+  50% { opacity: 0.2; }
+  100% { transform: translateX(200%) scaleX(2); opacity: 0; }
+}
+
+.animate-ghost-float {
+  animation: ghost-float linear infinite;
+}
+
+.animate-layer-slide {
+  animation: layer-slide ease-in-out infinite;
+}
+
+@keyframes ecosystem-text-swap {
+  0%, 20% { content: var(--eco-1); opacity: 1; transform: translateY(0); }
+  22% { opacity: 0; transform: translateY(-5px); }
+  24% { opacity: 0; transform: translateY(5px); }
+  25%, 45% { content: var(--eco-2); opacity: 1; transform: translateY(0); }
+  47% { opacity: 0; transform: translateY(-5px); }
+  49% { opacity: 0; transform: translateY(5px); }
+  50%, 70% { content: var(--eco-3); opacity: 1; transform: translateY(0); }
+  72% { opacity: 0; transform: translateY(-5px); }
+  74% { opacity: 0; transform: translateY(5px); }
+  75%, 95% { content: var(--eco-4); opacity: 1; transform: translateY(0); }
+  97% { opacity: 0; transform: translateY(-5px); }
+  99% { opacity: 0; transform: translateY(5px); }
+}
+
+:root {
+  --eco-1: "Ecosystem";
+  --eco-2: "Experience";
+  --eco-3: "Efficiency";
+  --eco-4: "Evolution";
+}
+
+html.lang-bn :root {
+  --eco-1: "ইকোসিস্টেম";
+  --eco-2: "অভিজ্ঞতা";
+  --eco-3: "দক্ষতা";
+  --eco-4: "বিবর্তন";
+}
+
+.ecosystem-flip {
+  display: inline-block;
+  min-width: 200px;
+}
+
+.ecosystem-flip::after {
+  content: var(--eco-1);
+  animation: ecosystem-text-swap 8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* ── Scroll reveal (driven by IntersectionObserver in GhostShell) ────────── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px);
+  will-change: opacity, transform;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-on-scroll[data-reveal="left"] { transform: translateX(-32px); }
+.reveal-on-scroll[data-reveal="right"] { transform: translateX(32px); }
+.reveal-on-scroll[data-reveal="zoom"] { transform: scale(0.965); }
+
+/* Stagger children of a revealed container */
+.reveal-on-scroll.is-visible > * {
+  animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.reveal-on-scroll.is-visible > *:nth-child(1) { animation-delay: 0.04s; }
+.reveal-on-scroll.is-visible > *:nth-child(2) { animation-delay: 0.10s; }
+.reveal-on-scroll.is-visible > *:nth-child(3) { animation-delay: 0.16s; }
+.reveal-on-scroll.is-visible > *:nth-child(4) { animation-delay: 0.22s; }
+.reveal-on-scroll.is-visible > *:nth-child(5) { animation-delay: 0.28s; }
+.reveal-on-scroll.is-visible > *:nth-child(6) { animation-delay: 0.34s; }
+.reveal-on-scroll.is-visible > *:nth-child(7) { animation-delay: 0.40s; }
+.reveal-on-scroll.is-visible > *:nth-child(8) { animation-delay: 0.46s; }
+.reveal-on-scroll.is-visible > *:nth-child(9) { animation-delay: 0.52s; }
+.reveal-on-scroll.is-visible > *:nth-child(10) { animation-delay: 0.58s; }
+.reveal-on-scroll.is-visible > *:nth-child(n + 11) { animation-delay: 0.62s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE RHYTHM · MOBILE + TABLET (software-grade density)
+   The page sections were authored with desktop-sized rhythm (mb-32/mb-64,
+   pt-24/pt-40). On a phone that reads as huge empty voids between sections and
+   on a tablet it wastes half the viewport. These clamps compress the vertical
+   and horizontal rhythm per breakpoint without touching any component.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* ── Phones ─────────────────────────────────────────────────────────────── */
+@media (max-width: 639px) {
+  .mb-64 { margin-bottom: 3.25rem !important; }
+  .mb-48 { margin-bottom: 3rem !important; }
+  .mb-40 { margin-bottom: 2.75rem !important; }
+  .mb-32 { margin-bottom: 2.75rem !important; }
+  .mb-24 { margin-bottom: 2.25rem !important; }
+  .mb-20 { margin-bottom: 2rem !important; }
+  .mb-16 { margin-bottom: 1.75rem !important; }
+  .mb-12 { margin-bottom: 1.5rem !important; }
+
+  .mt-24 { margin-top: 2.25rem !important; }
+  .mt-20 { margin-top: 2rem !important; }
+  .mt-16 { margin-top: 1.75rem !important; }
+  .mt-12 { margin-top: 1.5rem !important; }
+  .mt-10 { margin-top: 1.25rem !important; }
+
+  .pt-40 { padding-top: 1.75rem !important; }
+  .pt-32 { padding-top: 1.75rem !important; }
+  .pt-24 { padding-top: 1.5rem !important; }
+  .pt-20 { padding-top: 1.25rem !important; }
+  .pt-16 { padding-top: 1.25rem !important; }
+  .pt-14 { padding-top: 1.25rem !important; }
+
+  .pb-24 { padding-bottom: 2.5rem !important; }
+  .pb-20 { padding-bottom: 2.25rem !important; }
+  .pb-16 { padding-bottom: 2rem !important; }
+
+  .py-20 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  .py-16 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+  .py-14 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+  .py-12 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+
+  /* Inner padding of big panels: keep the card feeling, lose the dead space. */
+  .p-16 { padding: 1.25rem !important; }
+  .p-12 { padding: 1.15rem !important; }
+  .p-10 { padding: 1.1rem !important; }
+  .p-8  { padding: 1rem !important; }
+
+  /* Page gutters — a phone app has tight, even side margins. */
+  .px-8 { padding-left: 0.875rem !important; padding-right: 0.875rem !important; }
+  .px-6 { padding-left: 0.875rem !important; padding-right: 0.875rem !important; }
+
+  /* Oversized display type gets a phone-friendly cap. */
+  .text-7xl, .text-8xl { font-size: 3rem !important; line-height: 1 !important; }
+  .text-6xl { font-size: 2.5rem !important; line-height: 1.05 !important; }
+
+  /* Gaps inside grids/stacks. */
+  .gap-12 { gap: 1.25rem !important; }
+  .gap-10 { gap: 1rem !important; }
+  .space-y-12 > * + * { margin-top: 1.25rem !important; }
+  .space-y-10 > * + * { margin-top: 1rem !important; }
+}
+
+/* ── Tablets (the dedicated tablet layout pass) ─────────────────────────── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .mb-64 { margin-bottom: 5rem !important; }
+  .mb-48 { margin-bottom: 4.5rem !important; }
+  .mb-40 { margin-bottom: 4rem !important; }
+  .mb-32 { margin-bottom: 4rem !important; }
+  .mb-24 { margin-bottom: 3rem !important; }
+
+  .pt-40 { padding-top: 3rem !important; }
+  .pt-32 { padding-top: 2.75rem !important; }
+  .pt-24 { padding-top: 2.5rem !important; }
+
+  .p-16 { padding: 2.25rem !important; }
+  .p-12 { padding: 2rem !important; }
+
+  /* Tablet reads as a wide phone, not a narrow desktop: two comfortable
+     columns instead of one stretched column or three cramped ones. */
+  .tablet-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* ── Never let a section break the viewport horizontally ────────────────── */
+html, body { overflow-x: clip; max-width: 100%; }
+main, section, footer, header { min-width: 0; }
+/* Long paths, keys, URLs and hashes must wrap instead of widening the page. */
+p, li, dd, td, th, code, pre, h1, h2, h3, h4, span { overflow-wrap: anywhere; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PERFORMANCE · smooth scrolling on phones and tablets
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* Off-screen sections skip layout/paint until they are scrolled near. */
+main > section,
+main > div > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
+
+/* Backdrop blur is the single most expensive effect while scrolling on mobile
+   GPUs — swap the sticky chrome to an opaque surface below the tablet break. */
+@media (max-width: 1023px) {
+  .glass-chrome {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #F6F8FC;
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06);
+  }
+  html.dark .glass-chrome {
+    background: #080D1C;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  /* Decorative infinite animations: pure battery + jank, no information. */
+  .animate-ghost-float,
+  .animate-layer-slide,
+  .floating-glow::before { animation: none !important; display: none !important; }
+
+  /* Hover-only lift effects never fire on touch; drop their transitions. */
+  .hover-premium { transition: none; }
+}
+
+/* `will-change` on dozens of nodes keeps layers alive forever; only promote
+   elements that have not been revealed yet. */
+.reveal-on-scroll.is-visible { will-change: auto; }
+
+/* Touch scrolling feel */
+@media (hover: none) {
+  * { -webkit-tap-highlight-color: transparent; }
+  .interactive:hover { transform: none; }
+}
+
+/* Any horizontally scrollable table gets momentum + a hidden scrollbar so it
+   reads like a native app pane rather than a broken desktop table. */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+
+@keyframes ghost-route-progress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+.community-giveaway { font-family: "Ghostae Payment Bangla", -apple-system, system-ui, sans-serif; font-weight: 400; letter-spacing: 0; }
+.community-giveaway :is(h1, h2, h3, button, a) { letter-spacing: 0; }
+.giveaway-wheel { --wheel-soft: color-mix(in srgb, var(--primary) 14%, var(--surface)); --wheel-strong: color-mix(in srgb, var(--primary) 24%, var(--surface)); }
+.giveaway-wheel-disc { transition: transform 3.2s cubic-bezier(.12,.65,.16,1); }
+.giveaway-sector { stroke: var(--surface); stroke-width: 2; }
+.giveaway-sector-0 { fill: var(--wheel-strong); }
+.giveaway-sector-1 { fill: var(--surface-2); }
+.giveaway-sector-2 { fill: var(--wheel-soft); }
+.giveaway-sector-3 { fill: var(--surface); }
+.giveaway-wheel-label { fill: var(--foreground); font-size: 13px; font-weight: 500; }
+.giveaway-wheel-rim { fill: none; stroke: var(--line); stroke-width: 3; }
+.giveaway-wheel-pointer { fill: var(--primary); stroke: var(--surface); stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) { .giveaway-wheel-disc { transition-duration: 0.01ms; } }
+
+/* Lovable-style auth page */
+.lv-auth { --lv-bg: oklch(0.97 0 0); --lv-fg: oklch(0.15 0 0); --lv-muted: oklch(0.45 0 0); --lv-line: oklch(0.88 0 0); --lv-input: oklch(0.955 0 0); background: var(--lv-bg); color: var(--lv-fg); font-family: Inter, "Hind Siliguri", system-ui, sans-serif; }
+.lv-auth .lv-fg { color: var(--lv-fg); }
+.lv-auth .lv-muted { color: var(--lv-muted); }
+.lv-auth .lv-line { background: var(--lv-line); }
+.lv-auth .lv-pill { border: 1px solid oklch(0.8 0 0); border-radius: 9999px; background: transparent; color: var(--lv-fg); transition: background .15s; }
+.lv-auth .lv-pill:hover { background: oklch(0.93 0 0); }
+.lv-auth .lv-input { border: 1px solid var(--lv-line); border-radius: 9999px; background: var(--lv-input); color: var(--lv-fg); outline: none; }
+.lv-auth .lv-input:focus { border-color: oklch(0.6 0 0); }
+.lv-auth .lv-dark { background: linear-gradient(oklch(0.25 0 0), oklch(0.08 0 0)); color: oklch(0.99 0 0); }
+/* The showcase clip sits in a quiet framed card — no coloured wash behind it. */
+.lv-auth .lv-frame { border: 1px solid var(--lv-line); background: oklch(1 0 0); border-radius: 1.25rem; box-shadow: 0 26px 70px -40px oklch(0.2 0 0 / 0.45); }
+.lv-auth .lv-mesh { background: radial-gradient(60% 45% at 50% 18%, oklch(0.96 0.01 260) 0%, transparent 70%), radial-gradient(70% 40% at 50% 62%, oklch(0.68 0.17 265) 0%, transparent 70%), linear-gradient(180deg, oklch(0.94 0.02 260) 0%, oklch(0.7 0.15 260) 35%, oklch(0.72 0.2 330) 62%, oklch(0.64 0.25 5) 85%, oklch(0.68 0.21 25) 100%); }
+.lv-auth .lv-prompt { background: oklch(0.95 0.015 270 / 0.88); color: var(--lv-fg); box-shadow: 0 10px 40px oklch(0.3 0.1 270 / 0.15); }
+.lv-auth .lv-caret { color: oklch(0.55 0.2 260); animation: lv-blink 1s steps(1) infinite; }
+@keyframes lv-blink { 50% { opacity: 0; } }
+
+.section-mark { position: relative; padding-left: 0.75rem; }
+.section-mark::before { content: ""; position: absolute; left: 0; top: 0.2em; bottom: 0.2em; width: 3px; border-radius: 2px; background: var(--color-success, #10b981); opacity: 0.8; }
+
+/* Frame AI page — Bengali light font like the rest of the site */
+.frame-ai-page { font-family: "Hind Siliguri", system-ui, sans-serif; font-weight: 300; }
+.frame-ai-page h1, .frame-ai-page h2 { font-weight: 500; }
+.frame-ai-price, .frame-ai-price * { color: var(--media-foreground) !important; }
+
+/* Highlighted benefit card: blue gradient with forced white text. */
+.digital-highlight { background: linear-gradient(135deg, oklch(0.42 0.17 260), oklch(0.55 0.2 255)); }
+.digital-highlight, .digital-highlight * { color: oklch(1 0 0) !important; }
+.digital-highlight p:last-child { border-top: 1px solid oklch(1 0 0 / 0.2); }
+.live-art { container-type: inline-size; background: radial-gradient(120% 90% at 85% 15%, color-mix(in oklab, var(--tint) 55%, transparent), transparent 60%), linear-gradient(140deg, oklch(0.16 0.04 265), oklch(0.24 0.08 270)); }
+.live-art-brand { font-size: 13cqi; color: oklch(1 0 0); }
+.live-art-chip { font-size: 5cqi; color: oklch(1 0 0); background: color-mix(in oklab, var(--tint) 70%, oklch(0.2 0.05 265)); }
+
+/* Adobe app marks on extension cards (brand colours of the Adobe icons). */
+.app-mark-ae { background: #1f1147; color: #cf96fd; }
+.app-mark-pr { background: #00005b; color: #9999ff; }

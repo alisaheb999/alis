@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.ghost_consume_quota(text, uuid, text, text, text, integer, integer) FROM anon, authenticated;

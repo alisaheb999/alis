@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Authenticated users can see errors" ON public.extension_errors;
+CREATE POLICY "Admins can view extension errors" ON public.extension_errors FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'));

@@ -1,0 +1,1850 @@
+{
+  "presetType": "textColorStyle",
+  "version": "2.0",
+  "preserveTransform": true,
+  "preserveLayout": true,
+  "effectsPolicy": {
+    "applyTo": "textFillOnly",
+    "gradientRamp": {
+      "effect": "ADBE Ramp",
+      "enabled": true
+    },
+    "fourColorGradient": {
+      "effect": "ADBE 4ColorGradient",
+      "enabled": true
+    },
+    "glow": {
+      "effect": "ADBE Glo2",
+      "optionalPerPreset": true
+    },
+    "dropShadow": {
+      "effect": "ADBE Drop Shadow",
+      "optionalPerPreset": true
+    },
+    "ccLightSweep": {
+      "enabled": false
+    }
+  },
+  "presets": [
+    {
+      "id": "ramp_01",
+      "name": "Sunset Gold",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 125,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#8B1E3F"
+          },
+          {
+            "position": 0.3333,
+            "color": "#E04F39"
+          },
+          {
+            "position": 0.6667,
+            "color": "#FFB347"
+          },
+          {
+            "position": 1.0,
+            "color": "#FFE7A0"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#8B1E3F",
+          "#E04F39",
+          "#FFB347",
+          "#FFE7A0"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#8B1E3F",
+        "endColor": "#FFE7A0",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 80,
+        "distance": 8,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#8B1E3F",
+          "#E04F39",
+          "#FFB347",
+          "#FFE7A0"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_02",
+      "name": "Arctic Ice",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 125,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFFFFF"
+          },
+          {
+            "position": 0.3333,
+            "color": "#D7FBFF"
+          },
+          {
+            "position": 0.6667,
+            "color": "#6BD9FF"
+          },
+          {
+            "position": 1.0,
+            "color": "#2675D9"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFFFFF",
+          "#D7FBFF",
+          "#6BD9FF",
+          "#2675D9"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFFFFF",
+        "endColor": "#2675D9",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 38,
+        "intensity": 1.0,
+        "colorA": "#65EAFF",
+        "colorB": "#65EAFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": false,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 0,
+        "distance": 0,
+        "softness": 0,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFFFFF",
+          "#D7FBFF",
+          "#6BD9FF",
+          "#2675D9"
+        ],
+        "glow": true,
+        "glowColor": "#65EAFF",
+        "shadow": null
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_03",
+      "name": "Emerald Luxe",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 145,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#D9FFE9"
+          },
+          {
+            "position": 0.3333,
+            "color": "#54D98A"
+          },
+          {
+            "position": 0.6667,
+            "color": "#078F61"
+          },
+          {
+            "position": 1.0,
+            "color": "#003D32"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#D9FFE9",
+          "#54D98A",
+          "#078F61",
+          "#003D32"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#D9FFE9",
+        "endColor": "#003D32",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 95,
+        "distance": 9,
+        "softness": 13,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#D9FFE9",
+          "#54D98A",
+          "#078F61",
+          "#003D32"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_04",
+      "name": "Royal Violet",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 120,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFB7F2"
+          },
+          {
+            "position": 0.3333,
+            "color": "#FF55D8"
+          },
+          {
+            "position": 0.6667,
+            "color": "#A33CFF"
+          },
+          {
+            "position": 1.0,
+            "color": "#5321C9"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFB7F2",
+          "#FF55D8",
+          "#A33CFF",
+          "#5321C9"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFB7F2",
+        "endColor": "#5321C9",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 14,
+        "intensity": 0.55,
+        "colorA": "#9A51FF",
+        "colorB": "#9A51FF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 75,
+        "distance": 8,
+        "softness": 12,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFB7F2",
+          "#FF55D8",
+          "#A33CFF",
+          "#5321C9"
+        ],
+        "glow": true,
+        "glowColor": "#9A51FF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_05",
+      "name": "Platinum Chrome",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 105,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#555555"
+          },
+          {
+            "position": 0.3333,
+            "color": "#D9D9D9"
+          },
+          {
+            "position": 0.6667,
+            "color": "#FFFFFF"
+          },
+          {
+            "position": 1.0,
+            "color": "#4B4B4B"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#555555",
+          "#D9D9D9",
+          "#FFFFFF",
+          "#4B4B4B"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#555555",
+        "endColor": "#4B4B4B",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 95,
+        "distance": 8,
+        "softness": 8,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#555555",
+          "#D9D9D9",
+          "#FFFFFF",
+          "#4B4B4B"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_06",
+      "name": "Ocean Teal",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 130,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#D5FFF7"
+          },
+          {
+            "position": 0.3333,
+            "color": "#55EFD2"
+          },
+          {
+            "position": 0.6667,
+            "color": "#079EB0"
+          },
+          {
+            "position": 1.0,
+            "color": "#064F9E"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#D5FFF7",
+          "#55EFD2",
+          "#079EB0",
+          "#064F9E"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#D5FFF7",
+        "endColor": "#064F9E",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 18,
+        "intensity": 0.75,
+        "colorA": "#21DACD",
+        "colorB": "#21DACD",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 80,
+        "distance": 7,
+        "softness": 12,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#D5FFF7",
+          "#55EFD2",
+          "#079EB0",
+          "#064F9E"
+        ],
+        "glow": true,
+        "glowColor": "#21DACD",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_07",
+      "name": "Cherry Red",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 130,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFD0D0"
+          },
+          {
+            "position": 0.3333,
+            "color": "#FF6868"
+          },
+          {
+            "position": 0.6667,
+            "color": "#D20F39"
+          },
+          {
+            "position": 1.0,
+            "color": "#650018"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFD0D0",
+          "#FF6868",
+          "#D20F39",
+          "#650018"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFD0D0",
+        "endColor": "#650018",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 9,
+        "intensity": 0.3,
+        "colorA": "#FF4646",
+        "colorB": "#FF4646",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 90,
+        "distance": 8,
+        "softness": 14,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFD0D0",
+          "#FF6868",
+          "#D20F39",
+          "#650018"
+        ],
+        "glow": true,
+        "glowColor": "#FF4646",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_08",
+      "name": "Aurora",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 120,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#B7FFCF"
+          },
+          {
+            "position": 0.3333,
+            "color": "#38E4A2"
+          },
+          {
+            "position": 0.6667,
+            "color": "#38BAFF"
+          },
+          {
+            "position": 1.0,
+            "color": "#D65CFF"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#B7FFCF",
+          "#38E4A2",
+          "#38BAFF",
+          "#D65CFF"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#B7FFCF",
+        "endColor": "#D65CFF",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 18,
+        "intensity": 0.75,
+        "colorA": "#55C2FF",
+        "colorB": "#55C2FF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 85,
+        "distance": 8,
+        "softness": 13,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#B7FFCF",
+          "#38E4A2",
+          "#38BAFF",
+          "#D65CFF"
+        ],
+        "glow": true,
+        "glowColor": "#55C2FF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_09",
+      "name": "Rose Gold",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 110,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#713746"
+          },
+          {
+            "position": 0.3333,
+            "color": "#B66A6C"
+          },
+          {
+            "position": 0.6667,
+            "color": "#FFD5BF"
+          },
+          {
+            "position": 1.0,
+            "color": "#793B50"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#713746",
+          "#B66A6C",
+          "#FFD5BF",
+          "#793B50"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#713746",
+        "endColor": "#793B50",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 92,
+        "distance": 8,
+        "softness": 11,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#713746",
+          "#B66A6C",
+          "#FFD5BF",
+          "#793B50"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_10",
+      "name": "Electric Blue",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 130,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#DFFCFF"
+          },
+          {
+            "position": 0.3333,
+            "color": "#65EDFF"
+          },
+          {
+            "position": 0.6667,
+            "color": "#238CFF"
+          },
+          {
+            "position": 1.0,
+            "color": "#1936C9"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#DFFCFF",
+          "#65EDFF",
+          "#238CFF",
+          "#1936C9"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#DFFCFF",
+        "endColor": "#1936C9",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 18,
+        "intensity": 0.75,
+        "colorA": "#2F96FF",
+        "colorB": "#2F96FF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 98,
+        "distance": 5,
+        "softness": 9,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#DFFCFF",
+          "#65EDFF",
+          "#238CFF",
+          "#1936C9"
+        ],
+        "glow": true,
+        "glowColor": "#2F96FF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_11",
+      "name": "Gold Luxe",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 135,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFFBD0"
+          },
+          {
+            "position": 0.3333,
+            "color": "#FFE477"
+          },
+          {
+            "position": 0.6667,
+            "color": "#D99A27"
+          },
+          {
+            "position": 1.0,
+            "color": "#7C4810"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFFBD0",
+          "#FFE477",
+          "#D99A27",
+          "#7C4810"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFFBD0",
+        "endColor": "#7C4810",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 7,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFFBD0",
+          "#FFE477",
+          "#D99A27",
+          "#7C4810"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_12",
+      "name": "Magenta Candy",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 120,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFE0F4"
+          },
+          {
+            "position": 0.3333,
+            "color": "#FF83CE"
+          },
+          {
+            "position": 0.6667,
+            "color": "#EC3F9D"
+          },
+          {
+            "position": 1.0,
+            "color": "#8F166D"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFE0F4",
+          "#FF83CE",
+          "#EC3F9D",
+          "#8F166D"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFE0F4",
+        "endColor": "#8F166D",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 14,
+        "intensity": 0.55,
+        "colorA": "#FF4AB6",
+        "colorB": "#FF4AB6",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 5,
+        "softness": 9,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFE0F4",
+          "#FF83CE",
+          "#EC3F9D",
+          "#8F166D"
+        ],
+        "glow": true,
+        "glowColor": "#FF4AB6",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_13",
+      "name": "Lime Chrome",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 108,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#426A2A"
+          },
+          {
+            "position": 0.3333,
+            "color": "#B8EF55"
+          },
+          {
+            "position": 0.6667,
+            "color": "#F2FFC4"
+          },
+          {
+            "position": 1.0,
+            "color": "#315F1E"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#426A2A",
+          "#B8EF55",
+          "#F2FFC4",
+          "#315F1E"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#426A2A",
+        "endColor": "#315F1E",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 7,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#426A2A",
+          "#B8EF55",
+          "#F2FFC4",
+          "#315F1E"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_14",
+      "name": "Deep Ocean",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 135,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#071B42"
+          },
+          {
+            "position": 0.3333,
+            "color": "#0A5790"
+          },
+          {
+            "position": 0.6667,
+            "color": "#16B8C5"
+          },
+          {
+            "position": 1.0,
+            "color": "#B7FFF1"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#071B42",
+          "#0A5790",
+          "#16B8C5",
+          "#B7FFF1"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#071B42",
+        "endColor": "#B7FFF1",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 9,
+        "intensity": 0.3,
+        "colorA": "#00BED2",
+        "colorB": "#00BED2",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 98,
+        "distance": 6,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#071B42",
+          "#0A5790",
+          "#16B8C5",
+          "#B7FFF1"
+        ],
+        "glow": true,
+        "glowColor": "#00BED2",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_15",
+      "name": "Fire",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 125,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFF0BD"
+          },
+          {
+            "position": 0.3333,
+            "color": "#FFD04C"
+          },
+          {
+            "position": 0.6667,
+            "color": "#FF6B22"
+          },
+          {
+            "position": 1.0,
+            "color": "#6B0614"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFF0BD",
+          "#FFD04C",
+          "#FF6B22",
+          "#6B0614"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFF0BD",
+        "endColor": "#6B0614",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 9,
+        "intensity": 0.3,
+        "colorA": "#FF551E",
+        "colorB": "#FF551E",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 7,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFF0BD",
+          "#FFD04C",
+          "#FF6B22",
+          "#6B0614"
+        ],
+        "glow": true,
+        "glowColor": "#FF551E",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_16",
+      "name": "Lavender Silver",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 115,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFFFFF"
+          },
+          {
+            "position": 0.3333,
+            "color": "#E8DCFF"
+          },
+          {
+            "position": 0.6667,
+            "color": "#B9A7E8"
+          },
+          {
+            "position": 1.0,
+            "color": "#8E75BD"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFFFFF",
+          "#E8DCFF",
+          "#B9A7E8",
+          "#8E75BD"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFFFFF",
+        "endColor": "#8E75BD",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 7,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFFFFF",
+          "#E8DCFF",
+          "#B9A7E8",
+          "#8E75BD"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_17",
+      "name": "Tropical",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 120,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFF36A"
+          },
+          {
+            "position": 0.3333,
+            "color": "#7FF04E"
+          },
+          {
+            "position": 0.6667,
+            "color": "#20D6A5"
+          },
+          {
+            "position": 1.0,
+            "color": "#554DFF"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFF36A",
+          "#7FF04E",
+          "#20D6A5",
+          "#554DFF"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFF36A",
+        "endColor": "#554DFF",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 9,
+        "intensity": 0.3,
+        "colorA": "#27D2AA",
+        "colorB": "#27D2AA",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 6,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFF36A",
+          "#7FF04E",
+          "#20D6A5",
+          "#554DFF"
+        ],
+        "glow": true,
+        "glowColor": "#27D2AA",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_18",
+      "name": "Black Gold",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 105,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#29200E"
+          },
+          {
+            "position": 0.3333,
+            "color": "#8C6B21"
+          },
+          {
+            "position": 0.6667,
+            "color": "#FFF0A3"
+          },
+          {
+            "position": 1.0,
+            "color": "#33250E"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#29200E",
+          "#8C6B21",
+          "#FFF0A3",
+          "#33250E"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#29200E",
+        "endColor": "#33250E",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": false,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 0,
+        "intensity": 0,
+        "colorA": "#FFFFFF",
+        "colorB": "#FFFFFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 8,
+        "softness": 12,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#29200E",
+          "#8C6B21",
+          "#FFF0A3",
+          "#33250E"
+        ],
+        "glow": false,
+        "glowColor": "#FFFFFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_19",
+      "name": "Cosmic",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 130,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#F4EAFF"
+          },
+          {
+            "position": 0.3333,
+            "color": "#BD78FF"
+          },
+          {
+            "position": 0.6667,
+            "color": "#674CFF"
+          },
+          {
+            "position": 1.0,
+            "color": "#A1FFF2"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#F4EAFF",
+          "#BD78FF",
+          "#674CFF",
+          "#A1FFF2"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#F4EAFF",
+        "endColor": "#A1FFF2",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 14,
+        "intensity": 0.55,
+        "colorA": "#775FFF",
+        "colorB": "#775FFF",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 6,
+        "softness": 10,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#F4EAFF",
+          "#BD78FF",
+          "#674CFF",
+          "#A1FFF2"
+        ],
+        "glow": true,
+        "glowColor": "#775FFF",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "ramp_20",
+      "name": "Neon Yellow",
+      "type": "4ColorRamp",
+      "transformLocked": true,
+      "gradient": {
+        "effect": "ADBE 4ColorGradient",
+        "angle": 120,
+        "interpolation": "linear",
+        "colors": [
+          {
+            "position": 0.0,
+            "color": "#FFFFD2"
+          },
+          {
+            "position": 0.3333,
+            "color": "#EAFF62"
+          },
+          {
+            "position": 0.6667,
+            "color": "#B5ED32"
+          },
+          {
+            "position": 1.0,
+            "color": "#55B52B"
+          }
+        ],
+        "stops": [
+          0.0,
+          33.33,
+          66.67,
+          100.0
+        ],
+        "sourceColors": [
+          "#FFFFD2",
+          "#EAFF62",
+          "#B5ED32",
+          "#55B52B"
+        ]
+      },
+      "ramp": {
+        "effect": "ADBE Ramp",
+        "enabled": true,
+        "startPoint": [
+          0.0,
+          0.5
+        ],
+        "endPoint": [
+          1.0,
+          0.5
+        ],
+        "startColor": "#FFFFD2",
+        "endColor": "#55B52B",
+        "blendWithOriginal": 0
+      },
+      "glow": {
+        "enabled": true,
+        "effect": "ADBE Glo2",
+        "threshold": 0,
+        "radius": 18,
+        "intensity": 0.75,
+        "colorA": "#C5FF36",
+        "colorB": "#C5FF36",
+        "compositeOriginal": "onTop"
+      },
+      "dropShadow": {
+        "enabled": true,
+        "effect": "ADBE Drop Shadow",
+        "color": "#000000",
+        "opacity": 100,
+        "distance": 5,
+        "softness": 9,
+        "angle": 135
+      },
+      "preserveTransform": true,
+      "preserveLayout": true,
+      "source": {
+        "chars": [
+          "#FFFFD2",
+          "#EAFF62",
+          "#B5ED32",
+          "#55B52B"
+        ],
+        "glow": true,
+        "glowColor": "#C5FF36",
+        "shadow": "#000000"
+      },
+      "ccLightSweep": {
+        "enabled": false
+      }
+    }
+  ]
+}

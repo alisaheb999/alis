@@ -1,0 +1,205 @@
+/*!
+ * Ghostae Text — Premium clean layer (v3.26.0)
+ * Loaded LAST. Purely visual: strips stacked plates, boxes and hairlines
+ * so the panel chrome reads as one calm surface.
+ * No animation keyframes, no layout logic, no JS behaviour is touched.
+ */
+
+/* ── 1. Tab bar: borderless pills, quiet counts ───────────────────── */
+.ghost-toolkit-body .tools-header,
+.ghost-toolkit-body .tools-tabs,
+.ghost-toolkit-body .tk-tabs {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab,
+.ghost-toolkit-body .tools-tabs .tools-tab {
+    border: 0 !important;
+    border-radius: 9px;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, .58);
+    font-weight: 600;
+    transition: color .18s ease, background .18s ease;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab:hover {
+    color: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, .045) !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab.active,
+.ghost-toolkit-body .tk-tabs .tools-tab[aria-selected="true"] {
+    color: #c7d2fe;
+    background: rgba(99, 102, 241, .14) !important;
+}
+.ghost-toolkit-body .tk-tab-icon,
+.ghost-toolkit-body .tk-tab-icon svg {
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+.ghost-toolkit-body .tk-tab-count {
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 0 0 2px;
+    font-size: 9.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .34);
+}
+.ghost-toolkit-body .tk-tabs .tools-tab.active .tk-tab-count { color: rgba(199, 210, 254, .65); }
+
+/* ── 2. Header actions + panel toolbar: naked icons ───────────────── */
+.ghost-toolkit-body .tk-right-actions .tk-bm-filter,
+.ghost-toolkit-body .tk-right-actions .plan-upgrade-button,
+.ghost-toolkit-body .tk-search,
+.ghost-toolkit-body .tk-search-toggle,
+.ghost-toolkit-body .tk-panel-toolbar .tk-icon-btn,
+.ghost-toolkit-body .tk-catbtn,
+.ghost-toolkit-body .tk-langbtn {
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, .6);
+}
+.ghost-toolkit-body .tk-right-actions .tk-bm-filter:hover,
+.ghost-toolkit-body .tk-right-actions .plan-upgrade-button:hover,
+.ghost-toolkit-body .tk-search-toggle:hover,
+.ghost-toolkit-body .tk-panel-toolbar .tk-icon-btn:hover,
+.ghost-toolkit-body .tk-catbtn:hover,
+.ghost-toolkit-body .tk-langbtn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .06) !important;
+}
+.ghost-toolkit-body .tk-panel-toolbar .tk-icon-btn,
+.ghost-toolkit-body .tk-catbtn,
+.ghost-toolkit-body .tk-langbtn { border-radius: 9px; }
+.ghost-toolkit-body .tk-catbtn.is-filtered,
+.ghost-toolkit-body .tk-bm-filter[aria-pressed="true"] {
+    color: #c7d2fe;
+    background: rgba(99, 102, 241, .14) !important;
+}
+/* the category button is icon-only — the label was reading as random text */
+.ghost-toolkit-body .tk-catbtn-label,
+.ghost-toolkit-body .tk-catbtn-count { display: none !important; }
+.ghost-toolkit-body .tk-catbtn {
+    width: 26px;
+    height: 26px;
+    padding: 0 !important;
+    justify-content: center;
+}
+.ghost-toolkit-body .tk-bm-filter span,
+.ghost-toolkit-body #tkBookmarkCount {
+    font-size: 9.5px;
+    color: rgba(255, 255, 255, .35);
+    background: none !important;
+    border: 0 !important;
+    padding: 0 0 0 2px;
+}
+.ghost-toolkit-body .tk-search input,
+.ghost-toolkit-body #tkSearch {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: rgba(255, 255, 255, .05) !important;
+    border-radius: 999px;
+}
+.ghost-toolkit-body .tk-panel-toolbar { border: 0 !important; }
+
+/* ── 3. Card footer: caption without a hairline plate ─────────────── */
+.ghost-toolkit-body .tk-card-label,
+.ghost-toolkit-body .tk-pal-card .tk-card-label,
+.ghost-toolkit-body .tk-grid-style .tk-card-label {
+    border-top: 0 !important;
+    box-shadow: none !important;
+    background: linear-gradient(180deg, rgba(8, 9, 14, 0), rgba(8, 9, 14, .72)) !important;
+}
+
+/* ── 4. Favourite: pure glyph, no plate, no border ────────────────── */
+.ghost-toolkit-body .tk-card .tk-bm-star {
+    width: 16px;
+    height: 16px;
+    right: 7px;
+    bottom: 4px;
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    font-size: 10px;
+    color: rgba(255, 255, 255, .55);
+    transition: opacity .25s ease, color .18s ease, transform .18s cubic-bezier(.34, 1.56, .64, 1);
+}
+.ghost-toolkit-body .tk-card .tk-bm-star:hover {
+    color: #fbbf24;
+    background: none !important;
+    transform: scale(1.15);
+}
+.ghost-toolkit-body .tk-bm-star.is-on,
+.ghost-toolkit-body .tk-card.is-bookmarked .tk-bm-star {
+    color: #fbbf24;
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* ── 5. Like / dislike: one flat pair, zero stacked plates ────────── */
+.ghost-toolkit-body .tk-vote {
+    gap: 4px;
+    padding: 0;
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-vote-divider { display: none !important; }
+.ghost-toolkit-body .tk-vote-btn {
+    width: 16px;
+    height: 16px;
+    border: 0 !important;
+    border-radius: 6px;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, .55);
+}
+.ghost-toolkit-body .tk-vote-btn svg { width: 11px; height: 11px; }
+.ghost-toolkit-body .tk-vote-btn:hover {
+    color: #34d399;
+    background: none !important;
+    transform: scale(1.15);
+}
+.ghost-toolkit-body .tk-vote-btn.tk-vote-down:hover { color: #fb7185; }
+.ghost-toolkit-body .tk-vote-btn.tk-vote-up.is-on {
+    color: #10b981;
+    background: none !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-vote-btn.tk-vote-down.is-on {
+    color: #f43f5e;
+    background: none !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-card-del {
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* ── 6. Section chrome: no stray dividers anywhere ────────────────── */
+.ghost-toolkit-body .tk-grid-section,
+.ghost-toolkit-body .tk-grid,
+.ghost-toolkit-body .tk-chiprow,
+.ghost-toolkit-body .tk-speed,
+.ghost-toolkit-body .tools-tab-panel {
+    border: 0 !important;
+}
+.ghost-toolkit-body .tk-chip {
+    border: 0 !important;
+    background: rgba(255, 255, 255, .045) !important;
+    color: rgba(255, 255, 255, .62);
+}
+.ghost-toolkit-body .tk-chip:hover {
+    background: rgba(255, 255, 255, .08) !important;
+    color: #fff;
+}
+.ghost-toolkit-body .tk-chip.active {
+    background: rgba(99, 102, 241, .16) !important;
+    color: #c7d2fe;
+}

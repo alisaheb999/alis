@@ -1,0 +1,152 @@
+/* GHOSTAE Text — v8 UI pass (presentation only) */
+
+/* ── Top bar: search expands without breaking the tab strip ───────── */
+.ghost-toolkit-body .tk-topbar { gap: 8px; }
+.ghost-toolkit-body .tools-tabs {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+}
+.ghost-toolkit-body .tk-right-actions {
+  flex: 0 0 auto !important;
+  min-width: 0;
+  gap: 6px;
+}
+.ghost-toolkit-body .tk-search { flex: 0 0 auto; }
+.ghost-toolkit-body .tk-search.open {
+  width: 168px !important;
+  max-width: 42vw !important;
+}
+.ghost-toolkit-body .tk-search input {
+  font-size: 11px !important;
+  text-overflow: ellipsis;
+}
+.ghost-toolkit-body .tk-topbar.gp2-search-open .tk-tab-name { display: none; }
+.ghost-toolkit-body .tk-topbar.gp2-search-open .tools-tab { padding-left: 8px; padding-right: 8px; }
+.ghost-toolkit-body .gp2-pricing-btn { color: #6fe3b4 !important; }
+.ghost-toolkit-body .gp2-pricing-btn svg { width: 15px; height: 15px; }
+
+/* ── Grids fill the full width (no dead space on the right) ───────── */
+.ghost-toolkit-body .tk-grid,
+.ghost-toolkit-body .tk-expr-grid,
+.ghost-toolkit-body .tk-emoji-grid,
+.ghost-toolkit-body .ge-asset-grid { justify-content: stretch !important; }
+.ghost-toolkit-body .tk-grid > *,
+.ghost-toolkit-body .tk-expr-grid > *,
+.ghost-toolkit-body .tk-emoji-grid > *,
+.ghost-toolkit-body .ge-asset-grid > * {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* ── Expressions: compact, even rhythm ────────────────────────────── */
+.ghost-toolkit-body .tk-expr-toolbar {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0 !important;
+}
+.ghost-toolkit-body .tk-expr-cats { display: none !important; }
+.ghost-toolkit-body .gp2-target {
+  height: 24px !important;
+  min-height: 24px !important;
+  padding: 0 22px 0 8px !important;
+  font-size: 10.5px !important;
+  border-radius: 7px !important;
+  flex: 0 0 auto;
+  width: auto !important;
+  max-width: 150px;
+}
+.ghost-toolkit-body .tk-expr-reference-actions {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+.ghost-toolkit-body .tk-expr-reference-search {
+  height: 24px !important;
+  min-height: 24px !important;
+  font-size: 10.5px !important;
+  border-radius: 7px !important;
+  flex: 1 1 auto;
+  max-width: 220px;
+}
+.ghost-toolkit-body .tk-expr-reference-icon {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  font-size: 10px !important;
+  border-radius: 7px !important;
+  padding: 0 !important;
+}
+.ghost-toolkit-body .tk-expr-grid {
+  grid-template-columns: repeat(auto-fill, minmax(82px, 1fr)) !important;
+  gap: 6px !important;
+}
+.ghost-toolkit-body .tk-expr-card {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 58px !important;
+  height: auto !important;
+  padding: 8px 5px !important;
+  border-radius: 9px !important;
+}
+.ghost-toolkit-body .tk-expr-icon { width: 18px !important; height: 18px !important; }
+.ghost-toolkit-body .tk-expr-icon svg { width: 15px; height: 15px; }
+.ghost-toolkit-body .tk-expr-label {
+  display: block;
+  width: 100%;
+  font-size: 9px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: .01em;
+  color: color-mix(in srgb, var(--ghost-text, #e6e6e6) 62%, transparent);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* favourite star on expression cards */
+.ghost-toolkit-body .tk-expr-card .tk-bm-star {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 4;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(10, 14, 13, .45);
+  color: rgba(255, 255, 255, .85);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity .15s ease, color .15s ease;
+}
+.ghost-toolkit-body .tk-expr-card .tk-bm-star svg { width: 11px; height: 11px; }
+.ghost-toolkit-body .tk-expr-card:hover .tk-bm-star,
+.ghost-toolkit-body .tk-expr-card:focus-within .tk-bm-star,
+.ghost-toolkit-body .tk-expr-card .tk-bm-star.is-on { opacity: 1; }
+.ghost-toolkit-body .tk-expr-card .tk-bm-star.is-on { color: #ffd75a; }
+
+/* ── Premium emoji artwork ────────────────────────────────────────── */
+.ghost-toolkit-body .ge-tile-glyph { display: inline-flex; align-items: center; justify-content: center; }
+.ghost-toolkit-body .gp2-emoji-img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .35));
+}
+.ghost-toolkit-body .ge-asset-tile:hover .gp2-emoji-img { transform: scale(1.06); }
+.ghost-toolkit-body .gp2-emoji-img { transition: transform .12s ease; }

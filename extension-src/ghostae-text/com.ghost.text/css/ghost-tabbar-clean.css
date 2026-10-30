@@ -1,0 +1,10 @@
+/* Ghostae Text — no overflow "⋯" chip after Expressions. */
+.ghost-more, .ghost-more-pop { display: none !important; }
+.ghost-toolkit-body .tools-tabs.tk-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ghost-toolkit-body .tools-tabs.tk-tabs::-webkit-scrollbar { height: 0; }
+.ghost-toolkit-body .tools-tabs.tk-tabs .tools-tab { flex: 0 0 auto; }

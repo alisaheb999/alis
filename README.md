@@ -1,20 +1,26 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Ghostae
 
-# Run and deploy your AI Studio app
+hi
 
-This contains everything you need to run your app locally.
+This project was built with [Lovable](https://lovable.dev).
 
-View your app in AI Studio: https://ai.studio/apps/drive/1rhsyTT6vlf828gMWD_fDLR7jbcQ3E8_D
+**Live app**: https://hi-there-buddy-4063.lovable.app
 
-## Run Locally
+## Build with Lovable
 
-**Prerequisites:**  Node.js
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/c123f7e8-7653-432c-8d6b-ffd1686dd541).
 
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
+```

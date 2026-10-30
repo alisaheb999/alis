@@ -1,0 +1,2251 @@
+﻿{
+    "extensionId":  "com.ghost.text",
+    "version":  "3.41.0",
+    "buildType":  "customer-hardened",
+    "files":  [
+                  {
+                      "path":  "README.txt",
+                      "sha256":  "70a62c89d6efce9775976873bb4b0a7ccffd4be3cbc01f947c8387e5e1346aea"
+                  },
+                  {
+                      "path":  "toolkit.html",
+                      "sha256":  "5c78993cc8d26ffab0d7a0ccd54cfae0561ded4e771ae87e2621acb2b79bb2d8"
+                  },
+                  {
+                      "path":  "assets/app-mark.svg",
+                      "sha256":  "ab2796421df26ae56656bc8c0a8355aee8a80284213baed7da1739192229da23"
+                  },
+                  {
+                      "path":  "assets/icons/pause.svg",
+                      "sha256":  "ea096c051012949a055f33c786d1fc5ae788e93814ec17d1a70cae858449d1cc"
+                  },
+                  {
+                      "path":  "assets/icons/play.svg",
+                      "sha256":  "f89e36bb95f6292192894880fa12470e5132a8d8138ce01330a9ecb66f91a975"
+                  },
+                  {
+                      "path":  "assets/icons/settings.svg",
+                      "sha256":  "8609ad86341b2d80aaf28b3984efe63ef19287fb3913ee1ff413c2f357c3dd27"
+                  },
+                  {
+                      "path":  "ffx/README.txt",
+                      "sha256":  "32c6a3a2a12dd4e2460cc7708664e1d54ec433700f85e49cfec5e4d59a21f1fe"
+                  },
+                  {
+                      "path":  "docs/GHOST-MOTION-RULES.md",
+                      "sha256":  "d99bdbc6717f04d0c895ed52a10cc0779388dd290838c7e3bbe72c9a903b46ba"
+                  },
+                  {
+                      "path":  "docs/GHOST-UI-SKILL.md",
+                      "sha256":  "2d2f6360cbd753fdca9bd9273466bfcc01609e6f98d196d9d759553dfe81ce2a"
+                  },
+                  {
+                      "path":  "css/ae-theme.css",
+                      "sha256":  "579d99c2199be3371e219d250b6619299389d95b0374332b5d70b9739f843e46"
+                  },
+                  {
+                      "path":  "css/design-tokens.css",
+                      "sha256":  "fa86304f88aeb52db247d6468b3944696f36418a70f866a63cc48ca901e6300d"
+                  },
+                  {
+                      "path":  "css/ghost-ae2020-compat.css",
+                      "sha256":  "42c37d93cc805d7108d4671b77e76f0a2f1bd0b36896ac90ef86dd9ea077f965"
+                  },
+                  {
+                      "path":  "css/ghost-card-ultra.css",
+                      "sha256":  "c0fb8e930c5ea5baf59cc1e49cacb7014a79cc71a70c9c0268fda68017c079e0"
+                  },
+                  {
+                      "path":  "css/ghost-compat.bundle.css",
+                      "sha256":  "506d9c72d3c2cfe6c7911fec310632aae9608753a2688df297b0f2cd92c4a1c9"
+                  },
+                  {
+                      "path":  "css/ghost-connect.css",
+                      "sha256":  "c727b98302062c84c7ecd6e6d7bedd2f83c1c66df35e4b4287dd4c1521aae04a"
+                  },
+                  {
+                      "path":  "css/ghost-core.bundle.css",
+                      "sha256":  "23a8ec60438cafe6d7d6d01c4505f82e6bd7aa57712470de31d4393b0f11bfa9"
+                  },
+                  {
+                      "path":  "css/ghost-design-system.css",
+                      "sha256":  "bd81b960ebb2d0243b5884cc1fca2ada080cae55bff86090724c6ecc314dcb41"
+                  },
+                  {
+                      "path":  "css/ghost-ds-extend.css",
+                      "sha256":  "dc46711eaa163fa75a5bd8bf95cd2da631654b68cc9d8337c7ec807f82efa283"
+                  },
+                  {
+                      "path":  "css/ghost-emoji-2026.css",
+                      "sha256":  "c567177a382ff1cbc00f4ab0287881e2092d475d51a2373b0b0b08d3092028ba"
+                  },
+                  {
+                      "path":  "css/ghost-expr-2026.css",
+                      "sha256":  "bfa2a8478f85e54de279b116a5c057b8dd9b22396e392913ecda7db1c49602d6"
+                  },
+                  {
+                      "path":  "css/ghost-expr-fix.css",
+                      "sha256":  "b32b7840499a58bce04a9dd3853325f7124d6f380afd2e8ad088f83594562690"
+                  },
+                  {
+                      "path":  "css/ghost-expr-premium.css",
+                      "sha256":  "279f2b24c3eb3a65d5969e0672c58f1720ab03b0278b2a64a6f884c89d003dd5"
+                  },
+                  {
+                      "path":  "css/ghost-expression-final.css",
+                      "sha256":  "6fe47f98c1a74337e6ddea4673027362dd163e08c2a0f935512a03d55f03cbfa"
+                  },
+                  {
+                      "path":  "css/ghost-fa-lite.css",
+                      "sha256":  "b1600b45b9e07f8daa4c8424a7952a1e423e80df37636a52430178e41dd08baf"
+                  },
+                  {
+                      "path":  "css/ghost-final-2026.css",
+                      "sha256":  "c106703884b1a68ed6666cdb4f2909947daec85b4504803a9818bf42090e216c"
+                  },
+                  {
+                      "path":  "css/ghost-gap-fallback.css",
+                      "sha256":  "9103410329ddd90d83fab46170eee43e594d5d65bf84bd89f6983f21fb2e0dad"
+                  },
+                  {
+                      "path":  "css/ghost-gate-fix.css",
+                      "sha256":  "e0438b13346a9a4380b5d6d550295a56b1b926f08d163a1ce5b0f8418ccdc371"
+                  },
+                  {
+                      "path":  "css/ghost-gate.css",
+                      "sha256":  "3a857250888671251a0c652d0199df50a76b97b1ab78def8e39a03bc0cd6c6c0"
+                  },
+                  {
+                      "path":  "css/ghost-legacy-compat.css",
+                      "sha256":  "cd34afdc4cad6094a046357b4237cfca018cc14873959de026a8bcfb9f8029a0"
+                  },
+                  {
+                      "path":  "css/ghost-macos-controls.css",
+                      "sha256":  "e45f61bc1a724cc348662e8748be44e388967f66447aaf0ee146a0b08bdfbcf4"
+                  },
+                  {
+                      "path":  "css/ghost-menu-2027.css",
+                      "sha256":  "a477ba28e5901cfe0b440d426901d1717906bc6389ee1182dbffd48c32d11abf"
+                  },
+                  {
+                      "path":  "css/ghost-panel-2028.css",
+                      "sha256":  "9f3b5350c5c665784be57cd1c531c570e0587e6c8a3aed973aa7b887b6cd2b8b"
+                  },
+                  {
+                      "path":  "css/ghost-panel.bundle.css",
+                      "sha256":  "10572a87a6e5e7ea8dc031a1d78a6c6be1af1b46059aa0b472b3da9aa2605a04"
+                  },
+                  {
+                      "path":  "css/ghost-patch.css",
+                      "sha256":  "e0b1cd2155f7e4a5d9ce2ecf34bf0b153adc9ac552098aba43b90d0e75311484"
+                  },
+                  {
+                      "path":  "css/ghost-plans.css",
+                      "sha256":  "c0b3c87bd08654cd903a491dfd1ddd3b55262f212c15e8ebcab2167509616515"
+                  },
+                  {
+                      "path":  "css/ghost-premium-clean.css",
+                      "sha256":  "e609d7273be14f5fb60f664ddefb441a3d9f75f6b8daf8fdf241a25c55ea8637"
+                  },
+                  {
+                      "path":  "css/ghost-premium.css",
+                      "sha256":  "c336db930661e6b4954d7f1e0ed9dc44a4a977eaad4ecb84adef5b4a439a18fe"
+                  },
+                  {
+                      "path":  "css/ghost-publish-features.css",
+                      "sha256":  "e4abfe3619396713863ae7d4d25ec61390ecbb66c17547be4ac8fab8d3965749"
+                  },
+                  {
+                      "path":  "css/ghost-redesign-2026.css",
+                      "sha256":  "bd1c5c489767a77c459329c6f713fe9176cda671337e5d595759566bd852969f"
+                  },
+                  {
+                      "path":  "css/ghost-release.bundle.css",
+                      "sha256":  "e8915b9094f503203ed924def710135abed93eab740dcc717babcd9c8b040b02"
+                  },
+                  {
+                      "path":  "css/ghost-tabbar-clean.css",
+                      "sha256":  "09df088804b2fe86d71bbef6a3a64ad4cde79828b35b23c15d4133c3f05039fa"
+                  },
+                  {
+                      "path":  "css/ghost-text-2027.css",
+                      "sha256":  "1e87aa02ed04033380f20170d3d34447eb4671aeda315b91f2ee19d273f9b1a2"
+                  },
+                  {
+                      "path":  "css/ghost-text-clean.css",
+                      "sha256":  "50e17791da75c0184af7c40be9dbab9617f5fa1d8f7cbb1fba933d5dc6133da2"
+                  },
+                  {
+                      "path":  "css/ghost-tw.css",
+                      "sha256":  "d69a096531389e1bde40119e23df2f765e54905bcbef9e4edd20bda08ed61ab3"
+                  },
+                  {
+                      "path":  "css/ghost-ui-final.css",
+                      "sha256":  "397b15a1a3c2a2d29a827ffcf2a80b95af5d9c701abaa67b193329e0189c8fae"
+                  },
+                  {
+                      "path":  "css/ghost-ui-fixes.css",
+                      "sha256":  "e8629643805bc6ef6b02a47f29139e6992af44d1e6fa7c8a3eca552c5b91dcd6"
+                  },
+                  {
+                      "path":  "css/ghost-ui-rich-audit.css",
+                      "sha256":  "35edf745ac50c7313b40a30273d4a38a8f552b3974385303e6d96cf25ca75264"
+                  },
+                  {
+                      "path":  "css/ghost-ui-skill.css",
+                      "sha256":  "2e5910ab4ac58a46f358e215c731a7c2367c2caf1de3e859acffbf9e99ab586f"
+                  },
+                  {
+                      "path":  "css/ghost-uplift.css",
+                      "sha256":  "9a011224c89222db8b0b1a9769334ff34b04cbffe99ec08c718ab5e853e3aef7"
+                  },
+                  {
+                      "path":  "css/ghost-v8.css",
+                      "sha256":  "60da2feab4e3c80087a794245eaad04ec31e80548f110dc585f0d5b0c0e6117c"
+                  },
+                  {
+                      "path":  "css/ghost-web-style-presets.css",
+                      "sha256":  "3807ac63eef1a484300c57d88f0a9790e906d4e12c2d546abc5d51c3f2c8353c"
+                  },
+                  {
+                      "path":  "css/system-ui.css",
+                      "sha256":  "95e181eeb6780c4addca400898b1f51366ec6334a2823a6ba212cfa76b2d3cbb"
+                  },
+                  {
+                      "path":  "css/toolkit-advanced.css",
+                      "sha256":  "58562c0d239545db51b1d025bdb1af4641906a2c14a0c8f813f21155fcdcaf87"
+                  },
+                  {
+                      "path":  "css/toolkit.css",
+                      "sha256":  "35e85c84213187f9ce016779af85d12ff3508a82459c6502b06b236f581ac962"
+                  },
+                  {
+                      "path":  "css/tools.css",
+                      "sha256":  "d61948670dbe31815e3e9bec5665b4abd1bc40be46d8586733824ec430023889"
+                  },
+                  {
+                      "path":  "js/CSInterface.js",
+                      "sha256":  "1ff15811f9f77b7fa225ecb1b0a9eb46efd7122cc28efe90f6f7e8c9f1cf81fe"
+                  },
+                  {
+                      "path":  "js/api-compat.js",
+                      "sha256":  "6499f338efa30972ed7961e1227561828e3075a84f76767561a5b3046dc4166a"
+                  },
+                  {
+                      "path":  "js/build-version.js",
+                      "sha256":  "fba23e49f6e594e45a93d8ec547032ef14543cd66a998e96a6692ce49de51e90"
+                  },
+                  {
+                      "path":  "js/emoji-data.js",
+                      "sha256":  "77b64c07947dd3439736ca8ca073a8054df3f74c3d8009dc2bb4ef4e1c0f45ef"
+                  },
+                  {
+                      "path":  "js/error-handler.js",
+                      "sha256":  "fc114cb3cfc898c6437882a371be6560e3a57620b01db47465810b895c6689e4"
+                  },
+                  {
+                      "path":  "js/ghost-anim-pack.js",
+                      "sha256":  "70ed3be311f7dcd4bf5c2c76a303000b7d93a22c9d71af20186bb205a8ed7624"
+                  },
+                  {
+                      "path":  "js/ghost-apply-engine.js",
+                      "sha256":  "07db4cec18f30a39ed784707474e43efd4840ca93b1ebe96707393bd9b0cdb60"
+                  },
+                  {
+                      "path":  "js/ghost-boot.js",
+                      "sha256":  "1d509c6c3fbf82f86d457a672fceee6673f0e011a09f43971e896c1980939fa0"
+                  },
+                  {
+                      "path":  "js/ghost-bundled-preset-catalog.js",
+                      "sha256":  "31faf4fb4c0403a8ac9c27e44a2d43ac975ed952583e54a0508fd8da941a77cd"
+                  },
+                  {
+                      "path":  "js/ghost-cloud.js",
+                      "sha256":  "352db30e1d4ef0da50dd2a8432a0a7bdf6ff3e0336b6274c6e600921454e0f9a"
+                  },
+                  {
+                      "path":  "js/ghost-compat.js",
+                      "sha256":  "3a9d22a411652cacb81c273001eecaf677f5a25cb28fe4a8bbd8fa71872d57d1"
+                  },
+                  {
+                      "path":  "js/ghost-config.js",
+                      "sha256":  "523eb782ebf9d76bd08997fdd4ac3246a2e81e42f5963452d21c7821bc4857bd"
+                  },
+                  {
+                      "path":  "js/ghost-connect.js",
+                      "sha256":  "08624591d67d0cd8b0a5e29898d52101f07bd09258e873d763df10bd5eb1d3dd"
+                  },
+                  {
+                      "path":  "js/ghost-control-gate.js",
+                      "sha256":  "1dc4a31876a8624c661fbd8267ff2cf3880bfacbb74479777ab3a23a8f7a6ade"
+                  },
+                  {
+                      "path":  "js/ghost-feedback.js",
+                      "sha256":  "88f12c3f3fc7129e2348dec68a29a0ce4c69b44b02d07e16fd3c6e9af7488a84"
+                  },
+                  {
+                      "path":  "js/ghost-final-2026.js",
+                      "sha256":  "487c0c34209253bbea01f1c95c4188791046d8434b80cd695902c00f5c6d9628"
+                  },
+                  {
+                      "path":  "js/ghost-gate.js",
+                      "sha256":  "4b9af29fcdcfd3c527469047554d0e1790581b542e7e792d54e2c18fc3a2a785"
+                  },
+                  {
+                      "path":  "js/ghost-heroicons.js",
+                      "sha256":  "e422bde45b37387e3d8435d5a411e4f09472a404e6bcb477445ce6ef4e7330fc"
+                  },
+                  {
+                      "path":  "js/ghost-icons.js",
+                      "sha256":  "3e7b070fab377be117f0ee0b5b9202629f748c44e44de611255e3f04180446ea"
+                  },
+                  {
+                      "path":  "js/ghost-idle.js",
+                      "sha256":  "027cb1a2c1c2bd12a474c1f615e8e098429709382d57c6d014ea7e540957b879"
+                  },
+                  {
+                      "path":  "js/ghost-low-device-profile.js",
+                      "sha256":  "707a93c0ccf9ca032b0a9234eac94e0e798964f40357470668aa278d220c6585"
+                  },
+                  {
+                      "path":  "js/ghost-mcp-bridge.js",
+                      "sha256":  "dfcbe0f05a0d68fbf6635b65d07b347dd6a2569355da076a46a172e7b9d34dfd"
+                  },
+                  {
+                      "path":  "js/ghost-menu-2027.js",
+                      "sha256":  "40165db8c27dcc9ee917982904b66ba6995d119164239d15a88a47cb764e0060"
+                  },
+                  {
+                      "path":  "js/ghost-motion.js",
+                      "sha256":  "bd4df96a9f723998b966807229328158e0a7ac64d7cbad39afa072400c5dbca4"
+                  },
+                  {
+                      "path":  "js/ghost-observer.js",
+                      "sha256":  "3c98b12bc13b4c5ff28e9e541e4141ef6402ce68b1dd7acd16d767719aa9edf8"
+                  },
+                  {
+                      "path":  "js/ghost-panel-2028.js",
+                      "sha256":  "797b05120c60dfdc76e0ac3a519c79d4453600e42a8dc6c84463c25be061bee7"
+                  },
+                  {
+                      "path":  "js/ghost-patch.js",
+                      "sha256":  "15633cacf4854a0f5b06ce0e4643b0dfd4d79f0fe4821ed1c6ddddce39154fab"
+                  },
+                  {
+                      "path":  "js/ghost-perf.js",
+                      "sha256":  "d3f2d8e7a8630f00eb133c3ae11c97e18d18037860d09b5fc477b84be41e05b3"
+                  },
+                  {
+                      "path":  "js/ghost-plan-status.js",
+                      "sha256":  "ae34126957c11b12dbcfd1ddc2b9a885a364245eccda01b88f3e95b48fbd5875"
+                  },
+                  {
+                      "path":  "js/ghost-plans.js",
+                      "sha256":  "de9b92aeb5186e85e1e67ef512dc54b6cedf47a4cccf8cf7ce11d1f45a92efff"
+                  },
+                  {
+                      "path":  "js/ghost-publish-features.js",
+                      "sha256":  "b2e860d78918d408988d7d13a0048e428c331280de8678f3895ab4a95bcc6335"
+                  },
+                  {
+                      "path":  "js/ghost-release.bundle.js",
+                      "sha256":  "903c1df5aa447425b0a4534f927e5d2d23d73667e0ca73b139e6033ddb3e551e"
+                  },
+                  {
+                      "path":  "js/ghost-search.js",
+                      "sha256":  "bb7a71bc3ad2274e9c51f3723cdee82af0f063d6e42b203152c2116da3cf7132"
+                  },
+                  {
+                      "path":  "js/ghost-sidebar.js",
+                      "sha256":  "81e67e19fcc310a55f318dc0d7d8ce5ece87d9d719f54e073de2a58d51897cf1"
+                  },
+                  {
+                      "path":  "js/ghost-stability.js",
+                      "sha256":  "5b13a4529b577e1f52a7f5cdb49ffcb6519dcf6392ff3be86c4fd807ec54877b"
+                  },
+                  {
+                      "path":  "js/ghost-style-header-final.js",
+                      "sha256":  "02facfd4812e964737831c0ba7c398e9f9c15d3d4357f3bac8f7af27d786da4c"
+                  },
+                  {
+                      "path":  "js/ghost-style-header-restore.js",
+                      "sha256":  "073f9eed89a3993058ed57d2dd9069f4d63f0f22e5923495452fb385f0b8c93c"
+                  },
+                  {
+                      "path":  "js/ghost-style-version-gate.js",
+                      "sha256":  "f0ce95fd41eea00c45037fff3e74f11e5018f28000b96f86f411ada804b5c7fd"
+                  },
+                  {
+                      "path":  "js/ghost-tabbar.js",
+                      "sha256":  "599f8c1105fcf5584f38c934a322216acc7260e2e1a8741b0e5576f56c6c40df"
+                  },
+                  {
+                      "path":  "js/ghost-ui-2026.js",
+                      "sha256":  "a01e5afe8b7777b838f9b7ba81aa0e2c8eeb36311377969c970b133cfd1de29a"
+                  },
+                  {
+                      "path":  "js/ghost-user-presets.js",
+                      "sha256":  "fc14c86aedf2398fc42c1ae1442e275752646697425a5581143a48ab6c029b16"
+                  },
+                  {
+                      "path":  "js/ghost-v8.js",
+                      "sha256":  "0febcd5f9391b3f239a6cfbc68677bc25fd45069a3ebc7a40b93052610e232e9"
+                  },
+                  {
+                      "path":  "js/ghost-web-link.js",
+                      "sha256":  "6c4b06d4b0097c40d267798b5bc3a67b13f59b388e4d02b4901d1c9052cca2d4"
+                  },
+                  {
+                      "path":  "js/ghost-web-style-presets.js",
+                      "sha256":  "3fe20e87f0e1c2ecc69fafe167550d8f370a9696261fd1180da6e2b2cd2ebf1e"
+                  },
+                  {
+                      "path":  "js/host.jsx",
+                      "sha256":  "f1b1631f4ff870c7ec1a4b9cb47f4510e2ed38735b68a322a130fd9189f8732f"
+                  },
+                  {
+                      "path":  "js/toolkit-advanced.js",
+                      "sha256":  "fddaf5361416ee6ebcbcdb8d232f65dfa3875ee7bca51601f63c4d1934ec7f64"
+                  },
+                  {
+                      "path":  "js/toolkit.js",
+                      "sha256":  "febedb3b018bb13c3f76da3bc306838af616256e0d8b218aabd406e38d317c8b"
+                  },
+                  {
+                      "path":  "presets/ffx/README.md",
+                      "sha256":  "16473381c4a3ee3a677f0a966fc34428b7442d32aa72d0100b5a4284930881e4"
+                  },
+                  {
+                      "path":  "presets/ffx/pack.json",
+                      "sha256":  "ed42f67057c54c16b34cbe692199664644db7fcdc51b0b2d973d11b05337620d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Tracking Characters 2 (B)/Scale \u0026 Tracking Characters 2 (B).ffx",
+                      "sha256":  "c59c1cb870cf21c79ca8ad0dda69e9b17dc7b78589467a0b10f63d8584d1002e"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Right (B)/Position Characters Right (B).ffx",
+                      "sha256":  "f2fcc260a011b36a7b34c26cb385d312584923240a335bb106121d750f9291b0"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Left (B)/Position Words Left (B).ffx",
+                      "sha256":  "ba06b3365a745fc277f99dcbc482cd51cc86a714f56c33d3befb43e7dae6d087"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Words Down (B)/Position \u0026 Rotation Words Down (B).ffx",
+                      "sha256":  "bb823f40d4b893fce02259c4844f7d6e0e4028e7ce501b48abc6474944aa5c3e"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words Front/3D Words Front.ffx",
+                      "sha256":  "aca80dd7778cf553eab1af87fd5b83d963273ac656de25501c7b804f5357c219"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words Up/Random Words Up.ffx",
+                      "sha256":  "ffa2031ed905d3f97c7c91bf5b698e5416221fc5731d19b16868eb2d2f8c01f7"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Down/Position Characters Down.ffx",
+                      "sha256":  "e6c198e4b2e69ca4ead89f5671ea54310e9e1c0b8dff3564c2f657735ee9b4df"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Down 2/Position Characters Down 2.ffx",
+                      "sha256":  "ec5011ab58581feb924af5aebd31a9094fb135fc8279f29695a08841cf7345aa"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Down (B)/Position Words Down (B).ffx",
+                      "sha256":  "8f33619d5e4c8680eb61195f678a4f0e8ba3ea7c2993edcc11f6403eda1a29f0"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Up (B)/Position Characters Up (B).ffx",
+                      "sha256":  "b79bd04be1dfdb204c2406e3d6cfd777ec6addc5aac62be04961807747f117ed"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Tracking Words 2 (B)/Scale \u0026 Tracking Words 2 (B).ffx",
+                      "sha256":  "9337987d4c7935169480a700d7369f435179d165edab2fac393c8825ec781d0e"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters Down/3D Characters Down.ffx",
+                      "sha256":  "21d3f3fd4808bed51a640e5d3624786bb8680bf0e330e72a3de7dd707cae7cba"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words Left/Random Words Left.ffx",
+                      "sha256":  "1bad175c72a26e7d61ee59d6fb32ea0d5036a29c94f823e73848fc80df910820"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Up 2/Position Characters Up 2.ffx",
+                      "sha256":  "f5c28a69c5e8d3a6b0f5e52b6cdad079447187311a8d09548c5e2000f4066700"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Up/Position Words Up.ffx",
+                      "sha256":  "ca3957e1232a91ea97dd57fae6028b7f2cd862aabb397badc6d811f7f35f3d3e"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words Left/3D Words Left.ffx",
+                      "sha256":  "cb1e4b3efa646ef93f0b71484e25c8c4152a9a22898e6ae593b323db9335d8bc"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters Down/Random Characters Down.ffx",
+                      "sha256":  "1fc5f0e7afc084a6a4fea5135a3da40b0ca64f743c8dcc6e53cd425b45456781"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Rotation Words (B)/Scale \u0026 Rotation Words (B).ffx",
+                      "sha256":  "1901ebc73510d78d2364ef89487ae8f6e9439d0caca2450bbc084ded7f24c14d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Words Right/Anchor Point Words Right.ffx",
+                      "sha256":  "05977a6bd751456ca123657b21be6cb55f4e82528bade74810c07145ee392bb0"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Characters 1/Opacity Characters 1.ffx",
+                      "sha256":  "be7af2e6db218f9236b898056ba437a1691a027b823a15558ff8a3dd5b126771"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters \u0026 Rotation Front/3D Characters \u0026 Rotation Front.ffx",
+                      "sha256":  "c5c40713026f920a36e11e70a962b53815641f1caafd4cb398a8dde127f88c66"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters Up/3D Characters Up.ffx",
+                      "sha256":  "97a91d86391ef05042744783b6e434db60d0ea0e8fa04d5f81a9bc850f7d0663"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words Down/Random Words Down.ffx",
+                      "sha256":  "9c13a3bdf0a23044767e0c8c31f3795574b0693fa88721b7fe057f3ba8a67af2"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Words left/Anchor Point Words left.ffx",
+                      "sha256":  "940ce37759633fd1805b4eb76088e98a61d17a452e1e908bdd05fa2d98e5d560"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Right 2/Position Characters Right 2.ffx",
+                      "sha256":  "1774c425eb230a8a733cf8c7f0cf0460eef21fa4fb6da0992a1ce03707ee6bcc"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters \u0026 Blur/Random Characters \u0026 Blur.ffx",
+                      "sha256":  "83b7ba756e4b832ba0f1dfd8827f4631f54cc2c57938dae20507be62c55c0454"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Characters 3/Opacity Characters 3.ffx",
+                      "sha256":  "9db7d00ab6a8a64c83e7a488b3a8d75d4661e5d46273e5b37efa14a4e36ef87c"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters \u0026 Rotation Up/3D Characters \u0026 Rotation Up.ffx",
+                      "sha256":  "babb6c6fb525bcb1cfad39e3cf9b674c9e83e2c50c4182c49718bd0025515a58"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Up 3/Position Characters Up 3.ffx",
+                      "sha256":  "45d1e78c8532b40811d0cd20a1d1cfd2a4f82dd63a12a005e9d4535d31d1791d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters Left/3D Characters Left.ffx",
+                      "sha256":  "b1a951bcf119d04f62b99d41177a2e3bcc4ad854d993e3d7905fc93a9676deff"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Right 3/Position Characters Right 3.ffx",
+                      "sha256":  "91035ecd22f747d212d2c2cedb968f16ec09fc2ed681cfe1ced1fb265b542152"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Right (B)/Position Words Right (B).ffx",
+                      "sha256":  "d2831b062a7750ec3e31cc0a7ebdd65e6b7542ed8062e5f19c18d9dd735db7bc"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Tracking Characters (B)/Scale \u0026 Tracking Characters (B).ffx",
+                      "sha256":  "351cea8d7118b1a4a1a05c951083d3ac4398e23c259625cf270def361a155738"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Down (B)/Position Characters Down (B).ffx",
+                      "sha256":  "b8a0cd4f6a4ba0453f630250ba96d1543ca3f1450ee56b4dfad628274e45c651"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters Right/3D Characters Right.ffx",
+                      "sha256":  "ff21ecae12276f6067634e195a5be8428fb77bbe2160978cb9e2ffe23aa597ad"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Typewriter 3/Typewriter 3.ffx",
+                      "sha256":  "e9de999e1b5dfac9d7d887457ad1734fcaa1f9010f98f5bf3bc524c6a99c873c"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Typewriter 5/Typewriter 5.ffx",
+                      "sha256":  "d104cedc7aa6ebb1fd8b61aa727eb96522785a6458360281ce553e928e94a379"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Right/Position Words Right.ffx",
+                      "sha256":  "280f53886b693119f18a1c38a8229e1b2cd296de49f5985560dcf80b78fb74cc"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters Front/3D Characters Front.ffx",
+                      "sha256":  "a056cef813546a9fd1275348833f536a0ca693e3019f400ea8187e28cf683e22"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Blur Words Left/Position \u0026 Blur Words Left.ffx",
+                      "sha256":  "a3514f39e2354c6cb13139eb07634891351de95c7561043fdaaf9630ec88c636"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words Right/3D Words Right.ffx",
+                      "sha256":  "724a682ddf51ab8631e9e55546f6cbcd1558d70e1ac9c1fada64a48503665799"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters \u0026 Rotation Down/3D Characters \u0026 Rotation Down.ffx",
+                      "sha256":  "926fce9b121543d4404dcf585db7b4ee70073d0045d8590650f112ed3d8f6572"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words Down/3D Words Down.ffx",
+                      "sha256":  "b9e3f8315e1bb66da63bd127cccb2708451226e796ca11d12ca6a702ea685f76"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Words 1/Opacity Words 1.ffx",
+                      "sha256":  "6403080199f7cc00418cbc61a06f6e9ce378ed037bc56ac80c2808e07d39837a"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Right/Position Characters Right.ffx",
+                      "sha256":  "61e8f9d339e6d9b6811e02b917c9b79603a95e3d0539b2d99f92180dd7b1ab43"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Blur Words Right/Position \u0026 Blur Words Right.ffx",
+                      "sha256":  "850c58c3d04f3bc08b1eb5a8ba2ed39fc2f8e140d029ef0d503cd764564abf9c"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words \u0026 Rotation Front/3D Words \u0026 Rotation Front.ffx",
+                      "sha256":  "69c4d09e910af69740ba39391d43d37479ff04ce0267dcc192db52f71216ca31"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Characters Up (B)/Position \u0026 Rotation Characters Up (B).ffx",
+                      "sha256":  "779563bb3319879e81213c7fa938064aea7b47396e0ee7e005ea61433d9b7243"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale Words (B)/Scale Words (B).ffx",
+                      "sha256":  "af8a95089bf86c74089167a51950fe1e521510a48c7e95ba176b61cf892b4c47"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Characters \u0026 Rotation Left/3D Characters \u0026 Rotation Left.ffx",
+                      "sha256":  "bb7d33f6593ae5dab96c4ff996485a31cedba9449b148a74479eb9f86d0a1f47"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Words Right (B)/Position \u0026 Rotation Words Right (B).ffx",
+                      "sha256":  "95ede6c7502a7021c3afae85a7fa5c6713e04797fe7c22f9ccdc67bbd9b26587"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Characters left/Anchor Point Characters left.ffx",
+                      "sha256":  "ef45fb97af7ffdd7d741ac5ac448f698a2dcf7aebaded619c97c33818edad5a2"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Rotation Characters (B)/Scale \u0026 Rotation Characters (B).ffx",
+                      "sha256":  "5b84750f8d0bd94aeee67b88adbb7d4c20ff5d2709696e7cd2a3b7d622af8c19"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words \u0026 Blur 2/Random Words \u0026 Blur 2.ffx",
+                      "sha256":  "08bc2135b1948d563c1dbb98364506f040a8de91bd791e7ea964b036f1652ac8"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Line Up (B)/Position Line Up (B).ffx",
+                      "sha256":  "e6b61288d56a0ae905ad9bc1150b6e572adfa0eda57e031985d2dbbd1449fd66"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Blur Words Down/Position \u0026 Blur Words Down.ffx",
+                      "sha256":  "699f770e1d27dfa380d55c78dbe482932e051c90eb60dbbfcb6e8d8f682fd0e5"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity \u0026 Blur Words/Opacity \u0026 Blur Words.ffx",
+                      "sha256":  "9270753dd9766b2180c6f431e8ba36a7472c8f62e9928396b13aacf745bc0e02"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Words Left (B)/Position \u0026 Rotation Words Left (B).ffx",
+                      "sha256":  "116a657300adb6fa3c20594975aee5031d49181a70a796e8811803cbeb653396"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Typewriter 1/Typewriter 1.ffx",
+                      "sha256":  "39522443b723d93ce77fc9a7116ae22744e6158bed37ae92710ac910174ed62d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Words Down/Anchor Point Words Down.ffx",
+                      "sha256":  "e4859d97d712c2e986a30a321aebd732e83e807e26c063660095ee82df953a29"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words \u0026 Rotation Right/3D Words \u0026 Rotation Right.ffx",
+                      "sha256":  "c8e2de4fe04da94dc432bf3c6c92d3baca1e0d63f4b87cda2bbbe05d1588a636"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Up/Position Characters Up.ffx",
+                      "sha256":  "9172b90f9997484cd843ff60f6aff6fa258180559510534bf83f5e20378d3e44"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Words Up/Anchor Point Words Up.ffx",
+                      "sha256":  "a718ee1602b89ca8ea4ff7ac0727ea38451b8a9dc8a7bcc193037397e6388db2"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words/Random Words.ffx",
+                      "sha256":  "be38e0b62d5ec5d0d45101b4084105ea3dc5cbce8c77ba0fd3a36e6efe54bc04"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Characters Left (B)/Position \u0026 Rotation Characters Left (B).ffx",
+                      "sha256":  "4dacc97e48bf765784a89a709aa5a961fafdd1d010574634b860100c80784709"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters Up/Random Characters Up.ffx",
+                      "sha256":  "683b12d56e1e6f5e894322aa5d524142047ad1737f746fd796c4b6fad86cae9d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity \u0026 Blur Characters/Opacity \u0026 Blur Characters.ffx",
+                      "sha256":  "20f59cb07d9a47c813cdac543bda754da6daa4586a46be636b038263202151ca"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words \u0026 Rotation Left/3D Words \u0026 Rotation Left.ffx",
+                      "sha256":  "9264e37ac8c336c23c16f6815c7be377a2bc7efce11649c7770556934d9095b4"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Characters Up/Anchor Point Characters Up.ffx",
+                      "sha256":  "b5607c4a193a145258f378b63cc72dabda0fac708dd356aba80911c1b93095d1"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Words 2/Opacity Words 2.ffx",
+                      "sha256":  "c0c3bfffcab68ebd30cf1c0b2abad2f480c90999f424f33cda19b42046de7216"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Characters Right/Anchor Point Characters Right.ffx",
+                      "sha256":  "1600e13377e02a9f862881e1ff33db67e775df51af7708e566028a65a693b1d5"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Left/Position Words Left.ffx",
+                      "sha256":  "6949beba9f0b519bba716cdde574cdba6a3131123f070fc59bbe247402936083"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters Left/Random Characters Left.ffx",
+                      "sha256":  "343b035f0bc1907278aedfb371e6950034823bb25d7d514a59dfa9abdb7bf522"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters/Random Characters.ffx",
+                      "sha256":  "b0af95955a2a0d8c28b83ff0c5f42409b6887514b4b5d22ea364eca921602061"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Up (B)/Position Words Up (B).ffx",
+                      "sha256":  "de029f1a606656d2ab2921e17f1f3479eb78b289b61cd213e780966705201fdb"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters Right/Random Characters Right.ffx",
+                      "sha256":  "4349967a8eae3008e173098dfc7bb636871fe9371a83ff82fb9c33a4829c5acf"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words \u0026 Blur 3/Random Words \u0026 Blur 3.ffx",
+                      "sha256":  "66c30e90fba8068cfc98f9a995583a5705c0ef67c045bfe174d21dba6a5e3a59"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters \u0026 Blur 2/Random Characters \u0026 Blur 2.ffx",
+                      "sha256":  "8ca020c7cc885cd31ae46a27cdfbf1b8a3509d491ac014312378bd729ebd0858"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Line Left (B)/Position Line Left (B).ffx",
+                      "sha256":  "04737fb23f234a7209d2ba4521ba3785f3b8c5a4a5d47e48bf8a42462bb3eec6"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Words 3/Opacity Words 3.ffx",
+                      "sha256":  "160b13207c5dffbe85ccfb8f924b7d626b2685eb7b13f77e34c4132059b9f769"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Anchor Point Characters Down/Anchor Point Characters Down.ffx",
+                      "sha256":  "34f48ccdb914fbe49fee54e51d13632c49ef0d573a03982e9f07576a3e05cc07"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Rotation Words Up (B)/Position \u0026 Rotation Words Up (B).ffx",
+                      "sha256":  "44fb0f6dcb74fb7f61b35765729abb4e4d36e51ed356edc40c13612d6e38e208"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Left (B)/Position Characters Left (B).ffx",
+                      "sha256":  "3d087f2e133e068719cb44ed2338615387824926ec4758f3f333ef426786ad67"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale \u0026 Tracking Words (B)/Scale \u0026 Tracking Words (B).ffx",
+                      "sha256":  "ed1b12cac12b9ef0d21d295e6078f0a0a2bd796c715da44384429aef4fa1ba4a"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words \u0026 Blur/Random Words \u0026 Blur.ffx",
+                      "sha256":  "4316ab95975f39fab37d8dadc3e729ea0dc1e9d79d450571408c5906394916fc"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Words 4/Opacity Words 4.ffx",
+                      "sha256":  "ad687b28c86242b3daa4537a457544c2a7cde7f1fa6a7f3608128b46827a6024"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words \u0026 Rotation Down/3D Words \u0026 Rotation Down.ffx",
+                      "sha256":  "40f2ffe569585d2a9ea401fca403c48640aa2fabcbd84c24b52a5b0dee9e933f"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Characters \u0026 Blur 3/Random Characters \u0026 Blur 3.ffx",
+                      "sha256":  "6f012e1b1cfb2102ab9ee866b1f24c02815fd1f9cc24003c756369d8b41c9957"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Words Down/Position Words Down.ffx",
+                      "sha256":  "b97bde57f055fdfdb3601a19be336b360f2bfdbf694787b25071e0878360570d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Characters Down 3/Position Characters Down 3.ffx",
+                      "sha256":  "31eea50124dfdc24bc56e36b6f2b497996489926f2a587261b4b48bb4d4f9479"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Line Right (B)/Position Line Right (B).ffx",
+                      "sha256":  "28e70c242350b22b4b8e64d0af7b345d840f5393455d29d91b5f67e5a6f316d0"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Random Words Right/Random Words Right.ffx",
+                      "sha256":  "1e64cd62021b4697630083f6433791a52d5ac5fb9335081c108ec63e6c5e1405"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale Line (B)/Scale Line (B).ffx",
+                      "sha256":  "6224feb9536efb72f86151ebab95c7bcd035adea03cb059c603bdb3ba2aa4f2d"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words Up/3D Words Up.ffx",
+                      "sha256":  "0b6c19f79038cb38bb4777069dda7c564692c0cf9d3facef9bcdcbbfc7f943ee"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Typewriter 2/Typewriter 2.ffx",
+                      "sha256":  "c8b34068caba5c343b2327cc6a4d2b1e51b3c61502620138e068d7688fe8b903"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position \u0026 Blur Words Up/Position \u0026 Blur Words Up.ffx",
+                      "sha256":  "7d975dfd6323dc1beb82267ef7ab1fb770cf4dad685d647d55f61759c95e753e"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Position Line Down (B)/Position Line Down (B).ffx",
+                      "sha256":  "3cc86acce2a4a1f138a0ee13e83c4f8e0deb8d1c748dd0c42f55308de03ed155"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Scale Characters (B)/Scale Characters (B).ffx",
+                      "sha256":  "a718e6c5411bd9d7297841789861635f21f926c7990e1c5bba8b47c5f3b3fa0b"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/3D Words \u0026 Rotation Up/3D Words \u0026 Rotation Up.ffx",
+                      "sha256":  "ccf47da81ecd72a92f4b416d98216193d5f5029de7c214002f51dfacbc8d529a"
+                  },
+                  {
+                      "path":  "presets/animffx-legacy-backup/Opacity Characters 2/Opacity Characters 2.ffx",
+                      "sha256":  "497f50749c8b536aee101c3ff681dbed7701cff291ccb783c022a816173d5f5f"
+                  },
+                  {
+                      "path":  "presets/animffx/pack.json",
+                      "sha256":  "952033c8058bb98a944ae2da5c8f0107a18715a3bfeb27d1fd328c703a252e08"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters 2 (B)/Scale \u0026 Tracking Characters 2 (B).ffx",
+                      "sha256":  "c59c1cb870cf21c79ca8ad0dda69e9b17dc7b78589467a0b10f63d8584d1002e"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters 2 (B)/Scale \u0026 Tracking Characters 2 (B).mp4",
+                      "sha256":  "025996b724cbc88de0c2518e5d1d12dcca2a9567fa06d34faadc7efaacbd8f9a"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters 2 (B)/Scale \u0026 Tracking Characters 2 (B).png",
+                      "sha256":  "cd5f751a5b3097fa5f4f874b4f294a7593bb1e1dbc2e3001da51ba0ae8a2555f"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right (B)/Position Characters Right (B).ffx",
+                      "sha256":  "f2fcc260a011b36a7b34c26cb385d312584923240a335bb106121d750f9291b0"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right (B)/Position Characters Right (B).mp4",
+                      "sha256":  "1b2e69d89e04848d5efd635c7d138a1e7c62c84cc0cc96e242d41c584714ebae"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right (B)/Position Characters Right (B).png",
+                      "sha256":  "71de7ce8c45ec2a5b672071f092b105a9cd279e76863387042f1b041e2a29550"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left (B)/Position Words Left (B).ffx",
+                      "sha256":  "ba06b3365a745fc277f99dcbc482cd51cc86a714f56c33d3befb43e7dae6d087"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left (B)/Position Words Left (B).mp4",
+                      "sha256":  "76fedda7558976120c549985da56e4299d08fda972a4ba8707d724c6a754b712"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left (B)/Position Words Left (B).png",
+                      "sha256":  "fa5a6f424a7ad2f2d26993465df27b65c64b93c4616f5170a65d72da342ecdd6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Down (B)/Position \u0026 Rotation Words Down (B).ffx",
+                      "sha256":  "bb823f40d4b893fce02259c4844f7d6e0e4028e7ce501b48abc6474944aa5c3e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Down (B)/Position \u0026 Rotation Words Down (B).mp4",
+                      "sha256":  "fa97a97f919d6cb441bc7bd88aa4e2132d0903bdd3ad228d14b7662522f41cb6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Down (B)/Position \u0026 Rotation Words Down (B).png",
+                      "sha256":  "8159cdcf36d817f95ef69fc87df743de717a551b1bb8f53a40162bf427b213bf"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Front/3D Words Front.ffx",
+                      "sha256":  "aca80dd7778cf553eab1af87fd5b83d963273ac656de25501c7b804f5357c219"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Front/3D Words Front.mp4",
+                      "sha256":  "11f50b02529ea79846ec452cff121c5933c18b2275bdeefd92088c1f90124cf8"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Front/3D Words Front.png",
+                      "sha256":  "fdb21d90e67b08457fa04e4721b3c7d0e90ed664933434fb2ca5109d8dda9a59"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Up/Random Words Up.ffx",
+                      "sha256":  "ffa2031ed905d3f97c7c91bf5b698e5416221fc5731d19b16868eb2d2f8c01f7"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Up/Random Words Up.mp4",
+                      "sha256":  "d9650d3a7ba0fc9c8b74e28208be0739a5897ac484987480eaada46b661e9453"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Up/Random Words Up.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down/Position Characters Down.ffx",
+                      "sha256":  "e6c198e4b2e69ca4ead89f5671ea54310e9e1c0b8dff3564c2f657735ee9b4df"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down/Position Characters Down.mp4",
+                      "sha256":  "bca4e45ed8a336bd7384907a96c606915c30bb2c44cdfa2ecfccd20ed76ece02"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down/Position Characters Down.png",
+                      "sha256":  "2cbe4ecf5a177f7e60626b70c95b52422fcc3c44eba81f02e6d2b25352dd59dd"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 2/Position Characters Down 2.ffx",
+                      "sha256":  "ec5011ab58581feb924af5aebd31a9094fb135fc8279f29695a08841cf7345aa"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 2/Position Characters Down 2.mp4",
+                      "sha256":  "e4605026c7669cd751ca7c420afcff2a488db2d7621f41e8a70de43c3e9dd958"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 2/Position Characters Down 2.png",
+                      "sha256":  "fecb7ddacb684ab20421ba3a8e6b90f34a8113aa36016011a236bbd56dc8582f"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down (B)/Position Words Down (B).ffx",
+                      "sha256":  "8f33619d5e4c8680eb61195f678a4f0e8ba3ea7c2993edcc11f6403eda1a29f0"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down (B)/Position Words Down (B).mp4",
+                      "sha256":  "1eacb7095ec36a7ecc00940775cc0f8452631c81d6a7b60dd8632cf0d6122f35"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down (B)/Position Words Down (B).png",
+                      "sha256":  "5d21ed8d3d3eebe82c840b133a838ff4b04161daa2b222971cc9c64b6339c687"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up (B)/Position Characters Up (B).ffx",
+                      "sha256":  "b79bd04be1dfdb204c2406e3d6cfd777ec6addc5aac62be04961807747f117ed"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up (B)/Position Characters Up (B).mp4",
+                      "sha256":  "8b1c277ca47f63f457ffb76e47391b9e564aa43e3cd9a5fbbad55ea0772e87d4"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up (B)/Position Characters Up (B).png",
+                      "sha256":  "da308bf82c8665b2609122d8745a4a24c21a7161a14375d924af6d5d871b402b"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words 2 (B)/Scale \u0026 Tracking Words 2 (B).ffx",
+                      "sha256":  "9337987d4c7935169480a700d7369f435179d165edab2fac393c8825ec781d0e"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words 2 (B)/Scale \u0026 Tracking Words 2 (B).mp4",
+                      "sha256":  "19e221c1c0af27c9831e6b565138472313bbb00678edefd3dca6cb29c2fcb7a1"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words 2 (B)/Scale \u0026 Tracking Words 2 (B).png",
+                      "sha256":  "003e19b30b663423762f678fc5357cacca80abee6edc4ce28979987f33a60ebb"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Down/3D Characters Down.ffx",
+                      "sha256":  "21d3f3fd4808bed51a640e5d3624786bb8680bf0e330e72a3de7dd707cae7cba"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Down/3D Characters Down.mp4",
+                      "sha256":  "b8f87e6b559b90030b1c026c51a7870d7ba1f233ab5760eb1a0fc3d9fbfdedb8"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Down/3D Characters Down.png",
+                      "sha256":  "9c984d0e8d238208efba6c1cbc34d55cca584c3877b3cff4cb39a804106f52c6"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Left/Random Words Left.ffx",
+                      "sha256":  "1bad175c72a26e7d61ee59d6fb32ea0d5036a29c94f823e73848fc80df910820"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Left/Random Words Left.mp4",
+                      "sha256":  "a7ff05f92e734d4a0df0b6cb06eac82fad45c60b188a3b9b7663aee1dc216bda"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Left/Random Words Left.png",
+                      "sha256":  "0aba8eafe33f2eea97c09bf8edb09cfd2bcedc0c7937a1fe3f8573b6911a8a22"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 2/Position Characters Up 2.ffx",
+                      "sha256":  "f5c28a69c5e8d3a6b0f5e52b6cdad079447187311a8d09548c5e2000f4066700"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 2/Position Characters Up 2.mp4",
+                      "sha256":  "b6f9ffba73f2053996aa3eda1937783ba2fda762d40ac44a2b80dad6ecd94879"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 2/Position Characters Up 2.png",
+                      "sha256":  "a87cbedb943114d3dccfa74c7f331d59ab848555099985251499059d3983eb7a"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up/Position Words Up.ffx",
+                      "sha256":  "ca3957e1232a91ea97dd57fae6028b7f2cd862aabb397badc6d811f7f35f3d3e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up/Position Words Up.mp4",
+                      "sha256":  "a35067426ccefe5b9ad7f5be8b3ec99dd0d5de40d7e8dd2c5163ded5a36f5cb9"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up/Position Words Up.png",
+                      "sha256":  "e746f9af9349de1564d0c83e3155e51c2d3ba3811eb4b91e064650ac5af610ce"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Left/3D Words Left.ffx",
+                      "sha256":  "cb1e4b3efa646ef93f0b71484e25c8c4152a9a22898e6ae593b323db9335d8bc"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Left/3D Words Left.mp4",
+                      "sha256":  "25782c160165e289cce1d3e6a9f91b58c02f068559c746e7c04d7b86d1e18ac7"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Left/3D Words Left.png",
+                      "sha256":  "3426e16e5349137eee58d5e428faaf83c786880a4b64c016903704a7f6d2e830"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Down/Random Characters Down.ffx",
+                      "sha256":  "1fc5f0e7afc084a6a4fea5135a3da40b0ca64f743c8dcc6e53cd425b45456781"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Down/Random Characters Down.mp4",
+                      "sha256":  "108966ee588c87b55f701a95669ab32088683997264b2261d314e96ec6bcdfb1"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Down/Random Characters Down.png",
+                      "sha256":  "d41b6b85785b5851e8686fdcf04a7df3663d4c89614993afb100c2a9f871a323"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Words (B)/Scale \u0026 Rotation Words (B).ffx",
+                      "sha256":  "1901ebc73510d78d2364ef89487ae8f6e9439d0caca2450bbc084ded7f24c14d"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Words (B)/Scale \u0026 Rotation Words (B).mp4",
+                      "sha256":  "cfb85b015b7eb288f3326ee6996cc10d04db127b798c82863646a795ca8f9682"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Words (B)/Scale \u0026 Rotation Words (B).png",
+                      "sha256":  "459558de3b3e904b35732fc73e482000206f8e7c87142453e6438b7d5da9a48d"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Right/Anchor Point Words Right.ffx",
+                      "sha256":  "05977a6bd751456ca123657b21be6cb55f4e82528bade74810c07145ee392bb0"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Right/Anchor Point Words Right.mp4",
+                      "sha256":  "d3254bd276580c5dd5f80b9a2e66f173367b4806d3f6a284ee1f619454b5bc5a"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Right/Anchor Point Words Right.png",
+                      "sha256":  "a9a184531aa076fabcb36fd19f2d637d16d2851d521c9f20a2396aaea26c4b62"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 1/Opacity Characters 1.ffx",
+                      "sha256":  "be7af2e6db218f9236b898056ba437a1691a027b823a15558ff8a3dd5b126771"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 1/Opacity Characters 1.mp4",
+                      "sha256":  "39aaa6363b27014005fb41424f02d10cadd60ccb402b07cf175f610e6c811192"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 1/Opacity Characters 1.png",
+                      "sha256":  "fecb7ddacb684ab20421ba3a8e6b90f34a8113aa36016011a236bbd56dc8582f"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Front/3D Characters \u0026 Rotation Front.ffx",
+                      "sha256":  "c5c40713026f920a36e11e70a962b53815641f1caafd4cb398a8dde127f88c66"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Front/3D Characters \u0026 Rotation Front.mp4",
+                      "sha256":  "0792966c838bd449834555e4360ff9ea419fe7e33b1566a0c85350af29c5bc1e"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Front/3D Characters \u0026 Rotation Front.png",
+                      "sha256":  "07026a0fca8b23d4a76a6d17dfc8804c986a98d7d9044fb1f3c0bd01255b31c6"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Up/3D Characters Up.ffx",
+                      "sha256":  "97a91d86391ef05042744783b6e434db60d0ea0e8fa04d5f81a9bc850f7d0663"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Up/3D Characters Up.mp4",
+                      "sha256":  "7ab768e1a93b569a8633d192c7b5ca5cf581ecf12106b31b5b6cbf4fb8ced001"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Up/3D Characters Up.png",
+                      "sha256":  "08131bd06b5be996c6f15a9a6b06cbf931f3f264ab163a6399cec43a002c1163"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Down/Random Words Down.ffx",
+                      "sha256":  "9c13a3bdf0a23044767e0c8c31f3795574b0693fa88721b7fe057f3ba8a67af2"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Down/Random Words Down.mp4",
+                      "sha256":  "3d95699d445e333ae6161d1bbb6a3099c2699d1a7097b6eed96e9447ded0ef0d"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Down/Random Words Down.png",
+                      "sha256":  "0aba8eafe33f2eea97c09bf8edb09cfd2bcedc0c7937a1fe3f8573b6911a8a22"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words left/Anchor Point Words left.ffx",
+                      "sha256":  "940ce37759633fd1805b4eb76088e98a61d17a452e1e908bdd05fa2d98e5d560"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words left/Anchor Point Words left.mp4",
+                      "sha256":  "e16a9033b41eb9e76d59839df361f28af8fd75f21681951b458314c1f072fb32"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words left/Anchor Point Words left.png",
+                      "sha256":  "0aba8eafe33f2eea97c09bf8edb09cfd2bcedc0c7937a1fe3f8573b6911a8a22"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 2/Position Characters Right 2.ffx",
+                      "sha256":  "1774c425eb230a8a733cf8c7f0cf0460eef21fa4fb6da0992a1ce03707ee6bcc"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 2/Position Characters Right 2.mp4",
+                      "sha256":  "2a34e90c977bcd9cf51f16234907a87e41c02a565494cfc0b665102b0c79ca9e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 2/Position Characters Right 2.png",
+                      "sha256":  "9fc153effd07fec6201492bf07d9159947f10e76e8efa9830425cdf1d6637749"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur/Random Characters \u0026 Blur.ffx",
+                      "sha256":  "83b7ba756e4b832ba0f1dfd8827f4631f54cc2c57938dae20507be62c55c0454"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur/Random Characters \u0026 Blur.mp4",
+                      "sha256":  "976d735660852ed9a330be6b4db41bd76f2bf1090cea8053d4443a2c09b69c9a"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur/Random Characters \u0026 Blur.png",
+                      "sha256":  "40bf6ea5a40d12d0784305132ac218a277e7c52cfd34a83b05b71a75fefe8bd1"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 3/Opacity Characters 3.ffx",
+                      "sha256":  "9db7d00ab6a8a64c83e7a488b3a8d75d4661e5d46273e5b37efa14a4e36ef87c"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 3/Opacity Characters 3.mp4",
+                      "sha256":  "fa42b0fca95aec58d7e0f4f2f4162a6945b42550fb5fa9f415949eba8dfae959"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 3/Opacity Characters 3.png",
+                      "sha256":  "fecb7ddacb684ab20421ba3a8e6b90f34a8113aa36016011a236bbd56dc8582f"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Up/3D Characters \u0026 Rotation Up.ffx",
+                      "sha256":  "babb6c6fb525bcb1cfad39e3cf9b674c9e83e2c50c4182c49718bd0025515a58"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Up/3D Characters \u0026 Rotation Up.mp4",
+                      "sha256":  "3189711e124e31bd62d301f0527be9413e134a352a40ffe37b052fbf1bdf38d0"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Up/3D Characters \u0026 Rotation Up.png",
+                      "sha256":  "d33f783de66a1fa94b7ee2b16f01095fcfd4c247e292f6a282aa0f4c13827704"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 3/Position Characters Up 3.ffx",
+                      "sha256":  "45d1e78c8532b40811d0cd20a1d1cfd2a4f82dd63a12a005e9d4535d31d1791d"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 3/Position Characters Up 3.mp4",
+                      "sha256":  "c31f09de812e1fc6ef485aa5d21f3a67a8876d3cb7f3c7fe1afa192ffeed14b8"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up 3/Position Characters Up 3.png",
+                      "sha256":  "e7bffc05d332807a340becd30f9da8154b4aeb7c924d16a27041ed668d41023e"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Left/3D Characters Left.ffx",
+                      "sha256":  "b1a951bcf119d04f62b99d41177a2e3bcc4ad854d993e3d7905fc93a9676deff"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Left/3D Characters Left.mp4",
+                      "sha256":  "f3af9f5dc33f069e13ddc8bcbfbebb35d9aa7e169c5270d0c1b041cba3ff8f01"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Left/3D Characters Left.png",
+                      "sha256":  "39ca62c99d1da4372297c7ff789e413403be90babd2d6af450dab8dc956dc4c1"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 3/Position Characters Right 3.ffx",
+                      "sha256":  "91035ecd22f747d212d2c2cedb968f16ec09fc2ed681cfe1ced1fb265b542152"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 3/Position Characters Right 3.mp4",
+                      "sha256":  "bf99066bcba421e458943228f1e3dd8bd33b6391b4ab97cdb1aaf4909e2d94af"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right 3/Position Characters Right 3.png",
+                      "sha256":  "0c8716b72b9d85661e23babc09061d5548d848f811683e7735820fc44661a1be"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right (B)/Position Words Right (B).ffx",
+                      "sha256":  "d2831b062a7750ec3e31cc0a7ebdd65e6b7542ed8062e5f19c18d9dd735db7bc"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right (B)/Position Words Right (B).mp4",
+                      "sha256":  "e4bf9b07f6953f4e92a48942c9e85eab1ba45bc5c4523b47778d1470e052757f"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right (B)/Position Words Right (B).png",
+                      "sha256":  "c1e1952307a464a71fdf432ef63b6b816c69a15de5188d642d123e5f303d00a8"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters (B)/Scale \u0026 Tracking Characters (B).ffx",
+                      "sha256":  "351cea8d7118b1a4a1a05c951083d3ac4398e23c259625cf270def361a155738"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters (B)/Scale \u0026 Tracking Characters (B).mp4",
+                      "sha256":  "ad2a261ac73ac70827849c85590834ce9937a5141c3f4048264273ad73d7a1b4"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Characters (B)/Scale \u0026 Tracking Characters (B).png",
+                      "sha256":  "a5cbf80c257affff52becb165d41b5f3a6e14b4ecdb2e361270bdffce08d940e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down (B)/Position Characters Down (B).ffx",
+                      "sha256":  "b8a0cd4f6a4ba0453f630250ba96d1543ca3f1450ee56b4dfad628274e45c651"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down (B)/Position Characters Down (B).mp4",
+                      "sha256":  "70250d03b20f51d5a30ee5dbe94b10f1248e9eca989008d775e37657f6af1edb"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down (B)/Position Characters Down (B).png",
+                      "sha256":  "0b09ab9d06cbffb3f18259345f68ad23e9464ecb40e2304859509e8519906bac"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Right/3D Characters Right.ffx",
+                      "sha256":  "ff21ecae12276f6067634e195a5be8428fb77bbe2160978cb9e2ffe23aa597ad"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Right/3D Characters Right.mp4",
+                      "sha256":  "192b4129955d93728bb560f5f744a7b53f1a1a3cfb52fb96d624c612c861183f"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Right/3D Characters Right.png",
+                      "sha256":  "707b762e6895d5d82e999378f0ebc695935a9a2d3f436dc75a027d0f5bff81cc"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 3/Typewriter 3.ffx",
+                      "sha256":  "e9de999e1b5dfac9d7d887457ad1734fcaa1f9010f98f5bf3bc524c6a99c873c"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 3/Typewriter 3.mp4",
+                      "sha256":  "458d6898a780395d223c8b710caa9f3e2f2b57fb6563c58ebe636aaaab57228f"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 3/Typewriter 3.png",
+                      "sha256":  "5fa93d033c8da8fd412a5c96f5895f6b6ac616b56d15b963f886415c52c49420"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 5/Typewriter 5.ffx",
+                      "sha256":  "d104cedc7aa6ebb1fd8b61aa727eb96522785a6458360281ce553e928e94a379"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 5/Typewriter 5.mp4",
+                      "sha256":  "fadfdbdcf2d79ec0852b6156818aa6f1741fe772d7df9d6ad4f258aff1f33d16"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 5/Typewriter 5.png",
+                      "sha256":  "c2f98a63239950a996956b702dfb9a725a1b8e8105570d5dce36be1cb38fd94e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right/Position Words Right.ffx",
+                      "sha256":  "280f53886b693119f18a1c38a8229e1b2cd296de49f5985560dcf80b78fb74cc"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right/Position Words Right.mp4",
+                      "sha256":  "ee40ba65c03fbd66f277b6de576bea8a40b2d48c21c277de3541ecd850e0f76d"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Right/Position Words Right.png",
+                      "sha256":  "700370ee76fb88e27053078acfbf58f8ec4fe8480dedab7f0937f8120cd1b8ec"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Front/3D Characters Front.ffx",
+                      "sha256":  "a056cef813546a9fd1275348833f536a0ca693e3019f400ea8187e28cf683e22"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Front/3D Characters Front.mp4",
+                      "sha256":  "c425503ab978ab40341a0409c67c58aedb4fbaa21da8aff31bd8e06c5c9632c1"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters Front/3D Characters Front.png",
+                      "sha256":  "4fe1362180482037d430c870d98f05d9130bf1ece5508564c428fd9d91a5ce92"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Left/Position \u0026 Blur Words Left.ffx",
+                      "sha256":  "a3514f39e2354c6cb13139eb07634891351de95c7561043fdaaf9630ec88c636"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Left/Position \u0026 Blur Words Left.mp4",
+                      "sha256":  "6391c67cff9377a82454b8e6079b048e4380fdc31b0fc9472c031b628c549ec9"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Left/Position \u0026 Blur Words Left.png",
+                      "sha256":  "a4b74bdc6926ac4f3a8f8cfb6209f9e50da72c142835349f10dd61b40b7c1040"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Right/3D Words Right.ffx",
+                      "sha256":  "724a682ddf51ab8631e9e55546f6cbcd1558d70e1ac9c1fada64a48503665799"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Right/3D Words Right.mp4",
+                      "sha256":  "9874e635b3ec13a8b10afdb40fd104e24c4e6fe2919dfcec7717b604a3a40479"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Right/3D Words Right.png",
+                      "sha256":  "fdb21d90e67b08457fa04e4721b3c7d0e90ed664933434fb2ca5109d8dda9a59"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Down/3D Characters \u0026 Rotation Down.ffx",
+                      "sha256":  "926fce9b121543d4404dcf585db7b4ee70073d0045d8590650f112ed3d8f6572"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Down/3D Characters \u0026 Rotation Down.mp4",
+                      "sha256":  "2d45a8565c77166bfed5d856eb6d259f4ee714bc96a0bbe91a32473bd9d1bb2a"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Down/3D Characters \u0026 Rotation Down.png",
+                      "sha256":  "a359952e13d44065e1262adfe837e102ac05d2992a0eba0f6b228aec3f2bd865"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Down/3D Words Down.ffx",
+                      "sha256":  "b9e3f8315e1bb66da63bd127cccb2708451226e796ca11d12ca6a702ea685f76"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Down/3D Words Down.mp4",
+                      "sha256":  "5e2da29f9a219180cd60bf54b338aae6bed116631d83753a4728292347d8f467"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Down/3D Words Down.png",
+                      "sha256":  "3426e16e5349137eee58d5e428faaf83c786880a4b64c016903704a7f6d2e830"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 1/Opacity Words 1.ffx",
+                      "sha256":  "6403080199f7cc00418cbc61a06f6e9ce378ed037bc56ac80c2808e07d39837a"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 1/Opacity Words 1.mp4",
+                      "sha256":  "6f1fe11f0995547a4cac6749fbf1e20ceda143b2e7b4792fab366bb4b263f29e"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 1/Opacity Words 1.png",
+                      "sha256":  "88b9ce66c3c1bc04bfc247581bca17abb26ea8f1c645f488a54fb4c337847e14"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right/Position Characters Right.ffx",
+                      "sha256":  "61e8f9d339e6d9b6811e02b917c9b79603a95e3d0539b2d99f92180dd7b1ab43"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right/Position Characters Right.mp4",
+                      "sha256":  "bd123bf97b412067b2da90502e98af39a5dac2a55b7f3eec1129ff09ed9514e6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Right/Position Characters Right.png",
+                      "sha256":  "fbedf0fbf1ea519a697d9486fbaa12510f278138afd554c2362c0e35700014c3"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Right/Position \u0026 Blur Words Right.ffx",
+                      "sha256":  "850c58c3d04f3bc08b1eb5a8ba2ed39fc2f8e140d029ef0d503cd764564abf9c"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Right/Position \u0026 Blur Words Right.mp4",
+                      "sha256":  "3beba07fc0c3f1375223d4508a78e54216039938730ca1098fca0b5af5d47a6b"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Right/Position \u0026 Blur Words Right.png",
+                      "sha256":  "8f66fc71a16fe19a6fae311e530ae06ef33304442b86723845b00c73e6a72a96"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Front/3D Words \u0026 Rotation Front.ffx",
+                      "sha256":  "69c4d09e910af69740ba39391d43d37479ff04ce0267dcc192db52f71216ca31"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Front/3D Words \u0026 Rotation Front.mp4",
+                      "sha256":  "d4cc7c9a809e9f9ee0cfbbfae755dd9b5d83a48af6fab5368ba72b737c144764"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Front/3D Words \u0026 Rotation Front.png",
+                      "sha256":  "3426e16e5349137eee58d5e428faaf83c786880a4b64c016903704a7f6d2e830"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Up (B)/Position \u0026 Rotation Characters Up (B).ffx",
+                      "sha256":  "779563bb3319879e81213c7fa938064aea7b47396e0ee7e005ea61433d9b7243"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Up (B)/Position \u0026 Rotation Characters Up (B).mp4",
+                      "sha256":  "a3916b1b8bf826245c00fced189a7aef5a5219c4e17becbf84d2aa0a2754c9e0"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Up (B)/Position \u0026 Rotation Characters Up (B).png",
+                      "sha256":  "d8fd710331c77f08a650db7dfaf501f5fee78d9fb0d21255ef51fd1b6291534a"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Words (B)/Scale Words (B).ffx",
+                      "sha256":  "af8a95089bf86c74089167a51950fe1e521510a48c7e95ba176b61cf892b4c47"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Words (B)/Scale Words (B).mp4",
+                      "sha256":  "f4cbd7c194735e905229336589c6d35ae4e794d6922b122e22807165ffb59c06"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Words (B)/Scale Words (B).png",
+                      "sha256":  "781185275bf303801e99ef9b2b457289e43372a73f7f3dcbfa06ceb61009f105"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Left/3D Characters \u0026 Rotation Left.ffx",
+                      "sha256":  "bb7d33f6593ae5dab96c4ff996485a31cedba9449b148a74479eb9f86d0a1f47"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Left/3D Characters \u0026 Rotation Left.mp4",
+                      "sha256":  "6d456df803ccae16368eeeef5fcf86f88f9ae582a9706442ab817482b3436763"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Characters \u0026 Rotation Left/3D Characters \u0026 Rotation Left.png",
+                      "sha256":  "a359952e13d44065e1262adfe837e102ac05d2992a0eba0f6b228aec3f2bd865"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Right (B)/Position \u0026 Rotation Words Right (B).ffx",
+                      "sha256":  "95ede6c7502a7021c3afae85a7fa5c6713e04797fe7c22f9ccdc67bbd9b26587"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Right (B)/Position \u0026 Rotation Words Right (B).mp4",
+                      "sha256":  "4b8d8aa1c4b64ea8349925aaff67cb4a6eb497a6c855ffedd08da410cc9674c6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Right (B)/Position \u0026 Rotation Words Right (B).png",
+                      "sha256":  "8dad60328f80f2a3d48fb41f6c15952ea7de0aadab8869503627ad723c55eacf"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters left/Anchor Point Characters left.ffx",
+                      "sha256":  "ef45fb97af7ffdd7d741ac5ac448f698a2dcf7aebaded619c97c33818edad5a2"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters left/Anchor Point Characters left.mp4",
+                      "sha256":  "858794876870262f841865cf5fc967683ec71216a97e033e44a5c08476a574bf"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters left/Anchor Point Characters left.png",
+                      "sha256":  "e549440ea8ed72170f88df82284226fdf5205366c4766ead22e7dba88a734112"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Characters (B)/Scale \u0026 Rotation Characters (B).ffx",
+                      "sha256":  "5b84750f8d0bd94aeee67b88adbb7d4c20ff5d2709696e7cd2a3b7d622af8c19"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Characters (B)/Scale \u0026 Rotation Characters (B).mp4",
+                      "sha256":  "3d206605cec639ef1cfc4423b55835b4e810b0c1fa7eca93239ecc663c59dedb"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Rotation Characters (B)/Scale \u0026 Rotation Characters (B).png",
+                      "sha256":  "968222771f7f7f665a5231595ef8e4f71728e84a75003ddc68d1554f3f4ac097"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 2/Random Words \u0026 Blur 2.ffx",
+                      "sha256":  "08bc2135b1948d563c1dbb98364506f040a8de91bd791e7ea964b036f1652ac8"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 2/Random Words \u0026 Blur 2.mp4",
+                      "sha256":  "5656b15a6d45f41f385e5662d0c787bef63dfed4618a7f46eecacb603e58f935"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 2/Random Words \u0026 Blur 2.png",
+                      "sha256":  "a359952e13d44065e1262adfe837e102ac05d2992a0eba0f6b228aec3f2bd865"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Up (B)/Position Line Up (B).ffx",
+                      "sha256":  "e6b61288d56a0ae905ad9bc1150b6e572adfa0eda57e031985d2dbbd1449fd66"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Up (B)/Position Line Up (B).mp4",
+                      "sha256":  "1683790e614d15931a3e9db3180a9f2940a9148d0b32893096daeff2eb982944"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Up (B)/Position Line Up (B).png",
+                      "sha256":  "05f33505e598d67e9a61356fee99c2ef7a205690c86e76f15f666e783d2306e6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Down/Position \u0026 Blur Words Down.ffx",
+                      "sha256":  "699f770e1d27dfa380d55c78dbe482932e051c90eb60dbbfcb6e8d8f682fd0e5"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Down/Position \u0026 Blur Words Down.mp4",
+                      "sha256":  "6968f064b2eed0e197d4ccffd5ff435a8df25a79e8ba9a4cd7817f736f809d40"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Down/Position \u0026 Blur Words Down.png",
+                      "sha256":  "e549440ea8ed72170f88df82284226fdf5205366c4766ead22e7dba88a734112"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Words/Opacity \u0026 Blur Words.ffx",
+                      "sha256":  "9270753dd9766b2180c6f431e8ba36a7472c8f62e9928396b13aacf745bc0e02"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Words/Opacity \u0026 Blur Words.mp4",
+                      "sha256":  "25445ba65b76abc476cac10c30427bd4da7d69f12901c440e34b5d12b42e1b02"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Words/Opacity \u0026 Blur Words.png",
+                      "sha256":  "e549440ea8ed72170f88df82284226fdf5205366c4766ead22e7dba88a734112"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Left (B)/Position \u0026 Rotation Words Left (B).ffx",
+                      "sha256":  "116a657300adb6fa3c20594975aee5031d49181a70a796e8811803cbeb653396"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Left (B)/Position \u0026 Rotation Words Left (B).mp4",
+                      "sha256":  "a4d02cc1e1a64dd898c09e9fef6f181c3268424827a240e12686c87211dc7ffa"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Left (B)/Position \u0026 Rotation Words Left (B).png",
+                      "sha256":  "09a37eae7e4adf101ff017c724167f3a588427f78214960d0dd7c35a93f86a73"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 1/Typewriter 1.ffx",
+                      "sha256":  "39522443b723d93ce77fc9a7116ae22744e6158bed37ae92710ac910174ed62d"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 1/Typewriter 1.mp4",
+                      "sha256":  "3d8211a503e031169fd59a3ee71ba363b941a76e522b7c5db4a64d6b9febcbfb"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 1/Typewriter 1.png",
+                      "sha256":  "e2080ec1609acb5d6b1116e883930e95c784e71f8c5d7dbb6c78fd3244a8e345"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Down/Anchor Point Words Down.ffx",
+                      "sha256":  "e4859d97d712c2e986a30a321aebd732e83e807e26c063660095ee82df953a29"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Down/Anchor Point Words Down.mp4",
+                      "sha256":  "ccdba23fd8a358a168431739dfb4006358248ebea6f086a81655f877f11c38f6"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Down/Anchor Point Words Down.png",
+                      "sha256":  "0aba8eafe33f2eea97c09bf8edb09cfd2bcedc0c7937a1fe3f8573b6911a8a22"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Right/3D Words \u0026 Rotation Right.ffx",
+                      "sha256":  "c8e2de4fe04da94dc432bf3c6c92d3baca1e0d63f4b87cda2bbbe05d1588a636"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Right/3D Words \u0026 Rotation Right.mp4",
+                      "sha256":  "e9e3ad8becc1980b535aa9568de5c59d685b37a0fbebebdd3994ba1145edf941"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Right/3D Words \u0026 Rotation Right.png",
+                      "sha256":  "3426e16e5349137eee58d5e428faaf83c786880a4b64c016903704a7f6d2e830"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up/Position Characters Up.ffx",
+                      "sha256":  "9172b90f9997484cd843ff60f6aff6fa258180559510534bf83f5e20378d3e44"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up/Position Characters Up.mp4",
+                      "sha256":  "031b16110faaf5794563409573cb7ef9ee24f6a329915f4d871e41122935012d"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Up/Position Characters Up.png",
+                      "sha256":  "553a712d788d141670fe325932a68dfbbc914eff5cc0ff6bf3686cf6cb78aff7"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Up/Anchor Point Words Up.ffx",
+                      "sha256":  "a718ee1602b89ca8ea4ff7ac0727ea38451b8a9dc8a7bcc193037397e6388db2"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Up/Anchor Point Words Up.mp4",
+                      "sha256":  "4ddbe7edfdfe427000213b1d23587a01a3968caf12d69ce3b6dc73bd3ab5c56f"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Words Up/Anchor Point Words Up.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words/Random Words.ffx",
+                      "sha256":  "be38e0b62d5ec5d0d45101b4084105ea3dc5cbce8c77ba0fd3a36e6efe54bc04"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words/Random Words.mp4",
+                      "sha256":  "4e98d959aafc0db4b3637787b3f36867337d017528258e31f0856551461e5c2f"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words/Random Words.png",
+                      "sha256":  "a9a184531aa076fabcb36fd19f2d637d16d2851d521c9f20a2396aaea26c4b62"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Left (B)/Position \u0026 Rotation Characters Left (B).ffx",
+                      "sha256":  "4dacc97e48bf765784a89a709aa5a961fafdd1d010574634b860100c80784709"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Left (B)/Position \u0026 Rotation Characters Left (B).mp4",
+                      "sha256":  "051373fbd684969c3687979eb5f348152084b4e38c5a1641defb931a0444602d"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Characters Left (B)/Position \u0026 Rotation Characters Left (B).png",
+                      "sha256":  "65ea69c47062bc4f60f556f6035e7cd6db5112c1bf080b946e65e71d0196a3f3"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Up/Random Characters Up.ffx",
+                      "sha256":  "683b12d56e1e6f5e894322aa5d524142047ad1737f746fd796c4b6fad86cae9d"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Up/Random Characters Up.mp4",
+                      "sha256":  "99b589145ef4a1467c74da54cd2b6da8804f30f187ad7368038d58e751e36427"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Up/Random Characters Up.png",
+                      "sha256":  "fecb7ddacb684ab20421ba3a8e6b90f34a8113aa36016011a236bbd56dc8582f"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Characters/Opacity \u0026 Blur Characters.ffx",
+                      "sha256":  "20f59cb07d9a47c813cdac543bda754da6daa4586a46be636b038263202151ca"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Characters/Opacity \u0026 Blur Characters.mp4",
+                      "sha256":  "3497e198910fe90aba49d5fa7e4c013472ea3ca11cd3728fc41fd102a045b4c5"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity \u0026 Blur Characters/Opacity \u0026 Blur Characters.png",
+                      "sha256":  "4ed3128cac2a795fde5afd4e11bb6348ad6d082b3f2d3d529c9a7ead36e22eff"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Left/3D Words \u0026 Rotation Left.ffx",
+                      "sha256":  "9264e37ac8c336c23c16f6815c7be377a2bc7efce11649c7770556934d9095b4"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Left/3D Words \u0026 Rotation Left.mp4",
+                      "sha256":  "c72524799fbd7e8af7710e22bbd9b895a284423da3c9a13f853acb4bf977dacc"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Left/3D Words \u0026 Rotation Left.png",
+                      "sha256":  "ade044409803303cf059053d5f1a0b1b0ce5338af70213d9778d96f9af4e7472"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Up/Anchor Point Characters Up.ffx",
+                      "sha256":  "b5607c4a193a145258f378b63cc72dabda0fac708dd356aba80911c1b93095d1"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Up/Anchor Point Characters Up.mp4",
+                      "sha256":  "9fc9bfde904a036373916195344d138616143b0717f71bb6fb20a409fdf36988"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Up/Anchor Point Characters Up.png",
+                      "sha256":  "fecb7ddacb684ab20421ba3a8e6b90f34a8113aa36016011a236bbd56dc8582f"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 2/Opacity Words 2.ffx",
+                      "sha256":  "c0c3bfffcab68ebd30cf1c0b2abad2f480c90999f424f33cda19b42046de7216"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 2/Opacity Words 2.mp4",
+                      "sha256":  "f82e89629b254e03d28ebc1bedee9f3e25d9103e69536dd96b2744cb9f08ecfa"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 2/Opacity Words 2.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Right/Anchor Point Characters Right.ffx",
+                      "sha256":  "1600e13377e02a9f862881e1ff33db67e775df51af7708e566028a65a693b1d5"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Right/Anchor Point Characters Right.mp4",
+                      "sha256":  "9bd1259c9a08936e93299067bb42e9f52661b891f07fd631feb8a064a324bc4e"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Right/Anchor Point Characters Right.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left/Position Words Left.ffx",
+                      "sha256":  "6949beba9f0b519bba716cdde574cdba6a3131123f070fc59bbe247402936083"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left/Position Words Left.mp4",
+                      "sha256":  "dcf23de983aa1a5c7ea1c413bb50f7ea6b8d61d0954f4a2145a8255a10cc9bdb"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Left/Position Words Left.png",
+                      "sha256":  "3ce987de24b78e82ef824492a1aa9a8b699425d943aff68c8189dbd889144932"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Left/Random Characters Left.ffx",
+                      "sha256":  "343b035f0bc1907278aedfb371e6950034823bb25d7d514a59dfa9abdb7bf522"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Left/Random Characters Left.mp4",
+                      "sha256":  "7778ebb1748c21f3283096c8cd4958f09f68b69d6fe917e7c3cec63854429a49"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Left/Random Characters Left.png",
+                      "sha256":  "d41b6b85785b5851e8686fdcf04a7df3663d4c89614993afb100c2a9f871a323"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters/Random Characters.ffx",
+                      "sha256":  "b0af95955a2a0d8c28b83ff0c5f42409b6887514b4b5d22ea364eca921602061"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters/Random Characters.mp4",
+                      "sha256":  "9e06f623a1db6c11a77c6de3629523a91b79a4da0a91080816130b0813a98bef"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters/Random Characters.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up (B)/Position Words Up (B).ffx",
+                      "sha256":  "de029f1a606656d2ab2921e17f1f3479eb78b289b61cd213e780966705201fdb"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up (B)/Position Words Up (B).mp4",
+                      "sha256":  "7bbbfe28d7e88f345db9ad7a8b1f8ce70270ad9cd04c5b2c729279c7b6fe4153"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Up (B)/Position Words Up (B).png",
+                      "sha256":  "34b820a4fe269c469acc0979b24768970a2a4e316913f8e78189d9f63008d398"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Right/Random Characters Right.ffx",
+                      "sha256":  "4349967a8eae3008e173098dfc7bb636871fe9371a83ff82fb9c33a4829c5acf"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Right/Random Characters Right.mp4",
+                      "sha256":  "5dcaf65aa3d9137629bd83d51e0addbc24889dc1c93b951d921d82ced26facbf"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters Right/Random Characters Right.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 3/Random Words \u0026 Blur 3.ffx",
+                      "sha256":  "66c30e90fba8068cfc98f9a995583a5705c0ef67c045bfe174d21dba6a5e3a59"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 3/Random Words \u0026 Blur 3.mp4",
+                      "sha256":  "9dac0c8f93df79c22aaf644fe64f0f185a21cdb421de4996eed63d36fd2550a2"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur 3/Random Words \u0026 Blur 3.png",
+                      "sha256":  "a359952e13d44065e1262adfe837e102ac05d2992a0eba0f6b228aec3f2bd865"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 2/Random Characters \u0026 Blur 2.ffx",
+                      "sha256":  "8ca020c7cc885cd31ae46a27cdfbf1b8a3509d491ac014312378bd729ebd0858"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 2/Random Characters \u0026 Blur 2.mp4",
+                      "sha256":  "5ccde7de2285de940a3ecf32d6072d42ca38cc77ddc7cb2a91cf37ed0a86b7d3"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 2/Random Characters \u0026 Blur 2.png",
+                      "sha256":  "fdb21d90e67b08457fa04e4721b3c7d0e90ed664933434fb2ca5109d8dda9a59"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Left (B)/Position Line Left (B).ffx",
+                      "sha256":  "04737fb23f234a7209d2ba4521ba3785f3b8c5a4a5d47e48bf8a42462bb3eec6"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Left (B)/Position Line Left (B).mp4",
+                      "sha256":  "f8003d1a05d0c17ae08213aa350e05b426d783811e1792a24cb9b5d4f7fbf106"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Left (B)/Position Line Left (B).png",
+                      "sha256":  "8e9dc16b3511559c5256abbd42c944fdf25cdb8766e0c42b53c7156ef55b73ba"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 3/Opacity Words 3.ffx",
+                      "sha256":  "160b13207c5dffbe85ccfb8f924b7d626b2685eb7b13f77e34c4132059b9f769"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 3/Opacity Words 3.mp4",
+                      "sha256":  "08392f904e545edf03c0fda7d8417e06f500bfe8af46efd00a56330fb750cc89"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 3/Opacity Words 3.png",
+                      "sha256":  "9ec90c4b9df78ba0fcf570fb539b47196787a12397fcd6133cccec1b4dca047a"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Down/Anchor Point Characters Down.ffx",
+                      "sha256":  "34f48ccdb914fbe49fee54e51d13632c49ef0d573a03982e9f07576a3e05cc07"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Down/Anchor Point Characters Down.mp4",
+                      "sha256":  "988bc1dd1430c9f162729363bd70a34762aab26310c5667eedc5146d957e34fd"
+                  },
+                  {
+                      "path":  "presets/animffx/Anchor Point Characters Down/Anchor Point Characters Down.png",
+                      "sha256":  "e549440ea8ed72170f88df82284226fdf5205366c4766ead22e7dba88a734112"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Up (B)/Position \u0026 Rotation Words Up (B).ffx",
+                      "sha256":  "44fb0f6dcb74fb7f61b35765729abb4e4d36e51ed356edc40c13612d6e38e208"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Up (B)/Position \u0026 Rotation Words Up (B).mp4",
+                      "sha256":  "85d2f903ad2f285dfd374b6e585cde50af4a859ce57ad1a4a16865c5a92c9b10"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Rotation Words Up (B)/Position \u0026 Rotation Words Up (B).png",
+                      "sha256":  "af54b9d6bd28abf374aa7cac1b1ccdfdeef0d23ea0ebbaf7b9d07b6dd2f4a197"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Left (B)/Position Characters Left (B).ffx",
+                      "sha256":  "3d087f2e133e068719cb44ed2338615387824926ec4758f3f333ef426786ad67"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Left (B)/Position Characters Left (B).mp4",
+                      "sha256":  "93f1925d0d07dd1868e2fe440e61f3efcb3bf1824d51cb38250b3af4f814fa2b"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Left (B)/Position Characters Left (B).png",
+                      "sha256":  "7c31fd89eca83da3177eb9ac51bb771118c0f3d34fe90a6ce331d23385190957"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words (B)/Scale \u0026 Tracking Words (B).ffx",
+                      "sha256":  "ed1b12cac12b9ef0d21d295e6078f0a0a2bd796c715da44384429aef4fa1ba4a"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words (B)/Scale \u0026 Tracking Words (B).mp4",
+                      "sha256":  "bca2c17a4c6f3a160b4e62f998f4482937789778cd5cb20b23620913fb3002d4"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale \u0026 Tracking Words (B)/Scale \u0026 Tracking Words (B).png",
+                      "sha256":  "8b0574d7812645d0c76fec4da9096c70443e18ccb25256b1f00ec849440473b6"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur/Random Words \u0026 Blur.ffx",
+                      "sha256":  "4316ab95975f39fab37d8dadc3e729ea0dc1e9d79d450571408c5906394916fc"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur/Random Words \u0026 Blur.mp4",
+                      "sha256":  "c830fa5ca22ef2875b9535948f018c22d8a65972321d601319efa722acb5f27f"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words \u0026 Blur/Random Words \u0026 Blur.png",
+                      "sha256":  "348f1d897da5fc67ac4101a513394a844503b0caeebc9e8204221f67d1fd8a27"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 4/Opacity Words 4.ffx",
+                      "sha256":  "ad687b28c86242b3daa4537a457544c2a7cde7f1fa6a7f3608128b46827a6024"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 4/Opacity Words 4.mp4",
+                      "sha256":  "7305f650e60ed1006dd1178acbf3e641ad466decb6bc88c4849939d476688d8f"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Words 4/Opacity Words 4.png",
+                      "sha256":  "5baefa1afe14a542f86a0dbb8e7a55b3432ae8d1a243bbf648d1c3bdbc4b5808"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Down/3D Words \u0026 Rotation Down.ffx",
+                      "sha256":  "40f2ffe569585d2a9ea401fca403c48640aa2fabcbd84c24b52a5b0dee9e933f"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Down/3D Words \u0026 Rotation Down.mp4",
+                      "sha256":  "2fb1e15013cb67125d729e572c83911b984e0210bc91a2c897fb014c9528dd44"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Down/3D Words \u0026 Rotation Down.png",
+                      "sha256":  "ade044409803303cf059053d5f1a0b1b0ce5338af70213d9778d96f9af4e7472"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 3/Random Characters \u0026 Blur 3.ffx",
+                      "sha256":  "6f012e1b1cfb2102ab9ee866b1f24c02815fd1f9cc24003c756369d8b41c9957"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 3/Random Characters \u0026 Blur 3.mp4",
+                      "sha256":  "5507d3ecca2d5278a498ecdf0cef285759655d132b80cc4fd2347ff8a36f132f"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Characters \u0026 Blur 3/Random Characters \u0026 Blur 3.png",
+                      "sha256":  "fdb21d90e67b08457fa04e4721b3c7d0e90ed664933434fb2ca5109d8dda9a59"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down/Position Words Down.ffx",
+                      "sha256":  "b97bde57f055fdfdb3601a19be336b360f2bfdbf694787b25071e0878360570d"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down/Position Words Down.mp4",
+                      "sha256":  "98c22f011b1c2343a04dcc95912b5b4f3c1675e8e944c98765bb0e19349468e3"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Words Down/Position Words Down.png",
+                      "sha256":  "f8f36e29374b2a9d664fa60762d3b4e40aa15fde4fe93c614d97c77f8713da28"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 3/Position Characters Down 3.ffx",
+                      "sha256":  "31eea50124dfdc24bc56e36b6f2b497996489926f2a587261b4b48bb4d4f9479"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 3/Position Characters Down 3.mp4",
+                      "sha256":  "a8d70e6a646d2a7fae1e9e724a0821624508b156ceec75de38efca74bec94ba7"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Characters Down 3/Position Characters Down 3.png",
+                      "sha256":  "ade044409803303cf059053d5f1a0b1b0ce5338af70213d9778d96f9af4e7472"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Right (B)/Position Line Right (B).ffx",
+                      "sha256":  "28e70c242350b22b4b8e64d0af7b345d840f5393455d29d91b5f67e5a6f316d0"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Right (B)/Position Line Right (B).mp4",
+                      "sha256":  "3b69e0a1050570a09425440fb1741dc9fcfe1a7d7ffa37a65a821eade637aa5a"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Right (B)/Position Line Right (B).png",
+                      "sha256":  "1f73e9dac30049790815310c45b0010a2f0f1560554b954fa58d63063064170a"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Right/Random Words Right.ffx",
+                      "sha256":  "1e64cd62021b4697630083f6433791a52d5ac5fb9335081c108ec63e6c5e1405"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Right/Random Words Right.mp4",
+                      "sha256":  "6574b6f32e8d0074da4361f96f041c19c18921d5b93cee140b611f10c0c31c29"
+                  },
+                  {
+                      "path":  "presets/animffx/Random Words Right/Random Words Right.png",
+                      "sha256":  "a9a184531aa076fabcb36fd19f2d637d16d2851d521c9f20a2396aaea26c4b62"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Line (B)/Scale Line (B).ffx",
+                      "sha256":  "6224feb9536efb72f86151ebab95c7bcd035adea03cb059c603bdb3ba2aa4f2d"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Line (B)/Scale Line (B).mp4",
+                      "sha256":  "ad5e6f551c42d91ab69ffc8f7549988e89669b75c05350f1a361db79c95e5fcd"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Line (B)/Scale Line (B).png",
+                      "sha256":  "0d1dbd031598580430af4c2cb6fdfba7785104abcc26edf523085d9dc32c0ccb"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Up/3D Words Up.ffx",
+                      "sha256":  "0b6c19f79038cb38bb4777069dda7c564692c0cf9d3facef9bcdcbbfc7f943ee"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Up/3D Words Up.mp4",
+                      "sha256":  "99496f082a5fbb04a69dde1390bc1a1e8f7e726eb5e396f879636cb8f79a47c2"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words Up/3D Words Up.png",
+                      "sha256":  "0e30cee67b8fdeff9bf42d2b1918c6366430942166541f145286c3cc99806f32"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 2/Typewriter 2.ffx",
+                      "sha256":  "c8b34068caba5c343b2327cc6a4d2b1e51b3c61502620138e068d7688fe8b903"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 2/Typewriter 2.mp4",
+                      "sha256":  "86536fe756df146339c626affd3ff2278e88be3240211963e32d58f243f5f74e"
+                  },
+                  {
+                      "path":  "presets/animffx/Typewriter 2/Typewriter 2.png",
+                      "sha256":  "0e14231a6e997085e664997fcf9ea1bce32fa279130a594fb7199babbf165fc3"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Up/Position \u0026 Blur Words Up.ffx",
+                      "sha256":  "7d975dfd6323dc1beb82267ef7ab1fb770cf4dad685d647d55f61759c95e753e"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Up/Position \u0026 Blur Words Up.mp4",
+                      "sha256":  "6fdca2403eb1d22e7aad85ab3207607a282669de76c7c24f4e6f424cb68263cc"
+                  },
+                  {
+                      "path":  "presets/animffx/Position \u0026 Blur Words Up/Position \u0026 Blur Words Up.png",
+                      "sha256":  "e55f5e08777dcd6b9136571c9aaa701e3bf7865a1b7948ab458980f451d26d56"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Down (B)/Position Line Down (B).ffx",
+                      "sha256":  "3cc86acce2a4a1f138a0ee13e83c4f8e0deb8d1c748dd0c42f55308de03ed155"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Down (B)/Position Line Down (B).mp4",
+                      "sha256":  "24335a4487ef9b1c6043b3e36bc0f45fb981a7f5b4720e121f216ccc4913a549"
+                  },
+                  {
+                      "path":  "presets/animffx/Position Line Down (B)/Position Line Down (B).png",
+                      "sha256":  "7b8599820773431867efdcb2965e8e3821d30a2da13e18dedef48b09b3f2c4ae"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Characters (B)/Scale Characters (B).ffx",
+                      "sha256":  "a718e6c5411bd9d7297841789861635f21f926c7990e1c5bba8b47c5f3b3fa0b"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Characters (B)/Scale Characters (B).mp4",
+                      "sha256":  "b8aec7ca85f045694245a0ce0b4a46693dcc164d82fed01a165a8c410ce19167"
+                  },
+                  {
+                      "path":  "presets/animffx/Scale Characters (B)/Scale Characters (B).png",
+                      "sha256":  "a526349f1b176ce27b19f3cac83534c6155e6ac8facdce3dbf3a02252784adaf"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Up/3D Words \u0026 Rotation Up.ffx",
+                      "sha256":  "ccf47da81ecd72a92f4b416d98216193d5f5029de7c214002f51dfacbc8d529a"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Up/3D Words \u0026 Rotation Up.mp4",
+                      "sha256":  "8129388df4c2373fd287d0c58f693d4445a4b5184dd574eef281e4278c962709"
+                  },
+                  {
+                      "path":  "presets/animffx/3D Words \u0026 Rotation Up/3D Words \u0026 Rotation Up.png",
+                      "sha256":  "024de47687e298c5bcaad3fc96f96fee1ea386344bee0a0b314d275a496b752d"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 2/Opacity Characters 2.ffx",
+                      "sha256":  "497f50749c8b536aee101c3ff681dbed7701cff291ccb783c022a816173d5f5f"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 2/Opacity Characters 2.mp4",
+                      "sha256":  "b4c1d0ee1a43bfc89ff6f2201213d79524e5e5446e721db3787cb9bcfc756207"
+                  },
+                  {
+                      "path":  "presets/animffx/Opacity Characters 2/Opacity Characters 2.png",
+                      "sha256":  "ade044409803303cf059053d5f1a0b1b0ce5338af70213d9778d96f9af4e7472"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 1.ffx",
+                      "sha256":  "dbcc211d51c4001bba25fae75d2475e1a69d6433ee1a8a7512f31098649ff37e"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 1.png",
+                      "sha256":  "31c5c0957c103069795f634f03208a657cc4b005b94fdd03c64c8e601aa697e5"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 2.ffx",
+                      "sha256":  "5598efed470cc0ef4222ee76dbf8f5ab476d705fb3624213e634864ee1b62d31"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 2.png",
+                      "sha256":  "385e2a4da7dfd836b02ca8ccae880bf33ea656529b126e0de458520146c2cc77"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 3.ffx",
+                      "sha256":  "5c7a35e5a8bb41ab2344a576360d49e61562ca2062faaf30f1f57fe0618107d4"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 3.png",
+                      "sha256":  "803f3af08c47f8a4d73ba55a5c811153f80e0bf0801d714716a45fbb2ce12a58"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 4.ffx",
+                      "sha256":  "d8a3fc49b48f07c89ad8182f5e4d1461f5968c82beab0b272845f42d608158b4"
+                  },
+                  {
+                      "path":  "presets/style ffx/4 color 4.png",
+                      "sha256":  "911a5628d84ed95eba21567a56dfd712687d2e005e92136cec34766b4ee19342"
+                  },
+                  {
+                      "path":  "presets/style ffx/Red Black ramp .png",
+                      "sha256":  "c945033d28cb3783b1a3bb167f31f1be3bda0c1109f0bff1a9f871eacce2197d"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Blue Dark Black ramp .ffx",
+                      "sha256":  "8838c095f2c8379f1892bbb5316ad7f43e1d16b687af74ef5e95d6dc413bf83d"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Blue Dark Black ramp .png",
+                      "sha256":  "bc342d13e739287e2c8a0d436b7bf3eed5bcd3bc28a1b79efa74ee8bcefe6d62"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Green Dark Green ramp .ffx",
+                      "sha256":  "9e6db3dfa576e5d4fc1f2158adcae75e1b27f2bb2e529c13002218460fabe9a3"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Green Dark Green ramp .png",
+                      "sha256":  "831822704093580d246a68adb6a1d757fffd2e49add0fa196a838168228062f7"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Orange Dark Orange Ramp .ffx",
+                      "sha256":  "508b066f6b729c0e7bb24f276e2db48761dc9d0aaf1c5e6df362af1a8d23ee08"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Orange Dark Orange Ramp .png",
+                      "sha256":  "dbef90d640aadb47f5a4fd009adde6b03e50980016c1d691cc7af0969b3a5db1"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft White Dark Black ramp .ffx",
+                      "sha256":  "fea74b830376a0480f17e0d9eee99854029f191572505b9a2a0863c479763236"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft White Dark Black ramp .png",
+                      "sha256":  "5a7c1f4b9a10c2dc09d2dcc555616f110850cc05620bfe7f424db7bb85bf5cb2"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Yellow Dark Black ramp .ffx",
+                      "sha256":  "bf265e627e68e63db2efbb07be5290ad0f50da731055903de411574449cf1874"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft Yellow Dark Black ramp .png",
+                      "sha256":  "d5780dfd6698775d355769a3d28c3649d3fa4309c915f76fd58cb0bf21c73b30"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft sky Dark Black ramp .ffx",
+                      "sha256":  "73f6735abe9c0e756d8e2deb1a1888e9a0428acf4204998cf8b59005352b7908"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft sky Dark Black ramp .png",
+                      "sha256":  "e462c47e0ee5c5514fe45b7a7cd653287d8c4afb21cb15a55382132297a0684b"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft syen Dark syen  ramp .ffx",
+                      "sha256":  "0657a95fed4c524370abd08fbbc03e4eb82ea400d8ceccec6d4eb669d0630d5d"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft syen Dark syen  ramp .png",
+                      "sha256":  "22f29f13840dc3b3fb3cd9f9a777685bd76fe1d42190f5d54ac399a69734bbb0"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft tail Dark tail ramp .ffx",
+                      "sha256":  "5af1b008d9f6ccf6b7567e10331e00940b8559c9c930adc8fe4f6a512bf55e03"
+                  },
+                  {
+                      "path":  "presets/style ffx/Soft tail Dark tail ramp .png",
+                      "sha256":  "ed2e872f5a96798d09b77c077207dcdbb305ffb7eb23f6bfb11211c4d54d8fe7"
+                  },
+                  {
+                      "path":  "presets/style ffx/White Black ramp .ffx",
+                      "sha256":  "6bc7577bbc709defc435458850b863f45c46025418076e4cd4d3d04d8ed4ada0"
+                  },
+                  {
+                      "path":  "presets/style ffx/White Black ramp .png",
+                      "sha256":  "e5a5ff9af9bc935c380eedb812c008d7af16c0bc3bd25b33aba885f976201950"
+                  },
+                  {
+                      "path":  "presets/style ffx/pack.json",
+                      "sha256":  "d50e0734b41508803908bcbe7ec7a985fbf8f79959afd9ef24f869a2baca0d27"
+                  },
+                  {
+                      "path":  "presets/animffx-extra-new/Position \u0026 Rotation Characters Right (B)/Position \u0026 Rotation Characters Right (B).ffx",
+                      "sha256":  "bcb6e31b5cb5bbd51b5828a4f0e9497879c7b5309f7066b7562632bcd4969c75"
+                  },
+                  {
+                      "path":  "presets/animffx-extra-new/3D Characters \u0026 Rotation Right/3D Characters \u0026 Rotation Right.ffx",
+                      "sha256":  "8f28f7e623faf9f428522ff10646a50e277f2131ee5b7ffbd58b1a3ed4a4f7e2"
+                  },
+                  {
+                      "path":  "presets/animffx-extra-new/Position \u0026 Rotation Characters Down (B)/Position \u0026 Rotation Characters Down (B).ffx",
+                      "sha256":  "199fe43b984dfd9e97b880902125bc8f210336b0ec5749f06c470021eb30b6ce"
+                  },
+                  {
+                      "path":  "presets/animffx-extra-new/Typewriter 4/Typewriter 4.ffx",
+                      "sha256":  "6d4464a50f453eebd01bf8f55140dcb406e96dbe77c33f479556f622f9b1c580"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/README.md",
+                      "sha256":  "bbc060716dc43b228ffd3572d83cb2f2560f71416372b80ca5718161367a5dd7"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_01.png",
+                      "sha256":  "3da416afb7a7316ec3fdcde8878a3e2005b45a3d92d95048cc4b3dc7170cc380"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_02.png",
+                      "sha256":  "9d5f7bc48ba00573399b7dd0b5add351c797e46c7f9ea04fbb3b5007eca74e7b"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_03.png",
+                      "sha256":  "047561af7b8fc8b3d6163089b70e87c5809755cc35c22b5a040887396d1578ff"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_04.png",
+                      "sha256":  "9b41f23a70b9f1067e94c0afbd2c81e6ddd0ca1419d4d15e22afb36dcbb2c2ce"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_05.png",
+                      "sha256":  "5a2b1effad2cd60552de7b057709343b641670301b70c23bc7e72329007f42cd"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_06.png",
+                      "sha256":  "57aa1a89d4eee612559f841a31c2b71d72ee438e90c8083025e300cc63c0e0f0"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_07.png",
+                      "sha256":  "02b1343d34667ddc7249d97fd9df55b8e5236640001dc0d22b2799af16f92268"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_08.png",
+                      "sha256":  "28847333b1c268f28244bd337c625f5600d9f63af3ab2cccef485be7066c3a2b"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_09.png",
+                      "sha256":  "72d2733a17a90a36cd42029b45c203909a0b2843cabd341cdf3f997c4d02798e"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_10.png",
+                      "sha256":  "f8fcb1e335bf9d6542859722a00fab265675857c3c90898d1d3eb25001808e27"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_11.png",
+                      "sha256":  "f59ccd0d8e43423ace9b99ff49099a42404627e8a708c117a568efb366fd885f"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_12.png",
+                      "sha256":  "c132cb488b7c51196c5295b0d26142b5134d6b3ef57f09f116039483f0122dbe"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_13.png",
+                      "sha256":  "6e5c63c38b8f760c41e0bcb87d765962068c38aaf86148dbf27d30bd30824fb3"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_14.png",
+                      "sha256":  "84909d22490f5aee77f771cb13ffe1582231f5b33e8e10842310888df0afbc70"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_15.png",
+                      "sha256":  "4b926dfb9e6760f6f51b38bf41f91fee53bc73ed4578a2819e2515c95dc5e277"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_16.png",
+                      "sha256":  "d244f40da869a0033ee24fbba488cf61a2b91812d35d085e48a230fe9e0c03cc"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_17.png",
+                      "sha256":  "13accbf092156b9979e57d1752f92260383178ae0db818e68b9f19f22f3af352"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_18.png",
+                      "sha256":  "075c6ff8d792f30c63e327eb3c5cd3161020c051520367228d7a931d33a42abc"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_19.png",
+                      "sha256":  "f6af17ec8fb42c93bb78a409c772f4aad2452734d56e5829eb0c02f097547b1e"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/ramp_20.png",
+                      "sha256":  "89846ca36a4367039b369b4d5fc0a4343c2b557c659113ec0e20cb63b0c3459c"
+                  },
+                  {
+                      "path":  "presets/web-style-testing/web-presets.json",
+                      "sha256":  "95250d482e1449f148ccb67d14dfbde07a570c385069c01c387a61b58f999903"
+                  },
+                  {
+                      "path":  "CSXS/manifest.xml",
+                      "sha256":  "a60fbdd1fda4908184fe0873a451e1f4d41115eb736923b7041b1ab6e52457ed"
+                  },
+                  {
+                      "path":  "jsx/AEUPM.jsx",
+                      "sha256":  "73bb6b8e38659c1b63bd921c2c4fd76fe9a8f133766b5d24e4934ec234c200f1"
+                  }
+              ]
+}

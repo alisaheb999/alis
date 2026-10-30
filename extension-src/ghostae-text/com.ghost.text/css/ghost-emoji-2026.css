@@ -1,0 +1,283 @@
+/* ============================================================
+   GHOST EMOJI 2026 — "50 Categories Asset Panel" restyle
+   Scoped to the Emoji tab tile library (#emojiGrid) only.
+   Palette lifted from the approved mockup:
+     body #121212 · panel #222224 · card #2a2a2d
+     cardHover #353539 · border #3a3a3e · accent #007acc
+   ============================================================ */
+
+.ge-emoji-host {
+    background: #1a1a1c;
+    border: 1px solid #3a3a3e;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ── Category pill row (horizontal scroll) ─────────────────── */
+.ge-cat-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 6px;
+    padding: 6px 4px 10px;
+    margin: 0 -4px;
+    border-bottom: 1px solid #3a3a3e;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+.ge-cat-pill {
+    flex: 0 0 auto;
+    background: #28282b !important;
+    border: 1px solid #3a3a3e !important;
+    color: #d1d1d6 !important;
+    border-radius: 999px !important;
+    transition: all .15s ease-in-out;
+    white-space: nowrap;
+}
+
+.ge-cat-pill:hover {
+    border-color: #007acc !important;
+    color: #ffffff !important;
+    background: #313136 !important;
+}
+
+.ge-cat-pill.active,
+.ge-cat-pill.is-active {
+    background: #007acc !important;
+    border-color: #007acc !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 8px rgba(0, 122, 204, 0.5);
+    font-weight: 600;
+}
+
+/* ── Dense tile grid ────────────────────────────────────────── */
+.ge-grid-wrap {
+    background: #202022;
+    border: 1px solid #3a3a3e;
+    border-radius: 8px;
+    padding: 8px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.ge-asset-grid.tk-emoji-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)) !important;
+    gap: 6px !important;
+}
+
+.ge-asset-tile.tk-emoji-button {
+    position: relative;
+    background: #2a2a2d !important;
+    border: 1px solid #36363a !important;
+    border-radius: 6px !important;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    contain: layout paint;
+}
+
+.ge-asset-tile.tk-emoji-button:hover {
+    border-color: #007acc !important;
+    background: #333338 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.ge-asset-tile.tk-emoji-button:active {
+    transform: scale(0.95);
+}
+
+.ge-tile-glyph {
+    font-size: 16px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* ── Hover-only quick action label ─────────────────────────── */
+.ge-tile-hover {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2px 0;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 122, 204, 0.92);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity .15s ease, transform .15s ease;
+    pointer-events: none;
+}
+
+.ge-asset-tile.tk-emoji-button:hover .ge-tile-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Footer count bar ───────────────────────────────────────── */
+.ge-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 4px 0;
+    border-top: 1px solid #3a3a3e;
+    font-size: 10px;
+    color: #9a9a9a;
+}
+
+.ge-footer-count {
+    color: #007acc;
+    font-weight: 600;
+}
+
+.ge-footer-label {
+    color: #9a9a9a;
+}
+
+/* ── Scrollbars inside the emoji library ───────────────────── */
+.ge-emoji-host ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.ge-emoji-host ::-webkit-scrollbar-track {
+    background: #181818;
+}
+.ge-emoji-host ::-webkit-scrollbar-thumb {
+    background: #38383e;
+    border-radius: 3px;
+}
+.ge-emoji-host ::-webkit-scrollbar-thumb:hover {
+    background: #007acc;
+}
+
+/* Reference-panel header, category summary and responsive asset density. */
+.ge-emoji-host { position: relative; background: #1a1a1c; border-color: #3a3a3e; padding: 0; gap: 0; overflow: hidden; }
+.ge-library-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px; background: #1a1a1c; border-bottom: 1px solid #3a3a3e; }
+.ge-library-brand { display: flex; align-items: center; gap: 8px; min-width: 0; color: #fff; }
+.ge-library-mark, .ge-category-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 28px; height: 28px; border: 1px solid rgba(0,122,204,.55); border-radius: 6px; color: #fff; background: rgba(0,122,204,.16); font-size: 14px; filter: grayscale(1) brightness(2.8); }
+.ge-library-brand b, .ge-category-copy b { display: block; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ge-library-brand small, .ge-category-copy small { display: block; margin-top: 2px; color: #9a9a9a; font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ge-library-controls { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.ge-category-launcher { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 8px; color: #fff; background: #28282c; border: 1px solid #3a3a3e; border-radius: 4px; font-size: 10px; white-space: nowrap; cursor: pointer; }
+.ge-category-launcher:hover, .ge-category-launcher[aria-expanded="true"] { border-color: #007acc; background: #313136; }
+.ge-emoji-search { width: 160px; height: 26px; min-width: 0; padding: 0 8px; color: #fff; background: #121214; border: 1px solid #3a3a3e; border-radius: 4px; font-size: 10px; outline: none; }
+.ge-emoji-search:focus { border-color: #007acc; }
+.ge-density { display: flex; padding: 2px; background: #121214; border: 1px solid #3a3a3e; border-radius: 4px; }
+.ge-density button { width: 20px; height: 20px; padding: 0; color: #bdbdc2; background: transparent; border: 0; border-radius: 3px; font-size: 9px; cursor: pointer; }
+.ge-density button.is-active { color: #fff; background: #007acc; font-weight: 700; }
+.ge-cat-bar { padding: 8px 10px; margin: 0; background: #202022; }
+.ge-category-menu { position: absolute; z-index: 160; top: 50px; right: 10px; width: min(360px, calc(100% - 20px)); max-height: min(360px, calc(100vh - 100px)); padding: 8px; overflow: auto; background: #1a1a1c; border: 1px solid #3a3a3e; border-radius: 8px; box-shadow: 0 16px 38px rgba(0,0,0,.62); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.ge-category-menu[hidden] { display: none; }
+.ge-category-option { display: flex; align-items: center; gap: 7px; min-width: 0; padding: 7px; color: #d1d1d6; background: #252528; border: 1px solid #36363a; border-radius: 5px; text-align: left; cursor: pointer; }
+.ge-category-option:hover { color: #fff; border-color: #007acc; background: #2f2f34; }
+.ge-category-option-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 24px; height: 24px; color: #fff; font-size: 13px; filter: grayscale(1) brightness(3); }
+.ge-category-option-copy { min-width: 0; }
+.ge-category-option-copy b, .ge-category-option-copy small { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.ge-category-option-copy b { font-size: 10px; }
+.ge-category-option-copy small { margin-top: 2px; color: #96969b; font-size: 8px; }
+.ge-category-banner { display: flex; align-items: center; gap: 8px; margin: 10px 10px 8px; padding: 8px; background: #202022; border: 1px solid #3a3a3e; border-radius: 6px; min-width: 0; }
+.ge-category-copy { min-width: 0; }
+.ge-grid-wrap { margin: 0 10px; padding: 8px; max-height: none; min-height: 180px; background: #202022; }
+.ge-asset-grid.tk-emoji-grid { grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)) !important; gap: 7px !important; }
+.ge-asset-grid.ge-density-s { grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)) !important; gap: 5px !important; }
+.ge-asset-grid.ge-density-l { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)) !important; gap: 8px !important; }
+.ge-asset-tile.tk-emoji-button { background: #2a2a2d !important; border-color: #36363a !important; border-radius: 6px !important; }
+/* Emoji glyphs must render in their own colours — the old monochrome filter
+   (grayscale + brightness) blew most glyphs out to invisible white blobs. */
+.ge-tile-glyph, .tk-emoji-folder-icon { filter: none !important; }
+.ge-tile-glyph { font-size: 18px; text-shadow: none; }
+.ge-footer { margin: 8px 10px 0; padding: 7px 0 10px; }
+.ge-footer-count { color: #fff; }
+@media (max-width: 440px) {
+    .ge-library-header { align-items: flex-start; flex-direction: column; }
+    .ge-library-controls { width: 100%; }
+    .ge-emoji-search { width: 100%; flex: 1 1 auto; }
+    .ge-category-launcher span:nth-child(2) { display: none; }
+    .ge-category-launcher { width: 28px; justify-content: center; padding: 0; }
+    .ge-category-launcher span:last-child { display: none; }
+    .ge-category-menu { top: 88px; right: 8px; width: calc(100% - 16px); }
+    .ge-category-banner { margin: 8px; }
+    .ge-grid-wrap { margin: 0 8px; padding: 6px; }
+    .ge-asset-grid.tk-emoji-grid { grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)) !important; gap: 6px !important; }
+}
+@media (max-width: 300px) {
+    .ge-library-brand small, .tk-emoji-folder-name, .tk-emoji-folder-count { display: none; }
+    .ge-asset-grid.tk-emoji-grid { grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)) !important; }
+}
+
+/* ── premium polish (v3.22.1) ───────────────────────────────── */
+.ge-library-mark { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(145deg, #2f80ed, #1a5fbf); color: #fff; box-shadow: 0 4px 12px rgba(38,128,235,.35); }
+.ge-library-mark svg, .ge-launcher-ico svg, .ge-launcher-caret svg { width: 14px; height: 14px; display: block; }
+.ge-launcher-ico, .ge-launcher-caret { display: inline-flex; align-items: center; }
+.ge-grid-wrap { border: 1px solid #313135; border-radius: 10px; }
+.ge-asset-tile.tk-emoji-button { background: linear-gradient(180deg, #2c2c30, #232326) !important; border-color: #34343a !important; border-radius: 8px !important; }
+.ge-asset-tile.tk-emoji-button:hover { background: linear-gradient(180deg, #35353c, #292930) !important; }
+
+/* ══════════════════════════════════════════════════════════════
+   v3.35.0 — LEAN EMOJI LIBRARY
+   One header line (title · hairline · search icon · category icon),
+   category pills, tile grid. No density switch, banner or footer.
+   ══════════════════════════════════════════════════════════════ */
+.ge-emoji-lean { background: transparent; border: 0; border-radius: 0; padding: 6px 2px 10px; gap: 8px; display: flex; flex-direction: column; overflow: visible; }
+.ge-emoji-lean .ge-head { display: flex; align-items: center; gap: 8px; padding: 0 2px; }
+.ge-emoji-lean .ge-head-title { font: 600 9.5px/1 var(--font-base, "Inter", system-ui, sans-serif); letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.46); white-space: nowrap; }
+.ge-emoji-lean .ge-head-rule { flex: 1 1 auto; height: 1px; background: rgba(255,255,255,.08); }
+.ge-emoji-lean .ge-head-ico { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0; border: 0; background: transparent; color: rgba(255,255,255,.55); cursor: pointer; transition: color .18s ease, transform .18s ease; }
+.ge-emoji-lean .ge-head-ico svg { width: 13px; height: 13px; display: block; }
+.ge-emoji-lean .ge-head-ico:hover { color: #fff; transform: translateY(-1px); }
+.ge-emoji-lean .ge-head-ico[aria-expanded="true"] { color: #fff; }
+.ge-emoji-lean .ge-head-search { width: 108px; height: 22px; padding: 0 8px; border: 0; border-radius: 8px; background: rgba(255,255,255,.06); color: rgba(255,255,255,.88); font: 400 10px/1 var(--font-base, "Inter", system-ui, sans-serif); outline: none; }
+.ge-emoji-lean .ge-head-search[hidden] { display: none; }
+
+.ge-emoji-lean .ge-cat-bar { padding: 0 2px 6px; margin: 0; background: transparent; border-bottom: 0; gap: 5px; }
+.ge-emoji-lean .ge-cat-pill { padding: 4px 10px !important; border: 0 !important; border-radius: 999px !important; background: rgba(255,255,255,.05) !important; color: rgba(255,255,255,.55) !important; font: 500 9.5px/1 var(--font-base, "Inter", system-ui, sans-serif); box-shadow: none; }
+.ge-emoji-lean .ge-cat-pill:hover { background: rgba(255,255,255,.1) !important; color: #fff !important; }
+.ge-emoji-lean .ge-cat-pill.is-active, .ge-emoji-lean .ge-cat-pill.active { background: linear-gradient(180deg, rgba(120,170,255,.36), rgba(90,130,240,.2)) !important; color: #fff !important; box-shadow: none; font-weight: 600; }
+
+.ge-emoji-lean .ge-grid-wrap { margin: 0; padding: 0; background: transparent; border: 0; border-radius: 0; min-height: 120px; max-height: 320px; overflow: auto; }
+.ge-emoji-lean .ge-asset-grid.tk-emoji-grid { grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)) !important; gap: 5px !important; }
+.ge-emoji-lean .ge-asset-tile.tk-emoji-button { background: rgba(255,255,255,.045) !important; border: 0 !important; border-radius: 9px !important; box-shadow: none; content-visibility: auto; contain-intrinsic-size: 38px; }
+.ge-emoji-lean .ge-asset-tile.tk-emoji-button:hover { background: rgba(255,255,255,.1) !important; transform: translateY(-1px); box-shadow: none; }
+.ge-emoji-lean .ge-tile-glyph { font-size: 17px; }
+
+.ge-emoji-lean .ge-category-menu { top: 30px; right: 4px; grid-template-columns: repeat(2, minmax(0, 1fr)); background: rgba(30,30,34,.96); border: 0; border-radius: 14px; box-shadow: 0 18px 44px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08); }
+.ge-emoji-lean .ge-category-option { background: rgba(255,255,255,.04); border: 0; border-radius: 10px; color: rgba(255,255,255,.8); }
+.ge-emoji-lean .ge-category-option:hover { background: rgba(255,255,255,.1); color: #fff; }
+.ge-emoji-lean .ge-category-option-icon { filter: none; }
+
+/* ── v3.36.0 borderless finish ─────────────────────────────── */
+.ge-emoji-lean .ge-head-search,
+.ge-emoji-lean .ge-head-search:focus,
+.ge-emoji-lean .ge-emoji-search,
+.ge-emoji-lean .ge-emoji-search:focus {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  color: rgba(255,255,255,.9) !important;
+}
+.ge-emoji-lean .ge-head-ico,
+.ge-emoji-lean .ge-head-ico:hover,
+.ge-emoji-lean .ge-category-icon,
+.ge-emoji-lean .ge-category-launcher,
+.ge-emoji-lean .ge-category-launcher:hover,
+.ge-emoji-lean .ge-category-launcher[aria-expanded="true"] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.ge-emoji-lean .ge-head-ico:hover { color: #fff !important; transform: translateY(-1px); }
+.ge-emoji-lean .ge-density { display: none !important; }

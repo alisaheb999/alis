@@ -1,0 +1,285 @@
+/*!
+ * Ghostae Text — UI refinement layer (v3.23.0)
+ * Loaded LAST, so plain specificity is enough and no !important is needed
+ * except where an earlier rule already used one.
+ *
+ * Covers, in order:
+ *   1. no stray divider / border lines
+ *   2. smaller card caption under the animation
+ *   3. small, always-clickable like / dislike buttons
+ *   4. the category picker next to the play button
+ *   5. general polish (grid rhythm, focus rings, scrollbar)
+ */
+
+/* ── 1. Borders: only where a border actually separates something ───── */
+.ghost-toolkit-body .tk-grid-section {
+    margin-bottom: 14px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.ghost-toolkit-body .tk-grid + .tk-grid,
+.ghost-toolkit-body .tk-grid-ffx,
+.ghost-toolkit-body .tk-speed {
+    border: 0;
+}
+.ghost-toolkit-body .tk-card,
+.ghost-toolkit-body .tk-card::after,
+.ghost-toolkit-body .tk-card-preview {
+    border-bottom-color: transparent;
+}
+.ghost-toolkit-body .tk-card {
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .022);
+    transition: border-color .16s ease, background .16s ease, transform .16s ease;
+}
+.ghost-toolkit-body .tk-card:hover {
+    border-color: rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .045);
+}
+.ghost-toolkit-body .tk-card.is-active,
+.ghost-toolkit-body .tk-card.active {
+    border-color: rgba(110, 168, 255, .55);
+}
+/* the white hairline that used to close every shape / div */
+.ghost-toolkit-body .tk-card-label,
+.ghost-toolkit-body .tk-pal-card .tk-card-label,
+.ghost-toolkit-body .tk-grid-style .tk-card-label {
+    border-top: 0;
+    box-shadow: none;
+}
+
+/* ── 2. Caption under the animation: small again ────────────────────── */
+.ghost-toolkit-body .tk-card-label {
+    padding: 4px 7px 5px;
+    font-size: 9.5px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .005em;
+    text-transform: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, .82);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .78) 62%);
+    pointer-events: none;
+}
+.ghost-toolkit-body .tk-grid-style .tk-card-label,
+.ghost-toolkit-body .tk-pal-card .tk-card-label {
+    font-size: 9.5px;
+}
+
+/* ── 3. Like / dislike: half the size, and always clickable ─────────── */
+.ghost-toolkit-body .tk-vote-float {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 12;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity .14s ease;
+}
+.ghost-toolkit-body .tk-card:hover .tk-vote-float,
+.ghost-toolkit-body .tk-card:focus-within .tk-vote-float,
+.ghost-toolkit-body .tk-vote-float.has-vote {
+    opacity: 1;
+}
+.ghost-toolkit-body .tk-vote {
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    padding: 1px 3px;
+    border-radius: 999px;
+    background: rgba(10, 10, 13, .72);
+    border: 1px solid rgba(255, 255, 255, .09);
+    pointer-events: auto;
+}
+.ghost-toolkit-body .tk-vote-divider {
+    width: 1px;
+    height: 8px;
+    margin: 0;
+    background: rgba(255, 255, 255, .12);
+}
+.ghost-toolkit-body .tk-vote-btn {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    opacity: .7;
+    color: rgba(255, 255, 255, .92);
+    background: none !important;
+    transition: opacity .12s ease, color .12s ease, transform .12s ease;
+}
+.ghost-toolkit-body .tk-vote-btn svg {
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+.ghost-toolkit-body .tk-vote-btn:hover {
+    opacity: 1;
+    transform: scale(1.12);
+    background: rgba(255, 255, 255, .1) !important;
+}
+.ghost-toolkit-body .tk-vote-btn.is-on {
+    opacity: 1;
+    color: #7db1ff;
+    background: rgba(38, 128, 235, .2) !important;
+}
+.ghost-toolkit-body .tk-vote-btn.is-on.tk-vote-down {
+    color: #ff9a8b;
+    background: rgba(235, 76, 58, .18) !important;
+}
+/* nothing above the preview may swallow the click */
+.ghost-toolkit-body .tk-card-preview,
+.ghost-toolkit-body .tk-card-anim {
+    pointer-events: none;
+}
+
+/* ── 4. Category picker beside the play button ──────────────────────── */
+.ghost-toolkit-body .tk-catbtn-wrap {
+    position: relative;
+    display: inline-flex;
+}
+.ghost-toolkit-body .tk-catbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    width: auto;
+    padding: 0 8px;
+    height: 24px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .78);
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+.ghost-toolkit-body .tk-catbtn svg {
+    width: 12px;
+    height: 12px;
+    flex: none;
+}
+.ghost-toolkit-body .tk-catbtn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .2);
+}
+.ghost-toolkit-body .tk-catbtn.is-filtered {
+    color: #9ec5ff;
+    border-color: rgba(110, 168, 255, .5);
+    background: rgba(38, 128, 235, .14);
+}
+.ghost-toolkit-body .tk-catbtn-label {
+    max-width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ghost-toolkit-body .tk-catbtn-count {
+    font-size: 9px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    color: rgba(255, 255, 255, .7);
+}
+.ghost-toolkit-body .tk-catmenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 60;
+    min-width: 168px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 4px;
+    border-radius: 12px;
+    background: rgba(18, 18, 22, .98);
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .55);
+}
+.ghost-toolkit-body .tk-catmenu[hidden] { display: none; }
+.ghost-toolkit-body .tk-catmenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 6px 9px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: rgba(255, 255, 255, .8);
+    font-size: 11px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+.ghost-toolkit-body .tk-catmenu-item:hover {
+    background: rgba(255, 255, 255, .07);
+    color: #fff;
+}
+.ghost-toolkit-body .tk-catmenu-item.active {
+    background: rgba(38, 128, 235, .18);
+    color: #9ec5ff;
+}
+.ghost-toolkit-body .tk-catmenu-count {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .45);
+}
+.ghost-toolkit-body .tk-catmenu-item.active .tk-catmenu-count { color: #9ec5ff; }
+.ghost-toolkit-body .tk-group-off { display: none !important; }
+
+/* ── 5. General polish ──────────────────────────────────────────────── */
+.ghost-toolkit-body .tk-panel-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 2px 10px;
+}
+.ghost-toolkit-body .tk-grid {
+    gap: 8px;
+}
+.ghost-toolkit-body .tk-chiprow {
+    gap: 5px;
+    row-gap: 5px;
+}
+.ghost-toolkit-body .tk-chip {
+    border-radius: 999px;
+    font-size: 10px;
+    padding: 3px 9px;
+}
+.ghost-toolkit-body .tk-catmenu::-webkit-scrollbar { width: 8px; }
+.ghost-toolkit-body .tk-catmenu::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .14);
+}
+.ghost-toolkit-body button:focus-visible,
+.ghost-toolkit-body .tk-card:focus-visible {
+    outline: 2px solid rgba(110, 168, 255, .65);
+    outline-offset: 2px;
+}
+
+/* ── Idle governor ────────────────────────────────────────────────
+   When the CEP panel is not on screen every preview animation is
+   parked, so a background Ghost panel costs the AE process nothing.
+   Managed by js/ghost-idle.js. */
+body.ghost-panel-suspended *,
+body.ghost-panel-suspended *::before,
+body.ghost-panel-suspended *::after {
+    animation-play-state: paused !important;
+    transition: none !important;
+}
+
+/* Cards are self-contained: isolate layout so one card's preview never
+   invalidates the whole grid. No content-visibility here — CEP's older
+   Chromium mis-paints it and cards would flash empty. */
+.tk-card {
+    contain: layout;
+}

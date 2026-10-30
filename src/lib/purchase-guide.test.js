@@ -1,0 +1,10 @@
+import { expect, test } from 'bun:test';
+import { resolvePurchaseGuide } from './purchase-guide';
+const purchase = { orderId: 'purchase-1', email: 'buyer@example.test' };
+const order = { id: purchase.orderId, plan: 'text_lifetime', status: 'pending', license_key: 'KEY-1' };
+const license = { license_key: 'KEY-1', status: 'active', expires_at: null };
+const account = { email: purchase.email, orders: [order], licenses: [license] };
+test('pending never reveals a key', () => expect(resolvePurchaseGuide(account, purchase)?.licenseKey).toBeNull());
+test('paid reveals matching active key', () => expect(resolvePurchaseGuide({ ...account, orders: [{ ...order, status: 'paid' }] }, purchase)?.licenseKey).toBe('KEY-1'));
+test('other account cannot select guidance', () => expect(resolvePurchaseGuide(account, { ...purchase, email: 'other@example.test' })).toBeNull());
+test('expired key is not ready', () => expect(resolvePurchaseGuide({ ...account, orders: [{ ...order, status: 'paid' }], licenses: [{ ...license, expires_at: '2026-01-01T00:00:00Z' }] }, purchase, Date.parse('2026-10-10T05:19:00Z'))).toBeNull());

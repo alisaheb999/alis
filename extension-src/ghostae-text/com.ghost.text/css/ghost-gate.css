@@ -1,0 +1,344 @@
+/* GHOST Activation Gate — GhostAE Hub */
+
+/* The gated panel is dimmed, never blurred. A full-panel `filter: blur()`
+   forces a compositor layer for the whole document, which is what made older
+   After Effects builds (CEF 74–88, AE 2019–2022) render the panel as a
+   permanently smeared/blurred surface and cost real frame time. */
+html.ghost-gated body > *:not(.ghost-gate-overlay):not(#ghost-control-gate) {
+    opacity: .25;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* #ghost-control-gate (ghost-control-gate.js's remote-lock overlay) must
+   never be dimmed by the local gate — otherwise its own near-opaque
+   background fades to ~25% and its text visually collides with the
+   Activate/Status card underneath instead of cleanly replacing it. */
+
+.ghost-gate-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    padding: 16px;
+    overflow: auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1e293b; /* slate-800 */
+}
+
+.ghost-gate-overlay.is-open { display: flex; }
+
+/* Apple HIG light chrome. Kept flat: backdrop-filter is unsupported or
+   badly accelerated in the older CEF runtimes we still target. */
+.glass-chrome {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+
+/* Solid Content Card Layer */
+.content-card {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 8px 20px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Spring Physics Interactions */
+.spring-transition {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-scale:hover {
+    transform: scale(1.02);
+}
+
+.interactive-scale:active {
+    transform: scale(0.97);
+}
+
+.focus-ring:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Tab Transition */
+.tab-panel {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.tab-panel.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(4px);
+}
+.tab-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   TAILWIND COLOR POLYFILL FOR CEP ENVIRONMENT
+   =========================================================
+   Because CEP often blocks CDN loading, or dark mode CSS 
+   overrides globals, we explicitly enforce the light Apple HIG 
+   colors for the GhostAE Hub popup here. 
+   ========================================================= */
+
+/* Reset globals inside the overlay */
+.ghost-gate-overlay {
+    background-color: #f8fafc !important; 
+    color: #0f172a !important; 
+}
+.ghost-gate-overlay header,
+.ghost-gate-overlay footer,
+.ghost-gate-overlay section,
+.ghost-gate-overlay main,
+.ghost-gate-overlay div,
+.ghost-gate-overlay p,
+.ghost-gate-overlay span,
+.ghost-gate-overlay h1,
+.ghost-gate-overlay h2,
+.ghost-gate-overlay button,
+.ghost-gate-overlay input {
+    color: inherit;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Backgrounds */
+.ghost-gate-overlay .bg-white { background-color: #ffffff !important; }
+.ghost-gate-overlay .bg-white\/60 { background-color: rgba(255, 255, 255, 0.6) !important; }
+.ghost-gate-overlay .bg-slate-50 { background-color: #f8fafc !important; }
+.ghost-gate-overlay .bg-slate-100 { background-color: #f1f5f9 !important; }
+.ghost-gate-overlay .bg-slate-200 { background-color: #e2e8f0 !important; }
+.ghost-gate-overlay .bg-slate-200\/50 { background-color: rgba(226, 232, 240, 0.5) !important; }
+.ghost-gate-overlay .bg-slate-300 { background-color: #cbd5e1 !important; }
+.ghost-gate-overlay .bg-slate-800 { background-color: #1e293b !important; }
+.ghost-gate-overlay .bg-slate-900 { background-color: #0f172a !important; }
+.ghost-gate-overlay .bg-slate-900\/30 { background-color: rgba(15, 23, 42, 0.3) !important; }
+.ghost-gate-overlay .bg-blue-100\/60 { background-color: rgba(219, 234, 254, 0.6) !important; }
+.ghost-gate-overlay .bg-blue-400 { background-color: #60a5fa !important; }
+.ghost-gate-overlay .bg-blue-600 { background-color: #2563eb !important; }
+.ghost-gate-overlay .bg-emerald-400 { background-color: #34d399 !important; }
+.ghost-gate-overlay .bg-emerald-600 { background-color: #059669 !important; }
+
+/* Text Colors */
+.ghost-gate-overlay .text-white { color: #ffffff !important; }
+.ghost-gate-overlay .text-slate-300 { color: #cbd5e1 !important; }
+.ghost-gate-overlay .text-slate-400 { color: #94a3b8 !important; }
+.ghost-gate-overlay .text-slate-500 { color: #64748b !important; }
+.ghost-gate-overlay .text-slate-600 { color: #475569 !important; }
+.ghost-gate-overlay .text-slate-700 { color: #334155 !important; }
+.ghost-gate-overlay .text-slate-800 { color: #1e293b !important; }
+.ghost-gate-overlay .text-slate-900 { color: #0f172a !important; }
+.ghost-gate-overlay .text-emerald-600 { color: #059669 !important; }
+.ghost-gate-overlay .text-blue-600 { color: #2563eb !important; }
+
+/* Border Colors */
+.ghost-gate-overlay .border-slate-100 { border-color: #f1f5f9 !important; }
+.ghost-gate-overlay .border-slate-200 { border-color: #e2e8f0 !important; }
+.ghost-gate-overlay .border-slate-200\/60 { border-color: rgba(226, 232, 240, 0.6) !important; }
+.ghost-gate-overlay .border-slate-200\/80 { border-color: rgba(226, 232, 240, 0.8) !important; }
+.ghost-gate-overlay .border-slate-800 { border-color: #1e293b !important; }
+.ghost-gate-overlay .border-blue-600 { border-color: #2563eb !important; }
+
+/* Input specific */
+.ghost-gate-overlay input {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+}
+.ghost-gate-overlay input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Hover States for Buttons */
+.ghost-gate-overlay button.hover\:bg-slate-100:hover { background-color: #f1f5f9 !important; }
+.ghost-gate-overlay button.hover\:bg-slate-200:hover { background-color: #e2e8f0 !important; }
+.ghost-gate-overlay button.hover\:bg-slate-800:hover { background-color: #1e293b !important; }
+.ghost-gate-overlay button.hover\:bg-blue-700:hover { background-color: #1d4ed8 !important; }
+.ghost-gate-overlay button.hover\:bg-emerald-700:hover { background-color: #047857 !important; }
+
+.ghost-gate-overlay button.hover\:text-slate-700:hover { color: #334155 !important; }
+.ghost-gate-overlay button.hover\:text-slate-900:hover { color: #0f172a !important; }
+
+/* Ensure borders are shown */
+.ghost-gate-overlay .border { border-width: 1px; border-style: solid; }
+.ghost-gate-overlay .border-t { border-top-width: 1px; border-top-style: solid; }
+.ghost-gate-overlay .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+
+
+/* ==========================================================================
+   No-Tailwind fallback.
+   The gate markup is Tailwind-classed, but the Play CDN runtime does not
+   evaluate in every After Effects CEF build (AE 2019–2020 in particular).
+   `html.ghost-tw-off` is set by ghost-gate.js when no generated utility rule
+   is detected, and these rules keep the dialog fully usable and readable.
+   ========================================================================== */
+html.ghost-tw-off .ghost-gate-overlay .hidden { display: none !important; }
+html.ghost-tw-off .ghost-gate-overlay main {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+html.ghost-tw-off .ghost-gate-overlay .glass-chrome { border-radius: 16px; overflow: hidden; }
+html.ghost-tw-off .ghost-gate-overlay header > div:nth-child(2),
+html.ghost-tw-off .ghost-gate-overlay header > div:nth-child(3),
+html.ghost-tw-off .ghost-gate-overlay .relative.flex.items-center,
+html.ghost-tw-off .ghost-gate-overlay #tab-activate > div:last-child,
+html.ghost-tw-off .ghost-gate-overlay .content-card > div,
+html.ghost-tw-off .ghost-gate-overlay footer a {
+    display: flex;
+    align-items: center;
+}
+html.ghost-tw-off .ghost-gate-overlay header > div:nth-child(2),
+html.ghost-tw-off .ghost-gate-overlay .content-card > div { justify-content: space-between; }
+html.ghost-tw-off .ghost-gate-overlay header h1 { margin: 0 0 0 10px; font-size: 18px; }
+html.ghost-tw-off .ghost-gate-overlay #logoBox { width: 44px; height: 44px; }
+html.ghost-tw-off .ghost-gate-overlay #logoBox > div,
+html.ghost-tw-off .ghost-gate-overlay #logoBox img { width: 100%; height: 100%; box-sizing: border-box; }
+html.ghost-tw-off .ghost-gate-overlay header,
+html.ghost-tw-off .ghost-gate-overlay section,
+html.ghost-tw-off .ghost-gate-overlay footer { display: block; padding: 14px 16px; }
+html.ghost-tw-off .ghost-gate-overlay header { border-bottom: 1px solid #e2e8f0; }
+html.ghost-tw-off .ghost-gate-overlay footer { border-top: 1px solid #e2e8f0; text-align: center; }
+html.ghost-tw-off .ghost-gate-overlay nav { display: flex; gap: 6px; margin-top: 12px; }
+html.ghost-tw-off .ghost-gate-overlay nav button { flex: 1 1 0; padding: 6px 8px; border-radius: 8px; }
+/* The paste button is absolutely positioned; without an explicit positioned
+   wrapper (Tailwind's .relative is absent in fallback mode) it anchored to the
+   overlay and jumped out of the field. */
+html.ghost-tw-off .ghost-gate-overlay #tab-activate > div:first-child > div,
+html.ghost-tw-off .ghost-gate-overlay #licenseKey ~ #pasteBtn,
+html.ghost-tw-off .ghost-gate-overlay .relative {
+    position: relative;
+}
+html.ghost-tw-off .ghost-gate-overlay #tab-activate > div:first-child > div {
+    display: block;
+    margin-bottom: 10px;
+}
+html.ghost-tw-off .ghost-gate-overlay input#licenseKey {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 76px 10px 38px;
+    margin: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    letter-spacing: .08em;
+}
+html.ghost-tw-off .ghost-gate-overlay #pasteBtn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    margin-top: -16px;
+    height: 32px;
+    padding: 5px 8px;
+    line-height: 20px;
+    white-space: nowrap;
+    z-index: 2;
+}
+html.ghost-tw-off .ghost-gate-overlay #tab-activate > div:last-child { display: flex; gap: 8px; }
+html.ghost-tw-off .ghost-gate-overlay button {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+html.ghost-tw-off .ghost-gate-overlay #activateBtn { flex: 1 1 auto; background: #2563eb; color: #fff; border-color: #2563eb; }
+html.ghost-tw-off .ghost-gate-overlay #helpBtn { flex: 0 0 68px; }
+html.ghost-tw-off .ghost-gate-overlay .content-card > div { padding: 8px 0; }
+html.ghost-tw-off .ghost-gate-overlay footer a { justify-content: center; color: #475569; text-decoration: none; }
+html.ghost-tw-off .ghost-gate-overlay svg { width: 14px; height: 14px; }
+html.ghost-tw-off .ghost-gate-overlay #supportDrawer,
+html.ghost-tw-off .ghost-gate-overlay .z-\[-1\] { display: none !important; }
+html.ghost-tw-off .ghost-gate-overlay #toast {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+}
+html.ghost-tw-off .ghost-gate-overlay #toast.opacity-0 { display: none; }
+
+/* ==========================================================================
+   v3.40.11 — Activation gate dark theme.
+   The gate markup is Tailwind light-classed; these rules come last and
+   re-map the surface/ink pairs to the panel's black theme while keeping
+   WCAG-AA contrast (ink #e8eefc on #0a0e17 ≈ 15:1, muted #9fb0cc ≈ 7:1).
+   ========================================================================== */
+.ghost-gate-overlay {
+    background-color: #060911 !important;
+    color: #e8eefc !important;
+}
+.ghost-gate-overlay .glass-chrome,
+.ghost-gate-overlay .content-card {
+    background: #0d1320 !important;
+    border-color: rgba(120, 150, 200, .22) !important;
+    box-shadow: 0 24px 60px -22px rgba(0, 0, 0, .8) !important;
+}
+.ghost-gate-overlay .bg-white,
+.ghost-gate-overlay .bg-white\/60,
+.ghost-gate-overlay .bg-slate-50 { background-color: #0d1320 !important; }
+.ghost-gate-overlay .bg-slate-100,
+.ghost-gate-overlay .bg-slate-200,
+.ghost-gate-overlay .bg-slate-200\/50 { background-color: #16203a !important; }
+.ghost-gate-overlay .bg-slate-300 { background-color: #223055 !important; }
+.ghost-gate-overlay .bg-slate-800,
+.ghost-gate-overlay .bg-slate-900,
+.ghost-gate-overlay .bg-slate-900\/30 { background-color: #05080f !important; }
+.ghost-gate-overlay .bg-blue-100\/60 { background-color: rgba(47, 107, 255, .16) !important; }
+
+.ghost-gate-overlay .text-slate-900,
+.ghost-gate-overlay .text-slate-800 { color: #e8eefc !important; }
+.ghost-gate-overlay .text-slate-700,
+.ghost-gate-overlay .text-slate-600 { color: #c3d0e8 !important; }
+.ghost-gate-overlay .text-slate-500,
+.ghost-gate-overlay .text-slate-400,
+.ghost-gate-overlay .text-slate-300 { color: #9fb0cc !important; }
+.ghost-gate-overlay .text-blue-600 { color: #7aa8ff !important; }
+.ghost-gate-overlay .text-emerald-600 { color: #34d399 !important; }
+
+.ghost-gate-overlay .border,
+.ghost-gate-overlay .border-t,
+.ghost-gate-overlay .border-b,
+.ghost-gate-overlay .border-slate-100,
+.ghost-gate-overlay .border-slate-200,
+.ghost-gate-overlay .border-slate-200\/60,
+.ghost-gate-overlay .border-slate-200\/80 { border-color: rgba(120, 150, 200, .22) !important; }
+.ghost-gate-overlay .border-slate-800 { border-color: #05080f !important; }
+
+.ghost-gate-overlay input,
+.ghost-gate-overlay input#licenseKey {
+    background-color: #101828 !important;
+    color: #f2f6ff !important;
+    border-color: rgba(120, 150, 200, .3) !important;
+}
+.ghost-gate-overlay input::placeholder { color: #7d8ead !important; }
+.ghost-gate-overlay .focus-ring:focus-visible { outline-color: #5b9dff !important; }
+
+.ghost-gate-overlay button.hover\:bg-slate-100:hover,
+.ghost-gate-overlay button.hover\:bg-slate-200:hover { background-color: #1b2743 !important; }
+.ghost-gate-overlay button.hover\:bg-slate-800:hover { background-color: #000308 !important; }
+.ghost-gate-overlay button.hover\:text-slate-700:hover,
+.ghost-gate-overlay button.hover\:text-slate-900:hover { color: #ffffff !important; }
+
+html.ghost-tw-off .ghost-gate-overlay header { border-bottom-color: rgba(120,150,200,.22) !important; }
+html.ghost-tw-off .ghost-gate-overlay footer { border-top-color: rgba(120,150,200,.22) !important; }
+html.ghost-tw-off .ghost-gate-overlay footer a { color: #9fb0cc !important; }
+html.ghost-tw-off .ghost-gate-overlay button { border-color: rgba(120,150,200,.3) !important; color: #e8eefc !important; }
+html.ghost-tw-off .ghost-gate-overlay #activateBtn { background: #2f6bff !important; border-color: #2f6bff !important; color: #fff !important; }
+html.ghost-tw-off .ghost-gate-overlay #toast { background: #16203a !important; color: #eaf1ff !important; }

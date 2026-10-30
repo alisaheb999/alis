@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghostae Text v1.0 — Installation Guide</title>
+
+  <!-- Google Fonts: Inter, Hind Siliguri & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            bn: ['"Hind Siliguri"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #0f172a;
+      font-family: 'Hind Siliguri', 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-900 selection:bg-brand-100 selection:text-brand-800">
+
+  <!-- Minimal Nav -->
+  <nav class="border-b border-slate-100 py-4">
+    <div class="max-w-4xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="https://qzpvqycykdqxlwfcawli.supabase.co/storage/v1/object/public/uploads/images/1785787113997-7rmrxs.webp" 
+             alt="Ghostae Text Logo" 
+             class="w-8 h-8 rounded-lg object-contain shadow-xs"
+             onerror="this.style.display='none'">
+        <span class="font-bold text-slate-900 text-base sm:text-lg tracking-tight">Ghostae Text v1.0</span>
+      </div>
+
+      <!-- Language Toggle -->
+      <div class="flex items-center gap-1.5 text-sm text-slate-500 font-medium">
+        <button id="lang-bn" onclick="changeLang('bn')" class="px-2.5 py-1 rounded text-brand-700 font-semibold bg-brand-50 transition">বাংলা</button>
+        <span>/</span>
+        <button id="lang-en" onclick="changeLang('en')" class="px-2.5 py-1 rounded text-slate-400 hover:text-slate-700 transition">English</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- Header Section -->
+    <header class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
+        <span class="lang-bn">ইনস্টলেশন গাইড</span>
+        <span class="lang-en hidden">Installation Guide</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-500">
+        <span class="lang-bn">আপনার অপারেটিং সিস্টেম নির্বাচন করুন এবং নিচের ধাপগুলো অনুসরণ করুন:</span>
+        <span class="lang-en hidden">Select your operating system and follow the steps below:</span>
+      </p>
+    </header>
+
+    <!-- Direct OS Tabs for Zero Clutter -->
+    <div class="flex gap-2 p-1.5 bg-slate-100/90 rounded-xl w-fit mb-8 border border-slate-200/70">
+      <button id="tab-win" onclick="switchOS('win')" class="flex items-center gap-2.5 px-5 py-2 text-base font-semibold rounded-lg bg-white text-brand-700 shadow-sm transition">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+        </svg>
+        <span>Windows</span>
+      </button>
+
+      <button id="tab-mac" onclick="switchOS('mac')" class="flex items-center gap-2.5 px-5 py-2 text-base font-medium rounded-lg text-slate-600 hover:text-slate-900 transition">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.62-.75 1.04-1.8 0.92-2.84-.89.04-1.98.6-2.61 1.34-.56.64-1.05 1.7-0.92 2.72 1 .08 2-.47 2.61-1.22z"/>
+        </svg>
+        <span>macOS</span>
+      </button>
+    </div>
+
+    <!-- Windows Content Area -->
+    <section id="content-win" class="space-y-5">
+      <div class="divide-y divide-slate-100 border border-slate-200/90 rounded-2xl bg-white overflow-hidden shadow-sm">
+        
+        <!-- Step 1 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">1</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>আনজিপ:</strong> <code>Ghostae Text v1.0</code> জিপ ফাইলটি ডাউনলোড করে সম্পূর্ণ Extract করুন।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Unzip:</strong> Download and extract the <code>Ghostae Text v1.0</code> zip file completely.</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">2</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>ইনস্টল:</strong> ফোল্ডারের ভেতর <code>Windows/Install.bat</code> ফাইলে ডাবল-ক্লিক করে রান করুন।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Install:</strong> Double-click and run the <code>Windows/Install.bat</code> file inside the folder.</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">3</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>অপেক্ষা করুন:</strong> কনসোল স্ক্রিনে <span class="font-mono font-semibold text-brand-700">"Installation complete!"</span> না আসা পর্যন্ত অপেক্ষা করুন।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Confirmation:</strong> Wait until you see the <span class="font-mono font-semibold text-brand-700">"Installation complete!"</span> confirmation message.</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">4</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>প্লাগইন চালু:</strong> After Effects ওপেন করে মেনু থেকে যান: <code>Window → Extensions → Ghostae Text</code>।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Open Panel:</strong> Launch After Effects and go to: <code>Window → Extensions → Ghostae Text</code>.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- macOS Content Area -->
+    <section id="content-mac" class="space-y-5 hidden">
+      <div class="divide-y divide-slate-100 border border-slate-200/90 rounded-2xl bg-white overflow-hidden shadow-sm">
+        
+        <!-- Step 1 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">1</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>আনজিপ:</strong> ফাইলটি আনজিপ করে আপনার <strong>Downloads</strong> ফোল্ডারে রাখুন।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Unzip:</strong> Extract the folder and ensure it is placed directly in your <strong>Downloads</strong> directory.</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">2</span>
+          <div class="text-base sm:text-[17px] text-slate-700 w-full space-y-2.5">
+            <div>
+              <span class="lang-bn leading-relaxed"><strong>টার্মিনাল কমান্ড:</strong> Terminal অ্যাপটি খুলে নিচের কোডটি পেস্ট করে Enter দিন:</span>
+              <span class="lang-en hidden leading-relaxed"><strong>Terminal Command:</strong> Open Terminal, paste the following command, and press Enter:</span>
+            </div>
+            
+            <!-- Code Block with Copy -->
+            <div class="relative bg-slate-900 text-slate-100 rounded-xl p-4 text-sm font-mono leading-relaxed border border-slate-800">
+              <button onclick="copyCode('mac-cmd1', this)" class="absolute top-3 right-3 px-3 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition text-xs flex items-center gap-1">
+                <span>Copy</span>
+              </button>
+              <pre id="mac-cmd1" class="pr-16 overflow-x-auto whitespace-pre leading-relaxed">mkdir -p ~/Library/Application\ Support/Adobe/CEP/extensions
+cd ~/Downloads/Ghostae\ Text\ v1.0
+cp -R com.ghost.text ~/Library/Application\ Support/Adobe/CEP/extensions/</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">3</span>
+          <div class="text-base sm:text-[17px] text-slate-700 w-full space-y-2.5">
+            <div>
+              <span class="lang-bn leading-relaxed"><strong>Gatekeeper অনুমতি:</strong> ম্যাক যদি প্লাগইন খুলতে বাধা দেয়, তবে এই কমান্ডটি চালান:</span>
+              <span class="lang-en hidden leading-relaxed"><strong>Gatekeeper Bypass:</strong> If macOS security blocks the plugin, run this command:</span>
+            </div>
+            
+            <!-- Code Block with Copy -->
+            <div class="relative bg-slate-900 text-slate-100 rounded-xl p-4 text-sm font-mono leading-relaxed border border-slate-800">
+              <button onclick="copyCode('mac-cmd2', this)" class="absolute top-3 right-3 px-3 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition text-xs flex items-center gap-1">
+                <span>Copy</span>
+              </button>
+              <pre id="mac-cmd2" class="pr-16 overflow-x-auto whitespace-pre leading-relaxed">xattr -rd com.apple.quarantine ~/Library/Application\ Support/Adobe/CEP/extensions/com.ghost.text</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-5 flex items-start gap-4 hover:bg-slate-50/50 transition">
+          <span class="w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-sm font-bold flex items-center justify-center border border-brand-200/80 shrink-0 mt-0.5">4</span>
+          <div class="text-base sm:text-[17px] text-slate-700">
+            <span class="lang-bn leading-relaxed"><strong>প্লাগইন চালু:</strong> After Effects ওপেন করে যান: <code>Window → Extensions → Ghostae Text</code>।</span>
+            <span class="lang-en hidden leading-relaxed"><strong>Open Panel:</strong> Launch After Effects and go to: <code>Window → Extensions → Ghostae Text</code>.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tip -->
+      <p class="text-sm sm:text-base text-slate-600 pl-1">
+        <span class="text-brand-700 font-semibold">💡 
+          <span class="lang-bn">পরামর্শ:</span>
+          <span class="lang-en hidden">Tip:</span>
+        </span>
+        <span class="lang-bn">প্রথমবারে তালিকা না দেখালে After Effects পুরোপুরি বন্ধ করে আবার চালু করুন।</span>
+        <span class="lang-en hidden">If the extension is not visible immediately, restart After Effects.</span>
+      </p>
+    </section>
+
+    <!-- Direct WhatsApp Assistance Bar -->
+    <div class="mt-10 pt-7 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm sm:text-base text-slate-600">
+      <div>
+        <span class="font-bold text-slate-900">
+          <span class="lang-bn">কোনো সমস্যা হচ্ছে?</span>
+          <span class="lang-en hidden">Need direct help?</span>
+        </span>
+        <span class="lang-bn text-slate-500 block sm:inline sm:ml-1">আমরা AnyDesk-এর মাধ্যমে সরাসরি সেটআপ করে দেব।</span>
+        <span class="lang-en hidden text-slate-500 block sm:inline sm:ml-1">We offer direct setup via AnyDesk remote support.</span>
+      </div>
+
+      <a href="https://wa.me/8801345407572?text=Hello%20Ghostae%20Team,%20I%20need%20help%20with%20Ghostae%20Text%20v1.0%20installation." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-50 text-brand-700 font-bold border border-brand-200/80 hover:bg-brand-100 transition shrink-0 text-sm">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+        <span>WhatsApp: +880 1345-407572</span>
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+    // Tab switching (Windows vs Mac)
+    function switchOS(os) {
+      var isWin = os === 'win';
+      document.getElementById('content-win').classList.toggle('hidden', !isWin);
+      document.getElementById('content-mac').classList.toggle('hidden', isWin);
+
+      // Button styling with increased font size
+      var tabWin = document.getElementById('tab-win');
+      var tabMac = document.getElementById('tab-mac');
+
+      if (isWin) {
+        tabWin.className = "flex items-center gap-2.5 px-5 py-2 text-base font-semibold rounded-lg bg-white text-brand-700 shadow-sm transition";
+        tabMac.className = "flex items-center gap-2.5 px-5 py-2 text-base font-medium rounded-lg text-slate-600 hover:text-slate-900 transition";
+      } else {
+        tabMac.className = "flex items-center gap-2.5 px-5 py-2 text-base font-semibold rounded-lg bg-white text-brand-700 shadow-sm transition";
+        tabWin.className = "flex items-center gap-2.5 px-5 py-2 text-base font-medium rounded-lg text-slate-600 hover:text-slate-900 transition";
+      }
+    }
+
+    // Language switcher
+    function changeLang(lang) {
+      var isBn = lang === 'bn';
+      document.querySelectorAll('.lang-bn').forEach(function(el) {
+        el.classList.toggle('hidden', !isBn);
+      });
+      document.querySelectorAll('.lang-en').forEach(function(el) {
+        el.classList.toggle('hidden', isBn);
+      });
+
+      var btnBn = document.getElementById('lang-bn');
+      var btnEn = document.getElementById('lang-en');
+
+      if (isBn) {
+        btnBn.className = "px-2 py-0.5 rounded text-brand-700 font-semibold bg-brand-50";
+        btnEn.className = "px-2 py-0.5 rounded text-slate-400 hover:text-slate-700";
+      } else {
+        btnEn.className = "px-2 py-0.5 rounded text-brand-700 font-semibold bg-brand-50";
+        btnBn.className = "px-2 py-0.5 rounded text-slate-400 hover:text-slate-700";
+      }
+      document.documentElement.lang = lang;
+    }
+
+    // Copy Code snippet (Quiet feedback without alerts or popups)
+    function copyCode(elementId, btn) {
+      var elem = document.getElementById(elementId);
+      if (!elem) return;
+
+      var text = elem.innerText || elem.textContent;
+      var tempInput = document.createElement("textarea");
+      tempInput.value = text;
+      tempInput.style.position = "fixed";
+      tempInput.style.opacity = "0";
+      document.body.appendChild(tempInput);
+      tempInput.select();
+
+      try {
+        document.execCommand('copy');
+        var originalHTML = btn.innerHTML;
+        btn.innerHTML = '<span class="text-brand-400 font-semibold">✓ Copied</span>';
+        setTimeout(function() {
+          btn.innerHTML = originalHTML;
+        }, 1600);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        document.body.removeChild(tempInput);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "ghostffxPack": 1,
+  "pack": "GHOST FFX Text Styles",
+  "version": "3.41.0",
+  "note": "Two layouts are supported. Flat: 'Name.ffx' + 'Name.png' in this folder. Folder: a sub-folder 'Name/' holding the .ffx (or .ghostffx), a preview image (.png/.jpg) and an optional preview video (.mp4/.webm). Both show up automatically in the FFX Presets section — no code change needed. Entries below are optional and only override the display name, tags and sample text.",
+  "presets": []
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ghostae Text — standalone CEP package.
+
+  This package ships exactly ONE entry point (toolkit.html), so it declares
+  exactly ONE extension. The previous manifest declared 8 extensions pointing
+  at index.html / command.html / tools.html / template.html / one.html /
+  idea.html / core.html — none of which exist here, so 6 of the 8 panels
+  registered by After Effects opened to a blank window.
+
+  The Emoji tab is rendered natively inside toolkit.html (js/toolkit.js), so
+  there is no secondary HTML entry point any more.
+
+  Licensing is unaffected by the bundle id: js/ghost-cloud.js + js/ghost-gate.js
+  read/write the machine-wide activation cache at
+  Documents/Ghostae/License/activation.json, so one activation still unlocks
+  every Ghost panel. The bundle id is isolated per package (com.ghost.text)
+  so the installer can never overwrite another Ghost panel's folder.
+-->
+<ExtensionManifest Version="7.0"
+    ExtensionBundleId="com.ghost.text"
+    ExtensionBundleVersion="3.41.0"
+    ExtensionBundleName="Ghostae Text"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+        <Extension Id="com.ghost.toolkit.panel" Version="3.41.0" />
+    </ExtensionList>
+
+    <ExecutionEnvironment>
+        <HostList><Host Name="AEFT" Version="[16.0,99.9]" /></HostList>
+        <LocaleList><Locale Code="All" /></LocaleList>
+        <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="9.0" /></RequiredRuntimeList>
+    </ExecutionEnvironment>
+
+    <DispatchInfoList>
+        <Extension Id="com.ghost.toolkit.panel">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./toolkit.html</MainPath>
+                    <ScriptPath>./js/host.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--allow-file-access</Parameter>
+                        <Parameter>--allow-file-access-from-files</Parameter>
+                        <Parameter>--autoplay-policy=no-user-gesture-required</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle><AutoVisible>true</AutoVisible></Lifecycle>
+                <UI>
+                    <Type>Panel</Type><Menu>Ghostae Text</Menu>
+                    <Geometry>
+                        <Size><Width>460</Width><Height>760</Height></Size>
+                        <MinSize><Width>340</Width><Height>420</Height></MinSize>
+                        <MaxSize><Width>2400</Width><Height>2160</Height></MaxSize>
+                    </Geometry>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>

@@ -1,0 +1,104 @@
+/*!
+ * GHOST Creative System — Patch gate overlay
+ * Full-panel lock shown when a mandatory patch is published.
+ */
+
+.ghost-patch-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(10, 10, 10, .93);
+    backdrop-filter: blur(3px);
+    font-family: "Hind Siliguri", "Adobe Clean", "Segoe UI", system-ui, sans-serif;
+}
+.ghost-patch-gate.is-open { display: flex; }
+html.ghost-patch-locked, html.ghost-patch-locked body { overflow: hidden; }
+
+.ghost-patch-box {
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    background: #1c1c1c;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .6);
+    padding: 18px;
+    color: #e6e6e6;
+}
+
+.ghost-patch-head { display: flex; align-items: center; gap: 12px; }
+.ghost-patch-mark {
+    width: 38px; height: 38px;
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2680eb, #1b5fb0);
+    color: #fff;
+    font-size: 18px;
+}
+.ghost-patch-titles { min-width: 0; }
+.ghost-patch-title { font-size: 14px; font-weight: 700; }
+.ghost-patch-sub { margin-top: 2px; font-size: 10px; color: #8c8c8c; }
+
+.ghost-patch-notes {
+    margin: 14px 0 0;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #b9b9b9;
+    max-height: 140px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.ghost-patch-bar {
+    margin-top: 14px;
+    height: 6px;
+    border-radius: 999px;
+    background: #2b2b2b;
+    overflow: hidden;
+}
+.ghost-patch-bar > i {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2680eb, #57a4ff);
+    transition: width 160ms ease;
+}
+
+.ghost-patch-status {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: #9a9a9a;
+    min-height: 16px;
+}
+.ghost-patch-status[data-kind="ok"] { color: #6fd28a; }
+.ghost-patch-status[data-kind="error"] { color: #ff8a7a; }
+
+.ghost-patch-row { display: flex; gap: 8px; margin-top: 14px; }
+.ghost-patch-btn {
+    flex: 1 1 auto;
+    padding: 9px 12px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    background: #2b2b2b;
+    color: #d6d6d6;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.ghost-patch-btn:hover:not(:disabled) { background: #333; color: #fff; }
+.ghost-patch-btn:disabled { opacity: .55; cursor: default; }
+.ghost-patch-primary {
+    flex: 2 1 auto;
+    border-color: transparent;
+    background: #2680eb;
+    color: #fff;
+}
+.ghost-patch-primary:hover:not(:disabled) { background: #1f6fd0; }
+
+.ghost-patch-meta { margin-top: 10px; font-size: 10px; color: #6f6f6f; }

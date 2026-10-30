@@ -1,0 +1,174 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789920830032,
+      "tag": "0000_lock_down_policyless_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790586966065,
+      "tag": "0001_create_free_resources",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790650860221,
+      "tag": "0002_license_product_uniqueness_and_resource_slugs",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790885665665,
+      "tag": "0003_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791383184628,
+      "tag": "0004_manual_public_offers",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791388294776,
+      "tag": "0005_relay_testing_pairing",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1791398118382,
+      "tag": "0006_relay_transactions",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1791438927493,
+      "tag": "0007_coupon_public_visibility",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1791527173771,
+      "tag": "0008_tighten_open_policies",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1791527689799,
+      "tag": "0009_text_v2_license_endpoints",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1791614473129,
+      "tag": "0010_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1791615136206,
+      "tag": "0011_anonymous_community_giveaway",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1791633270305,
+      "tag": "0012_dev_snapshots",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1791825024575,
+      "tag": "0013_digital_orders",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1792804666669,
+      "tag": "0014_affiliate_referrals",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1792928958845,
+      "tag": "0015_ghostae_gear",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1792935482583,
+      "tag": "0016_gear_admin_orders",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1793238952193,
+      "tag": "0017_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1793239232623,
+      "tag": "0018_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1793319275143,
+      "tag": "0019_digital_private_key_inventory",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1793320102738,
+      "tag": "0020_digital_payment_and_inventory_guards",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1793320129943,
+      "tag": "0021_canboso_catalogue_and_order_link",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1793320991504,
+      "tag": "0022_digital_delivery_privacy_reviews_and_payment_safety",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1793321365878,
+      "tag": "0023_cross_catalogue_payment_replay_and_order_limits",
+      "breakpoints": true
+    }
+  ]
+}

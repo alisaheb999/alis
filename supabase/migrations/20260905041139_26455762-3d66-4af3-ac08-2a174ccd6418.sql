@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.ghost_bump_page_view(text) FROM anon, authenticated;

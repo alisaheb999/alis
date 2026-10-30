@@ -1,0 +1,508 @@
+{
+  "ghostAnimFfxPack": 1,
+  "pack": "Studio Text Animation",
+  "version": "1.0.1",
+  "note": "Each sub-folder holds <Name>.ffx + <Name>.png preview + <Name>.mp4 clip. PNG is preferred for the still preview; legacy JPG is accepted.",
+  "presets": [
+    {
+      "name": "Position & Rotation Characters Left (B)",
+      "folder": "Position & Rotation Characters Left (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position & Rotation Characters Up (B)",
+      "folder": "Position & Rotation Characters Up (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position Characters Down (B)",
+      "folder": "Position Characters Down (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position Characters Left (B)",
+      "folder": "Position Characters Left (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position Characters Right (B)",
+      "folder": "Position Characters Right (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position Characters Up (B)",
+      "folder": "Position Characters Up (B)",
+      "category": "Position Characters (B)"
+    },
+    {
+      "name": "Position & Rotation Words Down (B)",
+      "folder": "Position & Rotation Words Down (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position & Rotation Words Left (B)",
+      "folder": "Position & Rotation Words Left (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position & Rotation Words Right (B)",
+      "folder": "Position & Rotation Words Right (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position & Rotation Words Up (B)",
+      "folder": "Position & Rotation Words Up (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position Words Down (B)",
+      "folder": "Position Words Down (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position Words Left (B)",
+      "folder": "Position Words Left (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position Words Right (B)",
+      "folder": "Position Words Right (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position Words Up (B)",
+      "folder": "Position Words Up (B)",
+      "category": "Position Words (B)"
+    },
+    {
+      "name": "Position Line Down (B)",
+      "folder": "Position Line Down (B)",
+      "category": "Position line (B)"
+    },
+    {
+      "name": "Position Line Left (B)",
+      "folder": "Position Line Left (B)",
+      "category": "Position line (B)"
+    },
+    {
+      "name": "Position Line Right (B)",
+      "folder": "Position Line Right (B)",
+      "category": "Position line (B)"
+    },
+    {
+      "name": "Position Line Up (B)",
+      "folder": "Position Line Up (B)",
+      "category": "Position line (B)"
+    },
+    {
+      "name": "Scale & Rotation Characters (B)",
+      "folder": "Scale & Rotation Characters (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale & Rotation Words (B)",
+      "folder": "Scale & Rotation Words (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale & Tracking Characters (B)",
+      "folder": "Scale & Tracking Characters (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale & Tracking Characters 2 (B)",
+      "folder": "Scale & Tracking Characters 2 (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale & Tracking Words (B)",
+      "folder": "Scale & Tracking Words (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale & Tracking Words 2 (B)",
+      "folder": "Scale & Tracking Words 2 (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale Characters (B)",
+      "folder": "Scale Characters (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale Line (B)",
+      "folder": "Scale Line (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "Scale Words (B)",
+      "folder": "Scale Words (B)",
+      "category": "Scale (B)"
+    },
+    {
+      "name": "3D Characters & Rotation Down",
+      "folder": "3D Characters & Rotation Down",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters & Rotation Front",
+      "folder": "3D Characters & Rotation Front",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters & Rotation Left",
+      "folder": "3D Characters & Rotation Left",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters & Rotation Up",
+      "folder": "3D Characters & Rotation Up",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters Down",
+      "folder": "3D Characters Down",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters Front",
+      "folder": "3D Characters Front",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters Left",
+      "folder": "3D Characters Left",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters Right",
+      "folder": "3D Characters Right",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Characters Up",
+      "folder": "3D Characters Up",
+      "category": "3D Characters"
+    },
+    {
+      "name": "3D Words & Rotation Down",
+      "folder": "3D Words & Rotation Down",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words & Rotation Front",
+      "folder": "3D Words & Rotation Front",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words & Rotation Left",
+      "folder": "3D Words & Rotation Left",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words & Rotation Right",
+      "folder": "3D Words & Rotation Right",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words & Rotation Up",
+      "folder": "3D Words & Rotation Up",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words Down",
+      "folder": "3D Words Down",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words Front",
+      "folder": "3D Words Front",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words Left",
+      "folder": "3D Words Left",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words Right",
+      "folder": "3D Words Right",
+      "category": "3D Words"
+    },
+    {
+      "name": "3D Words Up",
+      "folder": "3D Words Up",
+      "category": "3D Words"
+    },
+    {
+      "name": "Anchor Point Characters Down",
+      "folder": "Anchor Point Characters Down",
+      "category": "Anchor Point Characters"
+    },
+    {
+      "name": "Anchor Point Characters Right",
+      "folder": "Anchor Point Characters Right",
+      "category": "Anchor Point Characters"
+    },
+    {
+      "name": "Anchor Point Characters Up",
+      "folder": "Anchor Point Characters Up",
+      "category": "Anchor Point Characters"
+    },
+    {
+      "name": "Anchor Point Characters left",
+      "folder": "Anchor Point Characters left",
+      "category": "Anchor Point Characters"
+    },
+    {
+      "name": "Anchor Point Words Down",
+      "folder": "Anchor Point Words Down",
+      "category": "Anchor Point Words"
+    },
+    {
+      "name": "Anchor Point Words Right",
+      "folder": "Anchor Point Words Right",
+      "category": "Anchor Point Words"
+    },
+    {
+      "name": "Anchor Point Words Up",
+      "folder": "Anchor Point Words Up",
+      "category": "Anchor Point Words"
+    },
+    {
+      "name": "Anchor Point Words left",
+      "folder": "Anchor Point Words left",
+      "category": "Anchor Point Words"
+    },
+    {
+      "name": "Opacity & Blur Characters",
+      "folder": "Opacity & Blur Characters",
+      "category": "Opacity Characters"
+    },
+    {
+      "name": "Opacity Characters 1",
+      "folder": "Opacity Characters 1",
+      "category": "Opacity Characters"
+    },
+    {
+      "name": "Opacity Characters 2",
+      "folder": "Opacity Characters 2",
+      "category": "Opacity Characters"
+    },
+    {
+      "name": "Opacity Characters 3",
+      "folder": "Opacity Characters 3",
+      "category": "Opacity Characters"
+    },
+    {
+      "name": "Opacity & Blur Words",
+      "folder": "Opacity & Blur Words",
+      "category": "Opacity Words"
+    },
+    {
+      "name": "Opacity Words 1",
+      "folder": "Opacity Words 1",
+      "category": "Opacity Words"
+    },
+    {
+      "name": "Opacity Words 2",
+      "folder": "Opacity Words 2",
+      "category": "Opacity Words"
+    },
+    {
+      "name": "Opacity Words 3",
+      "folder": "Opacity Words 3",
+      "category": "Opacity Words"
+    },
+    {
+      "name": "Opacity Words 4",
+      "folder": "Opacity Words 4",
+      "category": "Opacity Words"
+    },
+    {
+      "name": "Position Characters Down 2",
+      "folder": "Position Characters Down 2",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Down 3",
+      "folder": "Position Characters Down 3",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Down",
+      "folder": "Position Characters Down",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Right 2",
+      "folder": "Position Characters Right 2",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Right 3",
+      "folder": "Position Characters Right 3",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Right",
+      "folder": "Position Characters Right",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Up 2",
+      "folder": "Position Characters Up 2",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Up 3",
+      "folder": "Position Characters Up 3",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position Characters Up",
+      "folder": "Position Characters Up",
+      "category": "Position Characters"
+    },
+    {
+      "name": "Position & Blur Words Down",
+      "folder": "Position & Blur Words Down",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position & Blur Words Left",
+      "folder": "Position & Blur Words Left",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position & Blur Words Right",
+      "folder": "Position & Blur Words Right",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position & Blur Words Up",
+      "folder": "Position & Blur Words Up",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position Words Down",
+      "folder": "Position Words Down",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position Words Left",
+      "folder": "Position Words Left",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position Words Right",
+      "folder": "Position Words Right",
+      "category": "Position Words"
+    },
+    {
+      "name": "Position Words Up",
+      "folder": "Position Words Up",
+      "category": "Position Words"
+    },
+    {
+      "name": "Random Characters & Blur 2",
+      "folder": "Random Characters & Blur 2",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters & Blur 3",
+      "folder": "Random Characters & Blur 3",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters & Blur",
+      "folder": "Random Characters & Blur",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters Down",
+      "folder": "Random Characters Down",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters Left",
+      "folder": "Random Characters Left",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters Right",
+      "folder": "Random Characters Right",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters Up",
+      "folder": "Random Characters Up",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Characters",
+      "folder": "Random Characters",
+      "category": "Random Characters"
+    },
+    {
+      "name": "Random Words & Blur 2",
+      "folder": "Random Words & Blur 2",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words & Blur 3",
+      "folder": "Random Words & Blur 3",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words & Blur",
+      "folder": "Random Words & Blur",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words Down",
+      "folder": "Random Words Down",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words Left",
+      "folder": "Random Words Left",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words Right",
+      "folder": "Random Words Right",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words Up",
+      "folder": "Random Words Up",
+      "category": "Random Words"
+    },
+    {
+      "name": "Random Words",
+      "folder": "Random Words",
+      "category": "Random Words"
+    },
+    {
+      "name": "Typewriter 1",
+      "folder": "Typewriter 1",
+      "category": "Typewriter"
+    },
+    {
+      "name": "Typewriter 2",
+      "folder": "Typewriter 2",
+      "category": "Typewriter"
+    },
+    {
+      "name": "Typewriter 3",
+      "folder": "Typewriter 3",
+      "category": "Typewriter"
+    },
+    {
+      "name": "Typewriter 5",
+      "folder": "Typewriter 5",
+      "category": "Typewriter"
+    }
+  ]
+}

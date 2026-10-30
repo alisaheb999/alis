@@ -1,0 +1,154 @@
+/* Web Style Presets: visible bundled testing cards. Original Style toolbar is untouched. */
+.ghost-toolkit-body .gp2-ffx-quiet .tk-ts-sechead {
+  display:flex !important;
+}
+.ghost-toolkit-body .gp2-ffx-quiet .tk-grid:empty {
+  display:none !important;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-card {
+  position:relative;
+  overflow:hidden;
+  padding:0 !important;
+  min-height:0 !important;
+  border-radius:14px;
+  cursor:pointer;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-preview {
+  position:relative;
+  width:100%;
+  aspect-ratio:1.72 / 1;
+  min-height:96px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:inherit;
+  isolation:isolate;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-glow {
+  position:absolute;
+  inset:-22%;
+  background:linear-gradient(135deg,transparent 36%,rgba(255,255,255,.26) 48%,transparent 60%);
+  transform:translateX(-9%);
+  pointer-events:none;
+  z-index:0;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-text {
+  position:relative;
+  z-index:1;
+  direction:ltr;
+  unicode-bidi:plaintext;
+  font-family:"Noto Sans Bengali","Noto Sans Bengali UI","Nirmala UI","Vrinda",sans-serif;
+  font-size:clamp(17px,2.5vw,27px);
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:0;
+  color:#fff;
+  text-shadow:0 2px 9px rgba(0,0,0,.28);
+  white-space:nowrap;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-star {
+  position:absolute;
+  z-index:3;
+  top:8px;
+  right:8px;
+  width:25px;
+  height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:50%;
+  background:rgba(12,16,15,.28);
+  color:rgba(255,255,255,.92);
+  opacity:.0;
+  transition:opacity .15s ease,background .15s ease,color .15s ease;
+  cursor:pointer;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-card:hover .tk-web-bangla-ramp-star,
+.ghost-toolkit-body .tk-web-bangla-ramp-star:focus,
+.ghost-toolkit-body .tk-web-bangla-ramp-star.is-on {
+  opacity:1;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-star.is-on {
+  background:rgba(12,16,15,.48);
+  color:#ffd75a;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-star svg {
+  width:14px;
+  height:14px;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-card.is-bookmarked {
+  outline:1px solid rgba(255,215,90,.35);
+}
+
+/* bundled demo preview image (presets/web-style-testing/ramp_XX.png) */
+.ghost-toolkit-body .tk-web-bangla-ramp-shot{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  border-radius:inherit;
+  pointer-events:none;
+}
+.ghost-toolkit-body .tk-web-bangla-ramp-preview.has-shot .tk-web-bangla-ramp-text,
+.ghost-toolkit-body .tk-web-bangla-ramp-preview.has-shot .tk-web-bangla-ramp-glow{
+  display:none;
+}
+
+/* Ramp lock button (replaces the old filter icon) */
+.ghost-toolkit-body .gp2-style-lock.is-on { color:#ffd75a; }
+.ghost-toolkit-body #perfectColorLockMenu .gm-item.is-on { color:#ffd75a; }
+.ghost-toolkit-body #perfectColorLockMenu .gm-item svg { width:14px; height:14px; }
+
+/* Favourite star: small, hover/selected only — on both style grids */
+.ghost-toolkit-body #ffxStyleGrid .tk-card .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card .tk-bm-star {
+  width:20px; height:20px; opacity:0;
+  transition:opacity .15s ease;
+}
+.ghost-toolkit-body #ffxStyleGrid .tk-card:hover .tk-bm-star,
+.ghost-toolkit-body #ffxStyleGrid .tk-card:focus-within .tk-bm-star,
+.ghost-toolkit-body #ffxStyleGrid .tk-card.is-selected .tk-bm-star,
+.ghost-toolkit-body #ffxStyleGrid .tk-card.is-bookmarked .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card:hover .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card:focus-within .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card.is-selected .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card.is-bookmarked .tk-bm-star { opacity:1; }
+.ghost-toolkit-body .tk-web-bangla-ramp-card.is-selected .tk-web-bangla-ramp-star { opacity:1; }
+
+/* Animation header: star + 3-dot pushed to the far right, autoplay removed */
+.ghost-toolkit-body #tab-anim .tk-ts-sechead .gp2-rule { flex:1 1 auto; }
+.ghost-toolkit-body #tab-anim .tk-panel-toolbar.gp2-anim-toolbar-right {
+  margin-left:auto; display:flex; align-items:center; gap:6px;
+}
+
+/* Small favourite star on style / theme cards — hover or active only */
+.ghost-toolkit-body #ffxStyleGrid .tk-card,
+.ghost-toolkit-body #themeGrid .tk-card { position:relative; }
+.ghost-toolkit-body #ffxStyleGrid .tk-card .tk-bm-star,
+.ghost-toolkit-body #themeGrid .tk-card .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card .tk-bm-star {
+  position:absolute; top:6px; right:6px; z-index:4;
+  width:20px; height:20px; padding:0;
+  display:flex; align-items:center; justify-content:center;
+  border:0; border-radius:50%;
+  background:rgba(10,14,13,.42); color:rgba(255,255,255,.9);
+  opacity:0; transition:opacity .15s ease,color .15s ease;
+  cursor:pointer;
+}
+.ghost-toolkit-body .tk-bm-star svg { width:12px; height:12px; }
+.ghost-toolkit-body #ffxStyleGrid .tk-card:hover .tk-bm-star,
+.ghost-toolkit-body #ffxStyleGrid .tk-card:focus-within .tk-bm-star,
+.ghost-toolkit-body #ffxStyleGrid .tk-card .tk-bm-star.is-on,
+.ghost-toolkit-body #themeGrid .tk-card:hover .tk-bm-star,
+.ghost-toolkit-body #themeGrid .tk-card:focus-within .tk-bm-star,
+.ghost-toolkit-body #themeGrid .tk-card .tk-bm-star.is-on,
+.ghost-toolkit-body #textStyleGrid .tk-card:hover .tk-bm-star,
+.ghost-toolkit-body #textStyleGrid .tk-card .tk-bm-star.is-on { opacity:1; }
+.ghost-toolkit-body .tk-bm-star.is-on { color:#ffd75a; }
+
+/* Ramp lock popover always inside the viewport */
+.ghost-toolkit-body #perfectColorLockMenu { min-width:190px; }

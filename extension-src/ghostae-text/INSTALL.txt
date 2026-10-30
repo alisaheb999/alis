@@ -1,0 +1,25 @@
+GHOSTAE TEXT — INSTALL GUIDE
+============================
+
+1) Unzip this package completely (do not run from inside the zip).
+2) Close After Effects.
+3) Windows : right-click "Install-Windows.bat" -> Run as administrator
+   macOS   : right-click "Install-Mac.command" -> Open  (first time: Open Anyway)
+4) Start After Effects -> Window > Extensions > Ghostae Text
+
+What the installer does
+-----------------------
+- Copies com.ghost.text to the CEP extensions folder:
+  Windows: %APPDATA%\Adobe\CEP\extensions\com.ghost.text
+  macOS  : ~/Library/Application Support/Adobe/CEP/extensions/com.ghost.text
+- Enables PlayerDebugMode for CSXS 9-14 so the unsigned panel is allowed to load.
+- macOS only: clears the quarantine flag on the copied files.
+
+Notes
+-----
+- Style (Colour & FX) presets are built for After Effects 2025 and later.
+  Animation presets work on older versions too.
+- Uninstall: run Uninstall-Windows.bat / Uninstall-Mac.command.
+  Your activation (Documents/Ghostae/License) is not deleted.
+- If the panel does not appear: fully quit and reopen After Effects; if it still
+  does not show, restart the computer once (CEP caches the extension list).

@@ -1,0 +1,301 @@
+/* ===========================================================================
+   GHOST Redesign 2026 — visual layer distilled from the approved mockups
+   (ghost_tools_ultra_clean_ae_panel, 50_categories_ae_panel,
+    enhanced_expression_library_2, pricing_plans_panel, ghost_ship_ae_cep).
+
+   Presentation only: no markup or behaviour depends on this file, so every
+   panel keeps working if it is missing. Loaded last so it wins on specificity.
+   Design contract: calm at rest, detail on hover, 8px rhythm, rounded 10/12/16,
+   white/5 fills, single #3b82f6 accent.
+   =========================================================================== */
+
+:root {
+    --gr-accent: #3b82f6;
+    --gr-fill: rgba(255, 255, 255, 0.05);
+    --gr-fill-hover: rgba(255, 255, 255, 0.10);
+    --gr-line: rgba(255, 255, 255, 0.07);
+    --gr-ink-dim: rgba(255, 255, 255, 0.45);
+    --gr-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── 1. Minimal scrollbars everywhere (mockup: 4px, no track) ─────────── */
+.ghost-tools-body ::-webkit-scrollbar,
+.ghost-toolkit-body ::-webkit-scrollbar,
+body ::-webkit-scrollbar { width: 5px; height: 5px; }
+body ::-webkit-scrollbar-track { background: transparent; }
+body ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.14); border-radius: 999px; }
+body ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* ── 2. Tab groups become a pill rail on a recessed track ─────────────── */
+/* Tab chrome moved to toolkit.css (PANEL CHROME section). */
+
+/* ── 3. Section headings: uppercase micro-label + counter ─────────────── */
+.tool-card-head h2,
+.tool-card-head h3,
+.tk-section-head h2,
+.tk-section-head h3,
+.pm-card-head h3 {
+    font-size: 11px !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+.tk-tab-count,
+.pm-chip {
+    font-size: 10px;
+    color: var(--gr-ink-dim);
+    background: var(--gr-fill);
+    border: 1px solid var(--gr-line);
+    border-radius: 999px;
+    padding: 1px 7px;
+}
+
+/* ── 4. Utility buttons: icon chip + truncated label, flat surfaces ───── */
+.pm-btn,
+.tk-action,
+.tools-shell .ghost-button,
+.tool-card .ghost-button {
+    background: var(--gr-fill) !important;
+    border: 1px solid transparent !important;
+    border-radius: 12px !important;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 8px 10px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    transition: background 140ms var(--gr-ease), transform 120ms var(--gr-ease);
+}
+.pm-btn:hover,
+.tk-action:hover,
+.tools-shell .ghost-button:hover,
+.tool-card .ghost-button:hover { background: var(--gr-fill-hover) !important; }
+.pm-btn:active,
+.tk-action:active { transform: scale(0.98); }
+.pm-btn.primary,
+.primary-button {
+    background: var(--gr-accent) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+}
+.pm-btn.primary:hover,
+.primary-button:hover { background: #2563eb !important; }
+.pm-ico,
+.tk-action-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    background: var(--gr-fill-hover);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    line-height: 1;
+}
+.pm-btn > span:not(.pm-ico),
+.tk-action-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── 5. Cards: softer radius, hairline border, no heavy shadows ───────── */
+.tool-card,
+.pm-card,
+.pm-shell,
+.tk-panel-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--gr-line);
+    border-radius: 16px;
+    box-shadow: none;
+}
+.pm-stat {
+    background: var(--gr-fill);
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+/* ── 6. Category pills (50-categories mockup) ─────────────────────────── */
+.filter-button,
+.tk-chip,
+.cat-pill {
+    border-radius: 999px !important;
+    border: 1px solid var(--gr-line) !important;
+    background: var(--gr-fill) !important;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 11px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    transition: background 140ms var(--gr-ease), border-color 140ms var(--gr-ease);
+}
+.filter-button:hover,
+.tk-chip:hover { background: var(--gr-fill-hover) !important; border-color: rgba(59, 130, 246, 0.5) !important; color: #fff; }
+.filter-button.active,
+.tk-chip.active,
+.filter-button[aria-pressed="true"] {
+    background: var(--gr-accent) !important;
+    border-color: var(--gr-accent) !important;
+    color: #fff !important;
+}
+
+/* ── 7. Expression library: quiet icon tiles, detail on hover ─────────── */
+.tk-expr-grid {
+    grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)) !important;
+    gap: 8px !important;
+}
+.tk-expr-card {
+    position: relative;
+    height: 72px;
+    padding: 6px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px !important;
+    background: var(--gr-fill) !important;
+    border: 1px solid transparent !important;
+    overflow: visible;
+    transition: background 140ms var(--gr-ease), border-color 140ms var(--gr-ease);
+}
+.tk-expr-card:hover {
+    background: rgba(255, 255, 255, 0.09) !important;
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    transform: none !important;
+    z-index: 60;
+}
+.tk-expr-card .tk-expr-head {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+.tk-expr-card h3 {
+    font-size: 10.5px !important;
+    font-weight: 600;
+    line-height: 1.25;
+    white-space: normal !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* target chip + vote bar are noise at rest */
+.tk-expr-card .tk-expr-target,
+.tk-expr-card .tk-vote-float { opacity: 0; transition: opacity 140ms var(--gr-ease); }
+.tk-expr-card:hover .tk-expr-target,
+.tk-expr-card:hover .tk-vote-float,
+.tk-expr-card:focus-within .tk-vote-float { opacity: 1; }
+.tk-expr-card .tk-expr-target {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 8.5px;
+    padding: 1px 5px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    max-width: calc(100% - 10px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* Apply / Copy float out as a popover instead of shrinking the tile. */
+.tk-expr-card .tk-expr-actions {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 4px);
+    transform: translateX(-50%);
+    width: 148px;
+    padding: 6px;
+    gap: 6px !important;
+    background: #17181c;
+    border: 1px solid rgba(59, 130, 246, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 120ms var(--gr-ease);
+    z-index: 70;
+}
+.tk-expr-card:hover .tk-expr-actions,
+.tk-expr-card:focus-within .tk-expr-actions { opacity: 1; pointer-events: auto; }
+.tk-expr-card .tk-expr-actions button { border-radius: 8px !important; padding: 5px 0 !important; }
+
+/* ── 8. Compact (icon-only) mode — Ghost Tools "Super Light" ──────────── */
+body.ghost-compact .pm-btn > span:not(.pm-ico),
+body.ghost-compact .tk-action-label,
+body.ghost-compact .tools-brand div,
+body.ghost-compact .tk-expr-card h3 { display: none !important; }
+body.ghost-compact .pm-actions,
+body.ghost-compact .tk-action-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)) !important;
+    gap: 6px !important;
+}
+body.ghost-compact .pm-btn,
+body.ghost-compact .tk-action {
+    justify-content: center !important;
+    padding: 8px !important;
+}
+body.ghost-compact .tk-expr-grid { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)) !important; }
+body.ghost-compact .tk-expr-card { height: 52px; }
+
+.ghost-compact-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--gr-fill);
+    border: 1px solid var(--gr-line);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: background 140ms var(--gr-ease), color 140ms var(--gr-ease);
+}
+.ghost-compact-toggle:hover { background: var(--gr-fill-hover); color: #fff; }
+.ghost-compact-toggle.is-on { background: rgba(59, 130, 246, 0.18); border-color: rgba(59, 130, 246, 0.55); color: #fff; }
+
+/* ── 9. Plans modal → pricing mockup palette ──────────────────────────── */
+.gp-modal,
+.gp-sheet {
+    background: #151b2f !important;
+    border: 1px solid #273449 !important;
+    border-radius: 18px !important;
+    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.7) !important;
+}
+.gp-backdrop { background: rgba(11, 16, 32, 0.85) !important; backdrop-filter: blur(12px); }
+.gp-card {
+    background: #151b2f;
+    border: 1px solid #273449;
+    border-radius: 16px;
+    transition: border-color 160ms var(--gr-ease), transform 160ms var(--gr-ease);
+}
+.gp-card:hover { border-color: #374967; transform: translateY(-2px); }
+.gp-card.is-featured {
+    border-color: var(--gr-accent);
+    box-shadow: 0 0 35px -5px rgba(59, 130, 246, 0.35);
+}
+.gp-price { letter-spacing: -0.02em; }
+.gp-badge {
+    border-radius: 999px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* ── 10. Sidebar rail (ghost_ship mockup): tighter, hairline, no fills ─── */
+.sidebar { border-right: 1px solid var(--gr-line); }
+.sidebar-topbar { border-bottom: 1px solid var(--gr-line); }
+.icon-button { border-radius: 8px; }
+.plan-upgrade-button:hover { background: var(--gr-fill) !important; }
+
+/* ── 11. Motion register: short, never bouncy ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    * { transition-duration: 1ms !important; animation-duration: 1ms !important; }
+}

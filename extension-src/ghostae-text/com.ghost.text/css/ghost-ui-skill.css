@@ -1,0 +1,347 @@
+/*
+ * GHOST UI SKILL — Studio Dark / Emerald v1
+ * Visual-only layer. Loaded last by toolkit.html so the existing behavior and
+ * component markup stay intact while the panel gets one coherent theme.
+ */
+
+.ghost-toolkit-body {
+    --ui-bg: #0C1110;
+    --ui-header: #101715;
+    --ui-surface: #141B18;
+    --ui-card: #18211D;
+    --ui-card-hover: #1D2924;
+    --ui-border: rgba(166, 255, 221, .10);
+    --ui-border-strong: rgba(166, 255, 221, .20);
+    --ui-accent: #48D6A4;
+    --ui-accent-hover: #69E4B8;
+    --ui-accent-soft: rgba(72, 214, 164, .12);
+    --ui-text: #F3F7F5;
+    --ui-text-2: #AAB8B2;
+    --ui-muted: #6E7C76;
+    --ghost-bg: var(--ui-bg);
+    --ghost-bg-2: var(--ui-header);
+    --ghost-panel: var(--ui-card);
+    --ghost-surface: var(--ui-surface);
+    --ghost-border: var(--ui-border);
+    --ghost-accent: var(--ui-accent);
+    --ghost-accent-hover: var(--ui-accent-hover);
+    --ghost-text: var(--ui-text);
+    --ghost-text-dim: var(--ui-text-2);
+}
+
+/* Main canvas: static ambience only, so it never competes with previews. */
+html, body.ghost-tools-body {
+    background:
+        radial-gradient(560px 280px at 18% 0%, rgba(72, 214, 164, .075), transparent 62%),
+        radial-gradient(520px 320px at 88% 100%, rgba(39, 142, 111, .055), transparent 66%),
+        linear-gradient(180deg, #0D1211 0%, #0B100F 48%, #090D0C 100%);
+}
+
+.ghost-toolkit-body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,.018), transparent 20%);
+}
+
+.ghost-toolkit-body .tools-shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    background: transparent;
+}
+
+/* Header + primary navigation */
+.ghost-toolkit-body .tools-header {
+    background: rgba(15, 22, 19, .94);
+    border-bottom-color: var(--ui-border);
+    box-shadow: 0 8px 24px rgba(0,0,0,.20);
+    backdrop-filter: blur(10px);
+}
+
+.ghost-toolkit-body .tk-tabs {
+    background: rgba(5, 9, 8, .55);
+    border-color: rgba(166,255,221,.08);
+}
+
+.ghost-toolkit-body .tk-tabs .tools-tab {
+    color: #81918A;
+}
+
+.ghost-toolkit-body .tk-tabs .tools-tab:hover {
+    color: var(--ui-text);
+    background: rgba(72,214,164,.07);
+}
+
+.ghost-toolkit-body .tk-tabs .tools-tab.active {
+    color: #07120E;
+    background: linear-gradient(180deg, #6BE7BA 0%, #48D6A4 100%);
+    box-shadow: 0 4px 16px rgba(72,214,164,.16), inset 0 1px 0 rgba(255,255,255,.34);
+}
+
+.ghost-toolkit-body .tk-tabs .tools-tab.active .tk-tab-count {
+    color: #DFFFF2;
+    background: rgba(5, 45, 32, .32);
+}
+
+.ghost-toolkit-body .tk-right-actions > button,
+.ghost-toolkit-body .tk-search-toggle,
+.ghost-toolkit-body .tk-search-clear {
+    color: var(--ui-text-2);
+    border-color: var(--ui-border);
+}
+
+.ghost-toolkit-body .tk-right-actions > button:hover,
+.ghost-toolkit-body .tk-search-toggle:hover,
+.ghost-toolkit-body .tk-search-clear:hover {
+    color: var(--ui-accent-hover);
+    background: var(--ui-accent-soft);
+}
+
+/* Shared section chrome */
+.ghost-toolkit-body .tk-ts-section,
+.ghost-toolkit-body #tab-emoji,
+.ghost-toolkit-body #tab-expression {
+    color: var(--ui-text);
+}
+
+.ghost-toolkit-body .gp2-sechead,
+.ghost-toolkit-body .tk-expr-toolbar {
+    background: rgba(20, 27, 24, .62);
+    border: 1px solid var(--ui-border);
+    border-radius: 12px;
+}
+
+.ghost-toolkit-body .gp2-sechead {
+    padding: 7px 9px;
+}
+
+.ghost-toolkit-body .gp2-sectitle {
+    color: #EAF5F0;
+    letter-spacing: .035em;
+}
+
+.ghost-toolkit-body .gp2-rule {
+    background: rgba(166,255,221,.10);
+}
+
+.ghost-toolkit-body .tk-sec-badge {
+    color: #7BE9C1;
+    background: rgba(72,214,164,.10);
+    border-color: rgba(72,214,164,.18);
+}
+
+.ghost-toolkit-body .tk-icon-btn,
+.ghost-toolkit-body .tk-ts-icon {
+    background: rgba(255,255,255,.025);
+    border-color: var(--ui-border);
+    color: var(--ui-text-2);
+}
+
+.ghost-toolkit-body .tk-icon-btn:hover,
+.ghost-toolkit-body .tk-ts-icon:hover {
+    color: var(--ui-accent-hover);
+    border-color: var(--ui-border-strong);
+    background: var(--ui-accent-soft);
+}
+
+.ghost-toolkit-body .tk-sec-play[aria-pressed="true"],
+.ghost-toolkit-body .tk-sec-play.is-active {
+    color: #06120D;
+    background: var(--ui-accent);
+    border-color: var(--ui-accent);
+}
+
+/* Animation / style cards — preview is the visual hero. */
+.ghost-toolkit-body #tab-anim .tk-grid {
+    gap: 9px;
+}
+
+.ghost-toolkit-body #tab-anim .tk-card,
+.ghost-toolkit-body #tab-color .tk-card {
+    background: linear-gradient(180deg, rgba(31,43,38,.98), rgba(20,29,25,.98));
+    border-color: rgba(166,255,221,.09);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 8px 20px rgba(0,0,0,.10);
+}
+
+.ghost-toolkit-body #tab-anim .tk-card:hover,
+.ghost-toolkit-body #tab-color .tk-card:hover {
+    background: linear-gradient(180deg, rgba(35,51,44,.99), rgba(22,32,27,.99));
+    border-color: rgba(72,214,164,.32);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 10px 24px rgba(0,0,0,.18), 0 0 0 1px rgba(72,214,164,.045);
+}
+
+.ghost-toolkit-body #tab-anim .tk-card-label,
+.ghost-toolkit-body #tab-color .tk-card-label {
+    color: #AAB8B2;
+    background: linear-gradient(180deg, rgba(7,12,10,.10), rgba(7,12,10,.78));
+}
+
+.ghost-toolkit-body #tab-anim .tk-preview-text,
+.ghost-toolkit-body #tab-color .tk-preview-text {
+    color: #6FE5B8;
+    text-shadow: 0 0 18px rgba(72,214,164,.12);
+}
+
+.ghost-toolkit-body .tk-ffx-card {
+    background: #151E1A !important;
+}
+
+.ghost-toolkit-body .tk-ffx-card-shot,
+.ghost-toolkit-body .tk-ffx-card-clip {
+    background: #0A0F0D !important;
+}
+
+.ghost-toolkit-body .tk-ffx-card-tag.is-perfect {
+    background: rgba(72,214,164,.92) !important;
+    color: #06120D !important;
+}
+
+/* Style tab empty state: intentional, calm, and visually centered. */
+.ghost-toolkit-body #tab-color .tk-up-empty {
+    margin: 18px 8px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    border: 1px dashed rgba(166,255,221,.13);
+    border-radius: 14px;
+    color: var(--ui-muted);
+    background: rgba(20,27,24,.48);
+}
+
+/* Emoji: expressive, bright, but still part of the same dark studio. */
+.ghost-toolkit-body #tab-emoji.active {
+    padding: 10px 8px 18px;
+    background: transparent;
+}
+
+.ghost-toolkit-body .tk-emoji-rail {
+    padding: 4px 2px 10px;
+    border-bottom-color: var(--ui-border);
+}
+
+.ghost-toolkit-body .tk-emoji-folder {
+    color: #8C9B95;
+    background: rgba(20,27,24,.82);
+    border-color: var(--ui-border);
+}
+
+.ghost-toolkit-body .tk-emoji-folder:hover {
+    color: #DDF5EB;
+    border-color: rgba(72,214,164,.32);
+    background: rgba(72,214,164,.07);
+}
+
+.ghost-toolkit-body .tk-emoji-folder.is-active {
+    color: #06120D;
+    background: var(--ui-accent);
+    border-color: var(--ui-accent);
+    box-shadow: 0 4px 14px rgba(72,214,164,.14);
+}
+
+.ghost-toolkit-body .tk-emoji-button {
+    min-height: 40px;
+    border-radius: 10px;
+    border-color: rgba(166,255,221,.08);
+    background: linear-gradient(180deg, #17201C, #121916);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+.ghost-toolkit-body .tk-emoji-button:hover,
+.ghost-toolkit-body .tk-emoji-button:focus-visible {
+    border-color: rgba(72,214,164,.42);
+    background: linear-gradient(180deg, #1D2A24, #17211D);
+    transform: translateY(-1px) scale(1.015);
+    box-shadow: 0 8px 18px rgba(0,0,0,.18), 0 0 0 2px rgba(72,214,164,.07);
+}
+
+/* Expressions: utility-first cards with a clear accent hierarchy. */
+.ghost-toolkit-body #tab-expression.active {
+    padding: 10px 8px 18px;
+    background: transparent;
+}
+
+.ghost-toolkit-body .tk-expr-toolbar {
+    padding: 7px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.02);
+}
+
+.ghost-toolkit-body .tk-expr-toolbar .tk-select,
+.ghost-toolkit-body .tk-select {
+    color: var(--ui-text);
+    background: #111815;
+    border-color: rgba(166,255,221,.12);
+    border-radius: 9px;
+}
+
+.ghost-toolkit-body .tk-expr-toolbar .tk-select:focus,
+.ghost-toolkit-body .tk-select:focus {
+    border-color: rgba(72,214,164,.48);
+    box-shadow: 0 0 0 2px rgba(72,214,164,.09);
+}
+
+.ghost-toolkit-body .tk-expr-grid {
+    gap: 9px;
+}
+
+.ghost-toolkit-body .tk-expr-card {
+    border-color: rgba(166,255,221,.09);
+    border-radius: 12px;
+    background: linear-gradient(180deg, #18211D, #131A17);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 8px 20px rgba(0,0,0,.10);
+}
+
+.ghost-toolkit-body .tk-expr-card:hover {
+    border-color: rgba(72,214,164,.28);
+    background: linear-gradient(180deg, #1D2924, #16201B);
+    transform: translateY(-1px);
+}
+
+.ghost-toolkit-body .tk-expr-card h3 {
+    color: #EAF5F0;
+}
+
+.ghost-toolkit-body .tk-expr-target {
+    color: #75E5BC;
+    background: rgba(72,214,164,.10);
+    border: 1px solid rgba(72,214,164,.10);
+}
+
+.ghost-toolkit-body .tk-expr-actions button {
+    min-height: 30px;
+    border: 1px solid rgba(166,255,221,.09);
+    border-radius: 8px;
+    background: rgba(255,255,255,.025);
+    color: #AAB8B2;
+}
+
+.ghost-toolkit-body .tk-expr-actions button:hover {
+    color: #E7F7F0;
+    border-color: rgba(72,214,164,.30);
+    background: rgba(72,214,164,.09);
+}
+
+/* Focus states across the three requested areas. */
+.ghost-toolkit-body #tab-anim :focus-visible,
+.ghost-toolkit-body #tab-color :focus-visible,
+.ghost-toolkit-body #tab-emoji :focus-visible,
+.ghost-toolkit-body #tab-expression :focus-visible {
+    outline: 2px solid rgba(72,214,164,.68);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ghost-toolkit-body *,
+    .ghost-toolkit-body *::before,
+    .ghost-toolkit-body *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

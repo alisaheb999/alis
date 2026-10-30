@@ -1,0 +1,86 @@
+{
+  "ghostStyleFfxPack": true,
+  "pack": "Ghostae Text — bundled FFX style presets",
+  "version": "1.0",
+  "note": "Panel-side catalog fallback. The UI still applies the real .ffx file through After Effects.",
+  "presets": [
+    {
+      "name": "4 color 1",
+      "file": "4 color 1.ffx",
+      "preview": "4 color 1.png",
+      "category": "Color"
+    },
+    {
+      "name": "4 color 2",
+      "file": "4 color 2.ffx",
+      "preview": "4 color 2.png",
+      "category": "Color"
+    },
+    {
+      "name": "4 color 3",
+      "file": "4 color 3.ffx",
+      "preview": "4 color 3.png",
+      "category": "Color"
+    },
+    {
+      "name": "4 color 4",
+      "file": "4 color 4.ffx",
+      "preview": "4 color 4.png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft Blue Dark Black ramp ",
+      "file": "Soft Blue Dark Black ramp .ffx",
+      "preview": "Soft Blue Dark Black ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft Green Dark Green ramp ",
+      "file": "Soft Green Dark Green ramp .ffx",
+      "preview": "Soft Green Dark Green ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft Orange Dark Orange Ramp ",
+      "file": "Soft Orange Dark Orange Ramp .ffx",
+      "preview": "Soft Orange Dark Orange Ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft sky Dark Black ramp ",
+      "file": "Soft sky Dark Black ramp .ffx",
+      "preview": "Soft sky Dark Black ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft syen Dark syen  ramp ",
+      "file": "Soft syen Dark syen  ramp .ffx",
+      "preview": "Soft syen Dark syen  ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft tail Dark tail ramp ",
+      "file": "Soft tail Dark tail ramp .ffx",
+      "preview": "Soft tail Dark tail ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft White Dark Black ramp ",
+      "file": "Soft White Dark Black ramp .ffx",
+      "preview": "Soft White Dark Black ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "Soft Yellow Dark Black ramp ",
+      "file": "Soft Yellow Dark Black ramp .ffx",
+      "preview": "Soft Yellow Dark Black ramp .png",
+      "category": "Color"
+    },
+    {
+      "name": "White Black ramp ",
+      "file": "White Black ramp .ffx",
+      "preview": "White Black ramp .png",
+      "category": "Color"
+    }
+  ]
+}

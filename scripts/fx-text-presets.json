@@ -1,0 +1,2382 @@
+[
+ {
+  "id": 1,
+  "nameBn": "ব্রাশড মেটালিক স্টেইনলেস",
+  "nameEn": "Brushed Metallic Stainless",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #cbd5e1 30%, #475569 65%, #94a3b8 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#ffffff",
+   "#cbd5e1",
+   "#475569"
+  ]
+ },
+ {
+  "id": 2,
+  "nameBn": "লিকুইড ক্রোম রিফ্লেকশন",
+  "nameEn": "Liquid Chrome Mirror",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #94a3b8 25%, #0f172a 50%, #e2e8f0 75%, #ffffff 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#0f172a",
+   "#e2e8f0"
+  ]
+ },
+ {
+  "id": 3,
+  "nameBn": "টাইটেনিয়াম ডার্ক প্লাটিটিনাম",
+  "nameEn": "Titanium Dark Platinum",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #f8fafc 0%, #64748b 45%, #1e293b 80%, #64748b 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0,0,0,0.9))",
+  "swatches": [
+   "#f8fafc",
+   "#64748b",
+   "#1e293b"
+  ]
+ },
+ {
+  "id": 4,
+  "nameBn": "আইসব্লু ফ্রস্টেড মেটাল",
+  "nameEn": "Ice-Blue Frosted Metal",
+  "category": "steel",
+  "textColor": "linear-gradient(160deg, #ffffff 0%, #e0f2fe 35%, #0284c7 70%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.45))",
+  "swatches": [
+   "#ffffff",
+   "#e0f2fe",
+   "#0284c7"
+  ]
+ },
+ {
+  "id": 5,
+  "nameBn": "গানমেটাল কার্বন শ্যাডো",
+  "nameEn": "Gunmetal Carbon Shadow",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #e2e8f0 0%, #475569 40%, #020617 85%, #475569 100%)",
+  "dropShadow": "drop-shadow(0px 4px 12px rgba(0,0,0,0.95))",
+  "swatches": [
+   "#e2e8f0",
+   "#475569",
+   "#020617"
+  ]
+ },
+ {
+  "id": 6,
+  "nameBn": "পলিশড সিলভার মিরর",
+  "nameEn": "Polished Silver Pure Mirror",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #cbd5e1 20%, #334155 50%, #f1f5f9 80%, #ffffff 100%)",
+  "dropShadow": "drop-shadow(0px 2px 6px rgba(0,0,0,0.7))",
+  "swatches": [
+   "#ffffff",
+   "#334155",
+   "#f1f5f9"
+  ]
+ },
+ {
+  "id": 7,
+  "nameBn": "ডার্ক কোবাল্ট স্টিল",
+  "nameEn": "Dark Cobalt Blue Steel",
+  "category": "steel",
+  "textColor": "linear-gradient(150deg, #e0e7ff 0%, #6366f1 40%, #1e1b4b 80%, #818cf8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(99, 102, 241, 0.5))",
+  "swatches": [
+   "#e0e7ff",
+   "#6366f1",
+   "#1e1b4b"
+  ]
+ },
+ {
+  "id": 8,
+  "nameBn": "স্মোকি রডিয়াম মেটাল",
+  "nameEn": "Smokey Rhodium Metal",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #f8fafc 0%, #94a3b8 40%, #0f172a 85%, #64748b 100%)",
+  "dropShadow": "drop-shadow(0px 3px 10px rgba(0,0,0,0.9))",
+  "swatches": [
+   "#f8fafc",
+   "#94a3b8",
+   "#0f172a"
+  ]
+ },
+ {
+  "id": 9,
+  "nameBn": "অ্যালুমিনিয়াম সারফেস",
+  "nameEn": "Pure Aluminium Surface",
+  "category": "steel",
+  "textColor": "linear-gradient(170deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%)",
+  "dropShadow": "drop-shadow(0px 2px 5px rgba(0,0,0,0.65))",
+  "swatches": [
+   "#ffffff",
+   "#cbd5e1",
+   "#64748b"
+  ]
+ },
+ {
+  "id": 10,
+  "nameBn": "ব্ল্যাক প্লাটিটিনাম শ্যাডো",
+  "nameEn": "Black Platinum Velvet",
+  "category": "steel",
+  "textColor": "linear-gradient(180deg, #cbd5e1 0%, #334155 45%, #020617 80%, #64748b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.15))",
+  "swatches": [
+   "#cbd5e1",
+   "#334155",
+   "#020617"
+  ]
+ },
+ {
+  "id": 11,
+  "nameBn": "ইম্পেরিয়াল রয়্যাল গোল্ড",
+  "nameEn": "Imperial Royal Gold",
+  "category": "gold",
+  "textColor": "linear-gradient(180deg, #fffbe0 0%, #facc15 30%, #854d0e 65%, #fef08a 100%)",
+  "dropShadow": "drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.8))",
+  "swatches": [
+   "#fffbe0",
+   "#facc15",
+   "#854d0e"
+  ]
+ },
+ {
+  "id": 12,
+  "nameBn": "রোজ গোল্ড মেটালিক",
+  "nameEn": "Rose Gold Soft Metallic",
+  "category": "gold",
+  "textColor": "linear-gradient(145deg, #fff1f2 0%, #fecdd3 30%, #fb7185 60%, #881337 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.65))",
+  "swatches": [
+   "#fff1f2",
+   "#fb7185",
+   "#881337"
+  ]
+ },
+ {
+  "id": 13,
+  "nameBn": "অ্যানটিক ব্রোঞ্জ ব্রাস",
+  "nameEn": "Antique Bronze Brass",
+  "category": "gold",
+  "textColor": "linear-gradient(180deg, #fef3c7 0%, #d97706 40%, #451a03 80%, #b45309 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.85))",
+  "swatches": [
+   "#fef3c7",
+   "#d97706",
+   "#451a03"
+  ]
+ },
+ {
+  "id": 14,
+  "nameBn": "শ্যাম্পেইন শাইনি লাক্স",
+  "nameEn": "Champagne Luxe Shiny",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #fef3c7 35%, #ca8a04 70%, #fefce8 100%)",
+  "dropShadow": "drop-shadow(0px 2px 8px rgba(0,0,0,0.6))",
+  "swatches": [
+   "#ffffff",
+   "#fef3c7",
+   "#ca8a04"
+  ]
+ },
+ {
+  "id": 15,
+  "nameBn": "ওয়ার্ম কপার মেটাল",
+  "nameEn": "Warm Copper Gloss",
+  "category": "gold",
+  "textColor": "linear-gradient(180deg, #ffedd5 0%, #fb923c 35%, #7c2d12 75%, #c2410c 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.75))",
+  "swatches": [
+   "#ffedd5",
+   "#fb923c",
+   "#7c2d12"
+  ]
+ },
+ {
+  "id": 16,
+  "nameBn": "আম্বার হানি লাক্স",
+  "nameEn": "Amber Honey Gold",
+  "category": "gold",
+  "textColor": "linear-gradient(160deg, #ffffff 0%, #fbbf24 35%, #d97706 70%, #78350f 100%)",
+  "dropShadow": "drop-shadow(0px 0px 10px rgba(251, 191, 36, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fbbf24",
+   "#d97706"
+  ]
+ },
+ {
+  "id": 17,
+  "nameBn": "ভেনিসিয়ান মেটালিক ব্রাস",
+  "nameEn": "Venetian Metallic Brass",
+  "category": "gold",
+  "textColor": "linear-gradient(180deg, #fef3c7 0%, #ca8a04 40%, #291205 85%, #eab308 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#fef3c7",
+   "#ca8a04",
+   "#291205"
+  ]
+ },
+ {
+  "id": 18,
+  "nameBn": "সানসেট গোল্ডেন আম্বার",
+  "nameEn": "Sunset Golden Amber",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #fde047 30%, #f97316 70%, #9a3412 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(249, 115, 22, 0.45))",
+  "swatches": [
+   "#ffffff",
+   "#fde047",
+   "#f97316"
+  ]
+ },
+ {
+  "id": 19,
+  "nameBn": "লিকুইড ২৪কে গোল্ড",
+  "nameEn": "Liquid 24K Gold Pure",
+  "category": "gold",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #facc15 35%, #a16207 70%, #fef9c3 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(250, 204, 21, 0.4))",
+  "swatches": [
+   "#fef08a",
+   "#facc15",
+   "#a16207"
+  ]
+ },
+ {
+  "id": 20,
+  "nameBn": "অ্যাজটেক গোল্ড সানবার্স্ট",
+  "nameEn": "Aztec Gold Sunburst",
+  "category": "gold",
+  "textColor": "linear-gradient(150deg, #ffffff 0%, #fde047 35%, #854d0e 75%, #fef08a 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0,0,0,0.75))",
+  "swatches": [
+   "#ffffff",
+   "#fde047",
+   "#854d0e"
+  ]
+ },
+ {
+  "id": 21,
+  "nameBn": "সাইবার নিয়ন সায়ান",
+  "nameEn": "Cyber Neon Cyan Aura",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #67e8f9 35%, #06b6d4 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.85))",
+  "swatches": [
+   "#ffffff",
+   "#67e8f9",
+   "#06b6d4"
+  ]
+ },
+ {
+  "id": 22,
+  "nameBn": "ইলেকট্রিক প্লাজমা মেজেন্টা",
+  "nameEn": "Electric Plasma Magenta",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #f472b6 35%, #db2777 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(219, 39, 119, 0.85))",
+  "swatches": [
+   "#ffffff",
+   "#f472b6",
+   "#db2777"
+  ]
+ },
+ {
+  "id": 23,
+  "nameBn": "টক্সিক নিয়ন লাইম",
+  "nameEn": "Toxic Cyber Lime Glow",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #f7fee7 0%, #a3e635 35%, #65a30d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(132, 204, 22, 0.8))",
+  "swatches": [
+   "#f7fee7",
+   "#a3e635",
+   "#65a30d"
+  ]
+ },
+ {
+  "id": 24,
+  "nameBn": "ইলেকট্রিক আল্ট্রামারিন",
+  "nameEn": "Electric Ultramarine Neon",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #e0e7ff 0%, #818cf8 35%, #4f46e5 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(99, 102, 241, 0.8))",
+  "swatches": [
+   "#e0e7ff",
+   "#818cf8",
+   "#4f46e5"
+  ]
+ },
+ {
+  "id": 25,
+  "nameBn": "লেজার ভায়োলেট প্লাজমা",
+  "nameEn": "Laser Violet Plasma Glow",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #faf5ff 0%, #c084fc 35%, #9333ea 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(147, 51, 234, 0.8))",
+  "swatches": [
+   "#faf5ff",
+   "#c084fc",
+   "#9333ea"
+  ]
+ },
+ {
+  "id": 26,
+  "nameBn": "সনোর অরেঞ্জ প্লাজমা",
+  "nameEn": "Solar Orange Plasma",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #fff7ed 0%, #fb923c 35%, #ea580c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(234, 88, 12, 0.8))",
+  "swatches": [
+   "#fff7ed",
+   "#fb923c",
+   "#ea580c"
+  ]
+ },
+ {
+  "id": 27,
+  "nameBn": "এসডিক গ্রিন প্লাজমা",
+  "nameEn": "Acidic Green Glow",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #f0fdf4 0%, #4ade80 35%, #16a34a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(34, 197, 94, 0.8))",
+  "swatches": [
+   "#f0fdf4",
+   "#4ade80",
+   "#16a34a"
+  ]
+ },
+ {
+  "id": 28,
+  "nameBn": "আল্ট্রাভায়োলেট সানবার্স্ট",
+  "nameEn": "Ultraviolet Sunburst Flare",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #f3e8ff 0%, #e879f9 40%, #a855f7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(168, 85, 247, 0.8))",
+  "swatches": [
+   "#f3e8ff",
+   "#e879f9",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 29,
+  "nameBn": "প্লাজমা ইয়েলো ইলেকট্রিক",
+  "nameEn": "Plasma Yellow Electric",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #fefce8 0%, #facc15 35%, #ca8a04 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(250, 204, 21, 0.85))",
+  "swatches": [
+   "#fefce8",
+   "#facc15",
+   "#ca8a04"
+  ]
+ },
+ {
+  "id": 30,
+  "nameBn": "অ্যাকোয়া সাইবার নিওন",
+  "nameEn": "Aqua Cyber Pulse Glow",
+  "category": "neon",
+  "textColor": "linear-gradient(180deg, #ecfeff 0%, #22d3ee 35%, #0891b2 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.8))",
+  "swatches": [
+   "#ecfeff",
+   "#22d3ee",
+   "#0891b2"
+  ]
+ },
+ {
+  "id": 31,
+  "nameBn": "ইমারেল্ড লাক্স গ্রিন",
+  "nameEn": "Emerald Luxe Rich Green",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ecfdf5 0%, #34d399 35%, #059669 70%, #064e3b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(16, 185, 129, 0.45))",
+  "swatches": [
+   "#ecfdf5",
+   "#34d399",
+   "#059669"
+  ]
+ },
+ {
+  "id": 32,
+  "nameBn": "সানসেট ইনফার্নো গ্লো",
+  "nameEn": "Sunset Inferno Glow",
+  "category": "gradient",
+  "textColor": "linear-gradient(145deg, #fff7ed 0%, #fb923c 35%, #ea580c 70%, #7c2d12 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 88, 12, 0.5))",
+  "swatches": [
+   "#fff7ed",
+   "#fb923c",
+   "#ea580c"
+  ]
+ },
+ {
+  "id": 33,
+  "nameBn": "ওশানিক স্যাফায়ার ব্লু",
+  "nameEn": "Oceanic Sapphire Deep Blue",
+  "category": "gradient",
+  "textColor": "linear-gradient(160deg, #eff6ff 0%, #60a5fa 30%, #2563eb 65%, #1e3a8a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(37, 99, 235, 0.45))",
+  "swatches": [
+   "#eff6ff",
+   "#60a5fa",
+   "#2563eb"
+  ]
+ },
+ {
+  "id": 34,
+  "nameBn": "গ্লসি রুবিক রেড",
+  "nameEn": "Glossy Crimson Ruby Red",
+  "category": "gradient",
+  "textColor": "linear-gradient(180deg, #fff1f2 0%, #f43f5e 35%, #be123c 70%, #4c0519 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(225, 29, 72, 0.45))",
+  "swatches": [
+   "#fff1f2",
+   "#f43f5e",
+   "#be123c"
+  ]
+ },
+ {
+  "id": 35,
+  "nameBn": "ট্রপিক্যাল সানরাইজ ট্রায়ো",
+  "nameEn": "Tropical Sunrise Trio Gradient",
+  "category": "gradient",
+  "textColor": "linear-gradient(120deg, #fef08a 0%, #f97316 45%, #ec4899 90%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(236, 72, 153, 0.45))",
+  "swatches": [
+   "#fef08a",
+   "#f97316",
+   "#ec4899"
+  ]
+ },
+ {
+  "id": 36,
+  "nameBn": "অরোরা বরিয়ালিস লাইট",
+  "nameEn": "Aurora Borealis Light Gradient",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #e0f2fe 0%, #38bdf8 35%, #34d399 70%, #059669 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(52, 211, 153, 0.45))",
+  "swatches": [
+   "#e0f2fe",
+   "#38bdf8",
+   "#34d399"
+  ]
+ },
+ {
+  "id": 37,
+  "nameBn": "কোরাল সানসেট ফ্লেয়ার",
+  "nameEn": "Coral Sunset Flare",
+  "category": "gradient",
+  "textColor": "linear-gradient(140deg, #ffedd5 0%, #fb7185 45%, #e11d48 90%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(251, 113, 133, 0.45))",
+  "swatches": [
+   "#ffedd5",
+   "#fb7185",
+   "#e11d48"
+  ]
+ },
+ {
+  "id": 38,
+  "nameBn": "ভায়োলেট ট্রায়ো ব্লেইন্ড",
+  "nameEn": "Trio Sunset Violet",
+  "category": "gradient",
+  "textColor": "linear-gradient(130deg, #fef08a 0%, #f472b6 45%, #a855f7 90%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(168, 85, 247, 0.45))",
+  "swatches": [
+   "#fef08a",
+   "#f472b6",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 39,
+  "nameBn": "ডিপ ওশান টিল গ্লো",
+  "nameEn": "Deep Ocean Teal Glow",
+  "category": "gradient",
+  "textColor": "linear-gradient(170deg, #f0fdf4 0%, #2dd4bf 35%, #0f766e 75%, #042f2e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(45, 212, 191, 0.45))",
+  "swatches": [
+   "#f0fdf4",
+   "#2dd4bf",
+   "#0f766e"
+  ]
+ },
+ {
+  "id": 40,
+  "nameBn": "ফায়ার স্পার্ক ইনফিন্টি",
+  "nameEn": "Fire Spark Infinity Gradient",
+  "category": "gradient",
+  "textColor": "linear-gradient(150deg, #fef08a 0%, #f97316 35%, #dc2626 70%, #7f1d1d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(249, 115, 22, 0.5))",
+  "swatches": [
+   "#fef08a",
+   "#f97316",
+   "#dc2626"
+  ]
+ },
+ {
+  "id": 41,
+  "nameBn": "রুবিক জেমস্টোন রেড",
+  "nameEn": "Ruby Gemstone Red Crystal",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #ffe4e6 25%, #e11d48 60%, #881337 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(225, 29, 72, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#e11d48",
+   "#881337"
+  ]
+ },
+ {
+  "id": 42,
+  "nameBn": "স্যাফায়ার গ্লাস স্পার্ক",
+  "nameEn": "Sapphire Gemstone Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #dbeafe 25%, #1d4ed8 60%, #1e1b4b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(29, 78, 216, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#1d4ed8",
+   "#1e1b4b"
+  ]
+ },
+ {
+  "id": 43,
+  "nameBn": "ইমারেল্ড ক্রিস্টাল গ্লাস",
+  "nameEn": "Emerald Crystal Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #d1fae5 25%, #047857 60%, #022c22 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(4, 120, 87, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#047857",
+   "#022c22"
+  ]
+ },
+ {
+  "id": 44,
+  "nameBn": "অ্যামেথিস্ট ক্রিস্টাল পার্পল",
+  "nameEn": "Amethyst Crystal Purple",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #f3e8ff 25%, #7e22ce 60%, #3b0764 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(126, 34, 206, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#7e22ce",
+   "#3b0764"
+  ]
+ },
+ {
+  "id": 45,
+  "nameBn": "টোপাজ বার্স্ট ক্রিস্টাল",
+  "nameEn": "Topaz Gem Burst Gold",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #fef9c3 25%, #ca8a04 60%, #713f12 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(202, 138, 4, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#ca8a04",
+   "#713f12"
+  ]
+ },
+ {
+  "id": 46,
+  "nameBn": "ডায়মন্ড আইস ফ্রস্ট",
+  "nameEn": "Diamond Ice Frost Crystal",
+  "category": "jewel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #e2e8f0 30%, #94a3b8 65%, #334155 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(255,255,255,0.65))",
+  "swatches": [
+   "#ffffff",
+   "#94a3b8",
+   "#334155"
+  ]
+ },
+ {
+  "id": 47,
+  "nameBn": "ওপাল প্রিজমেটিক রেইনবো",
+  "nameEn": "Opal Rainbow Prism Gem",
+  "category": "jewel",
+  "textColor": "linear-gradient(120deg, #f472b6 0%, #38bdf8 30%, #4ade80 60%, #facc15 100%)",
+  "dropShadow": "drop-shadow(0px 0px 10px rgba(255,255,255,0.5))",
+  "swatches": [
+   "#f472b6",
+   "#38bdf8",
+   "#facc15"
+  ]
+ },
+ {
+  "id": 48,
+  "nameBn": "জেড ডাইনেস্টি গ্লাস",
+  "nameEn": "Jade Dynasty Green Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(160deg, #ffffff 0%, #a7f3d0 30%, #059669 65%, #064e3b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(5, 150, 105, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#059669",
+   "#064e3b"
+  ]
+ },
+ {
+  "id": 49,
+  "nameBn": "ট্যাঞ্জানাইট ডাস্ক ক্রিস্টাল",
+  "nameEn": "Tanzanite Dusk Crystal",
+  "category": "jewel",
+  "textColor": "linear-gradient(145deg, #ffffff 0%, #c7d2fe 30%, #4338ca 65%, #1e1b4b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(67, 56, 202, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#4338ca",
+   "#1e1b4b"
+  ]
+ },
+ {
+  "id": 50,
+  "nameBn": "গার্নেট ফায়ার জেমস্টোন",
+  "nameEn": "Garnet Fire Red Gem",
+  "category": "jewel",
+  "textColor": "linear-gradient(140deg, #ffffff 0%, #fca5a5 30%, #dc2626 65%, #450a0a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(220, 38, 38, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#dc2626",
+   "#450a0a"
+  ]
+ },
+ {
+  "id": 51,
+  "nameBn": "কোটন ক্যান্ডি প্যাস্টেল",
+  "nameEn": "Pastel Cotton Candy Soft",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #f472b6 45%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(244, 114, 182, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#f472b6",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 52,
+  "nameBn": "সফট ল্যাভেন্ডার ফগ",
+  "nameEn": "Soft Lavender Fog Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #e9d5ff 40%, #c084fc 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(192, 132, 252, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#e9d5ff",
+   "#c084fc"
+  ]
+ },
+ {
+  "id": 53,
+  "nameBn": "মিন্টি ব্রিজ প্যাস্টেল",
+  "nameEn": "Minty Breeze Soft Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #a7f3d0 40%, #34d399 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(52, 211, 153, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#a7f3d0",
+   "#34d399"
+  ]
+ },
+ {
+  "id": 54,
+  "nameBn": "পিচ শরবত সফট গ্লো",
+  "nameEn": "Peach Sorbet Soft Glow",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fed7aa 40%, #fb923c 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(251, 146, 60, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fed7aa",
+   "#fb923c"
+  ]
+ },
+ {
+  "id": 55,
+  "nameBn": "বাটারকাপ ইয়েলো ডাস্ক",
+  "nameEn": "Buttercup Yellow Soft Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fef08a 40%, #facc15 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(250, 204, 21, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fef08a",
+   "#facc15"
+  ]
+ },
+ {
+  "id": 56,
+  "nameBn": "বেবি ব্লউ ক্লাউড প্যাস্টেল",
+  "nameEn": "Baby Blue Cloud Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #bae6fd 40%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(56, 189, 248, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#bae6fd",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 57,
+  "nameBn": "রোজ কোয়ার্টজ ফগ",
+  "nameEn": "Rose Quartz Fog Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fbcfe8 40%, #f472b6 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(244, 114, 182, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fbcfe8",
+   "#f472b6"
+  ]
+ },
+ {
+  "id": 58,
+  "nameBn": "পিস্তাচিও গ্রিন ড্রিম",
+  "nameEn": "Pistachio Green Soft Dream",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #bbf7d0 40%, #4ade80 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(74, 222, 128, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#bbf7d0",
+   "#4ade80"
+  ]
+ },
+ {
+  "id": 59,
+  "nameBn": "লাইলাক ক্লাউড প্যাস্টেল",
+  "nameEn": "Lilac Cloud Soft Pastel",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #ddd6fe 40%, #a78bfa 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(167, 139, 250, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#ddd6fe",
+   "#a78bfa"
+  ]
+ },
+ {
+  "id": 60,
+  "nameBn": "ভ্যানিলা ক্রিম ড্রিম",
+  "nameEn": "Vanilla Cream Soft Dream",
+  "category": "pastel",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fef3c7 40%, #fde047 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(253, 224, 71, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fef3c7",
+   "#fde047"
+  ]
+ },
+ {
+  "id": 61,
+  "nameBn": "ভ্যাপারওয়েভ রেট্রো ৮০s",
+  "nameEn": "Vaporwave Retro 80s Neon",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #22d3ee 0%, #e879f9 50%, #f43f5e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(232, 121, 249, 0.6))",
+  "swatches": [
+   "#22d3ee",
+   "#e879f9",
+   "#f43f5e"
+  ]
+ },
+ {
+  "id": 62,
+  "nameBn": "সানসেট গ্রিড ৮০s",
+  "nameEn": "80s Sunset Grid Outrun",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #f97316 40%, #c084fc 80%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(249, 115, 22, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#f97316",
+   "#c084fc"
+  ]
+ },
+ {
+  "id": 63,
+  "nameBn": "সাইবার পিংক সিন্থওয়েভ",
+  "nameEn": "Cyber Pink Synthwave",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #f43f5e 40%, #881337 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(244, 63, 94, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#f43f5e",
+   "#881337"
+  ]
+ },
+ {
+  "id": 64,
+  "nameBn": "আউটরান আম্বার ৮০s",
+  "nameEn": "Outrun Amber Sunset",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #fb923c 45%, #b91c1c 90%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(251, 146, 60, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#fb923c",
+   "#b91c1c"
+  ]
+ },
+ {
+  "id": 65,
+  "nameBn": "কসমিক ভায়োলেট সিন্থ",
+  "nameEn": "Cosmic Violet Synth Glow",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #67e8f9 0%, #a855f7 50%, #4c0519 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(168, 85, 247, 0.6))",
+  "swatches": [
+   "#67e8f9",
+   "#a855f7",
+   "#4c0519"
+  ]
+ },
+ {
+  "id": 66,
+  "nameBn": "সিন্থওয়েভ সায়ান পিংক",
+  "nameEn": "Synthwave Cyan Pink Blend",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #38bdf8 0%, #ec4899 50%, #f43f5e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(236, 72, 153, 0.6))",
+  "swatches": [
+   "#38bdf8",
+   "#ec4899",
+   "#f43f5e"
+  ]
+ },
+ {
+  "id": 67,
+  "nameBn": "হট মেজেন্টা রেট্রো ৮০s",
+  "nameEn": "Hot Magenta Retro 80s",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #f472b6 45%, #db2777 90%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(219, 39, 119, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#f472b6",
+   "#db2777"
+  ]
+ },
+ {
+  "id": 68,
+  "nameBn": "হরাইজন গোল্ডেন ৮০s",
+  "nameEn": "Horizon Gold 80s Sunset",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fde047 35%, #ea580c 70%, #581c87 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 88, 12, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#fde047",
+   "#581c87"
+  ]
+ },
+ {
+  "id": 69,
+  "nameBn": "মিডনাইট সাইবার রেট্রো",
+  "nameEn": "Midnight Cyber Retro Drive",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #a5f3fc 0%, #0284c7 45%, #4c0519 90%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(2, 132, 199, 0.6))",
+  "swatches": [
+   "#a5f3fc",
+   "#0284c7",
+   "#4c0519"
+  ]
+ },
+ {
+  "id": 70,
+  "nameBn": "নিওন নাইট ড্রাইভ",
+  "nameEn": "Neon Night Drive Synth",
+  "category": "synthwave",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #38bdf8 45%, #a855f7 90%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#38bdf8",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 71,
+  "nameBn": "ডিপ স্পেস নেবুলা",
+  "nameEn": "Deep Space Nebula Flare",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #60a5fa 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(192, 132, 252, 0.65))",
+  "swatches": [
+   "#c084fc",
+   "#f472b6",
+   "#60a5fa"
+  ]
+ },
+ {
+  "id": 72,
+  "nameBn": "সেলেস্টিন গোল্ডেন স্পার্ক",
+  "nameEn": "Celestial Golden Spark",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fef08a 35%, #eab308 65%, #78350f 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 179, 8, 0.55))",
+  "swatches": [
+   "#ffffff",
+   "#fef08a",
+   "#78350f"
+  ]
+ },
+ {
+  "id": 73,
+  "nameBn": "লুনার ফ্রস্টেড সিলভার",
+  "nameEn": "Lunar Frosted Silver",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #e2e8f0 35%, #94a3b8 70%, #334155 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(226, 232, 240, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#e2e8f0",
+   "#334155"
+  ]
+ },
+ {
+  "id": 74,
+  "nameBn": "সোলার ফ্লেয়ার গ্লো",
+  "nameEn": "Solar Flare Glow Cosmic",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fde047 30%, #f97316 60%, #dc2626 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(249, 115, 22, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#fde047",
+   "#dc2626"
+  ]
+ },
+ {
+  "id": 75,
+  "nameBn": "স্টারলাইট আইস সিলভার",
+  "nameEn": "Starlight Ice Silver Glow",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #e0f2fe 40%, #7dd3fc 75%, #0284c7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(125, 211, 252, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#e0f2fe",
+   "#0284c7"
+  ]
+ },
+ {
+  "id": 76,
+  "nameBn": "অ্যাস্ট্রাল ভায়োলেট কসমস",
+  "nameEn": "Astral Violet Cosmos Glow",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #d8b4fe 35%, #a855f7 70%, #581c87 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(168, 85, 247, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#d8b4fe",
+   "#581c87"
+  ]
+ },
+ {
+  "id": 77,
+  "nameBn": "ওরিয়ন গ্যলাক্সি ব্লু",
+  "nameEn": "Orion Galaxy Deep Blue",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #93c5fd 35%, #3b82f6 70%, #1e3a8a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(59, 130, 246, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#93c5fd",
+   "#1e3a8a"
+  ]
+ },
+ {
+  "id": 78,
+  "nameBn": "সুপারনোভা ইয়েলো সানবার্স্ট",
+  "nameEn": "Supernova Yellow Sunburst",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fef08a 30%, #facc15 65%, #ca8a04 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(250, 204, 21, 0.7))",
+  "swatches": [
+   "#ffffff",
+   "#fef08a",
+   "#ca8a04"
+  ]
+ },
+ {
+  "id": 79,
+  "nameBn": "কমিক ডাস্ট সিলভার",
+  "nameEn": "Comet Dust Silver Glow",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #f8fafc 0%, #cbd5e1 40%, #64748b 75%, #0f172a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(203, 213, 225, 0.5))",
+  "swatches": [
+   "#f8fafc",
+   "#cbd5e1",
+   "#0f172a"
+  ]
+ },
+ {
+  "id": 80,
+  "nameBn": "অ্যাঞ্জেলিক প্রিজম অউরা",
+  "nameEn": "Angelic Prism Aura Glow",
+  "category": "cosmic",
+  "textColor": "linear-gradient(180deg, #ffffff 0%, #fbcfe8 30%, #c084fc 65%, #60a5fa 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(251, 207, 232, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#fbcfe8",
+   "#60a5fa"
+  ]
+ },
+ {
+  "id": 81,
+  "nameBn": "সায়ান মেজেন্টা ডিও স্প্লিট",
+  "nameEn": "Cyan Magenta Duo Split",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #22d3ee 0%, #e879f9 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(34, 211, 238, 0.5))",
+  "swatches": [
+   "#22d3ee",
+   "#e879f9",
+   "#e879f9"
+  ]
+ },
+ {
+  "id": 82,
+  "nameBn": "গোল্ড পার্পল লাক্স ডিও",
+  "nameEn": "Gold Purple Luxe Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #fde047 0%, #a855f7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(253, 224, 71, 0.5))",
+  "swatches": [
+   "#fde047",
+   "#a855f7",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 83,
+  "nameBn": "লাইম নেভি সাইবার ডিও",
+  "nameEn": "Lime Navy Cyber Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #a3e635 0%, #1e3a8a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(163, 230, 53, 0.5))",
+  "swatches": [
+   "#a3e635",
+   "#1e3a8a",
+   "#1e3a8a"
+  ]
+ },
+ {
+  "id": 84,
+  "nameBn": "কোরাল টিল ট্রপিক্যাল ডিও",
+  "nameEn": "Coral Teal Tropical Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #fb7185 0%, #14b8a6 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(251, 113, 133, 0.5))",
+  "swatches": [
+   "#fb7185",
+   "#14b8a6",
+   "#14b8a6"
+  ]
+ },
+ {
+  "id": 85,
+  "nameBn": "ইয়েলো ভায়োলেট লাক্স ডিও",
+  "nameEn": "Yellow Violet Luxe Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #facc15 0%, #7e22ce 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(250, 204, 21, 0.5))",
+  "swatches": [
+   "#facc15",
+   "#7e22ce",
+   "#7e22ce"
+  ]
+ },
+ {
+  "id": 86,
+  "nameBn": "রোজ ইমারেল্ড ডিও ব্লেইন্ড",
+  "nameEn": "Rose Emerald Duo Blend",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #f472b6 0%, #10b981 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(244, 114, 182, 0.5))",
+  "swatches": [
+   "#f472b6",
+   "#10b981",
+   "#10b981"
+  ]
+ },
+ {
+  "id": 87,
+  "nameBn": "অরেঞ্জ ইন্ডিগো সাইবার ডিও",
+  "nameEn": "Orange Indigo Cyber Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #fb923c 0%, #4338ca 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(251, 146, 60, 0.5))",
+  "swatches": [
+   "#fb923c",
+   "#4338ca",
+   "#4338ca"
+  ]
+ },
+ {
+  "id": 88,
+  "nameBn": "ক্রিমসন গোল্ড ইম্পেরিয়াল",
+  "nameEn": "Crimson Gold Imperial Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #f43f5e 0%, #facc15 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(244, 63, 94, 0.5))",
+  "swatches": [
+   "#f43f5e",
+   "#facc15",
+   "#facc15"
+  ]
+ },
+ {
+  "id": 89,
+  "nameBn": "পিংক সায়ান সাইবার ডিও",
+  "nameEn": "Pink Cyan Cyber Duo",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #ec4899 0%, #06b6d4 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(236, 72, 153, 0.5))",
+  "swatches": [
+   "#ec4899",
+   "#06b6d4",
+   "#06b6d4"
+  ]
+ },
+ {
+  "id": 90,
+  "nameBn": "ভাইওলেট আম্বার ডিও ব্লেইন্ড",
+  "nameEn": "Violet Amber Duo Blend",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #9333ea 0%, #f59e0b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(147, 51, 234, 0.5))",
+  "swatches": [
+   "#9333ea",
+   "#f59e0b",
+   "#f59e0b"
+  ]
+ },
+ {
+  "id": 91,
+  "nameBn": "রেডিয়াল গোল্ডেন কোর",
+  "nameEn": "Radial Golden Core Flare",
+  "category": "gold",
+  "textColor": "radial-gradient(circle at center, #ffffff 0%, #fde047 30%, #ca8a04 70%, #451a03 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(250, 204, 21, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#fde047",
+   "#451a03"
+  ]
+ },
+ {
+  "id": 92,
+  "nameBn": "রেডিয়াল সায়ান আইস কোর",
+  "nameEn": "Radial Cyan Ice Core",
+  "category": "neon",
+  "textColor": "radial-gradient(circle at center, #ffffff 0%, #67e8f9 35%, #0891b2 75%, #083344 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#67e8f9",
+   "#083344"
+  ]
+ },
+ {
+  "id": 93,
+  "nameBn": "অ্যাঙ্গুলার মেটালিক ক্রোমা",
+  "nameEn": "Angular Metallic Chroma",
+  "category": "steel",
+  "textColor": "linear-gradient(45deg, #ffffff 0%, #94a3b8 25%, #1e293b 50%, #cbd5e1 75%, #ffffff 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#ffffff",
+   "#1e293b",
+   "#cbd5e1"
+  ]
+ },
+ {
+  "id": 94,
+  "nameBn": "প্রিজম্যাটিক সানবার্স্ট ব্লেইন্ড",
+  "nameEn": "Prismatic Sunburst Blend",
+  "category": "duotone",
+  "textColor": "linear-gradient(45deg, #f43f5e 0%, #facc15 33%, #22d3ee 66%, #a855f7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.35))",
+  "swatches": [
+   "#f43f5e",
+   "#facc15",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 95,
+  "nameBn": "ফায়ার অ্যান্ড আইস ফিউশন",
+  "nameEn": "Fire & Ice Fusion",
+  "category": "gradient",
+  "textColor": "linear-gradient(90deg, #ef4444 0%, #f97316 35%, #38bdf8 65%, #3b82f6 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.5))",
+  "swatches": [
+   "#ef4444",
+   "#f97316",
+   "#3b82f6"
+  ]
+ },
+ {
+  "id": 96,
+  "nameBn": "রয়্যাল পার্পল গোল্ড স্পার্ক",
+  "nameEn": "Royal Purple Gold Spark",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #eab308 30%, #a855f7 70%, #3b0764 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 179, 8, 0.5))",
+  "swatches": [
+   "#fef08a",
+   "#eab308",
+   "#3b0764"
+  ]
+ },
+ {
+  "id": 97,
+  "nameBn": "কসমিক টিল পিংক ডাস্ট",
+  "nameEn": "Cosmic Teal Pink Dust",
+  "category": "cosmic",
+  "textColor": "linear-gradient(120deg, #2dd4bf 0%, #38bdf8 40%, #f472b6 80%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(45, 212, 191, 0.5))",
+  "swatches": [
+   "#2dd4bf",
+   "#38bdf8",
+   "#f472b6"
+  ]
+ },
+ {
+  "id": 98,
+  "nameBn": "প্লাটিটিনাম ব্রোঞ্জ লাক্স",
+  "nameEn": "Platinum Bronze Luxe",
+  "category": "steel",
+  "textColor": "linear-gradient(160deg, #ffffff 0%, #cbd5e1 30%, #d97706 70%, #451a03 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.8))",
+  "swatches": [
+   "#ffffff",
+   "#cbd5e1",
+   "#d97706"
+  ]
+ },
+ {
+  "id": 99,
+  "nameBn": "ভলকানিক লাভা গ্লো",
+  "nameEn": "Volcanic Lava Deep Glow",
+  "category": "gradient",
+  "textColor": "linear-gradient(180deg, #fef08a 0%, #f97316 30%, #dc2626 60%, #450a0a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(239, 68, 68, 0.65))",
+  "swatches": [
+   "#fef08a",
+   "#f97316",
+   "#450a0a"
+  ]
+ },
+ {
+  "id": 100,
+  "nameBn": "আল্টিমেট প্রিজম ক্রোম",
+  "nameEn": "Ultimate Prism Chrome Pure",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #38bdf8 25%, #f472b6 50%, #facc15 75%, #ffffff 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#38bdf8",
+   "#facc15"
+  ]
+ },
+ {
+  "id": 101,
+  "nameBn": "ব্রাশড মেটালিক স্টেইনলেস ডুও",
+  "nameEn": "Brushed Metallic Stainless Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #475569 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#ffffff",
+   "#475569"
+  ]
+ },
+ {
+  "id": 102,
+  "nameBn": "লিকুইড ক্রোম রিফ্লেকশন ডুও",
+  "nameEn": "Liquid Chrome Mirror Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #0f172a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#0f172a"
+  ]
+ },
+ {
+  "id": 103,
+  "nameBn": "টাইটেনিয়াম ডার্ক প্লাটিটিনাম ডুও",
+  "nameEn": "Titanium Dark Platinum Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #e2e8f0 0%, #1e293b 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0,0,0,0.9))",
+  "swatches": [
+   "#e2e8f0",
+   "#1e293b"
+  ]
+ },
+ {
+  "id": 104,
+  "nameBn": "আইসব্লু ফ্রস্টেড মেটাল ডুও",
+  "nameEn": "Ice-Blue Frosted Metal Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #0284c7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.45))",
+  "swatches": [
+   "#ffffff",
+   "#0284c7"
+  ]
+ },
+ {
+  "id": 105,
+  "nameBn": "গানমেটাল কার্বন শ্যাডো ডুও",
+  "nameEn": "Gunmetal Carbon Shadow Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #94a3b8 0%, #020617 100%)",
+  "dropShadow": "drop-shadow(0px 4px 12px rgba(0,0,0,0.95))",
+  "swatches": [
+   "#94a3b8",
+   "#020617"
+  ]
+ },
+ {
+  "id": 106,
+  "nameBn": "পলিশড সিলভার মিরর ডুও",
+  "nameEn": "Polished Silver Pure Mirror Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #f8fafc 0%, #334155 100%)",
+  "dropShadow": "drop-shadow(0px 2px 6px rgba(0,0,0,0.7))",
+  "swatches": [
+   "#f8fafc",
+   "#334155"
+  ]
+ },
+ {
+  "id": 107,
+  "nameBn": "ডার্ক কোবাল্ট স্টিল ডুও",
+  "nameEn": "Dark Cobalt Blue Steel Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #e0e7ff 0%, #1e1b4b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(99, 102, 241, 0.5))",
+  "swatches": [
+   "#e0e7ff",
+   "#1e1b4b"
+  ]
+ },
+ {
+  "id": 108,
+  "nameBn": "স্মোকি রডিয়াম মেটাল ডুও",
+  "nameEn": "Smokey Rhodium Metal Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #f1f5f9 0%, #0f172a 100%)",
+  "dropShadow": "drop-shadow(0px 3px 10px rgba(0,0,0,0.9))",
+  "swatches": [
+   "#f1f5f9",
+   "#0f172a"
+  ]
+ },
+ {
+  "id": 109,
+  "nameBn": "অ্যালুমিনিয়াম সারফেস ডুও",
+  "nameEn": "Pure Aluminium Surface Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #64748b 100%)",
+  "dropShadow": "drop-shadow(0px 2px 5px rgba(0,0,0,0.65))",
+  "swatches": [
+   "#ffffff",
+   "#64748b"
+  ]
+ },
+ {
+  "id": 110,
+  "nameBn": "ব্ল্যাক প্লাটিটিনাম শ্যাডো ডুও",
+  "nameEn": "Black Platinum Velvet Duo",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #cbd5e1 0%, #020617 100%)",
+  "dropShadow": "drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.15))",
+  "swatches": [
+   "#cbd5e1",
+   "#020617"
+  ]
+ },
+ {
+  "id": 111,
+  "nameBn": "ইম্পেরিয়াল রয়্যাল গোল্ড ডুও",
+  "nameEn": "Imperial Royal Gold Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fffbe0 0%, #854d0e 100%)",
+  "dropShadow": "drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.8))",
+  "swatches": [
+   "#fffbe0",
+   "#854d0e"
+  ]
+ },
+ {
+  "id": 112,
+  "nameBn": "রোজ গোল্ড মেটালিক ডুও",
+  "nameEn": "Rose Gold Soft Metallic Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fff1f2 0%, #9f123c 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.65))",
+  "swatches": [
+   "#fff1f2",
+   "#9f123c"
+  ]
+ },
+ {
+  "id": 113,
+  "nameBn": "অ্যানটিক ব্রোঞ্জ ব্রাস ডুও",
+  "nameEn": "Antique Bronze Brass Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef3c7 0%, #78350f 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.85))",
+  "swatches": [
+   "#fef3c7",
+   "#78350f"
+  ]
+ },
+ {
+  "id": 114,
+  "nameBn": "শ্যাম্পেইন শাইনি লাক্স ডুও",
+  "nameEn": "Champagne Luxe Shiny Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #ca8a04 100%)",
+  "dropShadow": "drop-shadow(0px 2px 8px rgba(0,0,0,0.6))",
+  "swatches": [
+   "#ffffff",
+   "#ca8a04"
+  ]
+ },
+ {
+  "id": 115,
+  "nameBn": "ওয়ার্ম কপার মেটাল ডুও",
+  "nameEn": "Warm Copper Gloss Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffedd5 0%, #7c2d12 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.75))",
+  "swatches": [
+   "#ffedd5",
+   "#7c2d12"
+  ]
+ },
+ {
+  "id": 116,
+  "nameBn": "আম্বার হানি লাক্স ডুও",
+  "nameEn": "Amber Honey Gold Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #b45309 100%)",
+  "dropShadow": "drop-shadow(0px 0px 10px rgba(251, 191, 36, 0.35))",
+  "swatches": [
+   "#fef08a",
+   "#b45309"
+  ]
+ },
+ {
+  "id": 117,
+  "nameBn": "ভেনিসিয়ান মেটালিক ব্রাস ডুও",
+  "nameEn": "Venetian Metallic Brass Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef3c7 0%, #854d0e 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#fef3c7",
+   "#854d0e"
+  ]
+ },
+ {
+  "id": 118,
+  "nameBn": "সানসেট গোল্ডেন আম্বার ডুও",
+  "nameEn": "Sunset Golden Amber Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fde047 0%, #ea580c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(249, 115, 22, 0.45))",
+  "swatches": [
+   "#fde047",
+   "#ea580c"
+  ]
+ },
+ {
+  "id": 119,
+  "nameBn": "লিকুইড ২৪কে গোল্ড ডুও",
+  "nameEn": "Liquid 24K Gold Pure Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef9c3 0%, #a16207 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(250, 204, 21, 0.4))",
+  "swatches": [
+   "#fef9c3",
+   "#a16207"
+  ]
+ },
+ {
+  "id": 120,
+  "nameBn": "অ্যাজটেক গোল্ড সানবার্স্ট ডুও",
+  "nameEn": "Aztec Gold Sunburst Duo",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #b45309 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(0,0,0,0.75))",
+  "swatches": [
+   "#ffffff",
+   "#b45309"
+  ]
+ },
+ {
+  "id": 121,
+  "nameBn": "সাইবার নিয়ন সায়ান ডুও",
+  "nameEn": "Cyber Neon Cyan Aura Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #a5f3fc 0%, #0891b2 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.85))",
+  "swatches": [
+   "#a5f3fc",
+   "#0891b2"
+  ]
+ },
+ {
+  "id": 122,
+  "nameBn": "ইলেকট্রিক প্লাজমা মেজেন্টা ডুও",
+  "nameEn": "Electric Plasma Magenta Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #fbcfe8 0%, #be185d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(219, 39, 119, 0.85))",
+  "swatches": [
+   "#fbcfe8",
+   "#be185d"
+  ]
+ },
+ {
+  "id": 123,
+  "nameBn": "টক্সিক নিয়ন লাইম ডুও",
+  "nameEn": "Toxic Cyber Lime Glow Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #f7fee7 0%, #4d7c0f 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(132, 204, 22, 0.8))",
+  "swatches": [
+   "#f7fee7",
+   "#4d7c0f"
+  ]
+ },
+ {
+  "id": 124,
+  "nameBn": "ইলেকট্রিক আল্ট্রামারিন ডুও",
+  "nameEn": "Electric Ultramarine Neon Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #e0e7ff 0%, #3730a3 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(99, 102, 241, 0.8))",
+  "swatches": [
+   "#e0e7ff",
+   "#3730a3"
+  ]
+ },
+ {
+  "id": 125,
+  "nameBn": "লেজার ভায়োলেট প্লাজমা ডুও",
+  "nameEn": "Laser Violet Plasma Glow Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #f3e8ff 0%, #6b21a8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(147, 51, 234, 0.8))",
+  "swatches": [
+   "#f3e8ff",
+   "#6b21a8"
+  ]
+ },
+ {
+  "id": 126,
+  "nameBn": "সনোর অরেঞ্জ প্লাজমা ডুও",
+  "nameEn": "Solar Orange Plasma Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #fff7ed 0%, #c2410c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(234, 88, 12, 0.8))",
+  "swatches": [
+   "#fff7ed",
+   "#c2410c"
+  ]
+ },
+ {
+  "id": 127,
+  "nameBn": "এসডিক গ্রিন প্লাজমা ডুও",
+  "nameEn": "Acidic Green Glow Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #f0fdf4 0%, #15803d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(34, 197, 94, 0.8))",
+  "swatches": [
+   "#f0fdf4",
+   "#15803d"
+  ]
+ },
+ {
+  "id": 128,
+  "nameBn": "আল্ট্রাভায়োলেট সানবার্স্ট ডুও",
+  "nameEn": "Ultraviolet Sunburst Flare Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #fae8ff 0%, #86198f 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(168, 85, 247, 0.8))",
+  "swatches": [
+   "#fae8ff",
+   "#86198f"
+  ]
+ },
+ {
+  "id": 129,
+  "nameBn": "প্লাজমা ইয়েলো ইলেকট্রিক ডুও",
+  "nameEn": "Plasma Yellow Electric Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #fefce8 0%, #a16207 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(250, 204, 21, 0.85))",
+  "swatches": [
+   "#fefce8",
+   "#a16207"
+  ]
+ },
+ {
+  "id": 130,
+  "nameBn": "অ্যাকোয়া সাইবার নিওন ডুও",
+  "nameEn": "Aqua Cyber Pulse Glow Duo",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #ecfeff 0%, #0e7490 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.8))",
+  "swatches": [
+   "#ecfeff",
+   "#0e7490"
+  ]
+ },
+ {
+  "id": 131,
+  "nameBn": "ইমারেল্ড লাক্স গ্রিন ডুও",
+  "nameEn": "Emerald Luxe Rich Green Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #a7f3d0 0%, #047857 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(16, 185, 129, 0.45))",
+  "swatches": [
+   "#a7f3d0",
+   "#047857"
+  ]
+ },
+ {
+  "id": 132,
+  "nameBn": "সানসেট ইনফার্নো গ্লো ডুও",
+  "nameEn": "Sunset Inferno Glow Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ffedd5 0%, #c2410c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 88, 12, 0.5))",
+  "swatches": [
+   "#ffedd5",
+   "#c2410c"
+  ]
+ },
+ {
+  "id": 133,
+  "nameBn": "ওশানিক স্যাফায়ার ব্লু ডুও",
+  "nameEn": "Oceanic Sapphire Deep Blue Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #bfdbfe 0%, #1d4ed8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(37, 99, 235, 0.45))",
+  "swatches": [
+   "#bfdbfe",
+   "#1d4ed8"
+  ]
+ },
+ {
+  "id": 134,
+  "nameBn": "গ্লসি রুবিক রেড ডুও",
+  "nameEn": "Glossy Crimson Ruby Red Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ffe4e6 0%, #be123c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(225, 29, 72, 0.45))",
+  "swatches": [
+   "#ffe4e6",
+   "#be123c"
+  ]
+ },
+ {
+  "id": 135,
+  "nameBn": "ট্রপিক্যাল সানরাইজ ট্রায়ো",
+  "nameEn": "Tropical Sunrise Ramp",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #db2777 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(236, 72, 153, 0.45))",
+  "swatches": [
+   "#fef08a",
+   "#db2777"
+  ]
+ },
+ {
+  "id": 136,
+  "nameBn": "অরোরা বরিয়ালিস লাইট ডুও",
+  "nameEn": "Aurora Borealis Light Gradient Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #bae6fd 0%, #059669 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(52, 211, 153, 0.45))",
+  "swatches": [
+   "#bae6fd",
+   "#059669"
+  ]
+ },
+ {
+  "id": 137,
+  "nameBn": "কোরাল সানসেট ফ্লেয়ার ডুও",
+  "nameEn": "Coral Sunset Flare Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ffedd5 0%, #e11d48 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(251, 113, 133, 0.45))",
+  "swatches": [
+   "#ffedd5",
+   "#e11d48"
+  ]
+ },
+ {
+  "id": 138,
+  "nameBn": "ভায়োলেট ট্রায়ো ব্লেইন্ড",
+  "nameEn": "Sunset Violet Ramp",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #7e22ce 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(168, 85, 247, 0.45))",
+  "swatches": [
+   "#fef08a",
+   "#7e22ce"
+  ]
+ },
+ {
+  "id": 139,
+  "nameBn": "ডিপ ওশান টিল গ্লো ডুও",
+  "nameEn": "Deep Ocean Teal Glow Duo",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ccfbf1 0%, #0f766e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(45, 212, 191, 0.45))",
+  "swatches": [
+   "#ccfbf1",
+   "#0f766e"
+  ]
+ },
+ {
+  "id": 140,
+  "nameBn": "ফায়ার স্পার্ক ইনফিন্টি",
+  "nameEn": "Fire Spark Flame Ramp",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #b91c1c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(249, 115, 22, 0.5))",
+  "swatches": [
+   "#fef08a",
+   "#b91c1c"
+  ]
+ },
+ {
+  "id": 141,
+  "nameBn": "ফ্রস্টেড আইস গ্লাস ক্রিস্টাল",
+  "nameEn": "Frosted Ice Glass Prism",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(14,165,233,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(186,230,253,0.75))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(14,165,233,0.85)"
+  ]
+ },
+ {
+  "id": 142,
+  "nameBn": "ট্রান্সলুসেন্ট রুবিক গ্লাস",
+  "nameEn": "Translucent Ruby Gem Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(190,18,60,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(244,63,94,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(190,18,60,0.85)"
+  ]
+ },
+ {
+  "id": 143,
+  "nameBn": "স্যাফায়ার গ্লাস রিফ্রেকশন",
+  "nameEn": "Sapphire Refractive Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(29,78,216,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(96,165,250,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(29,78,216,0.85)"
+  ]
+ },
+ {
+  "id": 144,
+  "nameBn": "ইমারেল্ড ক্রিস্টাল গ্লাস",
+  "nameEn": "Emerald Frosted Glass",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(4,120,87,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(52,211,153,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(4,120,87,0.85)"
+  ]
+ },
+ {
+  "id": 145,
+  "nameBn": "অ্যামেথিস্ট গ্লাস অউরা",
+  "nameEn": "Amethyst Prism Glass Aura",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(126,34,206,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(192,132,252,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(126,34,206,0.85)"
+  ]
+ },
+ {
+  "id": 146,
+  "nameBn": "টোপাজ গোল্ডেন গ্লাস",
+  "nameEn": "Topaz Amber Glass Shimmer",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(180,83,9,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(250,204,21,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(180,83,9,0.85)"
+  ]
+ },
+ {
+  "id": 147,
+  "nameBn": "ডায়মন্ড গ্লাস প্রিজম",
+  "nameEn": "Diamond Clear Glass Prism",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(71,85,105,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(255,255,255,0.8))",
+  "swatches": [
+   "rgba(255,255,255,1)",
+   "rgba(71,85,105,0.85)"
+  ]
+ },
+ {
+  "id": 148,
+  "nameBn": "ওপাল গ্লাস স্পেকট্রাম",
+  "nameEn": "Opal Iridescent Glass Ramp",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, #f472b6 0%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(255,255,255,0.6))",
+  "swatches": [
+   "#f472b6",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 149,
+  "nameBn": "জেড ডাইনেস্টি গ্লাস",
+  "nameEn": "Jade Dynasty Glass Refract",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(15,118,110,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(16,185,129,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(15,118,110,0.85)"
+  ]
+ },
+ {
+  "id": 150,
+  "nameBn": "গার্নেট গ্লাস ফায়ার",
+  "nameEn": "Garnet Glass Fire Glow",
+  "category": "jewel",
+  "textColor": "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(185,28,28,0.85) 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(239,68,68,0.65))",
+  "swatches": [
+   "rgba(255,255,255,0.95)",
+   "rgba(185,28,28,0.85)"
+  ]
+ },
+ {
+  "id": 151,
+  "nameBn": "কোটন ক্যান্ডি প্যাস্টেল ডুও",
+  "nameEn": "Pastel Cotton Candy Soft Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #fbcfe8 0%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(244, 114, 182, 0.35))",
+  "swatches": [
+   "#fbcfe8",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 152,
+  "nameBn": "সফট ল্যাভেন্ডার ফগ ডুও",
+  "nameEn": "Soft Lavender Fog Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #c084fc 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(192, 132, 252, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#c084fc"
+  ]
+ },
+ {
+  "id": 153,
+  "nameBn": "মিন্টি ব্রিজ প্যাস্টেল ডুও",
+  "nameEn": "Minty Breeze Soft Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #34d399 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(52, 211, 153, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#34d399"
+  ]
+ },
+ {
+  "id": 154,
+  "nameBn": "পিচ শরবত সফট গ্লো ডুও",
+  "nameEn": "Peach Sorbet Soft Glow Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #fb923c 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(251, 146, 60, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fb923c"
+  ]
+ },
+ {
+  "id": 155,
+  "nameBn": "বাটারকাপ ইয়েলো ডাস্ক ডুও",
+  "nameEn": "Buttercup Yellow Soft Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #facc15 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(250, 204, 21, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#facc15"
+  ]
+ },
+ {
+  "id": 156,
+  "nameBn": "বেবি ব্লউ ক্লাউড প্যাস্টেল ডুও",
+  "nameEn": "Baby Blue Cloud Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(56, 189, 248, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 157,
+  "nameBn": "রোজ কোয়ার্টজ ফগ ডুও",
+  "nameEn": "Rose Quartz Fog Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #f472b6 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(244, 114, 182, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#f472b6"
+  ]
+ },
+ {
+  "id": 158,
+  "nameBn": "পিস্তাচিও গ্রিন ড্রিম ডুও",
+  "nameEn": "Pistachio Green Soft Dream Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #4ade80 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(74, 222, 128, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#4ade80"
+  ]
+ },
+ {
+  "id": 159,
+  "nameBn": "লাইলাক ক্লাউড প্যাস্টেল ডুও",
+  "nameEn": "Lilac Cloud Soft Pastel Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #a78bfa 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(167, 139, 250, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#a78bfa"
+  ]
+ },
+ {
+  "id": 160,
+  "nameBn": "ভ্যানিলা ক্রিম ড্রিম ডুও",
+  "nameEn": "Vanilla Cream Soft Dream Duo",
+  "category": "pastel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #fde047 100%)",
+  "dropShadow": "drop-shadow(0px 3px 8px rgba(253, 224, 71, 0.35))",
+  "swatches": [
+   "#ffffff",
+   "#fde047"
+  ]
+ },
+ {
+  "id": 161,
+  "nameBn": "ভ্যাপারওয়েভ রেট্রো ৮০s ডুও",
+  "nameEn": "Vaporwave Retro 80s Neon Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #22d3ee 0%, #f43f5e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(232, 121, 249, 0.6))",
+  "swatches": [
+   "#22d3ee",
+   "#f43f5e"
+  ]
+ },
+ {
+  "id": 162,
+  "nameBn": "সানসেট গ্রিড ৮০s ডুও",
+  "nameEn": "80s Sunset Grid Outrun Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #a855f7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(249, 115, 22, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 163,
+  "nameBn": "সাইবার পিংক সিন্থওয়েভ ডুও",
+  "nameEn": "Cyber Pink Synthwave Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #e11d48 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(244, 63, 94, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#e11d48"
+  ]
+ },
+ {
+  "id": 164,
+  "nameBn": "আউটরান আম্বার ৮০s ডুও",
+  "nameEn": "Outrun Amber Sunset Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #fde047 0%, #b91c1c 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(251, 146, 60, 0.6))",
+  "swatches": [
+   "#fde047",
+   "#b91c1c"
+  ]
+ },
+ {
+  "id": 165,
+  "nameBn": "কসমিক ভায়োলেট সিন্থ ডুও",
+  "nameEn": "Cosmic Violet Synth Glow Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #38bdf8 0%, #7e22ce 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(168, 85, 247, 0.6))",
+  "swatches": [
+   "#38bdf8",
+   "#7e22ce"
+  ]
+ },
+ {
+  "id": 166,
+  "nameBn": "সিন্থওয়েভ সায়ান পিংক ডুও",
+  "nameEn": "Synthwave Cyan Pink Blend Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #06b6d4 0%, #ec4899 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(236, 72, 153, 0.6))",
+  "swatches": [
+   "#06b6d4",
+   "#ec4899"
+  ]
+ },
+ {
+  "id": 167,
+  "nameBn": "হট মেজেন্টা রেট্রো ৮০s ডুও",
+  "nameEn": "Hot Magenta Retro 80s Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #fde047 0%, #be185d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(219, 39, 119, 0.6))",
+  "swatches": [
+   "#fde047",
+   "#be185d"
+  ]
+ },
+ {
+  "id": 168,
+  "nameBn": "হরাইজন গোল্ডেন ৮০s ডুও",
+  "nameEn": "Horizon Gold 80s Sunset Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #581c87 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 88, 12, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#581c87"
+  ]
+ },
+ {
+  "id": 169,
+  "nameBn": "মিডনাইট সাইবার রেট্রো ডুও",
+  "nameEn": "Midnight Cyber Retro Drive Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #a5f3fc 0%, #1e1b4b 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(2, 132, 199, 0.6))",
+  "swatches": [
+   "#a5f3fc",
+   "#1e1b4b"
+  ]
+ },
+ {
+  "id": 170,
+  "nameBn": "নিওন নাইট ড্রাইভ ডুও",
+  "nameEn": "Neon Night Drive Synth Duo",
+  "category": "synthwave",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.6))",
+  "swatches": [
+   "#fef08a",
+   "#38bdf8"
+  ]
+ },
+ {
+  "id": 171,
+  "nameBn": "ডিপ স্পেস নেবুলা ডুও",
+  "nameEn": "Deep Space Nebula Flare Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #c084fc 0%, #2563eb 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(192, 132, 252, 0.65))",
+  "swatches": [
+   "#c084fc",
+   "#2563eb"
+  ]
+ },
+ {
+  "id": 172,
+  "nameBn": "সেলেস্টিন গোল্ডেন স্পার্ক ডুও",
+  "nameEn": "Celestial Golden Spark Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #a16207 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 179, 8, 0.55))",
+  "swatches": [
+   "#ffffff",
+   "#a16207"
+  ]
+ },
+ {
+  "id": 173,
+  "nameBn": "লুনার ফ্রস্টেড সিলভার ডুও",
+  "nameEn": "Lunar Frosted Silver Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #334155 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(226, 232, 240, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#334155"
+  ]
+ },
+ {
+  "id": 174,
+  "nameBn": "সোলার ফ্লেয়ার গ্লো ডুও",
+  "nameEn": "Solar Flare Glow Cosmic Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #fde047 0%, #dc2626 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(249, 115, 22, 0.65))",
+  "swatches": [
+   "#fde047",
+   "#dc2626"
+  ]
+ },
+ {
+  "id": 175,
+  "nameBn": "স্টারলাইট আইস সিলভার ডুও",
+  "nameEn": "Starlight Ice Silver Glow Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #0284c7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(125, 211, 252, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#0284c7"
+  ]
+ },
+ {
+  "id": 176,
+  "nameBn": "অ্যাস্ট্রাল ভায়োলেট কসমস ডুও",
+  "nameEn": "Astral Violet Cosmos Glow Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #581c87 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(168, 85, 247, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#581c87"
+  ]
+ },
+ {
+  "id": 177,
+  "nameBn": "ওরিয়ন গ্যলাক্সি ব্লু ডুও",
+  "nameEn": "Orion Galaxy Deep Blue Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #1e3a8a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(59, 130, 246, 0.65))",
+  "swatches": [
+   "#ffffff",
+   "#1e3a8a"
+  ]
+ },
+ {
+  "id": 178,
+  "nameBn": "সুপারনোভা ইয়েলো সানবার্স্ট ডুও",
+  "nameEn": "Supernova Yellow Sunburst Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #ca8a04 100%)",
+  "dropShadow": "drop-shadow(0px 0px 18px rgba(250, 204, 21, 0.7))",
+  "swatches": [
+   "#ffffff",
+   "#ca8a04"
+  ]
+ },
+ {
+  "id": 179,
+  "nameBn": "কমিক ডাস্ট সিলভার ডুও",
+  "nameEn": "Comet Dust Silver Glow Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #f8fafc 0%, #0f172a 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(203, 213, 225, 0.5))",
+  "swatches": [
+   "#f8fafc",
+   "#0f172a"
+  ]
+ },
+ {
+  "id": 180,
+  "nameBn": "অ্যাঞ্জেলিক প্রিজম অউরা ডুও",
+  "nameEn": "Angelic Prism Aura Glow Duo",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #fbcfe8 0%, #3b82f6 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(251, 207, 232, 0.65))",
+  "swatches": [
+   "#fbcfe8",
+   "#3b82f6"
+  ]
+ },
+ {
+  "id": 181,
+  "nameBn": "রেডিয়াল গোল্ডেন কোর",
+  "nameEn": "Golden Core Flare Ramp",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #854d0e 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(250, 204, 21, 0.5))",
+  "swatches": [
+   "#ffffff",
+   "#854d0e"
+  ]
+ },
+ {
+  "id": 182,
+  "nameBn": "রেডিয়াল সায়ান আইস কোর",
+  "nameEn": "Cyan Ice Core Ramp",
+  "category": "neon",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #0891b2 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(6, 182, 212, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#0891b2"
+  ]
+ },
+ {
+  "id": 183,
+  "nameBn": "অ্যাঙ্গুলার মেটালিক ক্রোমা",
+  "nameEn": "Angular Metallic Chroma Ramp",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #1e293b 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.85))",
+  "swatches": [
+   "#ffffff",
+   "#1e293b"
+  ]
+ },
+ {
+  "id": 184,
+  "nameBn": "প্রিজম্যাটিক সানবার্স্ট ব্লেইন্ড",
+  "nameEn": "Prismatic Sunburst Ramp",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #f43f5e 0%, #a855f7 100%)",
+  "dropShadow": "drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.35))",
+  "swatches": [
+   "#f43f5e",
+   "#a855f7"
+  ]
+ },
+ {
+  "id": 185,
+  "nameBn": "ফায়ার অ্যান্ড আইস ফিউশন",
+  "nameEn": "Fire & Ice Fusion Ramp",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #ef4444 0%, #3b82f6 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(56, 189, 248, 0.5))",
+  "swatches": [
+   "#ef4444",
+   "#3b82f6"
+  ]
+ },
+ {
+  "id": 186,
+  "nameBn": "রয়্যাল পার্পল গোল্ড স্পার্ক",
+  "nameEn": "Royal Purple Gold Ramp",
+  "category": "gold",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #3b0764 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(234, 179, 8, 0.5))",
+  "swatches": [
+   "#fef08a",
+   "#3b0764"
+  ]
+ },
+ {
+  "id": 187,
+  "nameBn": "কসমিক টিল পিংক ডাস্ট",
+  "nameEn": "Cosmic Teal Pink Ramp",
+  "category": "cosmic",
+  "textColor": "linear-gradient(135deg, #2dd4bf 0%, #ec4899 100%)",
+  "dropShadow": "drop-shadow(0px 0px 14px rgba(45, 212, 191, 0.5))",
+  "swatches": [
+   "#2dd4bf",
+   "#ec4899"
+  ]
+ },
+ {
+  "id": 188,
+  "nameBn": "প্লাটিটিনাম ব্রোঞ্জ লাক্স",
+  "nameEn": "Platinum Bronze Ramp",
+  "category": "steel",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #78350f 100%)",
+  "dropShadow": "drop-shadow(0px 4px 10px rgba(0,0,0,0.8))",
+  "swatches": [
+   "#ffffff",
+   "#78350f"
+  ]
+ },
+ {
+  "id": 189,
+  "nameBn": "ভলকানিক লাভা গ্লো",
+  "nameEn": "Volcanic Lava Deep Ramp",
+  "category": "gradient",
+  "textColor": "linear-gradient(135deg, #fef08a 0%, #7f1d1d 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(239, 68, 68, 0.65))",
+  "swatches": [
+   "#fef08a",
+   "#7f1d1d"
+  ]
+ },
+ {
+  "id": 190,
+  "nameBn": "আল্টিমেট প্রিজম ক্রোম",
+  "nameEn": "Ultimate Prism Chrome Ramp",
+  "category": "duotone",
+  "textColor": "linear-gradient(135deg, #ffffff 0%, #38bdf8 100%)",
+  "dropShadow": "drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.6))",
+  "swatches": [
+   "#ffffff",
+   "#38bdf8"
+  ]
+ }
+]

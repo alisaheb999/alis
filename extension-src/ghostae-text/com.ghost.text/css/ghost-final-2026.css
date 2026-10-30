@@ -1,0 +1,247 @@
+/* GHOSTAE Text — Final polish 2026 (loads LAST, additive only) */
+
+/* 1 · Expression titles hidden (hover pop keeps the name) */
+.ghost-toolkit-body .tk-expr-card > .tk-expr-label,
+.ghost-toolkit-body .tk-expr-card > .tk-expr-card-title,
+.ghost-toolkit-body .tk-expr-card > .tk-expr-name,
+.ghost-toolkit-body .tk-expr-card > h3,
+.ghost-toolkit-body .tk-expr-card > figcaption,
+.ghost-toolkit-body .tk-expr-card > span:not([class]) { display: none !important; }
+.ghost-toolkit-body .tk-expr-card { justify-content: center !important; gap: 0 !important; height: 56px !important; }
+.ghost-toolkit-body .tk-expr-card .tk-expr-pop h3 { display: block !important; }
+
+/* 2 · Style tab background — soft black with a hint of grey */
+.ghost-toolkit-body #tab-color.tools-tab-panel,
+.ghost-toolkit-body #tab-color .tk-ts-section,
+.ghost-toolkit-body #tab-color .tk-grid,
+.ghost-toolkit-body #tab-color .ge-grid-wrap { background: #141414 !important; }
+.ghost-toolkit-body #tab-color .tk-ts-head,
+.ghost-toolkit-body #tab-color .tk-ts-sechead { background: #141414 !important; border-color: rgba(255,255,255,.06) !important; }
+.ghost-toolkit-body #tab-color .tk-card { background: #1b1b1b !important; border-color: rgba(255,255,255,.07) !important; }
+
+/* 3 · Emoji: tidy, category-aligned grid */
+.ghost-toolkit-body .ge-cat-bar { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; padding: 6px 0 8px !important; justify-content: flex-start !important; }
+.ghost-toolkit-body .ge-cat-bar > * { flex: 0 0 auto !important; border-radius: 999px !important; padding: 4px 10px !important; font-size: 11px !important; line-height: 1.4 !important; }
+.ghost-toolkit-body .tk-emoji-grid.ge-asset-grid { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)) !important; gap: 6px !important; align-items: stretch !important; justify-items: stretch !important; padding: 4px 0 10px !important; }
+.ghost-toolkit-body .ge-asset-tile { display: flex !important; align-items: center !important; justify-content: center !important; aspect-ratio: 1 / 1; width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; border-radius: 10px !important; }
+.ghost-toolkit-body .ge-tile-glyph { font-size: 19px !important; line-height: 1 !important; }
+
+/* 4 · Fast tab transition */
+.ghost-toolkit-body .tools-tab-panel.active { animation: gfTabIn 140ms cubic-bezier(.22,.61,.36,1) both; will-change: opacity, transform; contain: layout paint; }
+@keyframes gfTabIn { from { opacity: 0; transform: translate3d(0,6px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
+.ghost-toolkit-body .tools-shell.gf-switching * { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) { .ghost-toolkit-body .tools-tab-panel.active { animation: none; } }
+
+/* 5 · Plan chip */
+.ghost-toolkit-body .gf-plan-chip { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 9px; margin-left: 4px; border-radius: 999px; border: 1px solid rgba(255,214,130,.35); background: linear-gradient(180deg, rgba(255,205,110,.18), rgba(255,165,60,.10)); color: #ffd79a; font-size: 10px; font-weight: 600; letter-spacing: .02em; white-space: nowrap; cursor: default; }
+.ghost-toolkit-body .gf-plan-chip svg { width: 12px; height: 12px; }
+
+/* 6 · Retired controls */
+.ghost-toolkit-body .tools-tab[data-tab="advanced"],
+.ghost-toolkit-body #tab-anim .tk-catbtn-wrap,
+.ghost-toolkit-body #tab-anim .tk-langbtn-wrap,
+.ghost-toolkit-body .gp2-lang-row { display: none !important; }
+
+/* ══ v12 · Clean-surface pass (no extra borders, true-black style tab) ══ */
+
+/* A · Style tab surfaces = true black, no boxes */
+.ghost-toolkit-body #tab-color,
+.ghost-toolkit-body #tab-color.tools-tab-panel,
+.ghost-toolkit-body #tab-color .tk-ts-section,
+.ghost-toolkit-body #tab-color .tk-grid,
+.ghost-toolkit-body #tab-color .ge-grid-wrap,
+.ghost-toolkit-body #tab-color .tk-ts-sechead,
+.ghost-toolkit-body #tab-color .tk-ts-sechead.gp2-sechead,
+.ghost-toolkit-body #tab-anim .tk-ts-sechead,
+.ghost-toolkit-body #tab-anim .tk-ts-sechead.gp2-sechead {
+    background: #0a0a0a !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+.ghost-toolkit-body #tab-color .tk-card,
+.ghost-toolkit-body #tab-color .tk-ffx-card,
+.ghost-toolkit-body #tab-color .tk-web-card {
+    background: #0d0d0d !important;
+    border: 1px solid rgba(255,255,255,.05) !important;
+    box-shadow: none !important;
+}
+
+/* B · Section headers: flat label + one hairline rule only */
+.ghost-toolkit-body .tk-ts-sechead.gp2-sechead {
+    padding: 0 !important;
+    margin: 10px 8px 6px !important;
+    border-radius: 0 !important;
+}
+.ghost-toolkit-body .tk-ts-sechead .gp2-sectitle {
+    background: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    color: rgba(255,255,255,.58) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .13em !important;
+    text-transform: uppercase !important;
+}
+.ghost-toolkit-body .tk-ts-sechead .gp2-rule {
+    flex: 1 1 auto !important;
+    height: 1px !important;
+    background: rgba(255,255,255,.07) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-ts-sechead .tk-panel-toolbar,
+.ghost-toolkit-body .tk-ts-sechead .gp2-style-toolbar,
+.ghost-toolkit-body .tk-ts-sechead .tk-icon-btn,
+.ghost-toolkit-body .tk-ts-sechead .tk-sec-play {
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-ts-sechead .tk-icon-btn:hover {
+    background: rgba(255,255,255,.06) !important;
+    border-radius: 6px !important;
+}
+.ghost-toolkit-body .tk-sec-badge {
+    background: rgba(80,220,150,.12) !important;
+    border: 0 !important;
+    color: #6fe3ab !important;
+    font-size: 9px !important;
+    letter-spacing: .1em !important;
+    padding: 2px 7px !important;
+    border-radius: 999px !important;
+}
+
+/* C · Plan chip — icon only (pro marker) */
+.ghost-toolkit-body .gf-plan-chip {
+    border: 0 !important;
+    background: rgba(112, 210, 160, .12) !important;
+    color: #7fd8ac !important;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    justify-content: center !important;
+}
+.ghost-toolkit-body .gf-plan-chip svg { display: block !important; width: 13px !important; height: 13px !important; }
+.ghost-toolkit-body .gf-plan-name { display: none !important; }
+
+/* C2 · Global search bar removed */
+.ghost-toolkit-body #tkSearchBox { display: none !important; }
+
+
+/* D · Emoji tab — calm, spacious, no boxed clutter */
+.ghost-toolkit-body #tab-emoji,
+.ghost-toolkit-body #tab-emoji .ge-grid-wrap,
+.ghost-toolkit-body #tab-emoji .ge-head,
+.ghost-toolkit-body #tab-emoji .tk-emoji-host {
+    background: #0a0a0a !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .ge-head {
+    padding: 10px 10px 4px !important;
+    gap: 8px !important;
+}
+.ghost-toolkit-body .ge-head-title {
+    color: rgba(255,255,255,.55) !important;
+    font-size: 10px !important;
+    letter-spacing: .13em !important;
+    text-transform: uppercase !important;
+    background: none !important;
+    border: 0 !important;
+}
+.ghost-toolkit-body .ge-head-rule { background: rgba(255,255,255,.07) !important; border: 0 !important; }
+.ghost-toolkit-body .ge-cat-bar {
+    gap: 5px !important;
+    padding: 4px 10px 10px !important;
+    border-bottom: 1px solid rgba(255,255,255,.05) !important;
+}
+.ghost-toolkit-body .ge-cat-pill,
+.ghost-toolkit-body .ge-cat-bar > button {
+    border: 0 !important;
+    background: rgba(255,255,255,.05) !important;
+    color: rgba(255,255,255,.66) !important;
+    height: 24px !important;
+    padding: 0 11px !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    border-radius: 999px !important;
+    transition: background 120ms linear, color 120ms linear;
+}
+.ghost-toolkit-body .ge-cat-pill:hover,
+.ghost-toolkit-body .ge-cat-bar > button:hover { background: rgba(255,255,255,.09) !important; color: #fff !important; }
+.ghost-toolkit-body .ge-cat-pill.ge-cur,
+.ghost-toolkit-body .ge-cat-bar > button.ge-cur,
+.ghost-toolkit-body .ge-cat-bar > button.active {
+    background: rgba(112,210,160,.16) !important;
+    color: #86e0b4 !important;
+}
+.ghost-toolkit-body .tk-emoji-grid.ge-asset-grid {
+    grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)) !important;
+    gap: 4px !important;
+    padding: 10px !important;
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
+}
+.ghost-toolkit-body .ge-asset-tile {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 9px !important;
+    transition: background 110ms linear, transform 110ms linear;
+}
+.ghost-toolkit-body .ge-asset-tile:hover { background: rgba(255,255,255,.07) !important; transform: translate3d(0,-1px,0); }
+.ghost-toolkit-body .ge-tile-glyph { font-size: 21px !important; }
+
+/* E · Expression toolbar / search — single quiet surface */
+.ghost-toolkit-body #tab-expression .tk-expr-toolbar,
+.ghost-toolkit-body #tab-expression .tk-expr-head,
+.ghost-toolkit-body #tab-expression .tk-expr-cats {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 8px 10px !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-head { border-bottom: 1px solid rgba(255,255,255,.05) !important; }
+.ghost-toolkit-body #tab-expression .tk-select,
+.ghost-toolkit-body #tab-expression .tk-expr-reference-search {
+    background: rgba(255,255,255,.05) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: rgba(255,255,255,.85) !important;
+    border-radius: 8px !important;
+    height: 26px !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-reference-search:focus {
+    background: rgba(255,255,255,.09) !important;
+    outline: 1px solid rgba(112,210,160,.35) !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-reference-icon,
+.ghost-toolkit-body #tab-expression .tk-expr-reference-actions .tk-icon-btn {
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-cat {
+    background: rgba(255,255,255,.05) !important;
+    border: 0 !important;
+    color: rgba(255,255,255,.66) !important;
+    border-radius: 999px !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-cat.active,
+.ghost-toolkit-body #tab-expression .tk-expr-cat[aria-selected="true"] {
+    background: rgba(112,210,160,.16) !important;
+    color: #86e0b4 !important;
+}
+.ghost-toolkit-body #tab-expression .tk-expr-card {
+    background: #0f0f0f !important;
+    border: 1px solid rgba(255,255,255,.05) !important;
+    box-shadow: none !important;
+}
+
+/* F · Performance */
+.ghost-toolkit-body .tk-grid,
+.ghost-toolkit-body .tk-expr-grid { content-visibility: auto; contain-intrinsic-size: 800px; }
+.ghost-toolkit-body .tools-tab-panel:not(.active) { content-visibility: hidden; }

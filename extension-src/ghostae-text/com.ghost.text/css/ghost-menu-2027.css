@@ -1,0 +1,450 @@
+/*!
+ * Ghostae Text — Menu 2027 (v3.29.0)
+ * Visual-only layer. Rebuilds the top toolbar to match the ultra-premium
+ * glass menu design: glossy dark panel, pill tabs with gradient active state,
+ * expandable search + one 6-dot overflow menu. Bottom animation toolbar keeps
+ * three icons (play/pause, favourites, overflow with category + language).
+ * No animation keyframes for cards, no logic touched.
+ */
+
+/* ── Top toolbar shell: one glossy glass panel ─────────────────────── */
+.ghost-toolkit-body .tools-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 5px 5px 3px !important;
+    padding: 4px !important;
+    border: 0 !important;
+    border-radius: 13px !important;
+    background: rgba(17, 19, 25, .96) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .55), inset 0 0 0 .5px rgba(255, 255, 255, .05) !important;
+}
+
+.ghost-toolkit-body .tk-tabs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    padding: 1px !important;
+    background: none !important;
+    border: 0 !important;
+}
+.ghost-toolkit-body .tk-tabs::-webkit-scrollbar { height: 0; }
+
+.ghost-toolkit-body .tk-tabs .tools-tab {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    height: 25px !important;
+    padding: 0 8px !important;
+    min-height: 0 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(156, 163, 175, 1) !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: .005em;
+    white-space: nowrap;
+    transition: color .2s ease, background .25s ease, box-shadow .25s ease;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab:hover {
+    color: #e5e7eb !important;
+    background: rgba(255, 255, 255, .05) !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab.active,
+.ghost-toolkit-body .tk-tabs .tools-tab[aria-selected="true"] {
+    color: #fff !important;
+    background: linear-gradient(90deg, #4f46e5, #2563eb 55%, #4f46e5) !important;
+    box-shadow: 0 0 22px rgba(79, 70, 229, .45), inset 0 1px 0 rgba(255, 255, 255, .18) !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab svg {
+    width: 13px !important;
+    height: 13px !important;
+    transition: transform .2s ease;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab:hover svg { transform: scale(1.1); }
+.ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-count { display: none !important; }
+.ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-name { display: inline !important; }
+
+/* ── Right actions: search + one dot menu only ─────────────────────── */
+.ghost-toolkit-body .tk-right-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 4px !important;
+    padding-left: 6px;
+    border: 0 !important;
+    background: none !important;
+    flex: 0 0 auto;
+}
+.ghost-toolkit-body .tk-search { gap: 0 !important; }
+.ghost-toolkit-body .tk-search-toggle,
+.ghost-toolkit-body .gm-dots {
+    width: 25px;
+    height: 25px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(156, 163, 175, 1) !important;
+    cursor: pointer;
+    transition: color .18s ease, background .18s ease, transform .12s ease;
+}
+.ghost-toolkit-body .tk-search-toggle:hover,
+.ghost-toolkit-body .gm-dots:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, .1) !important;
+}
+.ghost-toolkit-body .gm-dots:active { transform: scale(.95); }
+.ghost-toolkit-body .gm-dots.is-open {
+    color: #fff !important;
+    background: rgba(255, 255, 255, .12) !important;
+}
+.ghost-toolkit-body .gm-dots svg { width: 13px; height: 13px; }
+.ghost-toolkit-body .tk-search-toggle svg { width: 13px; height: 13px; }
+
+.ghost-toolkit-body #tkSearch,
+.ghost-toolkit-body .tk-search input {
+    border: 0 !important;
+    border-radius: 11px !important;
+    background: rgba(255, 255, 255, .08) !important;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    padding: 0 10px !important;
+}
+.ghost-toolkit-body #tkSearch:focus { background: rgba(255, 255, 255, .14) !important; }
+
+/* upgrade button lives inside the overflow menu now */
+.ghost-toolkit-body .tk-right-actions > .plan-upgrade-button { display: none !important; }
+
+/* ── Popover menus (glossy, borderless) ────────────────────────────── */
+.ghost-toolkit-body .gm-wrap { position: relative; display: inline-flex; }
+.ghost-toolkit-body .gm-pop {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 186px;
+    z-index: 999;
+    padding: 6px;
+    border: 0;
+    border-radius: 15px;
+    background: rgba(22, 24, 34, .97);
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 255, 255, .07);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.ghost-toolkit-body .gm-pop[hidden] { display: none; }
+.ghost-toolkit-body .gm-pop.gm-pop-up { top: auto; bottom: calc(100% + 8px); }
+.ghost-toolkit-body .gm-pop.gm-pop-left { right: auto; left: 0; }
+.ghost-toolkit-body .gm-item {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 0 !important;
+    padding: 7px 9px !important;
+    border: 0 !important;
+    border-radius: 11px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(209, 213, 219, 1) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-align: left;
+    cursor: pointer;
+    transition: background .16s ease, color .16s ease;
+}
+.ghost-toolkit-body .gm-item:hover {
+    background: rgba(255, 255, 255, .1) !important;
+    color: #fff !important;
+}
+.ghost-toolkit-body .gm-item svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.ghost-toolkit-body .gm-item.gm-ink-indigo svg { color: #818cf8; }
+.ghost-toolkit-body .gm-item.gm-ink-blue svg { color: #60a5fa; }
+.ghost-toolkit-body .gm-item.gm-ink-cyan svg { color: #22d3ee; }
+.ghost-toolkit-body .gm-item.gm-ink-amber svg { color: #fbbf24; }
+.ghost-toolkit-body .gm-sep { height: 1px; margin: 4px 6px; background: rgba(255, 255, 255, .09); }
+
+/* moved category / language controls inside the bottom popover */
+.ghost-toolkit-body .gm-pop .tk-catbtn-wrap,
+.ghost-toolkit-body .gm-pop .tk-langbtn-wrap { display: block; width: 100%; }
+.ghost-toolkit-body .gm-pop .tk-catbtn,
+.ghost-toolkit-body .gm-pop .tk-langbtn {
+    width: 100% !important;
+    height: auto !important;
+    justify-content: flex-start !important;
+    gap: 10px;
+    padding: 7px 9px !important;
+    border-radius: 11px !important;
+    font-size: 11px !important;
+    color: rgba(209, 213, 219, 1) !important;
+}
+.ghost-toolkit-body .gm-pop .tk-catbtn:hover,
+.ghost-toolkit-body .gm-pop .tk-langbtn:hover {
+    background: rgba(255, 255, 255, .1) !important;
+    color: #fff !important;
+}
+.ghost-toolkit-body .gm-pop .tk-catbtn-label {
+    display: inline !important;
+    font-weight: 500;
+}
+.ghost-toolkit-body .gm-pop .tk-catbtn-count { display: none !important; }
+
+/* ── Bottom animation toolbar: exactly three icons ─────────────────── */
+.ghost-toolkit-body .tk-panel-toolbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    padding: 4px 8px !important;
+    border: 0 !important;
+    background: none !important;
+}
+.ghost-toolkit-body .tk-panel-toolbar .tk-icon-btn,
+.ghost-toolkit-body .tk-panel-toolbar .tk-bm-filter,
+.ghost-toolkit-body .tk-panel-toolbar .gm-dots {
+    width: 22px;
+    min-width: 22px !important;
+    height: 22px;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 0 !important;
+    border-radius: 7px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(156, 163, 175, 1) !important;
+}
+.ghost-toolkit-body .tk-panel-toolbar .tk-icon-btn:hover,
+.ghost-toolkit-body .tk-panel-toolbar .tk-bm-filter:hover,
+.ghost-toolkit-body .tk-panel-toolbar .gm-dots:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, .08) !important;
+}
+.ghost-toolkit-body .tk-panel-toolbar .tk-bm-filter[aria-pressed="true"] { color: #fbbf24 !important; }
+.ghost-toolkit-body .tk-panel-toolbar .tk-bm-filter span,
+.ghost-toolkit-body .tk-panel-toolbar #tkBookmarkCount { display: none !important; }
+.ghost-toolkit-body .tk-panel-toolbar svg { width: 12px; height: 12px; }
+.ghost-toolkit-body .tk-panel-toolbar > *,
+.ghost-toolkit-body .tk-panel-toolbar > *:first-child { margin-left: 0 !important; margin-right: 0 !important; }
+
+/* ── Card controls: favourite plain, votes as soft squares ─────────── */
+.ghost-toolkit-body .tk-card .tk-bm-star {
+    background: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+.ghost-toolkit-body .tk-card .tk-bm-star:hover { background: none !important; }
+
+/* (vote control styling is defined once, at the end of this file) */
+
+
+
+/* ══ Bottom overflow popover: category + language, new design ═══════ */
+.ghost-toolkit-body .gm-pop .tk-catbtn,
+.ghost-toolkit-body .gm-pop .tk-langbtn {
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+}
+.ghost-toolkit-body .gm-pop .tk-catbtn svg,
+.ghost-toolkit-body .gm-pop .tk-langbtn svg { color: #818cf8; }
+.ghost-toolkit-body .gm-pop .tk-langbtn-flag { display: none !important; }
+.ghost-toolkit-body .gm-lang-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: inherit;
+    white-space: nowrap;
+}
+
+/* the category / language dropdowns themselves — glass, borderless */
+.ghost-toolkit-body .tk-catmenu,
+.ghost-toolkit-body .tk-langmenu {
+    position: absolute;
+    right: calc(100% + 8px);
+    left: auto;
+    bottom: 0;
+    top: auto;
+    z-index: 1000;
+    min-width: 176px;
+    max-height: 190px;
+    overflow-y: auto;
+
+    padding: 6px !important;
+    border: 0 !important;
+    border-radius: 15px !important;
+    background: rgba(26, 28, 38, .98) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    box-shadow: 0 22px 54px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 255, 255, .07) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.ghost-toolkit-body .tk-catmenu[hidden],
+.ghost-toolkit-body .tk-langmenu[hidden] { display: none !important; }
+.ghost-toolkit-body .tk-catmenu::-webkit-scrollbar,
+.ghost-toolkit-body .tk-langmenu::-webkit-scrollbar { width: 6px; }
+.ghost-toolkit-body .tk-catmenu::-webkit-scrollbar-thumb,
+.ghost-toolkit-body .tk-langmenu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .14);
+    border-radius: 999px;
+}
+.ghost-toolkit-body .tk-catmenu-item,
+.ghost-toolkit-body .tk-langmenu-item {
+    display: flex !important;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 0 !important;
+    padding: 7px 9px !important;
+    border: 0 !important;
+    border-radius: 11px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(209, 213, 219, 1) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-align: left;
+    transition: background .16s ease, color .16s ease;
+}
+.ghost-toolkit-body .tk-catmenu-item:hover,
+.ghost-toolkit-body .tk-langmenu-item:hover {
+    background: rgba(255, 255, 255, .1) !important;
+    color: #fff !important;
+}
+.ghost-toolkit-body .tk-catmenu-item.active,
+.ghost-toolkit-body .tk-langmenu-item.active {
+    background: rgba(99, 102, 241, .18) !important;
+    color: #c7d2fe !important;
+}
+.ghost-toolkit-body .tk-catmenu-count {
+    margin-left: auto;
+    font-size: 9.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .34) !important;
+    background: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+.ghost-toolkit-body .tk-langmenu-flag {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 auto;
+    font-size: 0 !important;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .22);
+}
+.ghost-toolkit-body .tk-langmenu-item.active .tk-langmenu-flag { background: #818cf8; }
+.ghost-toolkit-body .tk-langmenu-name { font-size: 11px; }
+
+/* inside the bottom overflow popover the lists expand in place, so they can
+   never be clipped by the panel edge */
+.ghost-toolkit-body .gm-pop .tk-catmenu,
+.ghost-toolkit-body .gm-pop .tk-langmenu {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-height: 168px !important;
+    margin: 2px 0 0 !important;
+    padding: 2px !important;
+    border-radius: 11px !important;
+    background: rgba(255, 255, 255, .05) !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+
+/* ══ Liquid-glass tab switching ═════════════════════════════════════ */
+.ghost-toolkit-body .tools-tab-panel {
+    animation: gmLiquidIn .52s cubic-bezier(.22, 1, .36, 1) both;
+    will-change: transform, opacity, filter;
+}
+@keyframes gmLiquidIn {
+    0%   { opacity: 0; transform: translate3d(0, 10px, 0) scale(.985); filter: blur(9px) saturate(1.25); }
+    55%  { opacity: 1; filter: blur(2px) saturate(1.08); }
+    100% { opacity: 1; transform: none; filter: blur(0) saturate(1); }
+}
+.ghost-toolkit-body .tk-tabs .tools-tab {
+    position: relative;
+    transition: color .28s ease, background .45s cubic-bezier(.22, 1, .36, 1),
+                box-shadow .45s cubic-bezier(.22, 1, .36, 1), transform .28s ease;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab.active {
+    animation: gmPillMorph .5s cubic-bezier(.34, 1.32, .5, 1) both;
+}
+@keyframes gmPillMorph {
+    0%   { transform: scale(.9); border-radius: 22px !important; }
+    60%  { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ghost-toolkit-body .tools-tab-panel,
+    .ghost-toolkit-body .tk-tabs .tools-tab.active { animation: none !important; }
+}
+
+/* ══ Card votes: tiny icon-only controls, no plate or border ════════ */
+.ghost-toolkit-body .tk-vote {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .tk-vote-divider {
+    display: none !important;
+}
+.ghost-toolkit-body .tk-vote-btn {
+    width: 15px !important;
+    min-width: 15px !important;
+    height: 15px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+.ghost-toolkit-body .tk-vote-btn:hover { background: none !important; }
+
+/* The controls stay out of the artwork until the card is intentionally
+   hovered/focused. A selected vote remains visible as state feedback. */
+.ghost-toolkit-body .tk-card .tk-vote-float {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity .16s ease !important;
+}
+.ghost-toolkit-body .tk-card:hover .tk-vote-float,
+.ghost-toolkit-body .tk-card:focus-within .tk-vote-float,
+.ghost-toolkit-body .tk-card .tk-vote-float.has-vote {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.ghost-toolkit-body .gm-pop .tk-catbtn-wrap,
+.ghost-toolkit-body .gm-pop .tk-langbtn-wrap { position: relative; }

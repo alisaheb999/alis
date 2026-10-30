@@ -1,0 +1,139 @@
+/* GHOST UI Rich Audit v1 — final visual cleanup layer
+   Purpose: reduce chrome, unify color, prevent wrapping, and remove low-value noise.
+   Visual-only; no behavior selectors are changed. */
+.ghost-toolkit-body {
+  --ui-bg:#0b100f; --ui-header:#0f1613; --ui-surface:#131a17; --ui-card:#171f1b;
+  --ui-card-hover:#1b2621; --ui-border:rgba(166,255,221,.085); --ui-border-strong:rgba(166,255,221,.18);
+  --ui-accent:#43d39d; --ui-accent-hover:#63e0b2; --ui-accent-soft:rgba(67,211,157,.11);
+  --ui-text:#f2f7f4; --ui-text-2:#a7b4ae; --ui-muted:#74817c;
+  --ui-radius:10px; --ui-control-h:30px;
+}
+
+/* 01 — Header: one clean line, no zero counters, one accent family. */
+.ghost-toolkit-body .tools-header{
+  margin:4px 5px 2px !important; padding:3px 4px !important; gap:5px !important;
+  background:rgba(14,20,17,.96) !important; border-radius:11px !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.26), inset 0 0 0 1px rgba(166,255,221,.045) !important;
+  backdrop-filter:blur(14px) !important; -webkit-backdrop-filter:blur(14px) !important;
+}
+.ghost-toolkit-body .tk-tabs{gap:2px !important; padding:2px !important; overflow-x:auto !important; scrollbar-width:none !important;}
+.ghost-toolkit-body .tk-tabs .tools-tab{
+  flex:1 1 0 !important; min-width:0 !important; justify-content:center !important;
+  height:28px !important; padding:0 8px !important; gap:5px !important;
+  color:#8c9993 !important; font-size:10.5px !important; font-weight:650 !important;
+  letter-spacing:0 !important; border-radius:8px !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-name{font-size:10.5px !important; line-height:1 !important; white-space:nowrap !important;}
+.ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-count{display:none !important;}
+.ghost-toolkit-body .tk-tabs .tools-tab svg{width:13px !important;height:13px !important;flex:0 0 auto !important;}
+.ghost-toolkit-body .tk-tabs .tools-tab.active,
+.ghost-toolkit-body .tk-tabs .tools-tab[aria-selected="true"]{
+  color:#06130e !important; background:var(--ui-accent) !important;
+  box-shadow:0 3px 12px rgba(67,211,157,.14), inset 0 1px 0 rgba(255,255,255,.28) !important;
+}
+.ghost-toolkit-body .tk-tabs .tools-tab:hover:not(.active){background:rgba(67,211,157,.055) !important;color:#e5eee9 !important;}
+.ghost-toolkit-body .tk-right-actions{gap:2px !important;padding-left:2px !important;}
+.ghost-toolkit-body .tk-right-actions .tk-bm-filter{display:none !important;}
+.ghost-toolkit-body .tk-right-actions .plan-upgrade-button{display:none !important;}
+.ghost-toolkit-body .tk-search-toggle,.ghost-toolkit-body .gm-dots{width:27px !important;height:27px !important;color:#9aa7a1 !important;}
+.ghost-toolkit-body #tkSearch,.ghost-toolkit-body .tk-search input{height:27px !important;min-height:27px !important;font-size:10.5px !important;background:rgba(255,255,255,.045) !important;color:var(--ui-text) !important;}
+
+/* 02 — Global type rhythm: readable, compact, and single-line where labels are atomic. */
+.ghost-toolkit-body .gp2-sectitle,.ghost-toolkit-body .tk-card-label,.ghost-toolkit-body .tk-tab-name,
+.ghost-toolkit-body .tk-emoji-folder,.ghost-toolkit-body .tk-select,.ghost-toolkit-body button,
+.ghost-toolkit-body label,.ghost-toolkit-body .adv-row > span{line-height:1.2 !important;}
+.ghost-toolkit-body .gp2-sectitle,.ghost-toolkit-body .tk-card-label,.ghost-toolkit-body .adv-row > span,
+.ghost-toolkit-body .tk-expr-card-title{white-space:nowrap !important;overflow:hidden !important;text-overflow:ellipsis !important;}
+
+/* 03 — Section headers: remove redundant plates and excess vertical space. */
+.ghost-toolkit-body .gp2-sechead,.ghost-toolkit-body .tk-expr-toolbar{
+  min-height:32px !important; padding:5px 7px !important; border-radius:9px !important;
+  background:rgba(19,26,23,.72) !important; border:1px solid var(--ui-border) !important; box-shadow:none !important;
+}
+.ghost-toolkit-body .gp2-sechead{gap:7px !important;}
+.ghost-toolkit-body .gp2-rule{opacity:.7 !important;}
+.ghost-toolkit-body .tk-sec-badge{font-size:8px !important;letter-spacing:.06em !important;padding:3px 6px !important;color:#75dcb3 !important;background:var(--ui-accent-soft) !important;border-color:rgba(67,211,157,.16) !important;}
+
+/* 04 — Animation cards: media first, chrome second. */
+.ghost-toolkit-body #tab-anim .tk-grid{gap:8px !important;}
+.ghost-toolkit-body #tab-anim .tk-card{
+  border-radius:10px !important; border-color:var(--ui-border) !important;
+  background:var(--ui-card) !important; box-shadow:0 5px 14px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.018) !important;
+}
+.ghost-toolkit-body #tab-anim .tk-card:hover{background:var(--ui-card-hover) !important;border-color:rgba(67,211,157,.24) !important;box-shadow:0 8px 18px rgba(0,0,0,.16),0 0 0 1px rgba(67,211,157,.035) !important;}
+.ghost-toolkit-body #tab-anim .tk-card-label{font-size:9.5px !important;padding:6px 7px !important;color:#aebbb5 !important;}
+.ghost-toolkit-body .tk-ffx-card-tag.is-perfect{background:var(--ui-accent) !important;color:#06130e !important;box-shadow:none !important;font-size:8px !important;}
+.ghost-toolkit-body .tk-sec-play{width:27px !important;height:27px !important;}
+
+/* 05 — Advanced: controls align to a strict label/value grid. */
+.ghost-toolkit-body #tab-advanced .adv-group{border-color:var(--ui-border) !important;background:rgba(19,26,23,.58) !important;border-radius:10px !important;padding:9px !important;}
+.ghost-toolkit-body #tab-advanced .adv-group h3{font-size:11px !important;color:#dce9e3 !important;margin:0 0 7px !important;}
+.ghost-toolkit-body #tab-advanced .adv-row{min-height:28px !important;gap:7px !important;}
+.ghost-toolkit-body #tab-advanced .adv-row > span{flex:0 0 82px !important;font-size:10px !important;color:#9facA6 !important;}
+.ghost-toolkit-body #tab-advanced .adv-row b{min-width:34px !important;text-align:right !important;font-size:9.5px !important;color:#dce8e2 !important;}
+.ghost-toolkit-body #tab-advanced .adv-select,.ghost-toolkit-body #tab-advanced select{height:27px !important;font-size:10px !important;min-width:0 !important;}
+.ghost-toolkit-body #tab-advanced input[type="range"]{min-width:0 !important;}
+.ghost-toolkit-body #tab-advanced .adv-apply-row{gap:6px !important;}
+.ghost-toolkit-body #tab-advanced .adv-hint{font-size:9.5px !important;line-height:1.35 !important;color:var(--ui-muted) !important;}
+
+/* 06 — Style: empty means empty. Reduce the visual weight of dead controls. */
+.ghost-toolkit-body #tab-color .tk-ts-head{min-height:30px !important;}
+.ghost-toolkit-body #tab-color .tk-ts-actions{gap:2px !important;}
+.ghost-toolkit-body #tab-color .tk-ts-actions .tk-ts-icon{width:27px !important;height:27px !important;}
+.ghost-toolkit-body #tab-color .tk-up-empty{min-height:96px !important;margin:10px 4px !important;padding:18px !important;font-size:10.5px !important;color:#78857f !important;background:rgba(19,26,23,.36) !important;border-color:rgba(166,255,221,.10) !important;}
+.ghost-toolkit-body #tab-color .gp2-ffx-quiet{opacity:.82 !important;}
+.ghost-toolkit-body #tab-color .gp2-ffx-quiet .gp2-sechead{opacity:.9 !important;}
+
+/* 07 — Emoji: category rail + tiles use one visual language; no glyph tint. */
+.ghost-toolkit-body #tab-emoji.active{padding:8px 7px 14px !important;}
+.ghost-toolkit-body .tk-emoji-rail{gap:5px !important;padding:3px 1px 8px !important;border-bottom:1px solid var(--ui-border) !important;}
+.ghost-toolkit-body .tk-emoji-folder{height:27px !important;padding:0 8px !important;border-radius:8px !important;font-size:9.5px !important;background:rgba(19,26,23,.78) !important;color:#8f9d96 !important;}
+.ghost-toolkit-body .tk-emoji-folder.is-active{color:#06130e !important;background:var(--ui-accent) !important;box-shadow:0 3px 10px rgba(67,211,157,.10) !important;}
+.ghost-toolkit-body .tk-emoji-button{min-height:42px !important;border-radius:9px !important;background:var(--ui-card) !important;border-color:var(--ui-border) !important;box-shadow:none !important;}
+.ghost-toolkit-body .tk-emoji-button:hover,.ghost-toolkit-body .tk-emoji-button:focus-visible{transform:translateY(-1px) !important;background:var(--ui-card-hover) !important;border-color:rgba(67,211,157,.28) !important;box-shadow:0 5px 14px rgba(0,0,0,.14) !important;}
+.ghost-toolkit-body .tk-emoji-button *{filter:none !important;opacity:1 !important;}
+
+/* 08 — Expressions: toolbar is a single utility line; cards stay quiet. */
+.ghost-toolkit-body #tab-expression{padding:8px 7px 14px !important;}
+.ghost-toolkit-body .tk-expr-toolbar{display:flex !important;align-items:center !important;gap:6px !important;margin-bottom:8px !important;}
+.ghost-toolkit-body .tk-expr-toolbar::before{content:"Target";color:#7f8c86;font-size:9.5px;white-space:nowrap;}
+.ghost-toolkit-body .tk-expr-toolbar .tk-select{flex:1 1 auto !important;min-width:0 !important;height:27px !important;font-size:10px !important;}
+.ghost-toolkit-body .tk-expr-grid{gap:8px !important;}
+.ghost-toolkit-body #tab-expression .tk-card{border-radius:10px !important;background:var(--ui-card) !important;border-color:var(--ui-border) !important;box-shadow:none !important;}
+.ghost-toolkit-body #tab-expression .tk-card:hover{background:var(--ui-card-hover) !important;border-color:rgba(67,211,157,.22) !important;}
+.ghost-toolkit-body .tk-expr-card-title{font-size:10.5px !important;}
+.ghost-toolkit-body .tk-expr-target{font-size:8px !important;background:var(--ui-accent-soft) !important;color:#79dcb7 !important;border-color:rgba(67,211,157,.14) !important;}
+
+/* 09 — Modals/toasts: same palette, predictable sizing. */
+.ghost-toolkit-body .tk-modal-card{background:#121916 !important;border-color:var(--ui-border-strong) !important;box-shadow:0 20px 55px rgba(0,0,0,.55) !important;border-radius:12px !important;}
+.ghost-toolkit-body .tk-modal-card h3,.ghost-toolkit-body .tk-ffx-modal-title{font-size:12px !important;color:var(--ui-text) !important;}
+.ghost-toolkit-body .tk-modal-note,.ghost-toolkit-body .tk-ffx-scope{font-size:9.5px !important;line-height:1.4 !important;color:var(--ui-muted) !important;}
+.ghost-toolkit-body .primary-button{background:var(--ui-accent) !important;color:#06130e !important;box-shadow:none !important;}
+.ghost-toolkit-body .secondary-button{background:#18211d !important;color:#d7e3dd !important;border-color:var(--ui-border) !important;}
+.ghost-toolkit-body .primary-button:hover{background:var(--ui-accent-hover) !important;transform:none !important;}
+
+/* 10 — Remove decorative color noise from legacy layers. */
+.ghost-toolkit-body .gm-item.gm-ink-indigo svg,.ghost-toolkit-body .gm-item.gm-ink-blue svg,
+.ghost-toolkit-body .gm-item.gm-ink-cyan svg,.ghost-toolkit-body .gm-item.gm-ink-amber svg{color:var(--ui-text-2) !important;}
+.ghost-toolkit-body .gm-pop{background:rgba(16,23,20,.98) !important;border:1px solid var(--ui-border) !important;box-shadow:0 18px 42px rgba(0,0,0,.55) !important;}
+.ghost-toolkit-body .gm-item:hover{background:var(--ui-accent-soft) !important;color:var(--ui-text) !important;}
+
+/* 11 — Narrow panel: never let text collide with controls. */
+@media (max-width:520px){
+  .ghost-toolkit-body .tk-tabs .tools-tab{padding:0 6px !important;font-size:9.5px !important;}
+  .ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-name{font-size:9.5px !important;}
+  .ghost-toolkit-body .tk-tabs .tools-tab svg{width:12px !important;height:12px !important;}
+  .ghost-toolkit-body .tk-right-actions{display:none !important;}
+}
+@media (max-width:390px){
+  .ghost-toolkit-body .tk-tabs .tools-tab{padding:0 5px !important;gap:3px !important;}
+  .ghost-toolkit-body .tk-tabs .tools-tab .tk-tab-name{font-size:9px !important;}
+  .ghost-toolkit-body .tk-tabs .tools-tab svg{display:none !important;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .ghost-toolkit-body *, .ghost-toolkit-body *::before, .ghost-toolkit-body *::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important;}
+}
+
+/* Style tab: an empty secondary catalog adds noise; keep its DOM IDs for compatibility but hide the empty presentation. */
+

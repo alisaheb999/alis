@@ -1,0 +1,46 @@
+/* ==========================================================================
+   GHOST — offline Font Awesome replacement.
+   CEP panels have no guaranteed internet access, so the CDN webfont never
+   loaded and every `<i class="fa-solid fa-x">` rendered as an empty box.
+   These rules draw the same glyphs from local SVG masks instead.
+   ========================================================================== */
+
+i[class*="fa-"],
+span[class*="fa-"].fa-solid {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+i.fa-solid::before,
+i.fa-regular::before { content: none; }
+
+.fa-xmark { -webkit-mask-image: url("../assets/icons/xmark.svg"); mask-image: url("../assets/icons/xmark.svg"); }
+.fa-file-lines { -webkit-mask-image: url("../assets/icons/file-lines.svg"); mask-image: url("../assets/icons/file-lines.svg"); }
+.fa-up-right-and-down-left-from-center { -webkit-mask-image: url("../assets/icons/expand.svg"); mask-image: url("../assets/icons/expand.svg"); }
+.fa-timeline { -webkit-mask-image: url("../assets/icons/timeline.svg"); mask-image: url("../assets/icons/timeline.svg"); }
+.fa-sun { -webkit-mask-image: url("../assets/icons/sun.svg"); mask-image: url("../assets/icons/sun.svg"); }
+.fa-moon { -webkit-mask-image: url("../assets/icons/moon.svg"); mask-image: url("../assets/icons/moon.svg"); }
+.fa-sliders { -webkit-mask-image: url("../assets/icons/sliders.svg"); mask-image: url("../assets/icons/sliders.svg"); }
+.fa-palette { -webkit-mask-image: url("../assets/icons/palette.svg"); mask-image: url("../assets/icons/palette.svg"); }
+.fa-microphone { -webkit-mask-image: url("../assets/icons/microphone.svg"); mask-image: url("../assets/icons/microphone.svg"); }
+.fa-font { -webkit-mask-image: url("../assets/icons/font.svg"); mask-image: url("../assets/icons/font.svg"); }
+.fa-file-audio { -webkit-mask-image: url("../assets/icons/file-audio.svg"); mask-image: url("../assets/icons/file-audio.svg"); }
+.fa-droplet { -webkit-mask-image: url("../assets/icons/droplet.svg"); mask-image: url("../assets/icons/droplet.svg"); }
+.fa-download { -webkit-mask-image: url("../assets/icons/download.svg"); mask-image: url("../assets/icons/download.svg"); }
+.fa-cloud-arrow-up { -webkit-mask-image: url("../assets/icons/cloud-arrow-up.svg"); mask-image: url("../assets/icons/cloud-arrow-up.svg"); }
+.fa-circle-check { -webkit-mask-image: url("../assets/icons/circle-check.svg"); mask-image: url("../assets/icons/circle-check.svg"); }
+.fa-search, .fa-magnifying-glass { -webkit-mask-image: url("../assets/icons/search.svg"); mask-image: url("../assets/icons/search.svg"); }
+.fa-rotate { -webkit-mask-image: url("../assets/icons/rotate.svg"); mask-image: url("../assets/icons/rotate.svg"); }
+.fa-pause { -webkit-mask-image: url("../assets/icons/pause.svg"); mask-image: url("../assets/icons/pause.svg"); }
+.fa-play { -webkit-mask-image: url("../assets/icons/play.svg"); mask-image: url("../assets/icons/play.svg"); }
+.fa-star { -webkit-mask-image: url("../assets/icons/star.svg"); mask-image: url("../assets/icons/star.svg"); }
+.fa-gear, .fa-cog { -webkit-mask-image: url("../assets/icons/settings.svg"); mask-image: url("../assets/icons/settings.svg"); }

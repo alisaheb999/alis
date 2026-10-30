@@ -1,0 +1,590 @@
+/*!
+ * Ghostae Text — Panel 2028 (v3.31.0)
+ * Visual-only layer on top of ghost-menu-2027.css.
+ *  • overflow ("more tabs") menu gets the same glass popover design
+ *  • animation grid gets FFX / Web preset section headers with a hairline rule
+ *  • bottom 3-dot menu, settings sheet, favourites import/export
+ *  • advance animator rows get a cleaner, different row style
+ *  • plan card polish
+ * No animation keyframes for cards, no logic touched.
+ */
+
+/* Advance tab lives inside the bottom 3-dot menu now */
+.ghost-toolkit-body .tk-tabs .tools-tab[data-tab="advanced"] { display: none !important; }
+
+/* ── Tab overflow popover (narrow panel) ───────────────────────────── */
+.ghost-toolkit-body .ghost-more,
+.ghost-toolkit-body .tk-tabs .ghost-more {
+    width: 25px !important;
+    height: 25px !important;
+    min-width: 25px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(156, 163, 175, 1) !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+}
+.ghost-toolkit-body .ghost-more:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, .1) !important;
+}
+.ghost-toolkit-body .ghost-more-pop {
+    position: absolute;
+    z-index: 1200;
+    min-width: 178px;
+    padding: 6px !important;
+    border: 0 !important;
+    border-radius: 15px !important;
+    background: rgba(22, 24, 34, .98) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 255, 255, .07) !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 2px;
+}
+.ghost-toolkit-body .ghost-more-pop[hidden] { display: none !important; }
+.ghost-toolkit-body .ghost-more-pop .tools-tab,
+.ghost-toolkit-body .ghost-more-pop button {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 7px 9px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 11px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(209, 213, 219, 1) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    white-space: nowrap;
+}
+.ghost-toolkit-body .ghost-more-pop .tools-tab:hover {
+    background: rgba(255, 255, 255, .1) !important;
+    color: #fff !important;
+}
+.ghost-toolkit-body .ghost-more-pop .tools-tab.active,
+.ghost-toolkit-body .ghost-more-pop .tools-tab[aria-selected="true"] {
+    background: rgba(99, 102, 241, .18) !important;
+    color: #c7d2fe !important;
+    box-shadow: none !important;
+}
+.ghost-toolkit-body .ghost-more-pop .tools-tab svg { width: 14px !important; height: 14px !important; }
+.ghost-toolkit-body .ghost-more-pop .tk-tab-count { display: none !important; }
+.ghost-toolkit-body .ghost-more-pop .tk-tab-name { display: inline !important; }
+
+/* ── Preset section headers in the animation grid ───────────────────── */
+.ghost-toolkit-body .gp2-sechead {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 8px 2px;
+}
+.ghost-toolkit-body .gp2-sectitle {
+    flex: 0 0 auto;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(148, 163, 184, .95);
+}
+.ghost-toolkit-body .gp2-rule {
+    flex: 1 1 auto;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .02));
+}
+.ghost-toolkit-body .gp2-sechead .tk-panel-toolbar {
+    flex: 0 0 auto;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.ghost-toolkit-body .gp2-ffx-section[hidden] { display: none !important; }
+.ghost-toolkit-body #gp2FfxGrid { margin-bottom: 4px; }
+
+/* ── Bottom 3-dot menu extras ───────────────────────────────────────── */
+.ghost-toolkit-body .gm-pop .gp2-lang-current {
+    margin-left: auto;
+    font-size: 10px;
+    color: rgba(255, 255, 255, .45);
+}
+
+/* ── Settings / favourites sheet ────────────────────────────────────── */
+.ghost-toolkit-body .gp2-sheet-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(6, 7, 11, .62);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    animation: gp2FadeIn .22s ease both;
+}
+@keyframes gp2FadeIn { from { opacity: 0; } to { opacity: 1; } }
+.ghost-toolkit-body .gp2-sheet {
+    width: 100%;
+    max-width: 320px;
+    max-height: 82vh;
+    overflow-y: auto;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(22, 24, 34, .99);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 255, 255, .07);
+    animation: gp2SheetIn .3s cubic-bezier(.22, 1, .36, 1) both;
+}
+@keyframes gp2SheetIn { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+.ghost-toolkit-body .gp2-sheet h3 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+.ghost-toolkit-body .gp2-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .045);
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: rgba(209, 213, 219, 1);
+}
+.ghost-toolkit-body .gp2-row small { display: block; margin-top: 2px; font-size: 9.5px; color: rgba(255, 255, 255, .38); }
+.ghost-toolkit-body .gp2-row-main { flex: 1 1 auto; min-width: 0; }
+.ghost-toolkit-body .gp2-switch {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 19px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .16);
+    position: relative;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+.ghost-toolkit-body .gp2-switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    background: #fff;
+    transition: transform .22s cubic-bezier(.22, 1, .36, 1);
+}
+.ghost-toolkit-body .gp2-switch[aria-pressed="true"] { background: linear-gradient(90deg, #4f46e5, #2563eb); }
+.ghost-toolkit-body .gp2-switch[aria-pressed="true"]::after { transform: translateX(15px); }
+.ghost-toolkit-body .gp2-btn {
+    flex: 0 0 auto;
+    padding: 6px 11px;
+    border: 0;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .1);
+    color: #e5e7eb;
+    font-size: 10.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .18s ease, transform .12s ease;
+}
+.ghost-toolkit-body .gp2-btn:hover { background: rgba(255, 255, 255, .18); }
+.ghost-toolkit-body .gp2-btn:active { transform: scale(.97); }
+.ghost-toolkit-body .gp2-btn-primary { background: linear-gradient(90deg, #4f46e5, #2563eb); color: #fff; }
+.ghost-toolkit-body .gp2-sheet-foot { display: flex; justify-content: flex-end; margin-top: 10px; }
+
+/* ── Advance animator rows: cleaner, different rhythm ───────────────── */
+.ghost-toolkit-body .adv-group {
+    border: 0 !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, .04) !important;
+    box-shadow: inset 0 0 0 .5px rgba(255, 255, 255, .05) !important;
+    padding: 12px 13px !important;
+}
+.ghost-toolkit-body .adv-group h3 {
+    font-size: 9.5px !important;
+    letter-spacing: .12em !important;
+    color: rgba(148, 163, 184, .95) !important;
+}
+.ghost-toolkit-body .adv-row {
+    grid-template-columns: 84px 1fr 44px !important;
+    gap: 10px !important;
+    margin-bottom: 4px !important;
+    padding: 4px 6px;
+    border-radius: 10px;
+    transition: background .18s ease;
+}
+.ghost-toolkit-body .adv-row:hover { background: rgba(255, 255, 255, .04); }
+.ghost-toolkit-body .adv-row b { color: #c7d2fe !important; }
+.ghost-toolkit-body .adv-row input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .14);
+}
+.ghost-toolkit-body .adv-row input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .55);
+    cursor: pointer;
+}
+.ghost-toolkit-body .adv-stage-wrap,
+.ghost-toolkit-body .adv-stage-head {
+    border: 0 !important;
+    background: rgba(255, 255, 255, .035) !important;
+}
+.ghost-toolkit-body .adv-stage-wrap { border-radius: 16px !important; box-shadow: inset 0 0 0 .5px rgba(255, 255, 255, .05); }
+.ghost-toolkit-body .adv-text-input,
+.ghost-toolkit-body .adv-select {
+    border: 0 !important;
+    background: rgba(255, 255, 255, .07) !important;
+    border-radius: 10px !important;
+}
+
+/* ── Plan card polish ───────────────────────────────────────────────── */
+.gp-overlay-mini .gp-mini {
+    border: 0 !important;
+    border-radius: 20px !important;
+    background: rgba(22, 24, 34, .99) !important;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 255, 255, .08) !important;
+    padding: 20px !important;
+    text-align: center;
+}
+.gp-overlay-mini .gp-mini-name { background: linear-gradient(90deg, #a5b4fc, #60a5fa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.gp-overlay-mini .gp-mini-cta,
+.gp-overlay-mini .gp-mini-support {
+    width: 100%;
+    margin-top: 10px;
+    border: 0 !important;
+    border-radius: 11px !important;
+    padding: 9px 12px !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+}
+.gp-overlay-mini .gp-mini-cta { background: linear-gradient(90deg, #4f46e5, #2563eb) !important; color: #fff !important; }
+.gp-overlay-mini .gp-mini-support { background: rgba(255, 255, 255, .09) !important; color: #e5e7eb !important; }
+.gp-overlay-mini .gp-mini-support:hover { background: rgba(255, 255, 255, .16) !important; }
+
+/* ── Style panel toolbar (mirrors the animation section rhythm) ──────── */
+.ghost-toolkit-body #tab-color .tk-ts-head { border: 0 !important; background: none !important; padding-bottom: 2px !important; }
+.ghost-toolkit-body .gp2-style-toolbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 4px;
+    margin: 0 8px 6px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+}
+.ghost-toolkit-body .gp2-style-toolbar .tk-icon-btn {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: rgba(156, 163, 175, 1) !important;
+}
+.ghost-toolkit-body .gp2-style-toolbar .tk-icon-btn svg { width: 13px !important; height: 13px !important; }
+.ghost-toolkit-body .gp2-style-toolbar .tk-icon-btn:hover { color: #fff !important; background: rgba(255, 255, 255, .1) !important; }
+.ghost-toolkit-body .gp2-style-toolbar .gp2-style-fav[aria-pressed="true"] { color: #fbbf24 !important; }
+.ghost-toolkit-body .gp2-style-toolbar .gp2-style-fav[aria-pressed="true"] svg { fill: currentColor; }
+.ghost-toolkit-body .gp2-style-toolbar .gm-wrap { margin-left: 2px; }
+.ghost-toolkit-body .gp2-style-pop { left: 0 !important; right: auto !important; }
+
+/* ── v3.32.0 — Style panel refinements ──────────────────────────────── */
+/* toolbar sits on the right, mirroring the animation section rhythm */
+.ghost-toolkit-body .gp2-style-toolbar {
+    justify-content: flex-end !important;
+}
+.ghost-toolkit-body .gp2-style-toolbar .gm-pop {
+    right: 0 !important;
+    left: auto !important;
+}
+.ghost-toolkit-body .gp2-style-pop { left: auto !important; right: 0 !important; }
+
+/* language row is collapsed until picked from the dot menu */
+.ghost-toolkit-body .gp2-langbar {
+    margin: 0 8px 6px !important;
+    border: 0 !important;
+    background: none !important;
+    padding: 0 !important;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.ghost-toolkit-body .gp2-langbar.is-collapsed { display: none !important; }
+.ghost-toolkit-body .gp2-langbar button,
+.ghost-toolkit-body .gp2-langbar .tk-lang-btn {
+    border: 0 !important;
+    border-radius: 9px !important;
+    background: rgba(255, 255, 255, .06) !important;
+    box-shadow: none !important;
+    color: rgba(209, 213, 219, 1) !important;
+    font-size: 10px !important;
+    padding: 4px 9px !important;
+    min-height: 0 !important;
+}
+.ghost-toolkit-body .gp2-langbar button.active,
+.ghost-toolkit-body .gp2-langbar button[aria-selected="true"] {
+    background: linear-gradient(90deg, rgba(79, 70, 229, .35), rgba(37, 99, 235, .35)) !important;
+    color: #e0e7ff !important;
+}
+
+/* section heads inside the Style tab match the animation grid */
+.ghost-toolkit-body #tab-color .tk-ts-sechead.gp2-sechead { margin: 8px 8px 4px; }
+.ghost-toolkit-body #tab-color .tk-ts-mini {
+    border: 0 !important;
+    background: rgba(255, 255, 255, .07) !important;
+    border-radius: 8px !important;
+    color: #d1d5db !important;
+    font-size: 9.5px !important;
+    padding: 3px 8px !important;
+}
+.ghost-toolkit-body #tab-color .tk-ts-note { display: none !important; }
+
+/* preview text: smaller, centred, no oversized overflow */
+.ghost-toolkit-body .tk-grid-style .tk-preview-text {
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    letter-spacing: .01em !important;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 6px;
+    word-break: break-word;
+}
+.ghost-toolkit-body .tk-grid-style .tk-preview-long { font-size: 12.5px !important; }
+.ghost-toolkit-body .tk-grid-style .tk-bangla-preview { font-size: 14px !important; }
+
+/* ── v3.33.0 — menu icon rhythm, style grid clean-up ─────────────────── */
+/* every popover row: same icon box, same colour, same alignment */
+.ghost-toolkit-body .gm-pop .gm-item,
+.ghost-toolkit-body .gm-pop .tk-catbtn,
+.ghost-toolkit-body .gm-pop .tk-langbtn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    padding: 7px 9px !important;
+    line-height: 1.2 !important;
+}
+.ghost-toolkit-body .gm-pop .gm-item svg,
+.ghost-toolkit-body .gm-pop .tk-catbtn svg,
+.ghost-toolkit-body .gm-pop .tk-langbtn svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    flex: 0 0 14px !important;
+    color: rgba(165, 180, 252, 1) !important;
+    stroke-width: 1.7 !important;
+    vertical-align: middle;
+}
+.ghost-toolkit-body .gm-pop .gm-item > span,
+.ghost-toolkit-body .gm-pop .tk-catbtn-label,
+.ghost-toolkit-body .gm-pop .gm-lang-name { flex: 1 1 auto; }
+.ghost-toolkit-body .gm-pop .gm-item.is-active {
+    background: rgba(99, 102, 241, .18) !important;
+    color: #e0e7ff !important;
+}
+
+/* style toolbar: filter + favourite + dots, all identical */
+.ghost-toolkit-body .gp2-style-toolbar .gp2-cat-wrap { position: relative; display: inline-flex; }
+.ghost-toolkit-body .gp2-style-toolbar .gp2-style-cat.is-on { color: #a5b4fc !important; }
+.ghost-toolkit-body .gp2-cat-pop { right: 0 !important; left: auto !important; }
+
+/* the FFX area stays silent until a user preset actually exists */
+.ghost-toolkit-body .gp2-ffx-quiet .tk-ffx-empty { display: none !important; }
+.ghost-toolkit-body .gp2-ffx-quiet .tk-grid:empty { display: none !important; }
+.ghost-toolkit-body .gp2-ffx-quiet { padding-top: 0 !important; }
+
+/* category filter result */
+.ghost-toolkit-body .tk-card.gp2-cat-hidden { display: none !important; }
+
+/* preset grid: tighter cards, one-line preview, no plate behind load-more */
+.ghost-toolkit-body .tk-grid-style {
+    grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)) !important;
+    gap: 8px !important;
+    padding: 0 8px !important;
+    background: none !important;
+}
+.ghost-toolkit-body .tk-grid-style .tk-card {
+    height: 74px !important;
+    border-radius: 13px !important;
+    padding: 6px 10px !important;
+}
+.ghost-toolkit-body .tk-grid-style .tk-preview-text {
+    font-size: 12px !important;
+    line-height: 1.15 !important;
+    letter-spacing: .015em !important;
+    white-space: nowrap !important;
+    max-width: 100%;
+    padding: 0 2px;
+    text-align: center;
+    overflow: hidden;
+}
+.ghost-toolkit-body .tk-grid-style .tk-preview-long { font-size: 10.5px !important; }
+.ghost-toolkit-body .tk-grid-style .tk-bangla-preview { font-size: 11.5px !important; white-space: nowrap; }
+.ghost-toolkit-body .tk-load-more {
+    border: 0 !important;
+    background: rgba(255, 255, 255, .06) !important;
+    box-shadow: none !important;
+}
+
+/* built-in .ghostffx demo cards are not part of the curated set */
+.ghost-toolkit-body #ffxColorGrid { display: none !important; }
+
+/* language row inside the panel menu reads icon + label + current value */
+.ghost-toolkit-body .gm-pop .tk-langbtn {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+}
+.ghost-toolkit-body .gm-pop .gp2-lang-label { flex: 1 1 auto; }
+.ghost-toolkit-body .gm-pop .gm-lang-name {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: rgba(255, 255, 255, .45) !important;
+    font-size: 10px !important;
+}
+
+/* ── v3.34.0 — Style header on one line, language sheet, cleaner presets ── */
+/* the Web Presets title, hairline and the icon toolbar share a single row */
+.ghost-toolkit-body #tab-color .tk-ts-head { display: none !important; }
+.ghost-toolkit-body #tab-color .tk-ts-sechead.gp2-sechead {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 6px 8px 4px !important;
+}
+.ghost-toolkit-body #tab-color .tk-ts-sechead .gp2-style-toolbar {
+    flex: 0 0 auto;
+    margin: 0 !important;
+}
+.ghost-toolkit-body .tk-langbar,
+.ghost-toolkit-body .gp2-langbar,
+.ghost-toolkit-body .tk-langbtn-wrap { display: none !important; }
+
+/* language rows inside the dot menus */
+.ghost-toolkit-body .gm-pop .gp2-lang-row .gp2-lang-current {
+    margin-left: auto;
+    padding-left: 8px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, .45);
+    white-space: nowrap;
+}
+
+/* language sheet */
+.ghost-toolkit-body .gp2-lang-sheet h3 small {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .45);
+}
+.ghost-toolkit-body .gp2-lang-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin: 10px 0 4px;
+}
+.ghost-toolkit-body .gp2-lang-opt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .05);
+    color: #d6dae2;
+    font-size: 11px;
+    text-align: left;
+    cursor: pointer;
+    transition: background .16s ease, color .16s ease;
+}
+.ghost-toolkit-body .gp2-lang-opt:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+.ghost-toolkit-body .gp2-lang-opt.is-active {
+    background: linear-gradient(90deg, rgba(99, 102, 241, .35), rgba(59, 130, 246, .28));
+    color: #e8ecff;
+    box-shadow: inset 0 0 0 1px rgba(165, 180, 252, .25);
+}
+.ghost-toolkit-body .gp2-lang-flag { font-size: 13px; line-height: 1; }
+.ghost-toolkit-body .gp2-lang-name { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* preset cards: a touch more inner room, glow kept off the glyph edges */
+.ghost-toolkit-body .tk-grid-style .tk-card {
+    height: 72px !important;
+    padding: 6px 12px !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .015)) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05) !important;
+}
+.ghost-toolkit-body .tk-grid-style .tk-card:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .03)) !important;
+}
+.ghost-toolkit-body .tk-grid-style .tk-preview-text {
+    font-size: 11.5px !important;
+    letter-spacing: .01em !important;
+}
+.ghost-toolkit-body .tk-grid-style .tk-preview-long { font-size: 10px !important; }
+
+/* FINAL STYLE HEADER RESTORE — direct corner actions, no overflow relocation. */
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final {
+    display:flex !important;
+    flex:0 0 auto !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:3px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    background:none !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-header-action {
+    display:inline-flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:23px !important;
+    height:23px !important;
+    min-width:23px !important;
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    color:rgba(156,163,175,1) !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-header-action svg {
+    width:13px !important;
+    height:13px !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-header-action:hover {
+    color:#fff !important;
+    background:rgba(255,255,255,.10) !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-style-fav[aria-pressed="true"] {
+    color:#fbbf24 !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-style-fav[aria-pressed="true"] svg {
+    fill:currentColor !important;
+}
+.ghost-toolkit-body #tab-color .gp2-style-toolbar-final .gp2-style-pop,
+.ghost-toolkit-body #tab-color #perfectColorFilterMenu {
+    z-index:10050 !important;
+}

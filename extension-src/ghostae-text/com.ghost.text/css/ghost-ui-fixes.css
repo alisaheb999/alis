@@ -1,0 +1,139 @@
+/*
+ * GHOST UI stability layer
+ *
+ * Loaded last by every visible CEP panel.  These rules deliberately address
+ * layout mechanics only: sizing, overflow, focus and small dock widths.
+ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+button, input, select, textarea { font: inherit; }
+button, select, input[type="checkbox"], input[type="radio"] { cursor: pointer; }
+button:disabled, input:disabled, select:disabled, textarea:disabled { cursor: default; }
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #58a6ff;
+    outline-offset: 2px;
+}
+
+/* Flex and grid children otherwise retain their intrinsic width and force
+   horizontal clipping in narrow AE docks. */
+.app-shell, .command-shell, .tools-shell, .gt-shell,
+.app-shell *, .command-shell *, .tools-shell *, .gt-shell * { min-width: 0; }
+
+/* The original tools panels combined 100vh and padding in content-box mode,
+   which hid the bottom controls. */
+.tools-shell {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+.tools-tab-panel {
+    min-height: 0;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Keep long asset, message and template names inside their cards. */
+.asset-card, .result-card, .message, .gt-card, .tool-card, .tk-card { overflow-wrap: anywhere; }
+.asset-card img, .result-card img, .gt-card img, .tool-card img, .tk-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Dialogs must remain usable in compact docked panels. */
+.expression-modal, .preview-shell, .gp-modal, .gp-sheet {
+    max-width: 100%;
+    max-height: 100%;
+}
+.expression-card {
+    max-height: calc(100vh - 24px);
+    overflow: auto;
+}
+
+/* Expression Apply / Copy must remain inside its hover detail box.  This
+   wins over the older floating-card rule used by the previous redesign. */
+#exprGrid .tk-expr-card .tk-expr-pop .tk-expr-actions {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    gap: 6px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+#exprGrid .tk-expr-card .tk-expr-pop .tk-expr-actions button {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 26px !important;
+    margin: 0 !important;
+    padding: 0 6px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Avoid inaccessible hover-only controls on CEP's touch-like panel surface. */
+@media (hover: none) {
+    .tk-bm-star, .sessions-list li .del { opacity: 1; }
+}
+
+@media (max-width: 520px) {
+    .app-shell { grid-template-columns: 46px minmax(0, 1fr); }
+    .app-shell .sidebar { width: 46px; padding-left: 4px; padding-right: 4px; }
+    .app-shell .brand-copy, .app-shell .header-control-capsule,
+    .app-shell .sidebar-footer, .app-shell .cloud-source-name,
+    .app-shell .cloud-tier-tag, .app-shell .history-name { display: none; }
+
+    .tools-shell { padding: 8px; gap: 8px; }
+    .tools-brand p, .tools-status { display: none; }
+    .tool-card { padding: 11px; }
+
+    .gt-search { max-width: none; }
+    .gt-header { padding: 0 6px; }
+    .gt-brand-title { display: none; }
+
+    .command-header { gap: 6px; padding-left: 8px; padding-right: 8px; }
+    .command-brand p, .connection-badge b { display: none; }
+    .sessions-panel { left: 8px; right: 8px; width: auto; }
+}
+
+@media (max-width: 360px) {
+    .tools-brand h1 { font-size: 12px; }
+    .command-brand h1 { font-size: 10px; }
+    .provider-label { display: none; }
+    .provider-bar { grid-template-columns: minmax(0, 1fr) auto auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+    }
+}

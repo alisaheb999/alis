@@ -1,0 +1,289 @@
+/*!
+ * GHOST Creative System — legacy CSS fallbacks.
+ *
+ * After Effects 2019–2023 embed Chromium builds that predate aspect-ratio,
+ * color-mix() and :has(). Without these fallbacks previews collapsed to zero
+ * height and accent colours resolved to "invalid", so cards looked missing.
+ * ghost-compat.js adds the no-* classes on <html>. Load this LAST.
+ */
+
+/* ---- aspect-ratio ------------------------------------------------- */
+.no-aspect-ratio .asset-preview,
+.no-aspect-ratio .glib-thumb,
+.no-aspect-ratio .tpl-thumb,
+.no-aspect-ratio .idea-thumb,
+.no-aspect-ratio .ghost-thumb,
+.no-aspect-ratio .template-card,
+.no-aspect-ratio .aspect-video {
+    min-height: 104px;
+}
+
+.no-aspect-ratio .emoji-cell,
+.no-aspect-ratio .glib-card .glib-media {
+    min-height: 72px;
+}
+
+/* ---- color-mix() -------------------------------------------------- */
+.no-color-mix .glib-card.is-active {
+    background: rgba(124, 92, 255, 0.22);
+}
+
+.no-color-mix .glib-play,
+.no-color-mix .glib-add {
+    border-color: rgba(124, 92, 255, 0.6);
+    background: rgba(124, 92, 255, 0.28);
+}
+
+.no-color-mix .glib-play:hover,
+.no-color-mix .glib-add:hover {
+    background: rgba(124, 92, 255, 0.5);
+}
+
+.no-color-mix .tk-chip.is-on,
+.no-color-mix .tk-btn.is-primary {
+    background: #2680eb;
+    border-color: #2680eb;
+    color: #fff;
+}
+
+.no-color-mix .tk-search input:focus {
+    box-shadow: 0 0 0 3px rgba(38, 128, 235, 0.28);
+}
+
+.no-color-mix .tk-expr-card:hover,
+.no-color-mix .tk-expr-target {
+    border-color: rgba(38, 128, 235, 0.55);
+}
+
+/* ---- :has() ------------------------------------------------------- */
+.no-has .ghost-toolkit-body .tk-vote-float {
+    opacity: 1;
+}
+
+/* ---- backdrop-filter ---------------------------------------------- */
+.no-backdrop .glass-chrome,
+.no-backdrop [class*="backdrop-blur"] {
+    background-color: rgba(20, 20, 22, 0.94);
+}
+
+/* ---- content-visibility ------------------------------------------- */
+.ghost-legacy-host [style*="content-visibility"],
+.ghost-legacy-host .asset-card,
+.ghost-legacy-host .glib-card {
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+}
+
+/* ==================================================================
+ * html.ghost-legacy  — Chromium < 84 (After Effects 2019-2022)
+ * Injected by js/ghost-low-device-profile.js after it reads the real
+ * engine version, so it also applies when a newer package is dropped
+ * into an old host.
+ * ================================================================== */
+
+/* ---- flexbox gap (Chrome 84) — hand-written panel CSS ------------- */
+html.ghost-legacy .ghost-gate-overlay nav > * { margin-right: 6px; }
+html.ghost-legacy .ghost-gate-overlay #tab-activate > div:last-child > * { margin-right: 8px; }
+html.ghost-legacy [class*="ghost-row"] > * + *,
+html.ghost-legacy .tk-toolbar > * + *,
+html.ghost-legacy .tk-chips > *,
+html.ghost-legacy .tk-tabs > * + *,
+html.ghost-legacy .gc-toolbar > * + *,
+html.ghost-legacy .gsb-actions > * + *,
+html.ghost-legacy .nav-item > * + *,
+html.ghost-legacy .flex.gap-2 > * + *,
+html.ghost-legacy .flex.gap-3 > * + *,
+html.ghost-legacy .flex.gap-4 > * + * { margin-left: 8px; }
+html.ghost-legacy .tk-chips > * { margin-bottom: 6px; }
+
+/* Chrome 74 supports flex and grid. Never replace either with block: doing so
+   stacks every toolbar and card. Only emulate the unsupported gap property. */
+html.ghost-legacy .grid { display: grid !important; }
+html.ghost-legacy .flex { display: flex !important; }
+html.ghost-legacy .flex-col { flex-direction: column; }
+html.ghost-legacy .grid > * { min-width: 0; }
+html.ghost-legacy .grid.gap-1 > * { margin: 2px; }
+html.ghost-legacy .grid.gap-2 > * { margin: 4px; }
+html.ghost-legacy .grid.gap-3 > * { margin: 6px; }
+html.ghost-legacy .grid.gap-4 > * { margin: 8px; }
+
+/* Card content visibility */
+html.ghost-legacy .asset-card i, 
+html.ghost-legacy .template-card i,
+html.ghost-legacy .tk-tab-icon { 
+    display: inline-block !important; 
+    visibility: visible; 
+    min-width: 14px;
+}
+
+
+/* ---- inset / aspect-ratio shorthands (Chrome 87/88) -------------- */
+html.ghost-legacy .absolute.inset-0,
+html.ghost-legacy [class*="inset-0"] { top: 0; right: 0; bottom: 0; left: 0; }
+html.ghost-legacy [class*="aspect-"] { min-height: 96px; }
+
+/* ---- :is() / :where() are unsupported: keep opacity predictable --- */
+html.ghost-legacy .tk-vote-float,
+html.ghost-legacy .asset-actions { opacity: 1; }
+
+/* ---- effects legacy CEF composites on the CPU -------------------- */
+html.ghost-legacy * {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    filter: none !important;
+    box-shadow: none !important;
+    animation: none;
+    transition: none;
+    content-visibility: visible;
+}
+
+/* ---- Lucide cannot be parsed here: neutral glyph placeholders ---- */
+html.ghost-tw-off i[data-lucide],
+html.ghost-legacy i[data-lucide]:empty,
+html.ghost-legacy .tk-tab-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid currentColor;
+    border-radius: 4px;
+    opacity: 0.65;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+}
+
+html.ghost-legacy .tk-tab-icon::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    border: 1px solid currentColor;
+    opacity: 0.5;
+}
+
+/* ---- baseline reset (precompiled sheet ships without preflight) -- */
+html.ghost-tw-off body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 12px;
+    color: #cfcfd4;
+    background: #232323;
+}
+html.ghost-tw-off * { box-sizing: border-box; }
+html.ghost-tw-off button,
+html.ghost-tw-off input,
+html.ghost-tw-off select,
+html.ghost-tw-off textarea { font: inherit; color: inherit; }
+html.ghost-tw-off button { cursor: pointer; }
+html.ghost-tw-off h1,
+html.ghost-tw-off h2,
+html.ghost-tw-off h3,
+html.ghost-tw-off h4,
+html.ghost-tw-off p,
+html.ghost-tw-off ul,
+html.ghost-tw-off ol { margin: 0; padding: 0; }
+html.ghost-tw-off ul,
+html.ghost-tw-off ol { list-style: none; }
+html.ghost-tw-off img,
+html.ghost-tw-off video,
+html.ghost-tw-off svg { display: block; max-width: 100%; }
+
+/* ---- activation gate: legacy-safe layout ------------------------- */
+html.ghost-legacy .ghost-gate-overlay {
+    display: none !important;
+}
+html.ghost-legacy .ghost-gate-overlay.is-open {
+    display: block !important;
+    overflow: auto;
+    background: #f8fafc;
+    color: #0f172a;
+}
+html.ghost-legacy .ghost-gate-overlay .fixed.inset-0.pointer-events-none { display: none; }
+html.ghost-legacy #ghost-gate-main-container {
+    width: auto;
+    max-width: 400px;
+    margin: 32px auto;
+}
+html.ghost-legacy .ghost-gate-overlay .glass-chrome {
+    border: 1px solid #dde3ec;
+    border-radius: 14px;
+    background: #ffffff;
+}
+html.ghost-legacy .ghost-gate-overlay input {
+    width: 100%;
+    padding: 8px 74px 8px 10px;
+    border: 1px solid #cdd6e2;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+}
+html.ghost-legacy .ghost-gate-overlay #pasteBtn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    margin-top: -16px;
+    height: 32px;
+    line-height: 20px;
+    padding: 4px 10px;
+    border: 1px solid #cdd6e2;
+    border-radius: 6px;
+    background: #eef2f7;
+    color: #0f172a;
+}
+html.ghost-legacy .ghost-gate-overlay #pasteBtn svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    margin-right: 4px;
+}
+
+/* ---- flexbox gap ---------------------------------------------------
+ * AE 2019-2020 embed Chromium 74/76 where flex `gap` is ignored, so rows
+ * of buttons collapsed into each other. ghost-compat.js adds .no-gap. */
+.no-gap [class*="flex"] > * + *,
+.no-gap .tabs > * + *,
+.no-gap .tools-tabs > * + *,
+.no-gap .tk-tabs > * + *,
+.no-gap .gate-actions > * + *,
+.no-gap .tk-expr-actions > * + *,
+.no-gap .asset-actions > * + *,
+.no-gap .toolbar > * + *,
+.no-gap .row > * + * {
+    margin-left: 8px;
+}
+
+.no-gap .stack > * + *,
+.no-gap .tool-card > * + *,
+.no-gap .tools-tab-panel > * + * {
+    margin-top: 8px;
+}
+
+/* ---- grid ---------------------------------------------------------- */
+.no-grid .asset-grid,
+.no-grid .emoji-grid,
+.no-grid .tpl-grid,
+.no-grid .glib-grid,
+.no-grid #exprGrid {
+    display: block;
+}
+.no-grid .asset-grid > *,
+.no-grid .emoji-grid > *,
+.no-grid .tpl-grid > *,
+.no-grid .glib-grid > *,
+.no-grid #exprGrid > * {
+    display: inline-block;
+    vertical-align: top;
+    width: 168px;
+    margin: 0 8px 8px 0;
+}
+
+/* ---- sticky -------------------------------------------------------- */
+.no-sticky .tools-header,
+.no-sticky .command-header,
+.no-sticky .gt-header,
+.no-sticky .tk-search {
+    position: relative;
+    top: auto;
+}

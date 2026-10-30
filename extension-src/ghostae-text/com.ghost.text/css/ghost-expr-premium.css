@@ -1,0 +1,434 @@
+/* ==========================================================================
+   GHOST — Expression tab, premium pass (v3.41.0)
+   Loaded last so it wins over ghost-expression-final.css.
+
+   Everything here is pure CSS: the icon glyphs already ship as inline SVG
+   paths (js/toolkit.js -> exprIconFor) and the masks in ghost-fa-lite.css use
+   local files, so the panel never waits on a CDN webfont. That keeps the
+   extension fast and works with no internet inside After Effects.
+
+   Also holds the two small additions used elsewhere in this release:
+   the "TESTING" section badge and the FFX card preview video.
+   ========================================================================== */
+
+/* ── section badge (Web Presets = not verified yet) ───────────────────── */
+.tk-sec-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 15px;
+    margin-left: 6px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    color: #f2b544;
+    background: rgba(242, 181, 68, 0.12);
+    border: 1px solid rgba(242, 181, 68, 0.34);
+}
+
+/* ── FFX card preview video (folder presets) ──────────────────────────── */
+.tk-ffx-card { position: relative; overflow: hidden; }
+.tk-ffx-card-clip {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    pointer-events: none;
+    border-radius: inherit;
+}
+.tk-ffx-card.is-clip-on .tk-ffx-card-clip { opacity: 1; }
+.tk-ffx-card-tag.is-perfect {
+    color: #7ff2c3;
+    background: rgba(46, 214, 158, 0.14);
+    border: 1px solid rgba(46, 214, 158, 0.35);
+}
+
+/* ── toolbar ───────────────────────────────────────────────────────────── */
+.tk-expr-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.tk-expr-reference-actions { display: flex; gap: 6px; align-items: center; margin-left: auto; }
+.tk-expr-reference-search {
+    height: 26px;
+    min-width: 118px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: inherit;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+.tk-expr-reference-search:focus {
+    outline: none;
+    border-color: rgba(120, 170, 255, 0.55);
+    box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.14);
+}
+.tk-expr-reference-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: background 0.16s ease, transform 0.16s ease;
+}
+.tk-expr-reference-icon:hover { background: rgba(255, 255, 255, 0.11); transform: translateY(-1px); }
+
+/* ── category chips ────────────────────────────────────────────────────── */
+.tk-expr-cats { display: flex; flex-wrap: wrap; gap: 5px; }
+.tk-expr-cat {
+    height: 24px;
+    padding: 0 11px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.62);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+    transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+}
+.tk-expr-cat:hover { color: #fff; background: rgba(255, 255, 255, 0.09); }
+.tk-expr-cat.active {
+    color: #0b0f16;
+    background: linear-gradient(135deg, #8fd0ff, #b7a5ff);
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(120, 150, 255, 0.28);
+}
+
+/* ── cards ─────────────────────────────────────────────────────────────── */
+.tk-expr-grid { gap: 8px; }
+.tk-expr-card {
+    position: relative;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 6px 18px rgba(0, 0, 0, 0.22);
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.tk-expr-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(150, 190, 255, 0.4);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(150, 190, 255, 0.16);
+}
+.tk-expr-card:focus-visible {
+    outline: none;
+    border-color: rgba(150, 190, 255, 0.65);
+    box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.18);
+}
+.tk-expr-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: #dbe7ff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tk-expr-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tk-expr-card:hover .tk-expr-icon { color: #fff; border-color: rgba(150, 190, 255, 0.35); }
+.tk-expr-target {
+    display: inline-flex;
+    align-items: center;
+    height: 16px;
+    padding: 0 7px;
+    border-radius: 999px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(220, 232, 255, 0.85);
+    background: rgba(120, 160, 255, 0.12);
+    border: 1px solid rgba(120, 160, 255, 0.24);
+}
+.tk-expr-code {
+    display: block;
+    max-height: 92px;
+    overflow: auto;
+    padding: 7px 9px;
+    border-radius: 9px;
+    font-size: 10px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    color: rgba(214, 228, 255, 0.9);
+    background: rgba(0, 0, 0, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.tk-expr-actions { display: flex; gap: 6px; }
+.tk-expr-actions .primary-button,
+.tk-expr-actions .ghost-button { height: 26px; padding: 0 12px; border-radius: 999px; font-size: 11px; }
+
+/* ── Perfect Presets badge (Animation tab, real .ffx pack) ────────────── */
+.tk-sec-badge.is-perfect-badge {
+    color: #7ff2c3;
+    background: rgba(46, 214, 158, 0.12);
+    border-color: rgba(46, 214, 158, 0.34);
+}
+.tk-ts-sechead .tk-catbtn-wrap { margin-left: 8px; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   v3.41.1 — rubber toolbar + calmer borders
+   The Expression toolbar must stay on ONE line at any panel width: the
+   select shrinks, the chip row scrolls sideways, the search collapses.
+   ══════════════════════════════════════════════════════════════════════ */
+.tk-expr-toolbar {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 5px;
+    padding: 6px 8px;
+    border-color: rgba(255, 255, 255, 0.045);
+    box-shadow: none;
+}
+.tk-expr-toolbar > .tk-select,
+.tk-expr-toolbar > #exprTarget {
+    flex: 0 1 auto;
+    min-width: 54px;
+    max-width: 132px;
+    width: auto;
+}
+.tk-expr-cats {
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 1px;
+}
+.tk-expr-cats::-webkit-scrollbar { height: 0; width: 0; }
+.tk-expr-cat {
+    flex: 0 0 auto;
+    height: 22px;
+    padding: 0 9px;
+    white-space: nowrap;
+}
+.tk-expr-reference-actions { flex: 0 0 auto; margin-left: 4px; gap: 4px; }
+.tk-expr-reference-search {
+    flex: 0 1 auto;
+    width: clamp(64px, 20vw, 150px);
+    min-width: 64px;
+    height: 24px;
+}
+.tk-expr-reference-icon { flex: 0 0 auto; width: 24px; height: 24px; }
+
+/* very narrow panel — drop the chip labels' breathing room even further */
+@media (max-width: 420px) {
+    .tk-expr-cat { padding: 0 7px; font-size: 10px; }
+    .tk-expr-toolbar > .tk-select,
+    .tk-expr-toolbar > #exprTarget { max-width: 84px; }
+}
+
+/* ── fewer / softer borders, matched to the panel background ─────────── */
+.tk-expr-card,
+.tk-expr-icon,
+.tk-expr-code,
+.tk-expr-target,
+.tk-expr-reference-search,
+.tk-expr-reference-icon,
+.tk-ffx-card,
+.tk-card {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+.tk-expr-card { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18); }
+.tk-expr-code { border: none; }
+.tk-expr-icon { border: none; }
+.tk-up-section,
+.tk-ts-section { border: none; background: transparent; box-shadow: none; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   v3.42.0 — Perfect Presets look exactly like Web Presets
+   Same card shell, hover-reveal name, hover-reveal like/dislike + star,
+   no FFX badge. Media fills the card; the clip sits on top of the still.
+   ══════════════════════════════════════════════════════════════════════ */
+.tk-ffx-grid { margin-top: 8px; }
+.ghost-toolkit-body .tk-ffx-card { padding: 0; min-height: 92px; }
+.tk-ffx-media {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.tk-ffx-media .tk-ffx-card-shot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    margin: 0;
+}
+.tk-ffx-media .tk-ffx-card-clip {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .18s ease;
+    pointer-events: none;
+}
+.tk-ffx-card.is-clip-on .tk-ffx-card-clip { opacity: 1; }
+.tk-ffx-card .tk-ffx-card-tag,
+.tk-ffx-card .tk-card-badge { display: none; }
+/* the hover-reveal caption needs a scrim so it stays readable over video */
+.ghost-toolkit-body .tk-ffx-card .tk-card-label {
+    z-index: 12;
+    background: linear-gradient(180deg, rgba(6, 8, 13, 0), rgba(6, 8, 13, .88));
+    border-top: 0;
+    color: #eef2ff;
+}
+
+/* ── one-line section heads with their own play toggle ────────────────── */
+.tk-sechead-1line {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+.tk-sechead-1line .gp2-sectitle { flex: 0 0 auto; white-space: nowrap; }
+.tk-sechead-1line .tk-sec-badge { flex: 0 0 auto; }
+.tk-sechead-1line .gp2-rule { flex: 1 1 auto; min-width: 8px; }
+.tk-sechead-1line .tk-sec-play,
+.tk-sechead-1line .tk-catbtn-wrap { flex: 0 0 auto; margin-left: 0; }
+.tk-sec-play .tk-ico-play { display: none; }
+.tk-sec-play[aria-pressed="false"] .tk-ico-play { display: block; }
+.tk-sec-play[aria-pressed="false"] .tk-ico-pause { display: none; }
+
+/* ── section play/pause buttons ───────────────────────────────────────── */
+.tk-sechead-1line .tk-sec-play {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 6px;
+    color: var(--ghost-text-dim, #a8adb8);
+    background: transparent;
+    border: 1px solid transparent;
+    transition: background .14s ease, color .14s ease, border-color .14s ease;
+}
+.tk-sechead-1line .tk-sec-play .gi { width: 13px; height: 13px; }
+.tk-sechead-1line .tk-sec-play:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .09);
+    border-color: rgba(255, 255, 255, .12);
+}
+.tk-sechead-1line .tk-sec-play:active { transform: scale(.94); }
+.tk-sechead-1line .tk-sec-play:focus-visible {
+    outline: 2px solid rgba(110, 168, 255, .7);
+    outline-offset: 1px;
+}
+.tk-sechead-1line .tk-sec-play[aria-pressed="true"] { color: #7db1ff; }
+
+/* ── preview autoplay: paused sections park on the finished pose ───────── */
+#animGrid.is-paused .tk-card:not(:hover),
+#animGrid.is-paused .tk-card:not(:hover) *,
+#animFfxGrid.is-paused .tk-card:not(:hover),
+#animFfxGrid.is-paused .tk-card:not(:hover) * {
+    animation-play-state: paused !important;
+}
+#animGrid.is-paused .tk-card:not(:hover) .tk-preview-text,
+#animGrid.is-paused .tk-card:not(:hover) .tk-seq-unit {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    letter-spacing: normal !important;
+    clip-path: none !important;
+}
+
+/* hover replay beats every idle/scroll park rule (id selectors win) */
+#animGrid .tk-card:hover,
+#animGrid .tk-card:hover *,
+#animFfxGrid .tk-card:hover,
+#animFfxGrid .tk-card:hover * {
+    animation-play-state: running !important;
+}
+#animGrid .tk-card:hover .tk-preview-text,
+#animGrid .tk-card:hover .tk-seq-unit {
+    opacity: initial;
+    transform: none;
+}
+
+/* one frame with no animation so hover restarts the preview from zero */
+#animGrid .tk-card.tk-anim-restart,
+#animGrid .tk-card.tk-anim-restart *,
+#animFfxGrid .tk-card.tk-anim-restart,
+#animFfxGrid .tk-card.tk-anim-restart * {
+    animation: none !important;
+}
+
+/* autoplay on: nothing is parked except off-screen cards */
+#animGrid.is-autoplay .tk-card:not(.tk-card-idle),
+#animGrid.is-autoplay .tk-card:not(.tk-card-idle) * {
+    animation-play-state: running !important;
+}
+
+
+/* ── v3.40.2 — Perfect Preset clips + one-line section head ───────────── */
+.tk-ffx-media .tk-ffx-card-shot { transition: opacity .18s ease; }
+.tk-ffx-card.is-clip-on.is-clip-ready .tk-ffx-card-shot { opacity: 0; }
+.tk-ffx-card.is-clip-on .tk-ffx-card-clip { opacity: 1; }
+.tk-sechead-1line .tk-panel-toolbar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+.tk-sechead-1line .tk-panel-toolbar .tk-catbtn-label { max-width: 92px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* v3.40.2 preview safety: the still image remains visible until the video
+   has actually produced data and entered playback. */
+.tk-ffx-card .tk-ffx-card-clip { opacity: 0; }
+.tk-ffx-card.is-clip-on.is-clip-ready .tk-ffx-card-clip { opacity: 1; }
+.tk-ffx-card.is-clip-on:not(.is-clip-ready) .tk-ffx-card-shot { opacity: 1; }
+/* v3.40.2 verified preview safety: never reveal a video until it is
+   actually playable; a rejected/unsupported play must leave the still visible. */
+.tk-ffx-card.is-clip-on:not(.is-clip-ready) .tk-ffx-card-clip { opacity: 0 !important; }
+.tk-ffx-card:not(.is-clip-on) .tk-ffx-card-clip { opacity: 0 !important; }
+.tk-ffx-card.is-clip-on.is-clip-ready .tk-ffx-card-clip { opacity: 1 !important; }
+
+/* Cloud preset state — green tick once the real .ffx is on this machine. */
+.tk-ffx-card.is-downloaded::after {
+  content: "";
+  position: absolute; top: 6px; right: 6px;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: #16a34a url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") center/10px 10px no-repeat;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.35);
+  pointer-events: none; z-index: 4;
+}
+.tk-ffx-card.is-downloading::after {
+  content: "";
+  position: absolute; top: 6px; right: 6px;
+  width: 15px; height: 15px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.35); border-top-color: #38bdf8;
+  animation: ghostFfxSpin .7s linear infinite;
+  pointer-events: none; z-index: 4;
+}
+@keyframes ghostFfxSpin { to { transform: rotate(360deg); } }

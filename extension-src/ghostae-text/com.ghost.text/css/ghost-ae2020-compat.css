@@ -1,0 +1,279 @@
+/*!
+ * GHOST Creative System — After Effects 2020 CSS compatibility overrides.
+ *
+ * Load LAST in every panel. Everything here is scoped to .ghost-legacy-host /
+ * .no-* capability classes set by js/ghost-compat.js, so modern After Effects
+ * builds (2023+) are untouched.
+ *
+ * Chromium 74-84 (AE 2020/2021) limitations addressed:
+ *  - flexbox `gap` is ignored           -> margin-based spacing
+ *  - `auto-fit` grid tracks collapse    -> auto-fill + fixed breakpoints
+ *  - inset shorthand unsupported        -> explicit top/right/bottom/left
+ *  - visibility-based overlays glitch   -> display driven show/hide
+ *  - modern easing curves stutter       -> ease-out
+ */
+
+/* ---- 1. Flex gap fallback ------------------------------------------------ */
+.no-gap .tabs > * ,
+.no-gap .tools-tabs > *,
+.no-gap .tools-tab-row > *,
+.no-gap .toolbar > *,
+.no-gap .row > *,
+.no-gap .btn-row > *,
+.no-gap .chip-row > *,
+.no-gap .tk-chips > *,
+.no-gap .filter-row > *,
+.no-gap .header-actions > *,
+.no-gap .command-header > *,
+.no-gap .tools-header > * {
+    margin-right: 6px;
+}
+.no-gap .tabs > *:last-child,
+.no-gap .tools-tabs > *:last-child,
+.no-gap .tools-tab-row > *:last-child,
+.no-gap .toolbar > *:last-child,
+.no-gap .row > *:last-child,
+.no-gap .btn-row > *:last-child,
+.no-gap .chip-row > *:last-child,
+.no-gap .tk-chips > *:last-child,
+.no-gap .filter-row > *:last-child,
+.no-gap .header-actions > *:last-child,
+.no-gap .command-header > *:last-child,
+.no-gap .tools-header > *:last-child {
+    margin-right: 0;
+}
+
+/* Vertical stacks that relied on column gap. */
+.no-gap .sidebar > *,
+.no-gap .card-stack > *,
+.no-gap .messages > *,
+.no-gap .tool-card > * {
+    margin-bottom: 8px;
+}
+.no-gap .sidebar > *:last-child,
+.no-gap .card-stack > *:last-child,
+.no-gap .messages > *:last-child,
+.no-gap .tool-card > *:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- 2. Grid track fallback --------------------------------------------- */
+/* repeat(auto-fit, ...) resolves to a single collapsed column in CEF 74. */
+.ghost-legacy-host .asset-grid,
+.ghost-legacy-host .glib-grid,
+.ghost-legacy-host .template-grid,
+.ghost-legacy-host .emoji-grid,
+.ghost-legacy-host .palette-grid,
+.ghost-legacy-host .tool-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.no-grid .asset-grid,
+.no-grid .glib-grid,
+.no-grid .template-grid,
+.no-grid .palette-grid,
+.no-grid .tool-grid {
+    display: block;
+    font-size: 0;
+}
+.no-grid .asset-grid > *,
+.no-grid .glib-grid > *,
+.no-grid .template-grid > *,
+.no-grid .palette-grid > *,
+.no-grid .tool-grid > * {
+    display: inline-block;
+    width: 48%;
+    margin: 0 1% 10px;
+    vertical-align: top;
+    font-size: 12px;
+}
+.no-grid .emoji-grid { display: block; font-size: 0; }
+.no-grid .emoji-grid > * {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    font-size: 18px;
+}
+
+/* Explicit breakpoints instead of intrinsic sizing. */
+@media (max-width: 620px) {
+    .ghost-legacy-host .asset-grid,
+    .ghost-legacy-host .glib-grid,
+    .ghost-legacy-host .template-grid,
+    .ghost-legacy-host .tool-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .no-grid .asset-grid > *,
+    .no-grid .glib-grid > *,
+    .no-grid .template-grid > *,
+    .no-grid .tool-grid > * { width: 48%; }
+}
+@media (max-width: 420px) {
+    .ghost-legacy-host .asset-grid,
+    .ghost-legacy-host .glib-grid,
+    .ghost-legacy-host .template-grid,
+    .ghost-legacy-host .tool-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .no-grid .asset-grid > *,
+    .no-grid .glib-grid > *,
+    .no-grid .template-grid > *,
+    .no-grid .tool-grid > * { width: 98%; }
+}
+
+/* ---- 3. inset shorthand ------------------------------------------------- */
+/* `inset: 0` is Chromium 87+. Older builds drop the whole declaration, which
+   left overlays with zero size and made them look broken/unclickable. */
+.ghost-legacy-host .gate-overlay,
+.ghost-legacy-host .modal-backdrop,
+.ghost-legacy-host .gp-modal,
+.ghost-legacy-host .preview-shell,
+.ghost-legacy-host .expression-modal,
+.ghost-legacy-host .sheet-backdrop {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* ---- 4. Overlays: display, not visibility ------------------------------- */
+/* visibility:hidden layers still swallowed clicks in CEF 74. */
+.ghost-legacy-host [hidden],
+.ghost-legacy-host .is-hidden,
+.ghost-legacy-host .hidden {
+    display: none !important;
+}
+.ghost-legacy-host .settings-overlay,
+.ghost-legacy-host .sessions-panel,
+.ghost-legacy-host .dropdown-menu,
+.ghost-legacy-host .menu-pop {
+    visibility: visible;
+}
+.ghost-legacy-host .settings-overlay:not(.is-open),
+.ghost-legacy-host .sessions-panel:not(.is-open),
+.ghost-legacy-host .dropdown-menu:not(.is-open),
+.ghost-legacy-host .menu-pop:not(.is-open) {
+    display: none;
+}
+
+/* ---- 5. Predictable transitions ---------------------------------------- */
+.ghost-legacy-host * {
+    transition-timing-function: ease-out;
+}
+.ghost-legacy-host .card,
+.ghost-legacy-host .asset-card,
+.ghost-legacy-host button {
+    transition-duration: 120ms !important;
+}
+
+/* ---- 6. Inputs must stay typable --------------------------------------- */
+/* Legacy CEF ignores caret-color and mis-measures autoscaled textareas. */
+.ghost-legacy-host input,
+.ghost-legacy-host textarea,
+.ghost-legacy-host select {
+    -webkit-user-select: text;
+    user-select: text;
+    color: #f4f5f7;
+    background-color: #202226;
+    border: 1px solid #3a3d44;
+    opacity: 1;
+}
+.ghost-legacy-host textarea {
+    min-height: 44px;
+    max-height: 180px;
+    overflow-y: auto;
+    resize: none;
+}
+.ghost-legacy-host button,
+.ghost-legacy-host .btn,
+.ghost-legacy-host [role="button"] {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ---- 7. Scrollable regions -------------------------------------------- */
+/* Virtualised lists rely on content-visibility, which CEF 74 lacks; force the
+   plain scrolling path so items actually paint. */
+.ghost-legacy-host .asset-grid,
+.ghost-legacy-host .glib-grid,
+.ghost-legacy-host .list-scroll,
+.ghost-legacy-host .messages {
+    content-visibility: visible;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbars are best-effort on AE 2020; keep them but guarantee width
+   so the track never overlaps content. */
+.ghost-legacy-host ::-webkit-scrollbar { width: 8px; height: 8px; }
+.ghost-legacy-host ::-webkit-scrollbar-thumb {
+    background: #4a4d55;
+    border-radius: 4px;
+}
+
+/* ---- 8. Colour fallbacks ---------------------------------------------- */
+/* var() works in CEF 74, but color-mix()/oklch() do not; those resolve to
+   "invalid" and elements rendered transparent. */
+.no-color-mix .ghost-legacy-host,
+.ghost-legacy-host.no-color-mix {
+    background-color: #141416;
+    color: #e9e9ec;
+}
+.ghost-legacy-host .btn-primary,
+.ghost-legacy-host .is-primary {
+    background-color: #2680eb;
+    color: #ffffff;
+    border-color: #2680eb;
+}
+
+/* ---- 9. Custom property fallback --------------------------------------- */
+/* If var() cannot resolve, panels previously rendered as unstyled white
+   surfaces. These literal values mirror css/design-tokens.css. */
+.no-css-vars body,
+.no-css-vars .app-shell,
+.no-css-vars .command-shell,
+.no-css-vars .tools-shell,
+.no-css-vars .gt-shell {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+.no-css-vars .sidebar,
+.no-css-vars .tools-header,
+.no-css-vars .command-header,
+.no-css-vars .gt-header {
+    background-color: #252526;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+.no-css-vars .card,
+.no-css-vars .asset-card,
+.no-css-vars .tool-card,
+.no-css-vars .tk-card,
+.no-css-vars .glib-card {
+    background-color: #2D2D30;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.no-css-vars .card:hover,
+.no-css-vars .asset-card:hover,
+.no-css-vars .tool-card:hover { background-color: #34343A; }
+.no-css-vars .muted,
+.no-css-vars .meta,
+.no-css-vars small { color: #A8A8A8; }
+.no-css-vars button,
+.no-css-vars .btn {
+    background-color: #2D2D30;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 6px;
+}
+.no-css-vars .btn-primary,
+.no-css-vars .is-primary,
+.no-css-vars .is-on {
+    background-color: #2680EB;
+    border-color: #2680EB;
+    color: #FFFFFF;
+}

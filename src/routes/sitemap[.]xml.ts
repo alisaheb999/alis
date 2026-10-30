@@ -1,0 +1,70 @@
+import { createFileRoute } from "@tanstack/react-router";
+import type {} from "@tanstack/react-start";
+import { POSTS } from "@/lib/blog-data";
+import { COMPETITORS } from "@/lib/compare-data";
+
+const BASE_URL = "https://ghostae.com";
+
+interface SitemapEntry {
+  path: string;
+  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  priority?: string;
+}
+
+const entries: SitemapEntry[] = [
+  { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/products", changefreq: "weekly", priority: "0.9" },
+  { path: "/products/caption", changefreq: "weekly", priority: "0.9" },
+  { path: "/products/text", changefreq: "weekly", priority: "0.9" },
+
+  { path: "/docs", changefreq: "monthly", priority: "0.7" },
+  { path: "/blog", changefreq: "weekly", priority: "0.6" },
+  { path: "/compare", changefreq: "monthly", priority: "0.8" },
+  ...COMPETITORS.map((c) => ({ path: `/compare/${c.slug}`, changefreq: "monthly" as const, priority: "0.8" })),
+
+  { path: "/security", changefreq: "monthly", priority: "0.5" },
+  { path: "/trust", changefreq: "monthly", priority: "0.7" },
+  { path: "/terms", changefreq: "yearly", priority: "0.3" },
+  { path: "/refund", changefreq: "yearly", priority: "0.3" },
+
+  // One entry per published blog post — mirrors /blog/$slug.
+  ...POSTS.map((post) => ({
+    path: `/blog/${post.slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.6",
+  })),
+];
+
+export const Route = createFileRoute("/sitemap.xml")({
+  server: {
+    handlers: {
+      GET: async () => {
+        const urls = entries.map((e) =>
+          [
+            `  <url>`,
+            `    <loc>${BASE_URL}${e.path}</loc>`,
+            e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
+            e.priority ? `    <priority>${e.priority}</priority>` : null,
+            `  </url>`,
+          ]
+            .filter(Boolean)
+            .join("\n"),
+        );
+
+        const xml = [
+          `<?xml version="1.0" encoding="UTF-8"?>`,
+          `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+          ...urls,
+          `</urlset>`,
+        ].join("\n");
+
+        return new Response(xml, {
+          headers: {
+            "Content-Type": "application/xml",
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
+      },
+    },
+  },
+});

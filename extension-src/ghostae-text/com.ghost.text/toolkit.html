@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="Ghostae Text — Text Presets for After Effects" />
+    <meta name="version" content="3.41.0" />
+    <title>Ghostae Text — Text Studio</title>
+    <!-- Bundled stylesheets: 20 files merged in original cascade order into
+         two bundles (core + panel) to cut CEP/CEF request overhead. --><!-- Tailwind: precompiled at build time (css/ghost-tw.css).
+         The 558KB Play CDN JIT used to run in-panel and kept a body-wide
+         MutationObserver alive forever; it is intentionally NOT loaded. -->
+
+    <!-- toolkit.css is the panel's authoritative stylesheet: loaded last so it
+         wins the cascade without !important. Do not bundle it. -->
+        <link rel="stylesheet" href="css/ghost-release.bundle.css?v=3.41.0-perf" />
+    <script defer src="js/ghost-preset-cloud.js?v=1.0.0"></script>
+<script defer src="js/ghost-release.bundle.obf.js?v=3.41.0-perf"></script>
+<script defer src="js/ghost-license-guard.js?v=1.0.0"></script>
+
+</head>
+<body class="ghost-tools-body ghost-toolkit-body">
+    <main class="tools-shell">
+        <header class="tools-header">
+            <nav class="tools-tabs tk-tabs" role="tablist" aria-label="Toolkit categories">
+                <button type="button" class="tools-tab active" role="tab" data-tab="anim" aria-selected="true" title="Animations"><span class="tk-tab-icon"><svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="bolt"><path d="M3.75 13.5l10.5-11.25-1.5 8.25h7.5L9.75 21.75l1.5-8.25h-7.5Z"/></svg></span><span class="tk-tab-name">Animations</span><span class="tk-tab-count" data-count="anim">0</span></button>
+                <button type="button" class="tools-tab" role="tab" data-tab="advanced" aria-selected="false" title="Advanced animation — editable layer builder"><span class="tk-tab-icon"><svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="adjustments-horizontal"><path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"/></svg></span><span class="tk-tab-name">Advanced</span></button>
+                <button type="button" class="tools-tab" role="tab" data-tab="color" aria-selected="false" title="Colour &amp; FX"><span class="tk-tab-icon"><svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="swatch"><path d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"/></svg></span><span class="tk-tab-name">Style</span><span class="tk-tab-count" data-count="color">0</span></button>
+                <button type="button" class="tools-tab" role="tab" data-tab="emoji" aria-selected="false" title="Emoji"><span class="tk-tab-icon"><svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="face-smile"><path d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"/></svg></span><span class="tk-tab-name">Emoji</span><span class="tk-tab-count" data-count="emoji">0</span></button>
+                <button type="button" class="tools-tab" role="tab" data-tab="expression" aria-selected="false" title="Expressions"><span class="tk-tab-icon"><svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="variable"><path d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 0 1 1.105.402l2.402 7.206a.75.75 0 0 0 1.104.401l1.445-.889m-8.25.75.213.09a1.687 1.687 0 0 0 2.062-.617l4.45-6.676a1.688 1.688 0 0 1 2.062-.618l.213.09"/></svg></span><span class="tk-tab-name">Expressions</span><span class="tk-tab-count" data-count="expression">0</span></button>
+            </nav>
+
+            <!-- RIGHT ACTIONS — search, bookmark filter, plan upgrade -->
+            <div class="tk-right-actions">
+                <div class="tk-search" id="tkSearchBox">
+                    <button type="button" class="tk-search-toggle" id="tkSearchToggle" aria-label="Search">
+                        <svg class="gi gi-action icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="magnifying-glass"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                    </button>
+                    <input type="search" id="tkSearch" placeholder="Search" aria-label="Search presets" />
+                    <button type="button" id="tkSearchClear" class="tk-search-clear" aria-label="Clear search" hidden>
+                        <svg class="gi gi-clear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" stroke-linejoin="round" data-hero-name="x-mark"><path d="M6 18 18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <button type="button" class="tk-bm-filter" id="tkBookmarkFilter" title="Show bookmarked presets only" aria-pressed="false">
+                    <svg class="gi gi-action icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="star"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+                    <span id="tkBookmarkCount">0</span>
+                </button>
+                <button type="button" class="plan-upgrade-button hig-icon-btn" title="Upgrade Plan" aria-label="Upgrade Plan">
+                    <svg class="gi gi-action icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="rocket-launch"><path d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg>
+                </button>
+            </div>
+        </header>
+
+
+        <!-- TAB 1 — ANIMATION PRESETS -->
+        <section id="tab-anim" class="tools-tab-panel active" role="tabpanel" aria-label="Animation presets">
+
+            <div class="tk-chiprow is-hidden" id="animGroups" role="tablist" aria-label="Animation groups">
+                <button type="button" class="tk-chip active" data-group="all" title="All">All</button>
+                <button type="button" class="tk-chip" data-group="pop" title="Pop In family">Pop In</button>
+                <button type="button" class="tk-chip" data-group="bounce" title="Bounce family">Bounce</button>
+                <button type="button" class="tk-chip" data-group="elastic" title="Elastic family">Elastic</button>
+                <button type="button" class="tk-chip" data-group="fade" title="Fade family">Fade</button>
+                <button type="button" class="tk-chip" data-group="slide" title="Slide family">Slide</button>
+                <button type="button" class="tk-chip" data-group="scale" title="Scale family">Scale</button>
+                <button type="button" class="tk-chip" data-group="rotate" title="Rotate family">Rotate</button>
+                <button type="button" class="tk-chip" data-group="blur" title="Blur family">Blur</button>
+                <button type="button" class="tk-chip" data-group="track" title="Tracking family">Tracking</button>
+                <button type="button" class="tk-chip" data-group="skew" title="Skew family">Skew</button>
+            </div>
+            
+            
+
+
+            <!-- PERFECT PRESETS — real .ffx files shipped in
+                 <extension>/presets/animffx/<Name>/ with a preview image and
+                 a preview clip. Click applies the preset to the selected text
+                 layer, so what the clip shows is exactly what AE builds. -->
+            <section class="tk-ts-section" aria-label="Perfect presets">
+                <div class="tk-ts-sechead gp2-sechead tk-sechead-1line">
+                    <span class="gp2-sectitle">Perfect Presets</span>
+                    <div class="tk-panel-toolbar tk-toolbar-inhead">
+                <div class="tk-catbtn-wrap">
+                    <button type="button" id="animCatBtn" class="tk-icon-btn tk-icon-btn-sm tk-catbtn" title="Animation category" aria-haspopup="true" aria-expanded="false">
+                        <svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="squares-2x2"><path d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/></svg>
+                        <span class="tk-catbtn-label" id="animCatLabel">All animations</span>
+                        <span class="tk-catbtn-count" id="animCatCount">50</span>
+                    </button>
+                    <div class="tk-catmenu" id="animCatMenu" role="menu" aria-label="Animation category" hidden></div>
+                </div>
+                <div class="tk-langbtn-wrap">
+                    <button type="button" id="animLangBtn" class="tk-icon-btn tk-icon-btn-sm tk-langbtn" title="Preview language" aria-haspopup="true" aria-expanded="false">
+                        <svg class="gi gi-nav icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-hero-name="globe-alt"><path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+                        <span class="tk-langbtn-flag" aria-hidden="true">🇺🇸</span>
+                    </button>
+                    <div class="tk-langmenu" id="animLangMenu" role="menu" hidden></div>
+                </div>
+            </div>
+                    <span class="gp2-rule"></span>
+                    <button type="button" id="animFfxPlayBtn" class="tk-icon-btn tk-icon-btn-sm tk-sec-play" title="Play Perfect Preset previews" aria-pressed="false">
+                        <svg class="gi gi-nav tk-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.75 5.25v13.5m-7.5-13.5v13.5"/></svg>
+                        <svg class="gi gi-nav tk-ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></svg>
+                    </button>
+                    <div class="tk-catbtn-wrap">
+                        <button type="button" id="animFfxCatBtn" class="tk-icon-btn tk-icon-btn-sm tk-catbtn" title="Preset category" aria-haspopup="true" aria-expanded="false">
+                            <span class="tk-catbtn-label" id="animFfxCatLabel">All</span>
+                        </button>
+                        <div class="tk-catmenu" id="animFfxCatMenu" role="menu" aria-label="Preset category" hidden></div>
+                    </div>
+                </div>
+                <div id="animFfxGrid" class="tk-grid tk-ffx-grid"></div>
+                <div id="animFfxEmpty" class="tk-up-empty" hidden>No FFX presets found in presets/animffx.</div>
+                <div id="animFfxStatus" class="tool-inline-status" hidden></div>
+            </section>
+
+            <!-- WEB ANIMATIONS — CSS-driven previews, still being verified. -->
+            <div class="tk-ts-sechead gp2-sechead tk-sechead-1line">
+                <span class="gp2-sectitle">Web Presets</span>
+                <span class="tk-sec-badge" title="These animations are still being verified — results may differ inside After Effects.">TESTING</span>
+                <span class="gp2-rule"></span>
+                <button type="button" id="animWebPlayBtn" class="tk-icon-btn tk-icon-btn-sm tk-sec-play" title="Pause Web Preset previews" aria-pressed="true">
+                    <svg class="gi gi-nav tk-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.75 5.25v13.5m-7.5-13.5v13.5"/></svg>
+                    <svg class="gi gi-nav tk-ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></svg>
+                </button>
+            </div>
+            <div id="animGrid" class="tk-grid"></div>
+            <div id="animStatus" class="tool-inline-status" hidden></div>
+
+        </section>
+
+        <!-- TAB 1b — ADVANCE ANIMATION (editable layer builder) -->
+        <section id="tab-advanced" class="tools-tab-panel" aria-hidden="true" role="tabpanel" aria-label="Advanced animation builder">
+            <div class="adv-shell">
+                <div class="adv-stage-wrap">
+                    <div class="adv-stage-head">
+                        <input type="text" id="advText" class="adv-text-input" value="GHOST KINETIC TEXT" aria-label="Preview text" />
+                        <div class="adv-stage-actions">
+                            <button type="button" id="advReplay" class="ps-btn" title="Replay preview">↻</button>
+                            <select id="advPreset" class="adv-select" aria-label="Base preset"></select>
+                        </div>
+                    </div>
+                    <div class="adv-stage" id="advStage" aria-live="off"></div>
+                </div>
+
+                <div class="adv-params">
+                    <div class="adv-group">
+                        <h3>Animator Properties</h3>
+                        <label class="adv-row"><span>Opacity %</span><input type="range" id="advOpacity" min="0" max="100" value="0" /><b id="advOpacityVal">0</b></label>
+                        <label class="adv-row"><span>Position Y</span><input type="range" id="advPosY" min="-400" max="400" value="60" /><b id="advPosYVal">60</b></label>
+                        <label class="adv-row"><span>Scale %</span><input type="range" id="advScale" min="0" max="300" value="80" /><b id="advScaleVal">80</b></label>
+                        <label class="adv-row"><span>Rotation</span><input type="range" id="advRotZ" min="-360" max="360" value="0" /><b id="advRotZVal">0</b></label>
+                        <label class="adv-row"><span>Rotation X</span><input type="range" id="advRotX" min="-360" max="360" value="0" /><b id="advRotXVal">0</b></label>
+                        <label class="adv-row"><span>Rotation Y</span><input type="range" id="advRotY" min="-360" max="360" value="0" /><b id="advRotYVal">0</b></label>
+                        <label class="adv-row"><span>Blur</span><input type="range" id="advBlur" min="0" max="120" value="10" /><b id="advBlurVal">10</b></label>
+                        <label class="adv-row"><span>Tracking</span><input type="range" id="advTracking" min="-30" max="120" value="0" /><b id="advTrackingVal">0</b></label>
+                        <label class="adv-row"><span>Skew</span><input type="range" id="advSkew" min="-70" max="70" value="0" /><b id="advSkewVal">0</b></label>
+                        <label class="adv-row adv-row-color"><span>Fill Colour</span><input type="color" id="advColor" value="#1473e6" /><label class="adv-check"><input type="checkbox" id="advUseColor" /> use</label></label>
+                    </div>
+
+                    <div class="adv-group">
+                        <h3>Range Selector</h3>
+                        <label class="adv-row"><span>Start %</span><input type="range" id="advStart" min="0" max="100" value="0" /><b id="advStartVal">0</b></label>
+                        <label class="adv-row"><span>End %</span><input type="range" id="advEnd" min="0" max="100" value="100" /><b id="advEndVal">100</b></label>
+                        <label class="adv-row"><span>Offset %</span><input type="range" id="advOffset" min="-100" max="100" value="0" /><b id="advOffsetVal">0</b></label>
+                        <label class="adv-row"><span>Based on</span>
+                            <select id="advBasis" class="adv-select">
+                                <option value="chars">Characters</option>
+                                <option value="charsExcl">Characters excl. spaces</option>
+                                <option value="words">Words</option>
+                                <option value="lines">Lines</option>
+                            </select>
+                        </label>
+                        <label class="adv-row"><span>Shape</span>
+                            <select id="advShape" class="adv-select">
+                                <option value="square">Square</option>
+                                <option value="rampup">Ramp Up</option>
+                                <option value="rampdown">Ramp Down</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="round">Round</option>
+                                <option value="smooth">Smooth</option>
+                            </select>
+                        </label>
+                        <label class="adv-row"><span>Ease High</span><input type="range" id="advEaseHigh" min="-100" max="100" value="0" /><b id="advEaseHighVal">0</b></label>
+                        <label class="adv-row"><span>Ease Low</span><input type="range" id="advEaseLow" min="-100" max="100" value="0" /><b id="advEaseLowVal">0</b></label>
+                        <label class="adv-row"><span>Randomize</span><input type="checkbox" id="advRandomize" /></label>
+                    </div>
+
+                    <div class="adv-group">
+                        <h3>Timing</h3>
+                        <label class="adv-row"><span>Duration (s)</span><input type="range" id="advDuration" min="2" max="60" value="18" /><b id="advDurationVal">1.8s</b></label>
+                        <label class="adv-row"><span>Stagger (s)</span><input type="range" id="advStagger" min="0" max="40" value="4" /><b id="advStaggerVal">0.04s</b></label>
+                        <label class="adv-row"><span>Direction</span>
+                            <select id="advDirection" class="adv-select">
+                                <option value="in">Animate In</option>
+                                <option value="out">Animate Out</option>
+                            </select>
+                        </label>
+                        <div class="adv-apply-row">
+                            <button type="button" id="advApply" class="primary-button">✦ Apply Editable Animator</button>
+                            <button type="button" id="advApplyNew" class="secondary-button auto-width">＋ New Text Layer</button>
+                            <button type="button" id="advReset" class="secondary-button auto-width">↺ Reset</button>
+                        </div>
+                        <p class="adv-hint">Applies a real After Effects <b>Text Animator</b> with a Range Selector and keyframes — fully editable inside AE after apply.</p>
+                    </div>
+                </div>
+                <div id="advStatus" class="tool-inline-status" hidden></div>
+            </div>
+        </section>
+
+        <!-- TAB 2 — COLOR & FX -->
+        <section id="tab-color" class="tools-tab-panel" aria-hidden="true" role="tabpanel" aria-label="Color and effect presets">
+            <header class="tk-ts-head">
+                <div class="tk-ts-actions">
+                    <button type="button" id="ffxImportButton" class="tk-ts-icon" title="Import an .ffx preset" aria-label="Import FFX">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-hero-name="arrow-down-tray"><path d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                    </button>
+                    <button type="button" id="ffxFolderButton" class="tk-ts-icon" title="Open the preset folder" aria-label="Preset folder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-hero-name="folder-open"><path d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776"/></svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="tk-langbar" id="langGroups" role="tablist" aria-label="Preview language"></div>
+
+            <!-- FFX STYLE PRESETS — shipped visual text styles. Cards are loaded from
+                 <extension>/presets/style ffx and use the matching PNG preview.
+                 Applying a card targets the selected text layer. -->
+            <section class="tk-ts-section" aria-label="FFX style presets">
+                <div class="tk-ts-sechead gp2-sechead" data-style-header="1">
+                    <span class="gp2-sectitle">Perfect Color Presets</span>
+                    <span class="gp2-rule"></span>
+                    <div class="tk-panel-toolbar gp2-style-toolbar" id="perfectColorHeaderActions" aria-label="Perfect Color Presets actions">
+                        <button type="button" class="tk-icon-btn tk-icon-btn-sm gp2-style-lock" id="perfectColorLock" title="Ramp lock" aria-label="Ramp lock" aria-haspopup="true" aria-expanded="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.8" y="10.4" width="14.4" height="9" rx="2.2"/><path d="M8.4 10.4V7.8a3.6 3.6 0 0 1 7.2 0v2.6"/></svg>
+                        </button>
+                        <button type="button" class="tk-icon-btn tk-icon-btn-sm gp2-style-fav" id="perfectColorFavorite" title="Show favourites only" aria-label="Show favourites only" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5l2.35 4.76 5.26.77-3.8 3.7.9 5.24L12 16.5l-4.71 2.47.9-5.24-3.8-3.7 5.26-.77L12 4.5z"/></svg>
+                        </button>
+                        <div class="gm-wrap gp2-style-actions-wrap">
+                            <button type="button" class="gm-dots" id="perfectColorActions" title="Style options" aria-label="Style options" aria-haspopup="true" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="4.5" cy="10" r="1.6"/><circle cx="10" cy="10" r="1.6"/><circle cx="15.5" cy="10" r="1.6"/></svg>
+                            </button>
+                            <div class="gm-pop gp2-style-pop" id="perfectColorActionsMenu" role="menu" hidden></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ffxStyleGrid" class="tk-grid tk-grid-style tk-ffx-grid"></div>
+                <div id="ffxStyleEmpty" class="tk-up-empty">No styles yet. Import or create a preset to add one.</div>
+                <div id="ffxStyleStatus" class="tool-inline-status" hidden></div>
+            </section>
+
+            <!-- WEB PRESETS — CSS-driven looks, kept below the FFX presets. -->
+            <section class="tk-ts-section gp2-ffx-quiet" aria-label="Web presets">
+                <div class="tk-ts-sechead gp2-sechead">
+                    <span class="gp2-sectitle">Web Presets</span>
+                    <span class="tk-sec-badge is-testing" title="These looks are still being verified — results may differ inside After Effects.">TESTING</span>
+                    <span class="gp2-rule"></span>
+                </div>
+
+                <div id="textStyleGrid" class="tk-grid tk-grid-style"></div>
+                <div id="textStyleEmpty" class="tk-up-empty">No additional styles available.</div>
+                <div id="textStyleStatus" class="tool-inline-status" hidden></div>
+                <div id="colorStatus" class="tool-inline-status" hidden></div>
+            </section>
+
+
+        </section>
+
+
+
+        <!-- TAB 6 — EMOJI -->
+
+        <section id="tab-emoji" class="tools-tab-panel" aria-hidden="true" role="tabpanel" aria-label="Emoji presets">
+            <!-- Rendered natively by js/toolkit.js (renderEmojis) so the emoji
+                 library shares the panel design system. The old iframe build
+                 (emoji-panel.html) is no longer used. -->
+            <div id="emojiGrid" class="tk-emoji-host"></div>
+            <div id="emojiStatus" class="tool-inline-status" hidden></div>
+        </section>
+
+        <!-- TAB 4 — EXPRESSIONS -->
+        <section id="tab-expression" class="tools-tab-panel" aria-hidden="true" role="tabpanel" aria-label="Expression presets">
+            <div class="tk-expr-toolbar">
+                <select id="exprTarget" class="tk-select">
+                    <option value="selected" selected>Selected</option>
+                    <option value="position">Position</option>
+                    <option value="scale">Scale</option>
+                    <option value="rotation">Rotation (Z)</option>
+                    <option value="rotationX">Rotation X</option>
+                    <option value="rotationY">Rotation Y</option>
+                    <option value="orientation">Orientation</option>
+                    <option value="opacity">Opacity</option>
+                    <option value="anchor">Anchor Point</option>
+                    <option value="sourceText">Source Text</option>
+                </select>
+            </div>
+            <div id="exprGrid" class="tk-expr-grid"></div>
+            <div id="exprStatus" class="tool-inline-status" hidden></div>
+        </section>
+    </main>
+
+
+    <!-- Add-animation modal: one JSON format drives both the card preview and
+         the After Effects animator, so an imported preset cannot mismatch. -->
+    <div id="animPackModal" class="tk-modal" hidden>
+        <div class="tk-modal-card tk-modal-wide" role="dialog" aria-modal="true" aria-labelledby="animPackTitle">
+            <header class="tk-modal-head">
+                <h3 id="animPackTitle">Add Animation</h3>
+                <button type="button" id="animPackClose" class="tk-ts-icon" aria-label="Close">
+                    <svg class="gi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-hero-name="x-mark"><path d="M6 18 18 6M6 6l12 12"/></svg>
+                </button>
+            </header>
+            <p class="tk-modal-note">Paste a Ghostae animation pack (JSON). Ask any AI for it with the prompt button below — the same numbers drive the card preview and the After Effects animator, so what you see is what gets applied.</p>
+            <div class="tk-modal-actions">
+                <button type="button" id="animPackPrompt" class="secondary-button auto-width">Copy AI prompt</button>
+                <button type="button" id="animPackFormat" class="secondary-button auto-width">Copy format</button>
+                <button type="button" id="animPackFile" class="secondary-button auto-width">Load .json file…</button>
+            </div>
+            <textarea id="animPackInput" class="tk-modal-textarea" rows="10" spellcheck="false" placeholder='{ "format": "ghostae-animation-pack", "version": 1, "animations": [ ... ] }' aria-label="Animation pack JSON"></textarea>
+            <div id="animPackPreview" class="tk-pack-previewbar" aria-live="polite"></div>
+            <div class="tk-modal-actions">
+                <button type="button" id="animPackAdd" class="primary-button">Add to library</button>
+            </div>
+            <div id="animPackStatus" class="tool-inline-status" hidden></div>
+        </div>
+    </div>
+
+    <div id="emojiModal" class="tk-modal" hidden>
+        <div class="tk-modal-card">
+            <div id="modalEmojiIcon" class="tk-modal-emoji">⚡</div>
+            <div id="modalEmojiName" class="tk-mono">Selected emoji</div>
+            <div class="tk-modal-actions">
+                <button type="button" id="emojiCopyButton" class="secondary-button auto-width">Copy</button>
+                <button type="button" id="emojiInsertButton" class="primary-button">Insert</button>
+            </div>
+            <button type="button" id="emojiCancelButton" class="tk-modal-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Save as Preset — mirrors the After Effects dialog, text style scope only -->
+    <div id="ffxModal" class="tk-modal" hidden>
+        <div class="tk-modal-card tk-ffx-modal-card" role="dialog" aria-modal="true" aria-labelledby="ffxModalTitle">
+            <h3 id="ffxModalTitle" class="tk-ffx-modal-title">Save as Preset — Text Style</h3>
+            <label class="tk-ffx-field">
+                <span>Preset name</span>
+                <input type="text" id="ffxNameInput" class="tk-ffx-input" placeholder="My Chrome Title" maxlength="64" />
+            </label>
+
+            <div class="tk-ffx-scope">Scope: <b>Text Style</b> — animation preset save পরে যোগ হবে।</div>
+
+            <div class="tk-ffx-check-head">
+                <span>Include properties</span>
+                <span class="tk-ffx-check-tools">
+                    <button type="button" id="ffxSelectAll" class="tk-ffx-mini">All</button>
+                    <button type="button" id="ffxSelectNone" class="tk-ffx-mini">None</button>
+                </span>
+            </div>
+            <div id="ffxCheckList" class="tk-ffx-checklist"></div>
+
+            <label class="tk-ffx-toggle">
+                <input type="checkbox" id="ffxPreviewToggle" checked />
+                <span>Save preview image (current comp frame)</span>
+            </label>
+
+            <label class="tk-ffx-toggle tk-ffx-lock-toggle">
+                <input type="checkbox" id="ffxRampLockToggle" checked />
+                <span>Lock Gradient / 4-Colour Ramp positions</span>
+            </label>
+
+            <div class="tk-modal-actions">
+                <button type="button" id="ffxNativeButton" class="secondary-button auto-width" title="Use the After Effects dialog to save a real .ffx file">Make FFX Save…</button>
+                <button type="button" id="ffxSaveButton" class="primary-button">OK — Save Preset</button>
+            </div>
+            <div id="ffxModalStatus" class="tool-inline-status" hidden></div>
+            <button type="button" id="ffxCancelButton" class="tk-modal-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <div id="toolkitToastRegion" class="toast-region" aria-live="polite"></div>
+
+    <div id="toast-container" class="tk-toast-stack" aria-live="polite"></div>
+    <script>window.GHOST_PANEL_ID="ghost-toolkit";</script>
+    <!-- WEB PREVIEW ONLY — remove this line when porting back to the extension. -->
+</body>
+</html>
