@@ -1,0 +1,8 @@
+{ "aliases": {}, "drafts": { "6e6d1a5c0de1": {
+  "palette": { "bg": "#f7f9ff", "fg": "#0b1a4a", "accent": "#2563ff" },
+  "sections": [
+    { "name": "Hook", "beats": [["burst"]] },
+    { "name": "Alert", "beats": [["text", "!", {"size": 170}]] },
+    { "name": "Reveal", "beats": [["logo", "Gemini AI Pro", {"mark": "✦", "markSize": 64, "size": 44, "sub": "GOOGLE"}]] },
+    { "name": "Think", "beats": [["hub", "Thinking about it?"]] }
+  ] } } }
