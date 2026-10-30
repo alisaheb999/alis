@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<!-- HyperFrames-style scene: one paused GSAP timeline, seeked frame by frame by the renderer. -->
+<meta name="hyperframes" content="duration:5,fps:30,width:1080,height:1350">
+<title>Zoravex Promo</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600;700&family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+<script src="gsap.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --amber: #ffc000; --ink: #f4f4f6; --muted: #8b8b95; --bg: #0b0b0d; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--bg); }
+  #root { position: absolute; inset: 0; overflow: hidden; perspective: 1800px; color: var(--ink);
+          font-family: Inter, 'Hind Siliguri', sans-serif;
+          background: radial-gradient(ellipse at 50% 38%, #17171b 0%, #0b0b0d 70%); }
+  .plane { position: absolute; pointer-events: none; }
+
+  #atmosphere { left: 90px; top: 150px; width: 900px; height: 700px; border-radius: 50%; filter: blur(30px);
+                background: radial-gradient(ellipse, rgba(255,192,0,.22) 0%, rgba(255,140,0,.07) 38%, transparent 70%); }
+  #orbit { left: 140px; top: 260px; width: 800px; height: 430px; border-radius: 50%;
+           border: 1.5px solid rgba(244,244,246,.09); transform: rotate(-6deg); }
+  #orbit::after { content: ""; position: absolute; left: 50%; top: -5px; width: 10px; height: 10px; border-radius: 50%;
+                  background: var(--amber); box-shadow: 0 0 16px var(--amber); }
+  #guide { left: 140px; top: 476px; width: 800px; height: 3px; border-radius: 9px; transform-origin: 50% 50%;
+           background: linear-gradient(90deg, transparent, rgba(255,192,0,.3) 18%, rgba(255,255,255,.85) 50%, rgba(255,192,0,.3) 82%, transparent); }
+  #glint { left: 385px; top: 320px; width: 310px; height: 310px; border-radius: 50%; filter: blur(8px);
+           background: radial-gradient(circle, rgba(255,255,255,.14), rgba(255,192,0,.06) 40%, transparent 72%); }
+
+  #stack { position: absolute; left: 50%; top: 475px; width: 0; height: 0; transform-style: preserve-3d; }
+  .card { position: absolute; left: -125px; top: -125px; width: 250px; height: 250px; border-radius: 58px;
+          transform-style: preserve-3d; }
+  .face { position: absolute; inset: 0; border-radius: 58px; display: grid; place-items: center; overflow: hidden;
+          backface-visibility: hidden; }
+  .face::after { content: ""; position: absolute; inset: 1px; border-radius: 57px; pointer-events: none;
+                 background: linear-gradient(132deg, rgba(255,255,255,.55), transparent 38%); }
+  .side .face { background: linear-gradient(145deg, #2a2a30, #18181c); border: 1px solid rgba(255,255,255,.1); }
+  .side .face::after { background: linear-gradient(132deg, rgba(255,255,255,.12), transparent 40%); }
+  #front { background: linear-gradient(145deg, #ffd34d 0%, #ffc000 55%, #e6a100 100%); }
+  #front span { font: 900 150px Inter, sans-serif; color: #0b0b0d; letter-spacing: -.06em; }
+  #back { background: linear-gradient(145deg, #fff 0%, #f2f2f5 62%, #dcdce3 100%); color: #0b0b0d; flex-direction: column; }
+  #back b { font: 700 92px 'Hind Siliguri', sans-serif; line-height: 1; }
+  #back i { font: 800 22px Inter, sans-serif; font-style: normal; letter-spacing: .2em; color: #a87b00; }
+  .side .lbl { position: absolute; bottom: 30px; font: 700 26px 'Hind Siliguri', sans-serif; color: var(--muted); }
+  #shadow { left: 245px; top: 640px; width: 590px; height: 64px; border-radius: 50%; background: rgba(0,0,0,.7); filter: blur(27px); }
+
+  .headline { position: absolute; top: 800px; width: 100%; display: flex; justify-content: center; gap: 28px;
+              font: 900 112px Inter, sans-serif; letter-spacing: -.05em; }
+  #word-right { color: var(--amber); }
+  .index { position: absolute; top: 760px; width: 100%; text-align: center; font: 700 20px Inter, sans-serif;
+           letter-spacing: .5em; color: var(--muted); }
+
+  #pill { position: absolute; left: 50%; top: 1010px; height: 116px; margin-left: -230px; width: 460px; border-radius: 80px;
+          background: var(--amber); color: #0b0b0d; display: flex; align-items: center; justify-content: center; gap: 18px;
+          font: 700 46px 'Hind Siliguri', sans-serif; overflow: hidden;
+          box-shadow: 0 30px 70px -20px rgba(255,192,0,.55); }
+  #sheen { position: absolute; top: -40px; left: -40%; width: 120px; height: 200px; transform: rotate(20deg);
+           background: linear-gradient(90deg, transparent, rgba(255,255,255,.75), transparent); opacity: 0; }
+  #pill-shadow { left: 340px; top: 1140px; width: 400px; height: 30px; border-radius: 50%; background: rgba(255,192,0,.35); filter: blur(22px); }
+  .microcopy { position: absolute; top: 1170px; width: 100%; text-align: center; font: 700 20px Inter, sans-serif;
+               letter-spacing: .4em; color: var(--muted); }
+  #spark { left: 540px; top: 1066px; width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: 0;
+           box-shadow: 0 0 18px 6px rgba(255,255,255,.8); }
+  #fade { position: absolute; inset: 0; background: var(--bg); opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="atmosphere" class="plane"></div>
+  <div id="orbit" class="plane"></div>
+  <div id="guide" class="plane"></div>
+  <div id="glint" class="plane"></div>
+  <div id="shadow" class="plane"></div>
+
+  <div id="stack">
+    <div class="card side" id="left"><div class="face">
+      <svg width="96" height="96" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4z" fill="none" stroke="#ffc000" stroke-width="1.6" stroke-linejoin="round"/><path d="M6.5 9v5c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3V9" fill="none" stroke="#f4f4f6" stroke-width="1.6"/></svg>
+      <span class="lbl">কোর্স</span></div></div>
+    <div class="card side" id="right"><div class="face">
+      <svg width="96" height="96" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="3" fill="none" stroke="#f4f4f6" stroke-width="1.6"/><path d="M3.5 8.5h17" stroke="#f4f4f6" stroke-width="1.6"/><rect x="6.5" y="11" width="5" height="6" rx="1" fill="#ffc000"/><path d="M14 12h4M14 15h3" stroke="#f4f4f6" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span class="lbl">টেমপ্লেট</span></div></div>
+    <div class="card" id="master">
+      <div class="face" id="front"><span>Z</span></div>
+      <div class="face" id="back"><b>৳৯৯</b><i>FROM</i></div>
+    </div>
+  </div>
+
+  <div class="index">ZORAVEX STORE</div>
+  <div class="headline"><span id="word-left">Digital</span><span id="word-right">Products</span></div>
+
+  <div id="pill-shadow" class="plane"></div>
+  <div id="pill"><span>অর্ডার করুন</span><span>→</span><div id="sheen"></div></div>
+  <div class="microcopy">INSTANT DOWNLOAD</div>
+  <div id="spark" class="plane"></div>
+  <div id="fade"></div>
+</div>
+<script>
+  const tl = gsap.timeline({ paused: true, defaults: { ease: 'power4.out' } });
+  const cards = ['#left', '#master', '#right'];
+
+  // resting poses before anything moves
+  gsap.set('#stack', { y: 1100, rotationX: 7, transformPerspective: 1800 });
+  gsap.set('#master', { z: 30, rotationZ: -2 });
+  gsap.set('#left', { y: 38, z: -30, scale: .94, rotationY: -5, rotationZ: -4 });
+  gsap.set('#right', { y: 76, z: -70, scale: .88, rotationY: 6, rotationZ: 4 });
+  gsap.set('#back', { opacity: 0 });
+  gsap.set('#guide', { opacity: 0, scaleX: .06 });
+  gsap.set('#shadow', { opacity: 0, scaleX: .36, scaleY: .66 });
+  gsap.set('#glint', { opacity: 0, scale: .72 });
+
+  tl
+    // 1. atmosphere blooms out of blur, the orbit settles in
+    .from('#atmosphere', { opacity: 0, scale: .72, filter: 'blur(60px)', duration: .8, ease: 'power3.out' }, 0)
+    .from('#orbit', { opacity: 0, scale: .9, rotation: -15, duration: .9, ease: 'power3.inOut' }, .04)
+    .to('#orbit', { rotation: 4, duration: 4, ease: 'sine.inOut' }, .9)
+
+    // 2. the stack rises, overshoots, lands with squash and a contact shadow
+    .to('#stack', { y: -28, rotationX: -1.5, duration: 1.02 }, .1)
+    .to('#stack', { y: 0, rotationX: 0, duration: .24, ease: 'back.out(1.28)' }, 1.12)
+    .to('#shadow', { opacity: .55, scaleX: .58, scaleY: 1, duration: .96 }, .16)
+    .to('#master', { y: 18, scaleX: 1.035, scaleY: .975, duration: .13, ease: 'power2.out' }, 1.36)
+    .to('#guide', { opacity: .8, scaleX: 1, duration: .34 }, 1.44)
+    .to('#glint', { opacity: .6, scale: 1.08, duration: .42 }, 1.44)
+
+    // 3. the logo card flips to the price; the side cards fan out
+    .to('#master', { y: -12, scaleX: 1, scaleY: 1, rotationY: 88, rotationZ: 0, duration: .34, ease: 'power3.in' }, 1.5)
+    .set('#front', { opacity: 0 }, 1.84).set('#back', { opacity: 1 }, 1.84)
+    .set('#master', { rotationY: -88 }, 1.84)
+    .to('#master', { rotationY: 0, duration: .36, ease: 'power3.out' }, 1.841)
+    .to('#left', { x: -290, y: 12, z: 0, scale: 1.04, rotationY: 0, rotationZ: -3, duration: .72, ease: 'back.out(1.38)' }, 1.7)
+    .to('#right', { x: 290, y: 12, z: 0, scale: 1.04, rotationY: 0, rotationZ: 3, duration: .72, ease: 'back.out(1.38)' }, 1.8)
+    .to('#master', { y: 0, scale: 1.06, duration: .31, ease: 'back.out(1.24)' }, 2.2)
+    .to(cards, { scale: 1, duration: .26, stagger: .035, ease: 'power2.out' }, 2.48)
+    .to('#guide', { opacity: .16, scaleX: .9, duration: .32, ease: 'power2.out' }, 2.43)
+    .to('#shadow', { opacity: .45, scaleX: 1, duration: .5, ease: 'power3.out' }, 2.15)
+
+    // 4. kinetic headline: the two words arrive from opposite sides out of blur
+    .from('.index', { opacity: 0, y: 10, duration: .4, ease: 'power2.out' }, 2.25)
+    .from('#word-left', { x: -140, y: 18, rotation: -1.2, opacity: 0, filter: 'blur(10px)', duration: .72 }, 2.3)
+    .from('#word-right', { x: 140, y: -18, rotation: 1.2, opacity: 0, filter: 'blur(10px)', duration: .72 }, 2.39)
+
+    // 5. the button squashes in and settles, a sheen and a spark run across it
+    .fromTo('#pill', { scaleX: .93, scaleY: 1.06, y: 14, opacity: 0, filter: 'blur(6px)' },
+                     { scaleX: 1.08, scaleY: .95, y: -4, opacity: 1, filter: 'blur(0px)', duration: .43, ease: 'power3.out' }, 2.75)
+    .to('#pill', { scaleX: 1, scaleY: 1, y: 0, duration: .34, ease: 'back.out(1.55)' }, 3.12)
+    .from('#pill-shadow', { opacity: 0, scaleX: .55, duration: .62, ease: 'power3.out' }, 2.78)
+    .from('.microcopy', { opacity: 0, y: 9, duration: .42, ease: 'power2.out' }, 3.05)
+    .to('#sheen', { opacity: .85, left: '118%', duration: .76, ease: 'power3.inOut' }, 3.4)
+    .to('#sheen', { opacity: 0, duration: .18, ease: 'sine.out' }, 4.0)
+    .set('#spark', { opacity: 1, x: -205 }, 3.4)
+    .to('#spark', { x: 210, y: -6, duration: .68, ease: 'power3.inOut' }, 3.41)
+    .to('#spark', { opacity: 0, duration: .2, ease: 'sine.out' }, 3.9)
+
+    // 6. a breath, then everything leaves upward in a stagger so the clip loops cleanly
+    .to(cards, { y: i => [5, -7, 5][i], duration: .36, stagger: .045, ease: 'sine.inOut' }, 3.35)
+    .to(cards, { y: i => [12, 0, 12][i], duration: .36, stagger: .045, ease: 'sine.inOut' }, 3.71)
+    .to('#glint', { opacity: 0, duration: .28, ease: 'power2.in' }, 4.05)
+    .to(['#right', '#master', '#left'], { y: -980, opacity: 0, rotationX: -9, scale: .9, duration: .62, stagger: .05, ease: 'power3.in' }, 4.15)
+    .to(['.index', '.headline', '#pill', '.microcopy'], { y: -60, opacity: 0, duration: .45, stagger: .04, ease: 'power3.in' }, 4.3)
+    .to(['#shadow', '#pill-shadow', '#guide'], { opacity: 0, duration: .4, ease: 'power3.in' }, 4.2)
+    .to('#fade', { opacity: 1, duration: .25, ease: 'none' }, 4.75);
+
+  window.__timelines = { root: tl };
+  window.render = t => { tl.seek(t, false); };
+</script>
+</body>
+</html>
